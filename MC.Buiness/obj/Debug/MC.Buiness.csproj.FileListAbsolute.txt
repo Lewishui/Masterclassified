@@ -1,0 +1,26 @@
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\obj\Debug\ResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\MC.Buiness.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\MC.Buiness.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\MC.Common.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\MC.DB.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\office.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\MC.Common.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\MC.DB.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\obj\Debug\MC.Buiness.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\obj\Debug\MC.Buiness.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\MongoDB.Bson.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\MongoDB.Driver.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified\MasterClassified\MC.Buiness\bin\Debug\log4net.dll
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.dll
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.pdb
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\bin\Debug\MC.Common.dll
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\bin\Debug\MC.DB.dll
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\bin\Debug\office.dll
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\bin\Debug\MC.Common.pdb
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\bin\Debug\MC.DB.pdb
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csprojResolveAssemblyReference.cache
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
+D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb

@@ -1,0 +1,16 @@
+2017-01-06 02:00:53,255 [10] FATAL SystemExceptionLogger [(null)] - System Error 无法访问已释放的对象。
+对象名:“frmTimeSelect”。, Exception Detail Info :   在 System.Windows.Forms.Control.CreateHandle()
+   在 System.Windows.Forms.Form.CreateHandle()
+   在 System.Windows.Forms.Control.get_Handle()
+   在 System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   在 System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   在 System.Windows.Forms.Control.Show()
+   在 MasterClassified.frmMCdata.dataGridView1_CellClick(Object sender, DataGridViewCellEventArgs e)
+   在 System.Windows.Forms.DataGridView.OnCellClick(DataGridViewCellEventArgs e)
+   在 System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.DataGridView.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time2017/1/6 2:00:53

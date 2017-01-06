@@ -16,6 +16,7 @@ namespace MasterClassified
 {
     public partial class frmDataCenter : DockContent
     {
+        private SortableBindingList<inputCaipiaoDATA> sortablePendingOrderList;
         List<inputCaipiaoDATA> ClaimReport_Server;
         public frmDataCenter()
         {
@@ -159,12 +160,19 @@ namespace MasterClassified
                     ClaimReport_Server = new List<inputCaipiaoDATA>();
                     ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
                     ClaimReport_Server.Sort(new Comp());
-                    this.dataGridView1.DataSource = null;
-                    this.dataGridView1.AutoGenerateColumns = false;
-                    if (ClaimReport_Server.Count != 0)
-                    {
-                        this.dataGridView1.DataSource = ClaimReport_Server;
-                    }
+
+                    sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(ClaimReport_Server);
+
+                    this.bindingSource1.DataSource = null;
+                    this.bindingSource1.DataSource = sortablePendingOrderList;
+
+                    this.dataGridView1.DataSource = this.bindingSource1;
+                    //this.dataGridView1.DataSource = null;
+                    //this.dataGridView1.AutoGenerateColumns = false;
+                    //if (ClaimReport_Server.Count != 0)
+                    //{
+                    //    this.dataGridView1.DataSource = ClaimReport_Server;
+                    //}
                 }
                 else if (s == 2)
                 {

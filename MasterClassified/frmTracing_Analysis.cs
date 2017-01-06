@@ -33,6 +33,7 @@ namespace MasterClassified
         private bool blnBackGroundWorkIsOK = false;
         //后加的后台属性显
         private bool backGroundRunResult;
+        private SortableBindingList<inputCaipiaoDATA> sortablePendingOrderList;
         public frmTracing_Analysis()
         {
             InitializeComponent();
@@ -284,14 +285,20 @@ namespace MasterClassified
                 jk++;
             }
 
+         //   sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(qtyTable);
+           
+            this.bindingSource1.DataSource = null;
+            this.bindingSource1.DataSource = qtyTable;
+            this.dataGridView1.DataSource = this.bindingSource1;
 
             dataGridView2.DataSource = qtyTable;
+
             string width = "";
 
-            for (int j = 2; j < dataGridView1.ColumnCount; j++)
+            for (int j = 2; j < dataGridView2.ColumnCount; j++)
             {
 
-                dataGridView1.Columns[j].Width = 30;
+                dataGridView2.Columns[j].Width = 30;
 
                 //将每一列都调整为自动适应模式
                 //this.dataGridView2.AutoResizeColumn(j, DataGridViewAutoSizeColumnMode.AllCells);
@@ -515,7 +522,10 @@ namespace MasterClassified
             this.dataGridView1.AutoGenerateColumns = false;
             if (ClaimReport_Server.Count != 0)
             {
-                this.dataGridView1.DataSource = ClaimReport_Server;
+                this.bindingSource1.DataSource = null;
+                this.bindingSource1.DataSource = sortablePendingOrderList;
+                this.dataGridView1.DataSource = this.bindingSource1;
+                //this.dataGridView1.DataSource = ClaimReport_Server;
             }
 
             this.toolStripComboBox1.ComboBox.DisplayMember = "QiHao";
@@ -1188,7 +1198,11 @@ namespace MasterClassified
                         this.dataGridView1.AutoGenerateColumns = false;
                         if (ClaimReport_Server.Count != 0)
                         {
-                            this.dataGridView1.DataSource = ClaimReport_Server;
+                            this.bindingSource1.DataSource = null;
+                            this.bindingSource1.DataSource = sortablePendingOrderList;
+
+                            this.dataGridView1.DataSource = this.bindingSource1;
+                            //this.dataGridView1.DataSource = ClaimReport_Server;
                         }
 
                     }
@@ -1214,6 +1228,8 @@ namespace MasterClassified
             ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
             ClaimReport_Server.Sort(new Comp());
 
+            sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(ClaimReport_Server);
+           
 
             DateTime FinishTime = DateTime.Now;
             TimeSpan s = DateTime.Now - oldDate;

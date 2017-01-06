@@ -66,3 +66,38 @@ D:\Dev Project\shengyangcaipiao\Masterclassified\MasterClassified\obj\Debug\Mast
 D:\Dev Project\shengyangcaipiao\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmMCdata.resources
 D:\Dev Project\shengyangcaipiao\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmTimeSelect.resources
 D:\Dev Project\shengyangcaipiao\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmChangeMC.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\Interop.SHDocVw.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.csproj.ResolveComReference.cache
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.exe
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\Log4Net.config
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MasterClassified.exe
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MasterClassified.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.Buiness.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.Common.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.DB.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\office.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.Buiness.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.Common.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.DB.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\office.xml
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\Interop.SHDocVw.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.csprojResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmAddCaiPiao.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmAddFanAnName.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmChangeMC.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmDataCenter.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmImport_Data.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmMCdata.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmMessageShow.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmNavigate.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmSetConfig.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmTimeSelect.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmTracing_Analysis.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmUDF.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.MainForm.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.Properties.Resources.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.csproj.GenerateResource.Cache

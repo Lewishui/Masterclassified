@@ -89,6 +89,13 @@ namespace MC.Buiness
                 temp.KaiJianHaoMa = "";
                 if (o[i, 2] != null)
                     temp.KaiJianHaoMa = o[i, 2].ToString().Trim();
+
+
+                temp.Xuan = "";
+                if (o[i, 3] != null)
+                    temp.Xuan = o[i, 3].ToString().Trim();
+
+
                 temp.Input_Date = DateTime.Now.ToString("yyyyMMdd-HHmm");
                 Result.Add(temp);
             }
@@ -108,10 +115,11 @@ namespace MC.Buiness
                     string a = fileText[i].Trim();
 
                     string[] temp1 = System.Text.RegularExpressions.Regex.Split(fileText[i], "\t");
-                    temp.QiHao = "";
+                  
                     temp.QiHao = temp1[0].ToString().Trim();
                     temp.KaiJianHaoMa = temp1[1].ToString().Trim();
-
+                    temp.Xuan = temp1[2].ToString().Trim();
+                    temp.KaiJianRiqi = clsCommHelp.objToDateTime(temp1[3]);
                     temp.Input_Date = DateTime.Now.ToString("yyyyMMdd-HHmm");
                     Result.Add(temp);
 
@@ -134,7 +142,7 @@ namespace MC.Buiness
             MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
             MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
 
-            collection1.RemoveAll();
+           //  collection1.RemoveAll();
             if (AddMAPResult == null)
             {
                 MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -142,6 +150,8 @@ namespace MC.Buiness
             }
             foreach (inputCaipiaoDATA item in AddMAPResult)
             {
+                QueryDocument query = new QueryDocument("QiHao", item.QiHao);
+                collection1.Remove(query);
 
                 MongoDatabase db = server.GetDatabase("MasterClassified");
                 MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
@@ -150,8 +160,9 @@ namespace MC.Buiness
                  { "QiHao", item.QiHao },
                  { "Jihao", item.Jihao },
                  { "System_Time", DateTime.Now.ToString("MM/dd/yyyy/HH")}, 
-                 { "KaiJianHaoMa", item.KaiJianHaoMa} 
-
+                 { "KaiJianHaoMa", item.KaiJianHaoMa} ,
+                  { "KaiJianRiqi", item.KaiJianRiqi} ,
+                       { "Xuan", item.Xuan} 
                  };
                 collection.Insert(fruit_1);
             }
@@ -195,6 +206,8 @@ namespace MC.Buiness
                         item.JiShu2= (emp["JiShu2"].AsString);
                     if (emp.Contains("JiShu3"))
                         item.JiShu3 = (emp["JiShu3"].AsString);
+                    if (emp.Contains("Xuan"))
+                        item.Xuan = (emp["Xuan"].AsString);
                  
                     #endregion
                     ClaimReport_Server.Add(item);
@@ -211,6 +224,123 @@ namespace MC.Buiness
             }
             #endregion
         }
+        public List<inputCaipiaoDATA> ReadclaimreportfromServerBy_Xuan(string findtext)
+        {
+
+            #region Read  database info server
+            try
+            {
+                List<inputCaipiaoDATA> ClaimReport_Server = new List<inputCaipiaoDATA>();
+
+                string connectionString = "mongodb://127.0.0.1";
+                MongoServer server = MongoServer.Create(connectionString);
+                MongoDatabase db = server.GetDatabase("MasterClassified");
+                MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
+                MongoCollection<BsonDocument> employees = db.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
+
+                var query = new QueryDocument("Xuan", findtext);
+
+                foreach (BsonDocument emp in employees.Find(query))
+                {
+                    inputCaipiaoDATA item = new inputCaipiaoDATA();
+
+                    #region 数据
+                    if (emp.Contains("_id"))
+                        item._id = (emp["_id"].ToString());
+                    if (emp.Contains("QiHao"))
+                        item.QiHao = (emp["QiHao"].AsString);
+                    if (emp.Contains("Jihao"))
+                        item.Jihao = (emp["Jihao"].ToString());
+                    if (emp.Contains("KaiJianHaoMa"))
+                        item.KaiJianHaoMa = (emp["KaiJianHaoMa"].AsString);
+                    if (emp.Contains("Input_Date"))
+                        item.Input_Date = (emp["Input_Date"].AsString);
+                    if (emp.Contains("JiShu1"))
+                        item.JiShu1 = (emp["JiShu1"].AsString);
+                    if (emp.Contains("JiShu2"))
+                        item.JiShu2 = (emp["JiShu2"].AsString);
+                    if (emp.Contains("JiShu3"))
+                        item.JiShu3 = (emp["JiShu3"].AsString);
+                    if (emp.Contains("Xuan"))
+                        item.Xuan = (emp["Xuan"].AsString);
+                    if (emp.Contains("KaiJianRiqi"))
+                        item.KaiJianRiqi = (emp["KaiJianRiqi"].AsString);
+                    #endregion
+                    ClaimReport_Server.Add(item);
+                }
+                return ClaimReport_Server;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                return null;
+
+                throw ex;
+            }
+            #endregion
+        }
+     
+
+        public List<inputCaipiaoDATA> ReadCaiPiaoData_One(string findtext)
+        {
+
+            #region Read  database info server
+            try
+            {
+                List<inputCaipiaoDATA> ClaimReport_Server = new List<inputCaipiaoDATA>();
+
+                string connectionString = "mongodb://127.0.0.1";
+                MongoServer server = MongoServer.Create(connectionString);
+                MongoDatabase db = server.GetDatabase("MasterClassified");
+                MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
+                MongoCollection<BsonDocument> employees = db.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
+
+                var query = new QueryDocument("QiHao", findtext);
+
+                foreach (BsonDocument emp in employees.Find(query))
+                {
+                    inputCaipiaoDATA item = new inputCaipiaoDATA();
+
+                    #region 数据
+                    if (emp.Contains("_id"))
+                        item._id = (emp["_id"].ToString());
+                    if (emp.Contains("QiHao"))
+                        item.QiHao = (emp["QiHao"].AsString);
+                    if (emp.Contains("Jihao"))
+                        item.Jihao = (emp["Jihao"].ToString());
+                    if (emp.Contains("KaiJianHaoMa"))
+                        item.KaiJianHaoMa = (emp["KaiJianHaoMa"].AsString);
+                    if (emp.Contains("Input_Date"))
+                        item.Input_Date = (emp["Input_Date"].AsString);
+                    if (emp.Contains("JiShu1"))
+                        item.JiShu1 = (emp["JiShu1"].AsString);
+                    if (emp.Contains("JiShu2"))
+                        item.JiShu2 = (emp["JiShu2"].AsString);
+                    if (emp.Contains("JiShu3"))
+                        item.JiShu3 = (emp["JiShu3"].AsString);
+                    if (emp.Contains("KaiJianRiqi"))
+                        item.KaiJianRiqi = (emp["KaiJianRiqi"].AsString);
+
+                    if (emp.Contains("Xuan"))
+                        item.Xuan = (emp["Xuan"].AsString);
+                    #endregion
+                    ClaimReport_Server.Add(item);
+                }
+                return ClaimReport_Server;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                return null;
+
+                throw ex;
+            }
+            #endregion
+        }
+       
+
         public List<FangAnLieBiaoDATA> Read_FangAn(string findtext)
         {
             #region Read  database info server
@@ -366,6 +496,73 @@ namespace MC.Buiness
             }
             #endregion
         }
+
+        public List<CaipiaoZhongLeiDATA> Read_CaiPiaoZhongLei_Moren(string findtext)
+        {
+            #region Read  database info server
+            try
+            {
+                List<CaipiaoZhongLeiDATA> Result = new List<CaipiaoZhongLeiDATA>();
+
+                string connectionString = "mongodb://127.0.0.1";
+                MongoServer server = MongoServer.Create(connectionString);
+                MongoDatabase db1 = server.GetDatabase("MasterClassified");
+                MongoCollection collection1 = db1.GetCollection("CaiPiaoZhongLei");
+                MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("CaiPiaoZhongLei");
+
+                var query = new QueryDocument("MoRenXuanzhong", findtext);
+
+                foreach (BsonDocument emp in employees1.Find(query))
+                {
+
+                    CaipiaoZhongLeiDATA item = new CaipiaoZhongLeiDATA();
+
+                    #region 数据聚合
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+
+                    if (emp.Contains("MoRenXuanzhong"))
+                        item.MoRenXuanzhong = (emp["MoRenXuanzhong"].AsString);
+ 
+
+
+                    if (emp.Contains("JiBenHaoMaS"))
+                        item.JiBenHaoMaS = (emp["JiBenHaoMaS"].AsString);
+
+                    if (emp.Contains("JiBenHaoMaT"))
+                        item.JiBenHaoMaT = (emp["JiBenHaoMaT"].AsString);
+
+                    if (emp.Contains("Xuan"))
+                        item.Xuan = (emp["Xuan"].AsString);
+
+                    if (emp.Contains("Check_TeBieHao"))
+                        item.Check_TeBieHao = (emp["Check_TeBieHao"].AsString);
+
+                    if (emp.Contains("TeBieHaoS"))
+                        item.TeBieHaoS = (emp["TeBieHaoS"].AsString);
+
+                    if (emp.Contains("TeBieHaoT"))
+                        item.TeBieHaoT = (emp["TeBieHaoT"].AsString);
+
+                    if (emp.Contains("Input_Date"))
+                        item.Input_Date = (emp["Input_Date"].AsString);
+
+                    if (emp.Contains("Caipiaowenjianming"))
+                        item.Caipiaowenjianming = (emp["Caipiaowenjianming"].ToString());
+
+                    #endregion
+                    Result.Add(item);
+                }
+                return Result;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            #endregion
+        }
+
         public List<CaipiaoZhongLeiDATA> Find_CaipiaoZhongLei_(string findtext)
         {
             #region Read  database info server
@@ -749,8 +946,38 @@ namespace MC.Buiness
 
 
         }
+        public void delete_CaiPiaoData(string name)
+        {
+            string connectionString = "mongodb://127.0.0.1";
+            MongoServer server = MongoServer.Create(connectionString);
+            MongoDatabase db1 = server.GetDatabase("MasterClassified");
+            MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
+            MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
 
+            if (name == null)
+            {
+                MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            QueryDocument query = new QueryDocument("QiHao", name);
+            collection1.Remove(query);
+        }
+        public void Clear_CaiPiaoData(string name)
+        {
+            string connectionString = "mongodb://127.0.0.1";
+            MongoServer server = MongoServer.Create(connectionString);
+            MongoDatabase db1 = server.GetDatabase("MasterClassified");
+            MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
+            MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
 
+            if (name == null)
+            {
+                MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            QueryDocument query = new QueryDocument("Xuan", name);
+            collection1.Remove(query);
+        }
         #endregion
     }
 }

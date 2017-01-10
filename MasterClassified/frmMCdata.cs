@@ -1,6 +1,7 @@
 ﻿using MC.Buiness;
 using MC.DB;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,7 @@ namespace MasterClassified
         public log4net.ILog ProcessLogger;
         public log4net.ILog ExceptionLogger;
         List<inputCaipiaoDATA> ClaimReport_Server;
-
+        private Hashtable datagrid_changes = null;
         private frmTimeSelect frmTimeSelect;
         int RowRemark = 0;
         int cloumn = 0;
@@ -38,26 +39,108 @@ namespace MasterClassified
             ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
             #endregion
 
+            this.datagrid_changes = new Hashtable();
 
             //this.listBox1.DisplayMember = "Name";
             //clsAllnew BusinessHelp = new clsAllnew();
             //List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAnName();
             //List<FangAnLieBiaoDATA> filtered = Result.FindAll(s => s.Name != null);
             //this.listBox1.DataSource = filtered;
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
+
+            if (CaipiaozhongleiResult.Count == 0)
+            {
+                MessageBox.Show("彩票默认运行类型没有选中", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+            this.label2.Text = CaipiaozhongleiResult[0].Name;
+            //this.label4.Text = CaipiaozhongleiResult[0].Name;
+            this.label6.Text = CaipiaozhongleiResult[0].JiBenHaoMaS + "-" + CaipiaozhongleiResult[0].JiBenHaoMaT;
+            this.label8.Text = CaipiaozhongleiResult[0].Xuan;
+
+
+
             ClaimReport_Server = new List<inputCaipiaoDATA>();
 
-            clsAllnew BusinessHelp = new clsAllnew();
 
             DateTime oldDate = DateTime.Now;
             ClaimReport_Server = new List<inputCaipiaoDATA>();
-            ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
+            ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(this.label8.Text);
             ClaimReport_Server.Sort(new Comp());
-            this.dataGridView1.DataSource = null;
-            this.dataGridView1.AutoGenerateColumns = false;
-            if (ClaimReport_Server.Count != 0)
+            //this.dataGridView1.DataSource = null;
+            //this.dataGridView1.AutoGenerateColumns = false;
+            //if (ClaimReport_Server.Count != 0)
+            //{
+            //    this.dataGridView1.DataSource = ClaimReport_Server;
+            //}
+
+            #region table
+
+            var qtyTable = new DataTable();
+            //foreach (var igrouping in ClaimReport_Server)
+            //{
+            //    // 生成 ioTable, use c{j}  instead of igrouping.Key, datagridview required
+            //    //qtyTable.Columns.Add(igrouping._id, System.Type.GetType("System.String"));
+
+            //    // qtyTable.Columns.Add(igrouping._id, System.Type.GetType("System.Int32"));
+            //}
+
+            string[] temptong = System.Text.RegularExpressions.Regex.Split(CaipiaozhongleiResult[0].Xuan, " ");
+
+            int l = 0;
+            qtyTable.Columns.Add("期号", System.Type.GetType("System.String"));
+            qtyTable.Columns.Add("开奖日期", System.Type.GetType("System.String"));
+
+            int jiindex = 0;
+
+            for (int m = 0; m < Convert.ToInt32(temptong[0]); m++)
             {
-                this.dataGridView1.DataSource = ClaimReport_Server;
+                jiindex++;
+
+                qtyTable.Columns.Add("基号" + jiindex.ToString(), System.Type.GetType("System.String"));
+
             }
+            foreach (var k in ClaimReport_Server)
+            {
+                qtyTable.Rows.Add(qtyTable.NewRow());
+            }
+            int jk = 0;
+
+            foreach (var item in ClaimReport_Server)
+            {
+                if (item.KaiJianHaoMa == null)
+                    continue;
+                string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
+                int lie = 2;
+                for (int i = 0; i < temp1.Length; i++)
+                {
+                    if (i >= temp1.Length)
+                        continue;
+
+                    qtyTable.Rows[jk][lie] = temp1[i];
+                    lie++;
+
+                }
+                qtyTable.Rows[jk][0] = item.QiHao;
+                qtyTable.Rows[jk][1] = item.KaiJianRiqi;
+
+                jk++;
+            }
+
+            //   sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(qtyTable);
+
+            this.bindingSource1.DataSource = null;
+            this.bindingSource1.DataSource = qtyTable;
+            this.dataGridView1.DataSource = this.bindingSource1;
+
+            //  dataGridView1.DataSource = qtyTable;
+
+
+            #endregion
 
         }
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -238,10 +321,23 @@ namespace MasterClassified
         {
             RowRemark = e.RowIndex;
             cloumn = e.ColumnIndex;
+            return;
             if (e.ColumnIndex == 1)
             {
-                dataGridView1.Rows[RowRemark].Cells[cloumn] = new DataGridViewComboBoxCell();
-          
+                //  dataGridView1.Rows[RowRemark].Cells[cloumn] = new DataGridViewComboBoxCell();
+
+                var form = new frmTimeSelect();
+                //var form1 = form.ShowDialog();
+
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
+
+                }
+                dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
+
+
+
                 if (frmTimeSelect == null)
                 {
                     frmTimeSelect = new frmTimeSelect();
@@ -352,9 +448,20 @@ namespace MasterClassified
             inputCaipiaoDATA item = new inputCaipiaoDATA();
             item.QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
             item.KaiJianRiqi = this.dataGridView1.Rows[RowRemark].Cells[1].EditedFormattedValue.ToString();
-            item.JiShu1 = this.dataGridView1.Rows[RowRemark].Cells[2].EditedFormattedValue.ToString();
-            item.JiShu2 = this.dataGridView1.Rows[RowRemark].Cells[3].EditedFormattedValue.ToString();
-            item.JiShu3 = this.dataGridView1.Rows[RowRemark].Cells[4].EditedFormattedValue.ToString();
+            //item.JiShu1 = this.dataGridView1.Rows[RowRemark].Cells[2].EditedFormattedValue.ToString();
+            //item.JiShu2 = this.dataGridView1.Rows[RowRemark].Cells[3].EditedFormattedValue.ToString();
+            //item.JiShu3 = this.dataGridView1.Rows[RowRemark].Cells[4].EditedFormattedValue.ToString();
+            item.Xuan = this.label8.Text;
+            for (int i = 2; i < dataGridView1.ColumnCount; i++)
+            {
+
+                {
+
+                    item.KaiJianHaoMa = item.KaiJianHaoMa + " " + dataGridView1.Rows[RowRemark].Cells[i].EditedFormattedValue.ToString().Trim();
+                }
+            }
+            item.KaiJianHaoMa = item.KaiJianHaoMa.Trim();
+
             Result.Add(item);
 
             clsAllnew BusinessHelp = new clsAllnew();
@@ -362,6 +469,144 @@ namespace MasterClassified
             BusinessHelp.SPInputclaimreport_Server(Result);
 
 
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+            var form = new frmChangeCaiPiaodata(this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString());
+            //var form1 = form.ShowDialog();
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                InitialSystemInfo();
+            }
+            InitialSystemInfo();
+
+        }
+
+        private void notifyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            string QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            BusinessHelp.delete_CaiPiaoData(QiHao);
+            InitialSystemInfo();
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            if (e.RowIndex != 0 && e.ColumnIndex != 0)
+            {
+
+                bool handle;
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.Equals(DBNull.Value))
+                {
+                    handle = true;
+                }
+                else
+                    handle = false;
+                e.Cancel = handle;
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.ColumnIndex == 1)
+            {
+
+                var form = new frmTimeSelect();
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
+
+                }
+                dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
+                return;
+            }
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("确认要清空当前类型的数据 ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+
+            }
+            else
+                return;
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            BusinessHelp.delete_CaiPiaoData(this.label8.Text);
+            InitialSystemInfo();
+        }
+
+        private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string qi = ClaimReport_Server[ClaimReport_Server.Count - 1].QiHao;
+            List<inputCaipiaoDATA> Result = new List<inputCaipiaoDATA>();
+            inputCaipiaoDATA item = new inputCaipiaoDATA();
+            item.QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
+            item.KaiJianRiqi = this.dataGridView1.Rows[RowRemark].Cells[1].EditedFormattedValue.ToString();
+            //item.JiShu1 = this.dataGridView1.Rows[RowRemark].Cells[2].EditedFormattedValue.ToString();
+            //item.JiShu2 = this.dataGridView1.Rows[RowRemark].Cells[3].EditedFormattedValue.ToString();
+            //item.JiShu3 = this.dataGridView1.Rows[RowRemark].Cells[4].EditedFormattedValue.ToString();
+
+            for (int i = 2; i < dataGridView1.ColumnCount; i++)
+            {
+
+                {
+
+                    item.KaiJianHaoMa = item.KaiJianHaoMa + " " + dataGridView1.Rows[RowRemark].Cells[i].EditedFormattedValue.ToString().Trim();
+                }
+            }
+            item.KaiJianHaoMa = item.KaiJianHaoMa.Trim();
+            item.Xuan = this.label8.Text;
+
+            Result.Add(item);
+
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            BusinessHelp.SPInputclaimreport_Server(Result);
+
+            //IEnumerable<int> orderIds = GetChangedOrderIds();
+            //List<inputCaipiaoDATA> orders = GetDataGridViewBoundOrders();
+            //if (orderIds.Count() > 0)
+            //{
+            //    foreach (var id in orderIds.Distinct())
+            //    {
+            //        var pendingorder = orders.Find(o => o.QiHao == id.ToString());
+            //            t_orderdata order = ctx.t_orderdata.Find(pendingorder.id受注データ);
+            //    }
+            //}
+        }
+        private List<inputCaipiaoDATA> GetDataGridViewBoundOrders()
+        {
+            List<inputCaipiaoDATA> orders = new List<inputCaipiaoDATA>();
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                orders.Add(dataGridView1.Rows[i].DataBoundItem as inputCaipiaoDATA);
+            }
+
+            return orders;
+        }
+        private IEnumerable<int> GetChangedOrderIds()
+        {
+
+            List<int> rows = new List<int>();
+            foreach (DictionaryEntry entry in datagrid_changes)
+            {
+                var key = entry.Key as string;
+                if (key.EndsWith("_changed"))
+                {
+                    int row = Int32.Parse(key.Split('_')[0]);
+                    rows.Add(row);
+                }
+                //                    Console.WriteLine("Key -- {0}; Value --{1}.", entry.Key, entry.Value);
+            }
+            return rows.Distinct();
         }
     }
 }

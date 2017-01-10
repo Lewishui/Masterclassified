@@ -128,7 +128,8 @@ namespace MC.DB
         public string qian100 { get; set; }
         public string qianMingcheng { get; set; }
         public string KaiJianRiqi { get; set; }
-
+        public string Xuan { get; set; }
+        
     }
     public class FangAnLieBiaoDATA
     {

@@ -101,3 +101,39 @@ C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClas
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.MainForm.resources
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.Properties.Resources.resources
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.csproj.GenerateResource.Cache
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\Interop.SHDocVw.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.csproj.ResolveComReference.cache
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.exe
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\Log4Net.config
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\MasterClassified.exe
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\MasterClassified.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\MC.Buiness.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\MC.Common.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\MC.DB.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\office.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\MC.Buiness.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\MC.Common.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\MC.DB.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\office.xml
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\bin\Debug\Interop.SHDocVw.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.csprojResolveAssemblyReference.cache
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmAddCaiPiao.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmAddFanAnName.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmChangeMC.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmDataCenter.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmImport_Data.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmMCdata.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmMessageShow.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmNavigate.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmSetConfig.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmTimeSelect.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmTracing_Analysis.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmUDF.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.MainForm.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.Properties.Resources.resources
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.csproj.GenerateResource.Cache
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmChangeCaiPiaodata.resources

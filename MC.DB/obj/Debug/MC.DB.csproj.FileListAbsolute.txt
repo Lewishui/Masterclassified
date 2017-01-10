@@ -8,3 +8,8 @@ D:\Dev Project\shengyangcaipiao\Masterclassified\MC.DB\bin\Debug\MC.DB.pdb
 D:\Dev Project\shengyangcaipiao\Masterclassified\MC.DB\obj\Debug\MC.DB.csprojResolveAssemblyReference.cache
 D:\Dev Project\shengyangcaipiao\Masterclassified\MC.DB\obj\Debug\MC.DB.dll
 D:\Dev Project\shengyangcaipiao\Masterclassified\MC.DB\obj\Debug\MC.DB.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.DB\bin\Debug\MC.DB.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.DB\bin\Debug\MC.DB.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.DB\obj\Debug\MC.DB.csprojResolveAssemblyReference.cache
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.DB\obj\Debug\MC.DB.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.DB\obj\Debug\MC.DB.pdb

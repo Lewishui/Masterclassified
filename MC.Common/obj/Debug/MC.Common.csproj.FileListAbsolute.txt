@@ -13,3 +13,10 @@ D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Common\bin\Debug\Microsoft.V
 D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Common\obj\Debug\MC.Common.csprojResolveAssemblyReference.cache
 D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Common\obj\Debug\MC.Common.dll
 D:\Dev Project\shengyangcaipiao\Masterclassified\MC.Common\obj\Debug\MC.Common.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\bin\Debug\MC.Common.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\bin\Debug\MC.Common.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\bin\Debug\office.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\obj\Debug\MC.Common.csprojResolveAssemblyReference.cache
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\obj\Debug\MC.Common.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\obj\Debug\MC.Common.pdb

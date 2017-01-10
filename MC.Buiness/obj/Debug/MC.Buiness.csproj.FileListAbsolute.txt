@@ -38,3 +38,20 @@ C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csprojResolveAssemblyReference.cache
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\MC.Common.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\MC.DB.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\office.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\MC.Common.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\MC.DB.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\office.xml
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csprojResolveAssemblyReference.cache
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\obj\Debug\Interop.Microsoft.Office.Core.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csproj.ResolveComReference.cache
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\Interop.Microsoft.Office.Core.dll

@@ -14,8 +14,9 @@ namespace MasterClassified
     public partial class frmChangeCaiPiaodata : Form
     {
         List<inputCaipiaoDATA> ReadResult;
+        string ming = "";
 
-        public frmChangeCaiPiaodata(string qihao)
+        public frmChangeCaiPiaodata(string qihao ,string mingcheng)
         {
             InitializeComponent();
             clsAllnew BusinessHelp = new clsAllnew();
@@ -32,6 +33,7 @@ namespace MasterClassified
                     textBox3.Text = item.KaiJianHaoMa;
 
             }
+            ming = mingcheng;
 
         }
 
@@ -54,7 +56,7 @@ namespace MasterClassified
                 item.KaiJianRiqi = textBox2.Text;
                 item.KaiJianHaoMa = textBox3.Text.Trim();
                 item.Xuan = ReadResult[0].Xuan;
-
+                item.Caipiaomingcheng = ming.ToString();
                 Result.Add(item);
                 clsAllnew BusinessHelp = new clsAllnew();
                 BusinessHelp.SPInputclaimreport_Server(Result);

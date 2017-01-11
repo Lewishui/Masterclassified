@@ -11,6 +11,8 @@ using MC.Common;
 using Microsoft.Win32;
 using System.Diagnostics;
 using System.Threading;
+using MC.Buiness;
+using MC.DB;
 
 namespace MasterClassified
 {
@@ -33,7 +35,8 @@ namespace MasterClassified
         private int alterisrun;
         private frmMCdata frmMCdata;
         private frmImport_MCleixing_Data frmImport_MCleixing_Data;
-
+        List<int> newlist;
+        List<string> showSuijiResultlist = new List<string>();
         public MainForm()
         {
             InitializeComponent();
@@ -92,7 +95,7 @@ namespace MasterClassified
             {
                 frmImport_MCleixing_Data = null;
             }
-            
+
         }
         private void InitialSystemInfo()
         {
@@ -442,7 +445,6 @@ namespace MasterClassified
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
             if (frmImport_MCleixing_Data == null)
             {
                 frmImport_MCleixing_Data = new frmImport_MCleixing_Data();
@@ -457,7 +459,143 @@ namespace MasterClassified
 
         private void 导入彩票数据xlsxToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+           
         }
+        private void NewMethod1()
+        {
+            try
+            {
+                newlist = new List<int>();
+                showSuijiResultlist = new List<string>();
+
+                newlist.Add(0);
+                newlist.Add(1);
+                newlist.Add(2);
+                newlist.Add(3);
+                newlist.Add(4);
+                newlist.Add(5);
+                newlist.Add(6);
+                newlist.Add(7);
+                newlist.Add(8);
+                newlist.Add(9);
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+
+                int duan = 3;
+                int evertduan = 10 / duan;
+                int ilast = 0;
+                ilast = duan * evertduan;
+
+
+                string first = "";
+                showSuijiResultlist = new List<string>();
+                for (int iq = 0; iq < duan; iq++)
+                {
+                    string num = "";
+                    int ago = 0;
+
+                    for (int i = 0; i <= evertduan; i++)
+                    {
+                        ago++;
+                        if (ago > evertduan)
+                            break;
+
+                        num = num + " " + newlist[0];
+                        newlist.RemoveAt(0);
+
+                    }
+                    first = first + "\r\n" + iq.ToString() + "段=" + " " + num;
+
+                    showSuijiResultlist.Add(iq.ToString() + " 段= " + " " + num);
+
+                }
+                List<string> showSuijiResultlist1 = new List<string>();
+
+                for (int ii = 0; ii < showSuijiResultlist.Count; ii++)
+                {
+                    for (int i = 0; i < newlist.Count; i++)
+                    {
+                        showSuijiResultlist[ii] = showSuijiResultlist[ii] + " " + newlist[i];
+                        newlist.RemoveAt(i);
+                        break;
+                    }
+                }
+
+                List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
+                FangAnLieBiaoDATA item = new FangAnLieBiaoDATA();
+
+
+                for (int i = 0; i < showSuijiResultlist.Count; i++)
+                {
+                    string[] temp1 = System.Text.RegularExpressions.Regex.Split(showSuijiResultlist[i], "=");
+                    if (i == 0)
+                        item.DuanWei1 = temp1[1].Trim();
+                    else if (i == 1)
+                        item.DuanWei2 = temp1[1].Trim();
+                    else if (i == 2)
+                        item.DuanWei3 = temp1[1].Trim();
+                    else if (i == 3)
+                        item.DuanWei4 = temp1[1].Trim();
+                    else if (i == 4)
+                        item.DuanWei5 = temp1[1].Trim();
+                    else if (i == 5)
+                        item.DuanWei6 = temp1[1].Trim();
+                    else if (i == 6)
+                        item.DuanWei7 = temp1[1].Trim();
+                    else if (i == 7)
+                        item.DuanWei8 = temp1[1].Trim();
+                    else if (i == 8)
+                        item.DuanWei9 = temp1[1].Trim();
+                    else if (i == 9)
+                        item.DuanWei10 = temp1[1].Trim();
+
+                    item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
+                }
+                item.ZhuJian = "YES";
+                item.Name = "默认方案";//保存名称
+                item.DuanShu = showSuijiResultlist.Count.ToString();
+                Result.Add(item);
+                clsAllnew BusinessHelp = new clsAllnew();
+                BusinessHelp.Save_FangAn(Result);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                return;
+
+                throw;
+            }
+        }
+
+        private void 一键配置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = AppDomain.CurrentDomain.BaseDirectory + "Resources\\彩票类型.txt";
+                clsAllnew BusinessHelp = new clsAllnew();
+                List<CaipiaoZhongLeiDATA> Result = BusinessHelp.Readcaipiaoleixing_TXT(path);
+                if (Result.Count != 0)
+                    BusinessHelp.Save_CaiPiaoZhongLei(Result);
+
+                path = AppDomain.CurrentDomain.BaseDirectory + "Resources\\号码单.txt";
+                List<inputCaipiaoDATA> Result2 = BusinessHelp.ReadcaipiaoFile_TXT(path);
+                if (Result2.Count != 0)
+                    BusinessHelp.SPInputclaimreport_Server(Result2);
+
+                NewMethod1();
+
+                MessageBox.Show("导入成功,可以使用了！");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("导入数据错误，请确认本地文件包解压是否正常" + ex, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+                throw;
+            }
+        }
+
+
     }
 }

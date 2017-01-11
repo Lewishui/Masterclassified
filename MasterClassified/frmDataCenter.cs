@@ -174,7 +174,7 @@ namespace MasterClassified
                     //    this.dataGridView1.DataSource = ClaimReport_Server;
                     //}
                 }
-                else if (s == 2)
+                else if (s == 1)
                 {
                     
 

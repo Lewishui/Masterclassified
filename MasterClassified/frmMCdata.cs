@@ -112,18 +112,20 @@ namespace MasterClassified
 
             foreach (var item in ClaimReport_Server)
             {
-                if (item.KaiJianHaoMa == null)
-                    continue;
-                string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
-                int lie = 2;
-                for (int i = 0; i < temp1.Length; i++)
+                if (item.KaiJianHaoMa != null)
                 {
-                    if (i >= temp1.Length)
-                        continue;
+                    //  continue;
+                    string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
+                    int lie = 2;
+                    for (int i = 0; i < temp1.Length; i++)
+                    {
+                        if (i >= temp1.Length)
+                            continue;
 
-                    qtyTable.Rows[jk][lie] = temp1[i];
-                    lie++;
+                        qtyTable.Rows[jk][lie] = temp1[i];
+                        lie++;
 
+                    }
                 }
                 qtyTable.Rows[jk][0] = item.QiHao;
                 qtyTable.Rows[jk][1] = item.KaiJianRiqi;
@@ -133,8 +135,9 @@ namespace MasterClassified
 
             //   sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(qtyTable);
 
-            this.bindingSource1.DataSource = null;
+            // this.bindingSource1.DataSource = null;
             this.bindingSource1.DataSource = qtyTable;
+            bindingSource1.Sort = "期号  ASC";
             this.dataGridView1.DataSource = this.bindingSource1;
 
             //  dataGridView1.DataSource = qtyTable;
@@ -150,25 +153,35 @@ namespace MasterClassified
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            string qi = ClaimReport_Server[ClaimReport_Server.Count - 1].QiHao;
+            string qi = DateTime.Now.ToString("yyyyMMddss");
 
-            int index = this.dataGridView1.Rows.Add();
+            if (ClaimReport_Server == null || ClaimReport_Server.Count == 0)
+            {
+                qi = DateTime.Now.ToString("yyyyMMddss");
+            }
+            else
+                qi = ClaimReport_Server[0].QiHao;
 
-            this.dataGridView1.Rows[index].Cells[0].Value = Convert.ToInt32(qi) + 1;
-            this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString("yyyy-MM-dd");
+            //int index = this.dataGridView1.Rows.Add();
+
+            //this.dataGridView1.Rows[index].Cells[0].Value = Convert.ToInt32(qi) + 1;
+            //this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString("yyyy-MM-dd");
 
             List<inputCaipiaoDATA> Result = new List<inputCaipiaoDATA>();
             inputCaipiaoDATA item = new inputCaipiaoDATA();
             int a = Convert.ToInt32(qi) + 1;
             item.QiHao = a.ToString();
-            item.KaiJianRiqi = DateTime.Now.ToString("yyyy-MM-dd").ToString();
+            item.Caipiaomingcheng = this.label2.Text.ToString();
+            item.KaiJianRiqi = DateTime.Now.ToString("yyyy/MM/dd").ToString();
             Result.Add(item);
 
             clsAllnew BusinessHelp = new clsAllnew();
 
             BusinessHelp.SPInputclaimreport_Server(Result);
-
-
+            InitialSystemInfo();
+            //dataGridView1.FirstDisplayedCell = dataGridView1.Rows[dataGridView1.RowCount - 1].Cells[0]; 
+            //dataGridView1.FirstDisplayedScrollingRowIndex = dataGridView1.RowCount - 1;// ;
+            dataGridView1.Rows[dataGridView1.RowCount - 1].Selected = true; 
             //DataGridViewRow row = new DataGridViewRow();
             //DataGridViewComboBoxCell comboxcell = new DataGridViewComboBoxCell();
             //row.Cells.Add(comboxcell);
@@ -335,9 +348,7 @@ namespace MasterClassified
 
                 }
                 dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
-
-
-
+                
                 if (frmTimeSelect == null)
                 {
                     frmTimeSelect = new frmTimeSelect();
@@ -439,19 +450,14 @@ namespace MasterClassified
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            string qi = ClaimReport_Server[ClaimReport_Server.Count - 1].QiHao;
-
-
-
-
+            //   string qi = ClaimReport_Server[ClaimReport_Server.Count - 1].QiHao;
             List<inputCaipiaoDATA> Result = new List<inputCaipiaoDATA>();
             inputCaipiaoDATA item = new inputCaipiaoDATA();
             item.QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
             item.KaiJianRiqi = this.dataGridView1.Rows[RowRemark].Cells[1].EditedFormattedValue.ToString();
-            //item.JiShu1 = this.dataGridView1.Rows[RowRemark].Cells[2].EditedFormattedValue.ToString();
-            //item.JiShu2 = this.dataGridView1.Rows[RowRemark].Cells[3].EditedFormattedValue.ToString();
-            //item.JiShu3 = this.dataGridView1.Rows[RowRemark].Cells[4].EditedFormattedValue.ToString();
+       
             item.Xuan = this.label8.Text;
+            item.Caipiaomingcheng = this.label2.Text.ToString();
             for (int i = 2; i < dataGridView1.ColumnCount; i++)
             {
 
@@ -467,14 +473,13 @@ namespace MasterClassified
             clsAllnew BusinessHelp = new clsAllnew();
 
             BusinessHelp.SPInputclaimreport_Server(Result);
-
-
+            
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
 
-            var form = new frmChangeCaiPiaodata(this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString());
+            var form = new frmChangeCaiPiaodata(this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString(), this.label2.Text.ToString());
             //var form1 = form.ShowDialog();
 
             if (form.ShowDialog() == DialogResult.OK)
@@ -487,7 +492,10 @@ namespace MasterClassified
 
         private void notifyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (RowRemark >= dataGridView1.Rows.Count)
+            {
+                RowRemark = RowRemark - 1;
+            }
             string QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
             clsAllnew BusinessHelp = new clsAllnew();
 
@@ -545,7 +553,7 @@ namespace MasterClassified
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string qi = ClaimReport_Server[ClaimReport_Server.Count - 1].QiHao;
+            // string qi = ClaimReport_Server[ClaimReport_Server.Count - 1].QiHao;
             List<inputCaipiaoDATA> Result = new List<inputCaipiaoDATA>();
             inputCaipiaoDATA item = new inputCaipiaoDATA();
             item.QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
@@ -564,7 +572,7 @@ namespace MasterClassified
             }
             item.KaiJianHaoMa = item.KaiJianHaoMa.Trim();
             item.Xuan = this.label8.Text;
-
+            item.Caipiaomingcheng = this.label2.Text.ToString();
             Result.Add(item);
 
             clsAllnew BusinessHelp = new clsAllnew();

@@ -46,7 +46,17 @@ namespace MasterClassified
             List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAnName();
             List<FangAnLieBiaoDATA> filtered = Result.FindAll(s => s.Name != null);
             this.listBox1.DataSource = filtered;
+            List<FangAnLieBiaoDATA> Result12 = BusinessHelp.Read_FangAn("YES");
+            int index = 0;
 
+            foreach (FangAnLieBiaoDATA ite in filtered)
+            {
+
+                if (Result12[0].Name == ite.Name)
+                    break;
+                index++;
+            }
+            listBox1.SelectedIndex = index;
 
         }
         private void button3_Click(object sender, EventArgs e)

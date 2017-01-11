@@ -67,6 +67,15 @@ namespace MasterClassified
 
             clsAllnew BusinessHelp = new clsAllnew();
             List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
+            if (CaipiaozhongleiResult.Count != 0)
+                this.label1.Text = "当前彩票类型：" + CaipiaozhongleiResult[0].Name;
+            else
+            {
+                MessageBox.Show("错误：请选择默认的彩票类型，再继续本界面的操作" , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            
+            }
+            //+"如数据或设置不能刷新请关闭本界面并重新在主界面打开"
 
 
             ClaimReport_Server = new List<inputCaipiaoDATA>();
@@ -141,7 +150,6 @@ namespace MasterClassified
         }
 
 
-
         private void AutoSizeColumn(DataGridView dgViewFiles)
         {
             int width = 0;
@@ -185,7 +193,7 @@ namespace MasterClassified
                     NewMethodtab1();
 
                 }
-                else if (s == 2)
+                else if (s == 1)
                 {
                     toolStripComboBox4.Items.Clear();
                     for (int i = 1; i <= 2000; i++)
@@ -372,9 +380,7 @@ namespace MasterClassified
             {
                 clsAllnew BusinessHelp = new clsAllnew();
                 List<string> qianmingcheng = new List<string>();
-
                 //ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
-
 
                 ClaimReport_Server.Sort(new CompsSmall());
                 int indexing = 0;
@@ -394,7 +400,6 @@ namespace MasterClassified
                             int xiangtongindex = 0;
                             string[] temp3 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
                             string[] temp1 = System.Text.RegularExpressions.Regex.Split(temp.KaiJianHaoMa, " ");
-
 
                             #region 匹配相同次数
                             for (int i = 0; i < temp3.Length; i++)
@@ -558,6 +563,8 @@ namespace MasterClassified
                 #region 添加 基数 和前几期对比
 
                 List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAn("YES");
+                if (Result.Count != 0)
+                    this.label2.Text = "当前方案名称：　" + Result[0].Name;
 
                 //showSuijiResultlist = new List<string>();
 
@@ -776,7 +783,7 @@ namespace MasterClassified
                 //ClaimReport_Server.Insert(0, item1);
                 // this.toolStripComboBox1.Items.Add("全部");
 
-             
+
                 toolStripLabel7.Text = "结束";
                 #endregion
             }
@@ -809,9 +816,9 @@ namespace MasterClassified
             if (s == 0)
             {
                 toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
-                GetDataforOutlookThread = new Thread(NewMethodtab1);
-                GetDataforOutlookThread.Start();
-
+                //GetDataforOutlookThread = new Thread(NewMethodtab1);
+                //GetDataforOutlookThread.Start();
+                NewMethodtab1();
             }
         }
         void FrmOMS_FormClosed(object sender, FormClosedEventArgs e)
@@ -1012,7 +1019,7 @@ namespace MasterClassified
                 if (UDF.Count != 0)
                 {
 
-                 
+
                     int s = this.tabControl1.SelectedIndex;
                     if (s == 0)
                     {
@@ -1022,7 +1029,7 @@ namespace MasterClassified
                         ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(CaipiaozhongleiResult[0].Name);
                         ClaimReport_Server.Sort(new Comp());
 
-                       // InitialSystemInfo();
+                        // InitialSystemInfo();
                         #region 原始 用  Dav 筛选
                         //   List<inputCaipiaoDATA> ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
                         #region 添加 基数 和前几期对比
@@ -1229,7 +1236,7 @@ namespace MasterClassified
 
                                 }
                             }
-                        } 
+                        }
                         #endregion
 
 
@@ -1257,7 +1264,7 @@ namespace MasterClassified
                     }
                 }
             }
-            else if (s2 == 2)
+            else if (s2 == 1)
             {
                 if (frmQianQiFenXi_Zidingyifenxi == null)
                 {
@@ -1322,6 +1329,7 @@ namespace MasterClassified
                     for (int m = 0; m < 9; m++)
                     {
                         qtyTable.Columns.Add("基" + m, System.Type.GetType("System.String"));
+                        dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { Width = 30, DataPropertyName = "基" + m });
 
                     }
 
@@ -1384,7 +1392,17 @@ namespace MasterClassified
                     this.bindingSource2.DataSource = qtyTable;
                     bindingSource2.Sort = "期号  ASC";
                     this.dataGridView1.DataSource = this.bindingSource2;
+                    for (int j = 2; j < 11; j++)
+                    {
 
+                        dataGridView1.Columns[j].Width = 30;
+                    }
+                }
+                else if (s == 1)
+                {
+
+                    qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
+                    tab2();
                 }
             }
             catch (Exception ex)
@@ -1550,7 +1568,7 @@ namespace MasterClassified
                     GetDataforOutlookThread = new Thread(NewMethodtab1);
                     GetDataforOutlookThread.Start();
                 }
-                else if (s == 2)
+                else if (s == 1)
                 {
                     toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
                     GetDataforOutlookThread = new Thread(tab2);
@@ -1587,16 +1605,16 @@ namespace MasterClassified
                     // 数据读取成功后在画面显示
                     if (blnBackGroundWorkIsOK)
                     {
-                        this.dataGridView1.DataSource = null;
-                        this.dataGridView1.AutoGenerateColumns = false;
-                        if (ClaimReport_Server.Count != 0)
-                        {
-                            this.bindingSource1.DataSource = null;
-                            this.bindingSource1.DataSource = sortablePendingOrderList;
+                        //this.dataGridView1.DataSource = null;
+                        //this.dataGridView1.AutoGenerateColumns = false;
+                        //if (ClaimReport_Server.Count != 0)
+                        //{
+                        //    this.bindingSource1.DataSource = null;
+                        //    this.bindingSource1.DataSource = sortablePendingOrderList;
 
-                            this.dataGridView1.DataSource = this.bindingSource1;
-                            //this.dataGridView1.DataSource = ClaimReport_Server;
-                        }
+                        //    this.dataGridView1.DataSource = this.bindingSource1;
+                        //    //this.dataGridView1.DataSource = ClaimReport_Server;
+                        //}
                     }
                 }
                 catch (Exception ex)
@@ -1615,12 +1633,36 @@ namespace MasterClassified
 
             DateTime oldDate = DateTime.Now;
 
+            // InitialSystemInfo();
+            //ClaimReport_Server = new List<inputCaipiaoDATA>();
+            //ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
+            //ClaimReport_Server.Sort(new Comp());
+
+            //sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(ClaimReport_Server);
+            List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
+            this.label1.Text = "当前彩票类型：" + CaipiaozhongleiResult[0].Name;
+            //+"如数据或设置不能刷新请关闭本界面并重新在主界面打开"
+
 
             ClaimReport_Server = new List<inputCaipiaoDATA>();
-            ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
+            ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(CaipiaozhongleiResult[0].Name);
             ClaimReport_Server.Sort(new Comp());
 
-            sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(ClaimReport_Server);
+            this.toolStripComboBox1.ComboBox.DisplayMember = "QiHao";
+            this.toolStripComboBox1.ComboBox.ValueMember = "QiHao";
+            this.toolStripComboBox1.ComboBox.DataSource = ClaimReport_Server;
+
+            this.toolStripComboBox2.ComboBox.DisplayMember = "QiHao";
+            this.toolStripComboBox2.ComboBox.ValueMember = "QiHao";
+            this.toolStripComboBox2.ComboBox.DataSource = ClaimReport_Server;
+
+            if (ClaimReport_Server.Count != 0)
+            {
+                this.toolStripComboBox1.SelectedIndex = 0;
+                this.toolStripComboBox2.SelectedIndex = ClaimReport_Server.Count - 1;
+                this.toolStripComboBox3.SelectedIndex = 2;
+                this.toolStripComboBox4.SelectedIndex = 2;
+            }
 
 
             DateTime FinishTime = DateTime.Now;
@@ -1700,6 +1742,16 @@ namespace MasterClassified
                 }
 
             }
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
         }
 
     }

@@ -47,8 +47,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.invoiceProcessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.导入彩票数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.导入彩票数据xlsxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.自动安装数据库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtSAPUserId = new System.Windows.Forms.ToolStripTextBox();
             this.tsbLogin = new System.Windows.Forms.ToolStripButton();
@@ -58,7 +58,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pBBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,7 +71,7 @@
             // invoiceProcessorToolStripMenuItem
             // 
             this.invoiceProcessorToolStripMenuItem.Name = "invoiceProcessorToolStripMenuItem";
-            this.invoiceProcessorToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.invoiceProcessorToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.invoiceProcessorToolStripMenuItem.Text = "彩票数据备份";
             this.invoiceProcessorToolStripMenuItem.Click += new System.EventHandler(this.invoiceProcessorToolStripMenuItem_Click);
             // 
@@ -80,8 +80,8 @@
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.invoiceProcessorToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.导入彩票数据ToolStripMenuItem,
-            this.导入彩票数据xlsxToolStripMenuItem,
             this.自动安装数据库ToolStripMenuItem});
             this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -90,23 +90,24 @@
             this.toolStripDropDownButton1.Text = "数据";
             this.toolStripDropDownButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(206, 26);
+            this.toolStripMenuItem1.Text = "彩票数据";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // 导入彩票数据ToolStripMenuItem
             // 
             this.导入彩票数据ToolStripMenuItem.Name = "导入彩票数据ToolStripMenuItem";
-            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.导入彩票数据ToolStripMenuItem.Text = "导入彩票数据(.txt)";
             this.导入彩票数据ToolStripMenuItem.Click += new System.EventHandler(this.导入彩票数据ToolStripMenuItem_Click);
-            // 
-            // 导入彩票数据xlsxToolStripMenuItem
-            // 
-            this.导入彩票数据xlsxToolStripMenuItem.Name = "导入彩票数据xlsxToolStripMenuItem";
-            this.导入彩票数据xlsxToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.导入彩票数据xlsxToolStripMenuItem.Text = "导入彩票数据(.xlsx)";
             // 
             // 自动安装数据库ToolStripMenuItem
             // 
             this.自动安装数据库ToolStripMenuItem.Name = "自动安装数据库ToolStripMenuItem";
-            this.自动安装数据库ToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.自动安装数据库ToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.自动安装数据库ToolStripMenuItem.Text = "自动安装数据库";
             this.自动安装数据库ToolStripMenuItem.Click += new System.EventHandler(this.自动安装数据库ToolStripMenuItem_Click);
             // 
@@ -142,14 +143,14 @@
             // 
             this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(44, 25);
+            this.toolStripLabel2.Size = new System.Drawing.Size(43, 25);
             this.toolStripLabel2.Text = "密码：";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(56, 23);
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 23);
             this.toolStripLabel1.Text = "用户名：";
             // 
             // toolStrip1
@@ -179,15 +180,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(958, 508);
+            this.panel1.Size = new System.Drawing.Size(958, 550);
             this.panel1.TabIndex = 7;
             // 
-            // toolStripMenuItem1
+            // toolStripMenuItem2
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(214, 26);
-            this.toolStripMenuItem1.Text = "彩票数据";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(206, 26);
+            this.toolStripMenuItem2.Text = "导入彩票类型(.txt)";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // dockPanel2
             // 
@@ -201,7 +202,7 @@
             this.dockPanel2.DocumentStyle = WeifenLuo.WinFormsUI.Docking.DocumentStyle.DockingWindow;
             this.dockPanel2.Location = new System.Drawing.Point(0, 28);
             this.dockPanel2.Name = "dockPanel2";
-            this.dockPanel2.Size = new System.Drawing.Size(958, 480);
+            this.dockPanel2.Size = new System.Drawing.Size(958, 522);
             dockPanelGradient1.EndColor = System.Drawing.SystemColors.ControlLight;
             dockPanelGradient1.StartColor = System.Drawing.SystemColors.ControlLight;
             autoHideStripSkin1.DockStripGradient = dockPanelGradient1;
@@ -288,9 +289,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 508);
+            this.ClientSize = new System.Drawing.Size(958, 550);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
@@ -321,10 +322,10 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripMenuItem 追踪分析ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 导入彩票数据ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 导入彩票数据xlsxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 自动安装数据库ToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 

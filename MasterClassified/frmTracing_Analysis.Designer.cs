@@ -29,120 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTracing_Analysis));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.QiHao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KaiJianHaoMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JiShu1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JiShu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JiShu3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JiShu4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JiShu5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JiShu6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JiShu7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JiShu8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JiShu9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian86 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian89 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian91 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian92 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian93 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian94 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian95 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian96 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian97 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian98 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qian100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -172,826 +60,134 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn86 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn89 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn91 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn92 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn93 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn94 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn95 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn96 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn97 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn98 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn101 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn102 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn103 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn104 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn105 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn106 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn107 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn108 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn109 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn110 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn111 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.QiHao,
-            this.KaiJianHaoMa,
-            this.JiShu1,
-            this.JiShu2,
-            this.JiShu3,
-            this.JiShu4,
-            this.JiShu5,
-            this.JiShu6,
-            this.JiShu7,
-            this.JiShu8,
-            this.JiShu9,
-            this.qian1,
-            this.qian2,
-            this.qian3,
-            this.qian4,
-            this.qian5,
-            this.qian6,
-            this.qian7,
-            this.qian8,
-            this.qian9,
-            this.qian10,
-            this.qian11,
-            this.qian12,
-            this.qian13,
-            this.qian14,
-            this.qian15,
-            this.qian16,
-            this.qian17,
-            this.qian18,
-            this.qian19,
-            this.qian20,
-            this.qian21,
-            this.qian22,
-            this.qian23,
-            this.qian24,
-            this.qian25,
-            this.qian26,
-            this.qian27,
-            this.qian28,
-            this.qian29,
-            this.qian30,
-            this.qian31,
-            this.qian32,
-            this.qian33,
-            this.qian34,
-            this.qian35,
-            this.qian36,
-            this.qian37,
-            this.qian38,
-            this.qian39,
-            this.qian40,
-            this.qian41,
-            this.qian42,
-            this.qian43,
-            this.qian44,
-            this.qian45,
-            this.qian46,
-            this.qian47,
-            this.qian48,
-            this.qian49,
-            this.qian50,
-            this.qian51,
-            this.qian52,
-            this.qian53,
-            this.qian54,
-            this.qian55,
-            this.qian56,
-            this.qian57,
-            this.qian58,
-            this.qian59,
-            this.qian60,
-            this.qian61,
-            this.qian62,
-            this.qian63,
-            this.qian64,
-            this.qian65,
-            this.qian66,
-            this.qian67,
-            this.qian68,
-            this.qian69,
-            this.qian70,
-            this.qian71,
-            this.qian72,
-            this.qian73,
-            this.qian74,
-            this.qian75,
-            this.qian76,
-            this.qian77,
-            this.qian78,
-            this.qian79,
-            this.qian80,
-            this.qian81,
-            this.qian82,
-            this.qian83,
-            this.qian84,
-            this.qian85,
-            this.qian86,
-            this.qian87,
-            this.qian88,
-            this.qian89,
-            this.qian90,
-            this.qian91,
-            this.qian92,
-            this.qian93,
-            this.qian94,
-            this.qian95,
-            this.qian96,
-            this.qian97,
-            this.qian98,
-            this.qian99,
-            this.qian100});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 20;
-            this.dataGridView1.Size = new System.Drawing.Size(1038, 391);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // QiHao
-            // 
-            this.QiHao.DataPropertyName = "QiHao";
-            this.QiHao.HeaderText = "期号";
-            this.QiHao.Name = "QiHao";
-            // 
-            // KaiJianHaoMa
-            // 
-            this.KaiJianHaoMa.DataPropertyName = "KaiJianHaoMa";
-            this.KaiJianHaoMa.HeaderText = "开奖号码";
-            this.KaiJianHaoMa.Name = "KaiJianHaoMa";
-            // 
-            // JiShu1
-            // 
-            this.JiShu1.DataPropertyName = "JiShu1";
-            this.JiShu1.HeaderText = "基1";
-            this.JiShu1.Name = "JiShu1";
-            this.JiShu1.Width = 20;
-            // 
-            // JiShu2
-            // 
-            this.JiShu2.DataPropertyName = "JiShu2";
-            this.JiShu2.HeaderText = "基2";
-            this.JiShu2.Name = "JiShu2";
-            this.JiShu2.Width = 20;
-            // 
-            // JiShu3
-            // 
-            this.JiShu3.DataPropertyName = "JiShu3";
-            this.JiShu3.HeaderText = "基3";
-            this.JiShu3.Name = "JiShu3";
-            this.JiShu3.Width = 20;
-            // 
-            // JiShu4
-            // 
-            this.JiShu4.DataPropertyName = "JiShu4";
-            this.JiShu4.HeaderText = "基4";
-            this.JiShu4.Name = "JiShu4";
-            this.JiShu4.Width = 20;
-            // 
-            // JiShu5
-            // 
-            this.JiShu5.DataPropertyName = "JiShu5";
-            this.JiShu5.HeaderText = "基5";
-            this.JiShu5.Name = "JiShu5";
-            this.JiShu5.Width = 20;
-            // 
-            // JiShu6
-            // 
-            this.JiShu6.DataPropertyName = "JiShu6";
-            this.JiShu6.HeaderText = "基6";
-            this.JiShu6.Name = "JiShu6";
-            this.JiShu6.Width = 20;
-            // 
-            // JiShu7
-            // 
-            this.JiShu7.DataPropertyName = "JiShu7";
-            this.JiShu7.HeaderText = "基7";
-            this.JiShu7.Name = "JiShu7";
-            this.JiShu7.Width = 20;
-            // 
-            // JiShu8
-            // 
-            this.JiShu8.DataPropertyName = "JiShu8";
-            this.JiShu8.HeaderText = "基8";
-            this.JiShu8.Name = "JiShu8";
-            this.JiShu8.Width = 20;
-            // 
-            // JiShu9
-            // 
-            this.JiShu9.DataPropertyName = "JiShu9";
-            this.JiShu9.HeaderText = "基9";
-            this.JiShu9.Name = "JiShu9";
-            this.JiShu9.Width = 30;
-            // 
-            // qian1
-            // 
-            this.qian1.DataPropertyName = "qian1";
-            this.qian1.HeaderText = "前第1期相同位置";
-            this.qian1.Name = "qian1";
-            this.qian1.Width = 90;
-            // 
-            // qian2
-            // 
-            this.qian2.DataPropertyName = "qian2";
-            this.qian2.HeaderText = "前第2期相同位置";
-            this.qian2.Name = "qian2";
-            // 
-            // qian3
-            // 
-            this.qian3.DataPropertyName = "qian3";
-            this.qian3.HeaderText = "前第3期相同位置";
-            this.qian3.Name = "qian3";
-            // 
-            // qian4
-            // 
-            this.qian4.DataPropertyName = "qian4";
-            this.qian4.HeaderText = "前第4期相同位置";
-            this.qian4.Name = "qian4";
-            // 
-            // qian5
-            // 
-            this.qian5.DataPropertyName = "qian5";
-            this.qian5.HeaderText = "前第5期相同位置";
-            this.qian5.Name = "qian5";
-            // 
-            // qian6
-            // 
-            this.qian6.DataPropertyName = "qian6";
-            this.qian6.HeaderText = "前第6期相同位置";
-            this.qian6.Name = "qian6";
-            // 
-            // qian7
-            // 
-            this.qian7.DataPropertyName = "qian7";
-            this.qian7.HeaderText = "前第7期相同位置";
-            this.qian7.Name = "qian7";
-            // 
-            // qian8
-            // 
-            this.qian8.DataPropertyName = "qian8";
-            this.qian8.HeaderText = "前第8期相同位置";
-            this.qian8.Name = "qian8";
-            // 
-            // qian9
-            // 
-            this.qian9.DataPropertyName = "qian9";
-            this.qian9.HeaderText = "前第9期相同位置";
-            this.qian9.Name = "qian9";
-            // 
-            // qian10
-            // 
-            this.qian10.DataPropertyName = "qian10";
-            this.qian10.HeaderText = "前第10期相同位置";
-            this.qian10.Name = "qian10";
-            // 
-            // qian11
-            // 
-            this.qian11.DataPropertyName = "qian11";
-            this.qian11.HeaderText = "前第11期相同位置";
-            this.qian11.Name = "qian11";
-            // 
-            // qian12
-            // 
-            this.qian12.DataPropertyName = "qian12";
-            this.qian12.HeaderText = "前第12期相同位置";
-            this.qian12.Name = "qian12";
-            // 
-            // qian13
-            // 
-            this.qian13.DataPropertyName = "qian13";
-            this.qian13.HeaderText = "前第13期相同位置";
-            this.qian13.Name = "qian13";
-            // 
-            // qian14
-            // 
-            this.qian14.DataPropertyName = "qian14";
-            this.qian14.HeaderText = "前第14期相同位置";
-            this.qian14.Name = "qian14";
-            // 
-            // qian15
-            // 
-            this.qian15.DataPropertyName = "qian15";
-            this.qian15.HeaderText = "前第15期相同位置";
-            this.qian15.Name = "qian15";
-            // 
-            // qian16
-            // 
-            this.qian16.DataPropertyName = "qian16";
-            this.qian16.HeaderText = "前第16期相同位置";
-            this.qian16.Name = "qian16";
-            // 
-            // qian17
-            // 
-            this.qian17.DataPropertyName = "qian17";
-            this.qian17.HeaderText = "前第17期相同位置";
-            this.qian17.Name = "qian17";
-            // 
-            // qian18
-            // 
-            this.qian18.DataPropertyName = "qian18";
-            this.qian18.HeaderText = "前第18期相同位置";
-            this.qian18.Name = "qian18";
-            // 
-            // qian19
-            // 
-            this.qian19.DataPropertyName = "qian19";
-            this.qian19.HeaderText = "前第19期相同位置";
-            this.qian19.Name = "qian19";
-            // 
-            // qian20
-            // 
-            this.qian20.DataPropertyName = "qian20";
-            this.qian20.HeaderText = "前第20期相同位置";
-            this.qian20.Name = "qian20";
-            // 
-            // qian21
-            // 
-            this.qian21.DataPropertyName = "qian21";
-            this.qian21.HeaderText = "前第21期相同位置";
-            this.qian21.Name = "qian21";
-            // 
-            // qian22
-            // 
-            this.qian22.DataPropertyName = "qian22";
-            this.qian22.HeaderText = "前第22期相同位置";
-            this.qian22.Name = "qian22";
-            // 
-            // qian23
-            // 
-            this.qian23.DataPropertyName = "qian23";
-            this.qian23.HeaderText = "前第23期相同位置";
-            this.qian23.Name = "qian23";
-            // 
-            // qian24
-            // 
-            this.qian24.DataPropertyName = "qian24";
-            this.qian24.HeaderText = "前第24期相同位置";
-            this.qian24.Name = "qian24";
-            // 
-            // qian25
-            // 
-            this.qian25.DataPropertyName = "qian25";
-            this.qian25.HeaderText = "前第25期相同位置";
-            this.qian25.Name = "qian25";
-            // 
-            // qian26
-            // 
-            this.qian26.DataPropertyName = "qian26";
-            this.qian26.HeaderText = "前第26期相同位置";
-            this.qian26.Name = "qian26";
-            // 
-            // qian27
-            // 
-            this.qian27.DataPropertyName = "qian27";
-            this.qian27.HeaderText = "前第27期相同位置";
-            this.qian27.Name = "qian27";
-            // 
-            // qian28
-            // 
-            this.qian28.DataPropertyName = "qian28";
-            this.qian28.HeaderText = "前第28期相同位置";
-            this.qian28.Name = "qian28";
-            // 
-            // qian29
-            // 
-            this.qian29.DataPropertyName = "qian29";
-            this.qian29.HeaderText = "前第29期相同位置";
-            this.qian29.Name = "qian29";
-            // 
-            // qian30
-            // 
-            this.qian30.DataPropertyName = "qian30";
-            this.qian30.HeaderText = "前第30期相同位置";
-            this.qian30.Name = "qian30";
-            // 
-            // qian31
-            // 
-            this.qian31.DataPropertyName = "qian31";
-            this.qian31.HeaderText = "前第31期相同位置";
-            this.qian31.Name = "qian31";
-            // 
-            // qian32
-            // 
-            this.qian32.DataPropertyName = "qian32";
-            this.qian32.HeaderText = "前第32期相同位置";
-            this.qian32.Name = "qian32";
-            // 
-            // qian33
-            // 
-            this.qian33.DataPropertyName = "qian33";
-            this.qian33.HeaderText = "前第33期相同位置";
-            this.qian33.Name = "qian33";
-            // 
-            // qian34
-            // 
-            this.qian34.DataPropertyName = "qian34";
-            this.qian34.HeaderText = "前第34期相同位置";
-            this.qian34.Name = "qian34";
-            // 
-            // qian35
-            // 
-            this.qian35.DataPropertyName = "qian35";
-            this.qian35.HeaderText = "前第35期相同位置";
-            this.qian35.Name = "qian35";
-            // 
-            // qian36
-            // 
-            this.qian36.DataPropertyName = "qian36";
-            this.qian36.HeaderText = "前第36期相同位置";
-            this.qian36.Name = "qian36";
-            // 
-            // qian37
-            // 
-            this.qian37.DataPropertyName = "qian37";
-            this.qian37.HeaderText = "前第37期相同位置";
-            this.qian37.Name = "qian37";
-            // 
-            // qian38
-            // 
-            this.qian38.DataPropertyName = "qian38";
-            this.qian38.HeaderText = "前第38期相同位置";
-            this.qian38.Name = "qian38";
-            // 
-            // qian39
-            // 
-            this.qian39.DataPropertyName = "qian39";
-            this.qian39.HeaderText = "前第39期相同位置";
-            this.qian39.Name = "qian39";
-            // 
-            // qian40
-            // 
-            this.qian40.DataPropertyName = "qian40";
-            this.qian40.HeaderText = "前第40期相同位置";
-            this.qian40.Name = "qian40";
-            // 
-            // qian41
-            // 
-            this.qian41.DataPropertyName = "qian41";
-            this.qian41.HeaderText = "前第41期相同位置";
-            this.qian41.Name = "qian41";
-            // 
-            // qian42
-            // 
-            this.qian42.DataPropertyName = "qian42";
-            this.qian42.HeaderText = "前第42期相同位置";
-            this.qian42.Name = "qian42";
-            // 
-            // qian43
-            // 
-            this.qian43.DataPropertyName = "qian43";
-            this.qian43.HeaderText = "前第43期相同位置";
-            this.qian43.Name = "qian43";
-            // 
-            // qian44
-            // 
-            this.qian44.DataPropertyName = "qian44";
-            this.qian44.HeaderText = "前第44期相同位置";
-            this.qian44.Name = "qian44";
-            // 
-            // qian45
-            // 
-            this.qian45.DataPropertyName = "qian45";
-            this.qian45.HeaderText = "前第45期相同位置";
-            this.qian45.Name = "qian45";
-            // 
-            // qian46
-            // 
-            this.qian46.DataPropertyName = "qian46";
-            this.qian46.HeaderText = "前第46期相同位置";
-            this.qian46.Name = "qian46";
-            // 
-            // qian47
-            // 
-            this.qian47.DataPropertyName = "qian47";
-            this.qian47.HeaderText = "前第47期相同位置";
-            this.qian47.Name = "qian47";
-            // 
-            // qian48
-            // 
-            this.qian48.DataPropertyName = "qian49";
-            this.qian48.HeaderText = "前第48期相同位置";
-            this.qian48.Name = "qian48";
-            // 
-            // qian49
-            // 
-            this.qian49.DataPropertyName = "qian49";
-            this.qian49.HeaderText = "前第49期相同位置";
-            this.qian49.Name = "qian49";
-            // 
-            // qian50
-            // 
-            this.qian50.DataPropertyName = "qian50";
-            this.qian50.HeaderText = "前第50期相同位置";
-            this.qian50.Name = "qian50";
-            // 
-            // qian51
-            // 
-            this.qian51.DataPropertyName = "qian51";
-            this.qian51.HeaderText = "前第51期相同位置";
-            this.qian51.Name = "qian51";
-            // 
-            // qian52
-            // 
-            this.qian52.DataPropertyName = "qian52";
-            this.qian52.HeaderText = "前第52期相同位置";
-            this.qian52.Name = "qian52";
-            // 
-            // qian53
-            // 
-            this.qian53.DataPropertyName = "qian53";
-            this.qian53.HeaderText = "前第53期相同位置";
-            this.qian53.Name = "qian53";
-            // 
-            // qian54
-            // 
-            this.qian54.DataPropertyName = "qian54";
-            this.qian54.HeaderText = "前第54期相同位置";
-            this.qian54.Name = "qian54";
-            // 
-            // qian55
-            // 
-            this.qian55.DataPropertyName = "qian55";
-            this.qian55.HeaderText = "前第55期相同位置";
-            this.qian55.Name = "qian55";
-            // 
-            // qian56
-            // 
-            this.qian56.DataPropertyName = "qian56";
-            this.qian56.HeaderText = "前第56期相同位置";
-            this.qian56.Name = "qian56";
-            // 
-            // qian57
-            // 
-            this.qian57.DataPropertyName = "qian57";
-            this.qian57.HeaderText = "前第57期相同位置";
-            this.qian57.Name = "qian57";
-            // 
-            // qian58
-            // 
-            this.qian58.DataPropertyName = "qian58";
-            this.qian58.HeaderText = "前第58期相同位置";
-            this.qian58.Name = "qian58";
-            // 
-            // qian59
-            // 
-            this.qian59.DataPropertyName = "qian59";
-            this.qian59.HeaderText = "前第59期相同位置";
-            this.qian59.Name = "qian59";
-            // 
-            // qian60
-            // 
-            this.qian60.DataPropertyName = "qian60";
-            this.qian60.HeaderText = "前第60期相同位置";
-            this.qian60.Name = "qian60";
-            // 
-            // qian61
-            // 
-            this.qian61.DataPropertyName = "qian61";
-            this.qian61.HeaderText = "前第61期相同位置";
-            this.qian61.Name = "qian61";
-            // 
-            // qian62
-            // 
-            this.qian62.DataPropertyName = "qian62";
-            this.qian62.HeaderText = "前第62期相同位置";
-            this.qian62.Name = "qian62";
-            // 
-            // qian63
-            // 
-            this.qian63.DataPropertyName = "qian63";
-            this.qian63.HeaderText = "前第63期相同位置";
-            this.qian63.Name = "qian63";
-            // 
-            // qian64
-            // 
-            this.qian64.DataPropertyName = "qian64";
-            this.qian64.HeaderText = "前第64期相同位置";
-            this.qian64.Name = "qian64";
-            // 
-            // qian65
-            // 
-            this.qian65.DataPropertyName = "qian65";
-            this.qian65.HeaderText = "前第65期相同位置";
-            this.qian65.Name = "qian65";
-            // 
-            // qian66
-            // 
-            this.qian66.DataPropertyName = "qian66";
-            this.qian66.HeaderText = "前第66期相同位置";
-            this.qian66.Name = "qian66";
-            // 
-            // qian67
-            // 
-            this.qian67.DataPropertyName = "qian67";
-            this.qian67.HeaderText = "前第67期相同位置";
-            this.qian67.Name = "qian67";
-            // 
-            // qian68
-            // 
-            this.qian68.DataPropertyName = "qian68";
-            this.qian68.HeaderText = "前第68期相同位置";
-            this.qian68.Name = "qian68";
-            // 
-            // qian69
-            // 
-            this.qian69.DataPropertyName = "qian69";
-            this.qian69.HeaderText = "前第69期相同位置";
-            this.qian69.Name = "qian69";
-            // 
-            // qian70
-            // 
-            this.qian70.DataPropertyName = "qian70";
-            this.qian70.HeaderText = "前第70期相同位置";
-            this.qian70.Name = "qian70";
-            // 
-            // qian71
-            // 
-            this.qian71.DataPropertyName = "qian71";
-            this.qian71.HeaderText = "前第71期相同位置";
-            this.qian71.Name = "qian71";
-            // 
-            // qian72
-            // 
-            this.qian72.DataPropertyName = "qian72";
-            this.qian72.HeaderText = "前第72期相同位置";
-            this.qian72.Name = "qian72";
-            // 
-            // qian73
-            // 
-            this.qian73.DataPropertyName = "qian73";
-            this.qian73.HeaderText = "前第73期相同位置";
-            this.qian73.Name = "qian73";
-            // 
-            // qian74
-            // 
-            this.qian74.DataPropertyName = "qian74";
-            this.qian74.HeaderText = "前第74期相同位置";
-            this.qian74.Name = "qian74";
-            // 
-            // qian75
-            // 
-            this.qian75.DataPropertyName = "qian75";
-            this.qian75.HeaderText = "前第75期相同位置";
-            this.qian75.Name = "qian75";
-            // 
-            // qian76
-            // 
-            this.qian76.DataPropertyName = "qian76";
-            this.qian76.HeaderText = "前第76期相同位置";
-            this.qian76.Name = "qian76";
-            // 
-            // qian77
-            // 
-            this.qian77.DataPropertyName = "qian77";
-            this.qian77.HeaderText = "前第77期相同位置";
-            this.qian77.Name = "qian77";
-            // 
-            // qian78
-            // 
-            this.qian78.DataPropertyName = "qian78";
-            this.qian78.HeaderText = "前第78期相同位置";
-            this.qian78.Name = "qian78";
-            // 
-            // qian79
-            // 
-            this.qian79.DataPropertyName = "qian79";
-            this.qian79.HeaderText = "前第79期相同位置";
-            this.qian79.Name = "qian79";
-            // 
-            // qian80
-            // 
-            this.qian80.DataPropertyName = "qian80";
-            this.qian80.HeaderText = "前第80期相同位置";
-            this.qian80.Name = "qian80";
-            // 
-            // qian81
-            // 
-            this.qian81.DataPropertyName = "qian81";
-            this.qian81.HeaderText = "前第81期相同位置";
-            this.qian81.Name = "qian81";
-            // 
-            // qian82
-            // 
-            this.qian82.DataPropertyName = "qian82";
-            this.qian82.HeaderText = "前第82期相同位置";
-            this.qian82.Name = "qian82";
-            // 
-            // qian83
-            // 
-            this.qian83.DataPropertyName = "qian83";
-            this.qian83.HeaderText = "前第83期相同位置";
-            this.qian83.Name = "qian83";
-            // 
-            // qian84
-            // 
-            this.qian84.DataPropertyName = "qian84";
-            this.qian84.HeaderText = "前第84期相同位置";
-            this.qian84.Name = "qian84";
-            // 
-            // qian85
-            // 
-            this.qian85.DataPropertyName = "qian85";
-            this.qian85.HeaderText = "前第85期相同位置";
-            this.qian85.Name = "qian85";
-            // 
-            // qian86
-            // 
-            this.qian86.DataPropertyName = "qian86";
-            this.qian86.HeaderText = "前第86期相同位置";
-            this.qian86.Name = "qian86";
-            // 
-            // qian87
-            // 
-            this.qian87.DataPropertyName = "qian87";
-            this.qian87.HeaderText = "前第87期相同位置";
-            this.qian87.Name = "qian87";
-            // 
-            // qian88
-            // 
-            this.qian88.DataPropertyName = "qian88";
-            this.qian88.HeaderText = "前第88期相同位置";
-            this.qian88.Name = "qian88";
-            // 
-            // qian89
-            // 
-            this.qian89.DataPropertyName = "qian89";
-            this.qian89.HeaderText = "前第89期相同位置";
-            this.qian89.Name = "qian89";
-            // 
-            // qian90
-            // 
-            this.qian90.DataPropertyName = "qian90";
-            this.qian90.HeaderText = "前第90期相同位置";
-            this.qian90.Name = "qian90";
-            // 
-            // qian91
-            // 
-            this.qian91.DataPropertyName = "qian91";
-            this.qian91.HeaderText = "前第91期相同位置";
-            this.qian91.Name = "qian91";
-            // 
-            // qian92
-            // 
-            this.qian92.DataPropertyName = "qian92";
-            this.qian92.HeaderText = "前第92期相同位置";
-            this.qian92.Name = "qian92";
-            // 
-            // qian93
-            // 
-            this.qian93.DataPropertyName = "qian93";
-            this.qian93.HeaderText = "前第93期相同位置";
-            this.qian93.Name = "qian93";
-            // 
-            // qian94
-            // 
-            this.qian94.DataPropertyName = "qian94";
-            this.qian94.HeaderText = "前第94期相同位置";
-            this.qian94.Name = "qian94";
-            // 
-            // qian95
-            // 
-            this.qian95.DataPropertyName = "qian95";
-            this.qian95.HeaderText = "前第95期相同位置";
-            this.qian95.Name = "qian95";
-            // 
-            // qian96
-            // 
-            this.qian96.DataPropertyName = "qian96";
-            this.qian96.HeaderText = "前第96期相同位置";
-            this.qian96.Name = "qian96";
-            // 
-            // qian97
-            // 
-            this.qian97.DataPropertyName = "qian97";
-            this.qian97.HeaderText = "前第97期相同位置";
-            this.qian97.Name = "qian97";
-            // 
-            // qian98
-            // 
-            this.qian98.DataPropertyName = "qian98";
-            this.qian98.HeaderText = "前第98期相同位置";
-            this.qian98.Name = "qian98";
-            // 
-            // qian99
-            // 
-            this.qian99.DataPropertyName = "qian99";
-            this.qian99.HeaderText = "前第99期相同位置";
-            this.qian99.Name = "qian99";
-            // 
-            // qian100
-            // 
-            this.qian100.DataPropertyName = "qian100";
-            this.qian100.HeaderText = "前第100期相同位置";
-            this.qian100.Name = "qian100";
             // 
             // tableLayoutPanel1
             // 
@@ -1037,6 +233,7 @@
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(81, 26);
             this.toolStripDropDownButton1.Text = "高级编辑";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // 设置ToolStripMenuItem
             // 
@@ -1109,6 +306,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -1191,8 +389,11 @@
             // toolStripComboBox2
             // 
             this.toolStripComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBox2.Items.AddRange(new object[] {
+            "-空-"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
             this.toolStripComboBox2.Size = new System.Drawing.Size(100, 25);
+            this.toolStripComboBox2.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox2_SelectedIndexChanged);
             // 
             // toolStripLabel5
             // 
@@ -1377,6 +578,825 @@
             this.textBox1.Size = new System.Drawing.Size(162, 31);
             this.textBox1.TabIndex = 0;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn47,
+            this.dataGridViewTextBoxColumn48,
+            this.dataGridViewTextBoxColumn49,
+            this.dataGridViewTextBoxColumn50,
+            this.dataGridViewTextBoxColumn51,
+            this.dataGridViewTextBoxColumn52,
+            this.dataGridViewTextBoxColumn53,
+            this.dataGridViewTextBoxColumn54,
+            this.dataGridViewTextBoxColumn55,
+            this.dataGridViewTextBoxColumn56,
+            this.dataGridViewTextBoxColumn57,
+            this.dataGridViewTextBoxColumn58,
+            this.dataGridViewTextBoxColumn59,
+            this.dataGridViewTextBoxColumn60,
+            this.dataGridViewTextBoxColumn61,
+            this.dataGridViewTextBoxColumn62,
+            this.dataGridViewTextBoxColumn63,
+            this.dataGridViewTextBoxColumn64,
+            this.dataGridViewTextBoxColumn65,
+            this.dataGridViewTextBoxColumn66,
+            this.dataGridViewTextBoxColumn67,
+            this.dataGridViewTextBoxColumn68,
+            this.dataGridViewTextBoxColumn69,
+            this.dataGridViewTextBoxColumn70,
+            this.dataGridViewTextBoxColumn71,
+            this.dataGridViewTextBoxColumn72,
+            this.dataGridViewTextBoxColumn73,
+            this.dataGridViewTextBoxColumn74,
+            this.dataGridViewTextBoxColumn75,
+            this.dataGridViewTextBoxColumn76,
+            this.dataGridViewTextBoxColumn77,
+            this.dataGridViewTextBoxColumn78,
+            this.dataGridViewTextBoxColumn79,
+            this.dataGridViewTextBoxColumn80,
+            this.dataGridViewTextBoxColumn81,
+            this.dataGridViewTextBoxColumn82,
+            this.dataGridViewTextBoxColumn83,
+            this.dataGridViewTextBoxColumn84,
+            this.dataGridViewTextBoxColumn85,
+            this.dataGridViewTextBoxColumn86,
+            this.dataGridViewTextBoxColumn87,
+            this.dataGridViewTextBoxColumn88,
+            this.dataGridViewTextBoxColumn89,
+            this.dataGridViewTextBoxColumn90,
+            this.dataGridViewTextBoxColumn91,
+            this.dataGridViewTextBoxColumn92,
+            this.dataGridViewTextBoxColumn93,
+            this.dataGridViewTextBoxColumn94,
+            this.dataGridViewTextBoxColumn95,
+            this.dataGridViewTextBoxColumn96,
+            this.dataGridViewTextBoxColumn97,
+            this.dataGridViewTextBoxColumn98,
+            this.dataGridViewTextBoxColumn99,
+            this.dataGridViewTextBoxColumn100,
+            this.dataGridViewTextBoxColumn101,
+            this.dataGridViewTextBoxColumn102,
+            this.dataGridViewTextBoxColumn103,
+            this.dataGridViewTextBoxColumn104,
+            this.dataGridViewTextBoxColumn105,
+            this.dataGridViewTextBoxColumn106,
+            this.dataGridViewTextBoxColumn107,
+            this.dataGridViewTextBoxColumn108,
+            this.dataGridViewTextBoxColumn109,
+            this.dataGridViewTextBoxColumn110,
+            this.dataGridViewTextBoxColumn111});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 20;
+            this.dataGridView3.Size = new System.Drawing.Size(1038, 391);
+            this.dataGridView3.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "QiHao";
+            this.dataGridViewTextBoxColumn1.HeaderText = "期号";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "KaiJianHaoMa";
+            this.dataGridViewTextBoxColumn2.HeaderText = "开奖号码";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "JiShu1";
+            this.dataGridViewTextBoxColumn3.HeaderText = "基1";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "JiShu2";
+            this.dataGridViewTextBoxColumn4.HeaderText = "基2";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "JiShu3";
+            this.dataGridViewTextBoxColumn5.HeaderText = "基3";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "JiShu4";
+            this.dataGridViewTextBoxColumn6.HeaderText = "基4";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "JiShu5";
+            this.dataGridViewTextBoxColumn7.HeaderText = "基5";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "JiShu6";
+            this.dataGridViewTextBoxColumn8.HeaderText = "基6";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "JiShu7";
+            this.dataGridViewTextBoxColumn9.HeaderText = "基7";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "JiShu8";
+            this.dataGridViewTextBoxColumn10.HeaderText = "基8";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "JiShu9";
+            this.dataGridViewTextBoxColumn11.HeaderText = "基9";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "qian1";
+            this.dataGridViewTextBoxColumn12.HeaderText = "前第1期相同位置";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "qian2";
+            this.dataGridViewTextBoxColumn13.HeaderText = "前第2期相同位置";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "qian3";
+            this.dataGridViewTextBoxColumn14.HeaderText = "前第3期相同位置";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "qian4";
+            this.dataGridViewTextBoxColumn15.HeaderText = "前第4期相同位置";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "qian5";
+            this.dataGridViewTextBoxColumn16.HeaderText = "前第5期相同位置";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "qian6";
+            this.dataGridViewTextBoxColumn17.HeaderText = "前第6期相同位置";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "qian7";
+            this.dataGridViewTextBoxColumn18.HeaderText = "前第7期相同位置";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "qian8";
+            this.dataGridViewTextBoxColumn19.HeaderText = "前第8期相同位置";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "qian9";
+            this.dataGridViewTextBoxColumn20.HeaderText = "前第9期相同位置";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "qian10";
+            this.dataGridViewTextBoxColumn21.HeaderText = "前第10期相同位置";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "qian11";
+            this.dataGridViewTextBoxColumn22.HeaderText = "前第11期相同位置";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "qian12";
+            this.dataGridViewTextBoxColumn23.HeaderText = "前第12期相同位置";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "qian13";
+            this.dataGridViewTextBoxColumn24.HeaderText = "前第13期相同位置";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "qian14";
+            this.dataGridViewTextBoxColumn25.HeaderText = "前第14期相同位置";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "qian15";
+            this.dataGridViewTextBoxColumn26.HeaderText = "前第15期相同位置";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "qian16";
+            this.dataGridViewTextBoxColumn27.HeaderText = "前第16期相同位置";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "qian17";
+            this.dataGridViewTextBoxColumn28.HeaderText = "前第17期相同位置";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "qian18";
+            this.dataGridViewTextBoxColumn29.HeaderText = "前第18期相同位置";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "qian19";
+            this.dataGridViewTextBoxColumn30.HeaderText = "前第19期相同位置";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "qian20";
+            this.dataGridViewTextBoxColumn31.HeaderText = "前第20期相同位置";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "qian21";
+            this.dataGridViewTextBoxColumn32.HeaderText = "前第21期相同位置";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "qian22";
+            this.dataGridViewTextBoxColumn33.HeaderText = "前第22期相同位置";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "qian23";
+            this.dataGridViewTextBoxColumn34.HeaderText = "前第23期相同位置";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "qian24";
+            this.dataGridViewTextBoxColumn35.HeaderText = "前第24期相同位置";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "qian25";
+            this.dataGridViewTextBoxColumn36.HeaderText = "前第25期相同位置";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "qian26";
+            this.dataGridViewTextBoxColumn37.HeaderText = "前第26期相同位置";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "qian27";
+            this.dataGridViewTextBoxColumn38.HeaderText = "前第27期相同位置";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "qian28";
+            this.dataGridViewTextBoxColumn39.HeaderText = "前第28期相同位置";
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "qian29";
+            this.dataGridViewTextBoxColumn40.HeaderText = "前第29期相同位置";
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "qian30";
+            this.dataGridViewTextBoxColumn41.HeaderText = "前第30期相同位置";
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.DataPropertyName = "qian31";
+            this.dataGridViewTextBoxColumn42.HeaderText = "前第31期相同位置";
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.DataPropertyName = "qian32";
+            this.dataGridViewTextBoxColumn43.HeaderText = "前第32期相同位置";
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.DataPropertyName = "qian33";
+            this.dataGridViewTextBoxColumn44.HeaderText = "前第33期相同位置";
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "qian34";
+            this.dataGridViewTextBoxColumn45.HeaderText = "前第34期相同位置";
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "qian35";
+            this.dataGridViewTextBoxColumn46.HeaderText = "前第35期相同位置";
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "qian36";
+            this.dataGridViewTextBoxColumn47.HeaderText = "前第36期相同位置";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "qian37";
+            this.dataGridViewTextBoxColumn48.HeaderText = "前第37期相同位置";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "qian38";
+            this.dataGridViewTextBoxColumn49.HeaderText = "前第38期相同位置";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "qian39";
+            this.dataGridViewTextBoxColumn50.HeaderText = "前第39期相同位置";
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            this.dataGridViewTextBoxColumn51.DataPropertyName = "qian40";
+            this.dataGridViewTextBoxColumn51.HeaderText = "前第40期相同位置";
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            // 
+            // dataGridViewTextBoxColumn52
+            // 
+            this.dataGridViewTextBoxColumn52.DataPropertyName = "qian41";
+            this.dataGridViewTextBoxColumn52.HeaderText = "前第41期相同位置";
+            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
+            // 
+            // dataGridViewTextBoxColumn53
+            // 
+            this.dataGridViewTextBoxColumn53.DataPropertyName = "qian42";
+            this.dataGridViewTextBoxColumn53.HeaderText = "前第42期相同位置";
+            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
+            // 
+            // dataGridViewTextBoxColumn54
+            // 
+            this.dataGridViewTextBoxColumn54.DataPropertyName = "qian43";
+            this.dataGridViewTextBoxColumn54.HeaderText = "前第43期相同位置";
+            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
+            // 
+            // dataGridViewTextBoxColumn55
+            // 
+            this.dataGridViewTextBoxColumn55.DataPropertyName = "qian44";
+            this.dataGridViewTextBoxColumn55.HeaderText = "前第44期相同位置";
+            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
+            // 
+            // dataGridViewTextBoxColumn56
+            // 
+            this.dataGridViewTextBoxColumn56.DataPropertyName = "qian45";
+            this.dataGridViewTextBoxColumn56.HeaderText = "前第45期相同位置";
+            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
+            // 
+            // dataGridViewTextBoxColumn57
+            // 
+            this.dataGridViewTextBoxColumn57.DataPropertyName = "qian46";
+            this.dataGridViewTextBoxColumn57.HeaderText = "前第46期相同位置";
+            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
+            // 
+            // dataGridViewTextBoxColumn58
+            // 
+            this.dataGridViewTextBoxColumn58.DataPropertyName = "qian47";
+            this.dataGridViewTextBoxColumn58.HeaderText = "前第47期相同位置";
+            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
+            // 
+            // dataGridViewTextBoxColumn59
+            // 
+            this.dataGridViewTextBoxColumn59.DataPropertyName = "qian49";
+            this.dataGridViewTextBoxColumn59.HeaderText = "前第48期相同位置";
+            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
+            // 
+            // dataGridViewTextBoxColumn60
+            // 
+            this.dataGridViewTextBoxColumn60.DataPropertyName = "qian49";
+            this.dataGridViewTextBoxColumn60.HeaderText = "前第49期相同位置";
+            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
+            // 
+            // dataGridViewTextBoxColumn61
+            // 
+            this.dataGridViewTextBoxColumn61.DataPropertyName = "qian50";
+            this.dataGridViewTextBoxColumn61.HeaderText = "前第50期相同位置";
+            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
+            // 
+            // dataGridViewTextBoxColumn62
+            // 
+            this.dataGridViewTextBoxColumn62.DataPropertyName = "qian51";
+            this.dataGridViewTextBoxColumn62.HeaderText = "前第51期相同位置";
+            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
+            // 
+            // dataGridViewTextBoxColumn63
+            // 
+            this.dataGridViewTextBoxColumn63.DataPropertyName = "qian52";
+            this.dataGridViewTextBoxColumn63.HeaderText = "前第52期相同位置";
+            this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
+            // 
+            // dataGridViewTextBoxColumn64
+            // 
+            this.dataGridViewTextBoxColumn64.DataPropertyName = "qian53";
+            this.dataGridViewTextBoxColumn64.HeaderText = "前第53期相同位置";
+            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
+            // 
+            // dataGridViewTextBoxColumn65
+            // 
+            this.dataGridViewTextBoxColumn65.DataPropertyName = "qian54";
+            this.dataGridViewTextBoxColumn65.HeaderText = "前第54期相同位置";
+            this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
+            // 
+            // dataGridViewTextBoxColumn66
+            // 
+            this.dataGridViewTextBoxColumn66.DataPropertyName = "qian55";
+            this.dataGridViewTextBoxColumn66.HeaderText = "前第55期相同位置";
+            this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
+            // 
+            // dataGridViewTextBoxColumn67
+            // 
+            this.dataGridViewTextBoxColumn67.DataPropertyName = "qian56";
+            this.dataGridViewTextBoxColumn67.HeaderText = "前第56期相同位置";
+            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
+            // 
+            // dataGridViewTextBoxColumn68
+            // 
+            this.dataGridViewTextBoxColumn68.DataPropertyName = "qian57";
+            this.dataGridViewTextBoxColumn68.HeaderText = "前第57期相同位置";
+            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
+            // 
+            // dataGridViewTextBoxColumn69
+            // 
+            this.dataGridViewTextBoxColumn69.DataPropertyName = "qian58";
+            this.dataGridViewTextBoxColumn69.HeaderText = "前第58期相同位置";
+            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
+            // 
+            // dataGridViewTextBoxColumn70
+            // 
+            this.dataGridViewTextBoxColumn70.DataPropertyName = "qian59";
+            this.dataGridViewTextBoxColumn70.HeaderText = "前第59期相同位置";
+            this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
+            // 
+            // dataGridViewTextBoxColumn71
+            // 
+            this.dataGridViewTextBoxColumn71.DataPropertyName = "qian60";
+            this.dataGridViewTextBoxColumn71.HeaderText = "前第60期相同位置";
+            this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
+            // 
+            // dataGridViewTextBoxColumn72
+            // 
+            this.dataGridViewTextBoxColumn72.DataPropertyName = "qian61";
+            this.dataGridViewTextBoxColumn72.HeaderText = "前第61期相同位置";
+            this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
+            // 
+            // dataGridViewTextBoxColumn73
+            // 
+            this.dataGridViewTextBoxColumn73.DataPropertyName = "qian62";
+            this.dataGridViewTextBoxColumn73.HeaderText = "前第62期相同位置";
+            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
+            // 
+            // dataGridViewTextBoxColumn74
+            // 
+            this.dataGridViewTextBoxColumn74.DataPropertyName = "qian63";
+            this.dataGridViewTextBoxColumn74.HeaderText = "前第63期相同位置";
+            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
+            // 
+            // dataGridViewTextBoxColumn75
+            // 
+            this.dataGridViewTextBoxColumn75.DataPropertyName = "qian64";
+            this.dataGridViewTextBoxColumn75.HeaderText = "前第64期相同位置";
+            this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
+            // 
+            // dataGridViewTextBoxColumn76
+            // 
+            this.dataGridViewTextBoxColumn76.DataPropertyName = "qian65";
+            this.dataGridViewTextBoxColumn76.HeaderText = "前第65期相同位置";
+            this.dataGridViewTextBoxColumn76.Name = "dataGridViewTextBoxColumn76";
+            // 
+            // dataGridViewTextBoxColumn77
+            // 
+            this.dataGridViewTextBoxColumn77.DataPropertyName = "qian66";
+            this.dataGridViewTextBoxColumn77.HeaderText = "前第66期相同位置";
+            this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
+            // 
+            // dataGridViewTextBoxColumn78
+            // 
+            this.dataGridViewTextBoxColumn78.DataPropertyName = "qian67";
+            this.dataGridViewTextBoxColumn78.HeaderText = "前第67期相同位置";
+            this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
+            // 
+            // dataGridViewTextBoxColumn79
+            // 
+            this.dataGridViewTextBoxColumn79.DataPropertyName = "qian68";
+            this.dataGridViewTextBoxColumn79.HeaderText = "前第68期相同位置";
+            this.dataGridViewTextBoxColumn79.Name = "dataGridViewTextBoxColumn79";
+            // 
+            // dataGridViewTextBoxColumn80
+            // 
+            this.dataGridViewTextBoxColumn80.DataPropertyName = "qian69";
+            this.dataGridViewTextBoxColumn80.HeaderText = "前第69期相同位置";
+            this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
+            // 
+            // dataGridViewTextBoxColumn81
+            // 
+            this.dataGridViewTextBoxColumn81.DataPropertyName = "qian70";
+            this.dataGridViewTextBoxColumn81.HeaderText = "前第70期相同位置";
+            this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
+            // 
+            // dataGridViewTextBoxColumn82
+            // 
+            this.dataGridViewTextBoxColumn82.DataPropertyName = "qian71";
+            this.dataGridViewTextBoxColumn82.HeaderText = "前第71期相同位置";
+            this.dataGridViewTextBoxColumn82.Name = "dataGridViewTextBoxColumn82";
+            // 
+            // dataGridViewTextBoxColumn83
+            // 
+            this.dataGridViewTextBoxColumn83.DataPropertyName = "qian72";
+            this.dataGridViewTextBoxColumn83.HeaderText = "前第72期相同位置";
+            this.dataGridViewTextBoxColumn83.Name = "dataGridViewTextBoxColumn83";
+            // 
+            // dataGridViewTextBoxColumn84
+            // 
+            this.dataGridViewTextBoxColumn84.DataPropertyName = "qian73";
+            this.dataGridViewTextBoxColumn84.HeaderText = "前第73期相同位置";
+            this.dataGridViewTextBoxColumn84.Name = "dataGridViewTextBoxColumn84";
+            // 
+            // dataGridViewTextBoxColumn85
+            // 
+            this.dataGridViewTextBoxColumn85.DataPropertyName = "qian74";
+            this.dataGridViewTextBoxColumn85.HeaderText = "前第74期相同位置";
+            this.dataGridViewTextBoxColumn85.Name = "dataGridViewTextBoxColumn85";
+            // 
+            // dataGridViewTextBoxColumn86
+            // 
+            this.dataGridViewTextBoxColumn86.DataPropertyName = "qian75";
+            this.dataGridViewTextBoxColumn86.HeaderText = "前第75期相同位置";
+            this.dataGridViewTextBoxColumn86.Name = "dataGridViewTextBoxColumn86";
+            // 
+            // dataGridViewTextBoxColumn87
+            // 
+            this.dataGridViewTextBoxColumn87.DataPropertyName = "qian76";
+            this.dataGridViewTextBoxColumn87.HeaderText = "前第76期相同位置";
+            this.dataGridViewTextBoxColumn87.Name = "dataGridViewTextBoxColumn87";
+            // 
+            // dataGridViewTextBoxColumn88
+            // 
+            this.dataGridViewTextBoxColumn88.DataPropertyName = "qian77";
+            this.dataGridViewTextBoxColumn88.HeaderText = "前第77期相同位置";
+            this.dataGridViewTextBoxColumn88.Name = "dataGridViewTextBoxColumn88";
+            // 
+            // dataGridViewTextBoxColumn89
+            // 
+            this.dataGridViewTextBoxColumn89.DataPropertyName = "qian78";
+            this.dataGridViewTextBoxColumn89.HeaderText = "前第78期相同位置";
+            this.dataGridViewTextBoxColumn89.Name = "dataGridViewTextBoxColumn89";
+            // 
+            // dataGridViewTextBoxColumn90
+            // 
+            this.dataGridViewTextBoxColumn90.DataPropertyName = "qian79";
+            this.dataGridViewTextBoxColumn90.HeaderText = "前第79期相同位置";
+            this.dataGridViewTextBoxColumn90.Name = "dataGridViewTextBoxColumn90";
+            // 
+            // dataGridViewTextBoxColumn91
+            // 
+            this.dataGridViewTextBoxColumn91.DataPropertyName = "qian80";
+            this.dataGridViewTextBoxColumn91.HeaderText = "前第80期相同位置";
+            this.dataGridViewTextBoxColumn91.Name = "dataGridViewTextBoxColumn91";
+            // 
+            // dataGridViewTextBoxColumn92
+            // 
+            this.dataGridViewTextBoxColumn92.DataPropertyName = "qian81";
+            this.dataGridViewTextBoxColumn92.HeaderText = "前第81期相同位置";
+            this.dataGridViewTextBoxColumn92.Name = "dataGridViewTextBoxColumn92";
+            // 
+            // dataGridViewTextBoxColumn93
+            // 
+            this.dataGridViewTextBoxColumn93.DataPropertyName = "qian82";
+            this.dataGridViewTextBoxColumn93.HeaderText = "前第82期相同位置";
+            this.dataGridViewTextBoxColumn93.Name = "dataGridViewTextBoxColumn93";
+            // 
+            // dataGridViewTextBoxColumn94
+            // 
+            this.dataGridViewTextBoxColumn94.DataPropertyName = "qian83";
+            this.dataGridViewTextBoxColumn94.HeaderText = "前第83期相同位置";
+            this.dataGridViewTextBoxColumn94.Name = "dataGridViewTextBoxColumn94";
+            // 
+            // dataGridViewTextBoxColumn95
+            // 
+            this.dataGridViewTextBoxColumn95.DataPropertyName = "qian84";
+            this.dataGridViewTextBoxColumn95.HeaderText = "前第84期相同位置";
+            this.dataGridViewTextBoxColumn95.Name = "dataGridViewTextBoxColumn95";
+            // 
+            // dataGridViewTextBoxColumn96
+            // 
+            this.dataGridViewTextBoxColumn96.DataPropertyName = "qian85";
+            this.dataGridViewTextBoxColumn96.HeaderText = "前第85期相同位置";
+            this.dataGridViewTextBoxColumn96.Name = "dataGridViewTextBoxColumn96";
+            // 
+            // dataGridViewTextBoxColumn97
+            // 
+            this.dataGridViewTextBoxColumn97.DataPropertyName = "qian86";
+            this.dataGridViewTextBoxColumn97.HeaderText = "前第86期相同位置";
+            this.dataGridViewTextBoxColumn97.Name = "dataGridViewTextBoxColumn97";
+            // 
+            // dataGridViewTextBoxColumn98
+            // 
+            this.dataGridViewTextBoxColumn98.DataPropertyName = "qian87";
+            this.dataGridViewTextBoxColumn98.HeaderText = "前第87期相同位置";
+            this.dataGridViewTextBoxColumn98.Name = "dataGridViewTextBoxColumn98";
+            // 
+            // dataGridViewTextBoxColumn99
+            // 
+            this.dataGridViewTextBoxColumn99.DataPropertyName = "qian88";
+            this.dataGridViewTextBoxColumn99.HeaderText = "前第88期相同位置";
+            this.dataGridViewTextBoxColumn99.Name = "dataGridViewTextBoxColumn99";
+            // 
+            // dataGridViewTextBoxColumn100
+            // 
+            this.dataGridViewTextBoxColumn100.DataPropertyName = "qian89";
+            this.dataGridViewTextBoxColumn100.HeaderText = "前第89期相同位置";
+            this.dataGridViewTextBoxColumn100.Name = "dataGridViewTextBoxColumn100";
+            // 
+            // dataGridViewTextBoxColumn101
+            // 
+            this.dataGridViewTextBoxColumn101.DataPropertyName = "qian90";
+            this.dataGridViewTextBoxColumn101.HeaderText = "前第90期相同位置";
+            this.dataGridViewTextBoxColumn101.Name = "dataGridViewTextBoxColumn101";
+            // 
+            // dataGridViewTextBoxColumn102
+            // 
+            this.dataGridViewTextBoxColumn102.DataPropertyName = "qian91";
+            this.dataGridViewTextBoxColumn102.HeaderText = "前第91期相同位置";
+            this.dataGridViewTextBoxColumn102.Name = "dataGridViewTextBoxColumn102";
+            // 
+            // dataGridViewTextBoxColumn103
+            // 
+            this.dataGridViewTextBoxColumn103.DataPropertyName = "qian92";
+            this.dataGridViewTextBoxColumn103.HeaderText = "前第92期相同位置";
+            this.dataGridViewTextBoxColumn103.Name = "dataGridViewTextBoxColumn103";
+            // 
+            // dataGridViewTextBoxColumn104
+            // 
+            this.dataGridViewTextBoxColumn104.DataPropertyName = "qian93";
+            this.dataGridViewTextBoxColumn104.HeaderText = "前第93期相同位置";
+            this.dataGridViewTextBoxColumn104.Name = "dataGridViewTextBoxColumn104";
+            // 
+            // dataGridViewTextBoxColumn105
+            // 
+            this.dataGridViewTextBoxColumn105.DataPropertyName = "qian94";
+            this.dataGridViewTextBoxColumn105.HeaderText = "前第94期相同位置";
+            this.dataGridViewTextBoxColumn105.Name = "dataGridViewTextBoxColumn105";
+            // 
+            // dataGridViewTextBoxColumn106
+            // 
+            this.dataGridViewTextBoxColumn106.DataPropertyName = "qian95";
+            this.dataGridViewTextBoxColumn106.HeaderText = "前第95期相同位置";
+            this.dataGridViewTextBoxColumn106.Name = "dataGridViewTextBoxColumn106";
+            // 
+            // dataGridViewTextBoxColumn107
+            // 
+            this.dataGridViewTextBoxColumn107.DataPropertyName = "qian96";
+            this.dataGridViewTextBoxColumn107.HeaderText = "前第96期相同位置";
+            this.dataGridViewTextBoxColumn107.Name = "dataGridViewTextBoxColumn107";
+            // 
+            // dataGridViewTextBoxColumn108
+            // 
+            this.dataGridViewTextBoxColumn108.DataPropertyName = "qian97";
+            this.dataGridViewTextBoxColumn108.HeaderText = "前第97期相同位置";
+            this.dataGridViewTextBoxColumn108.Name = "dataGridViewTextBoxColumn108";
+            // 
+            // dataGridViewTextBoxColumn109
+            // 
+            this.dataGridViewTextBoxColumn109.DataPropertyName = "qian98";
+            this.dataGridViewTextBoxColumn109.HeaderText = "前第98期相同位置";
+            this.dataGridViewTextBoxColumn109.Name = "dataGridViewTextBoxColumn109";
+            // 
+            // dataGridViewTextBoxColumn110
+            // 
+            this.dataGridViewTextBoxColumn110.DataPropertyName = "qian99";
+            this.dataGridViewTextBoxColumn110.HeaderText = "前第99期相同位置";
+            this.dataGridViewTextBoxColumn110.Name = "dataGridViewTextBoxColumn110";
+            // 
+            // dataGridViewTextBoxColumn111
+            // 
+            this.dataGridViewTextBoxColumn111.DataPropertyName = "qian100";
+            this.dataGridViewTextBoxColumn111.HeaderText = "前第100期相同位置";
+            this.dataGridViewTextBoxColumn111.Name = "dataGridViewTextBoxColumn111";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1038, 391);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // frmTracing_Analysis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1386,13 +1406,13 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "frmTracing_Analysis";
             this.Text = "追踪分析";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.toolStrip2.ResumeLayout(false);
@@ -1400,13 +1420,15 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1421,117 +1443,6 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QiHao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KaiJianHaoMa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JiShu1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JiShu2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JiShu3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JiShu4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JiShu5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JiShu6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JiShu7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JiShu8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JiShu9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian42;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian43;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian45;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian47;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian48;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian49;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian50;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian51;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian52;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian53;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian54;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian55;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian56;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian57;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian58;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian59;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian60;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian61;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian62;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian63;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian64;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian65;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian66;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian67;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian68;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian69;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian70;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian71;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian72;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian73;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian74;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian75;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian76;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian77;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian78;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian79;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian80;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian81;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian82;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian83;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian84;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian85;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian86;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian87;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian88;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian89;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian90;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian91;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian92;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian93;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian94;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian95;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian96;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian97;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian98;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian99;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qian100;
         private System.Windows.Forms.ToolStripMenuItem 自定义分析ToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
@@ -1547,5 +1458,119 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel7;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn53;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn54;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn55;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn56;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn57;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn58;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn59;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn60;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn61;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn62;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn63;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn64;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn65;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn66;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn67;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn68;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn69;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn70;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn71;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn72;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn73;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn74;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn75;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn76;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn77;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn78;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn79;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn80;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn81;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn82;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn83;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn84;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn85;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn86;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn87;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn88;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn89;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn90;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn91;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn92;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn93;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn94;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn95;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn96;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn97;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn98;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn99;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn100;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn101;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn102;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn103;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn104;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn105;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn106;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn107;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn108;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn109;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn110;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn111;
+        private System.Windows.Forms.BindingSource bindingSource2;
     }
 }

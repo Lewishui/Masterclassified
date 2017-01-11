@@ -129,7 +129,7 @@ namespace MC.DB
         public string qianMingcheng { get; set; }
         public string KaiJianRiqi { get; set; }
         public string Xuan { get; set; }
-        
+        public string Caipiaomingcheng { get; set; }
     }
     public class FangAnLieBiaoDATA
     {
@@ -161,6 +161,7 @@ namespace MC.DB
         public string Check_TeBieHao { get; set; }
         public string TeBieHaoS { get; set; }
         public string TeBieHaoT { get; set; }
+        public string Jiaxuantebiehao { get; set; }
         public string Input_Date { get; set; }
         public string MoRenXuanzhong { get; set; }
 

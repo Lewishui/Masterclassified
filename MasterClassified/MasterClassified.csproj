@@ -89,6 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="backupform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backupform.Designer.cs">
+      <DependentUpon>backupform.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddCaiPiao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,12 @@
     <Compile Include="frmNavigate.Designer.cs">
       <DependentUpon>frmNavigate.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQianQiFenXi_Zidingyifenxi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQianQiFenXi_Zidingyifenxi.Designer.cs">
+      <DependentUpon>frmQianQiFenXi_Zidingyifenxi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSetConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +187,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmImport_MCleixing_Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImport_MCleixing_Data.Designer.cs">
+      <DependentUpon>frmImport_MCleixing_Data.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="backupform.resx">
+      <DependentUpon>backupform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddCaiPiao.resx">
       <DependentUpon>frmAddCaiPiao.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -208,6 +229,9 @@
       <DependentUpon>frmNavigate.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQianQiFenXi_Zidingyifenxi.resx">
+      <DependentUpon>frmQianQiFenXi_Zidingyifenxi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSetConfig.resx">
       <DependentUpon>frmSetConfig.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -237,6 +261,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="frmImport_MCleixing_Data.resx">
+      <DependentUpon>frmImport_MCleixing_Data.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

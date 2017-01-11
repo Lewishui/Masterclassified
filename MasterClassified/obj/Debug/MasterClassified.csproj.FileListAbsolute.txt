@@ -137,3 +137,7 @@ D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified
 D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.Properties.Resources.resources
 D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.csproj.GenerateResource.Cache
 D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmChangeCaiPiaodata.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmChangeCaiPiaodata.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmImport_MCleixing_Data.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmQianQiFenXi_Zidingyifenxi.resources
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\obj\Debug\MasterClassified.backupform.resources

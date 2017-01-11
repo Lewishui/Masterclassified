@@ -12,7 +12,7 @@ using MC.DB;
 
 namespace MasterClassified
 {
-    public partial class frmImport_Data : Form
+    public partial class frmImport_MCleixing_Data : Form
     {    // 后台执行控件
         private BackgroundWorker bgWorker;
         // 消息显示窗体
@@ -26,7 +26,7 @@ namespace MasterClassified
         List<inputCaipiaoDATA> Result = new List<inputCaipiaoDATA>();
         string MCpath;
 
-        public frmImport_Data()
+        public frmImport_MCleixing_Data()
         {
             InitializeComponent();
             InitialSystemInfo();
@@ -125,6 +125,7 @@ namespace MasterClassified
                     if (blnBackGroundWorkIsOK)
                     {
                         this.Close();
+
                     }
                 }
                 catch (Exception ex)
@@ -140,9 +141,9 @@ namespace MasterClassified
             DateTime oldDate = DateTime.Now;
             Result = new List<inputCaipiaoDATA>();
             clsAllnew BusinessHelp = new clsAllnew();
-            ProcessLogger.Fatal("1005--input kiajiang data" + DateTime.Now.ToString());
-            Result = BusinessHelp.InputclaimReport(ref this.bgWorker, MCpath);
-            ProcessLogger.Fatal("1006-- Input finish" + DateTime.Now.ToString());
+            ProcessLogger.Fatal("2005--input caipiaoleixing data" + DateTime.Now.ToString());
+            Result = BusinessHelp.InputCaipiaoleixing(ref this.bgWorker, MCpath);
+            ProcessLogger.Fatal("2006-- Input finish" + DateTime.Now.ToString());
             DateTime FinishTime = DateTime.Now;  //   
             TimeSpan s = DateTime.Now - oldDate;
             string timei = s.Minutes.ToString() + ":" + s.Seconds.ToString();

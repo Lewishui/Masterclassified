@@ -32,6 +32,7 @@ namespace MasterClassified
         private Thread GetDataforRawDataThread;
         private int alterisrun;
         private frmMCdata frmMCdata;
+        private frmImport_MCleixing_Data frmImport_MCleixing_Data;
 
         public MainForm()
         {
@@ -86,6 +87,10 @@ namespace MasterClassified
             if (sender is frmMCdata)
             {
                 frmMCdata = null;
+            }
+            if (sender is frmImport_MCleixing_Data)
+            {
+                frmImport_MCleixing_Data = null;
             }
             
         }
@@ -432,6 +437,26 @@ namespace MasterClassified
             frmMCdata.Show(this.dockPanel2);
 
 
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+            if (frmImport_MCleixing_Data == null)
+            {
+                frmImport_MCleixing_Data = new frmImport_MCleixing_Data();
+                frmImport_MCleixing_Data.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
+            }
+            if (frmImport_MCleixing_Data == null)
+            {
+                frmImport_MCleixing_Data = new frmImport_MCleixing_Data();
+            }
+            frmImport_MCleixing_Data.Show();
+        }
+
+        private void 导入彩票数据xlsxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

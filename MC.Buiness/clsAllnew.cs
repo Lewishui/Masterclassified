@@ -115,11 +115,12 @@ namespace MC.Buiness
                     string a = fileText[i].Trim();
 
                     string[] temp1 = System.Text.RegularExpressions.Regex.Split(fileText[i], "\t");
-                  
+
                     temp.QiHao = temp1[0].ToString().Trim();
                     temp.KaiJianHaoMa = temp1[1].ToString().Trim();
                     temp.Xuan = temp1[2].ToString().Trim();
                     temp.KaiJianRiqi = clsCommHelp.objToDateTime(temp1[3]);
+                    temp.Caipiaomingcheng = temp1[4].ToString().Trim();
                     temp.Input_Date = DateTime.Now.ToString("yyyyMMdd-HHmm");
                     Result.Add(temp);
 
@@ -134,6 +135,53 @@ namespace MC.Buiness
 
 
         }
+
+        public List<CaipiaoZhongLeiDATA> Readcaipiaoleixing_TXT(string path)
+        {
+            try
+            {
+                List<CaipiaoZhongLeiDATA> Result = new List<CaipiaoZhongLeiDATA>();
+
+                string[] fileText = File.ReadAllLines(path);
+                for (int i = 1; i < fileText.Length; i++)
+                {
+                    CaipiaoZhongLeiDATA temp = new CaipiaoZhongLeiDATA();
+                    string a = fileText[i].Trim();
+
+                    string[] temp1 = System.Text.RegularExpressions.Regex.Split(fileText[i], "\t");
+
+                    temp.Name = temp1[0].ToString().Trim();
+                    temp.Caipiaowenjianming = temp1[1].ToString().Trim();
+                    temp.JiBenHaoMaS = temp1[2].ToString().Trim();
+                    temp.JiBenHaoMaT = temp1[3].ToString().Trim();
+
+                    temp.Check_TeBieHao = temp1[5].ToString().Trim();
+
+                    temp.Xuan = temp1[4].ToString().Trim();
+                    temp.TeBieHaoS = temp1[6].ToString().Trim();
+                    temp.TeBieHaoT = temp1[7].ToString().Trim();
+                    temp.Jiaxuantebiehao = temp1[8].ToString().Trim();
+
+
+                    //temp.QiHao = temp1[0].ToString().Trim();
+                    //temp.KaiJianHaoMa = temp1[1].ToString().Trim();
+                    //temp.Xuan = temp1[2].ToString().Trim();
+                    //temp.KaiJianRiqi = clsCommHelp.objToDateTime(temp1[3]);
+                    //temp.Input_Date = DateTime.Now.ToString("yyyyMMdd-HHmm");
+                    Result.Add(temp);
+
+                }
+                return Result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                throw;
+            }
+
+
+        }
+
         public void SPInputclaimreport_Server(List<inputCaipiaoDATA> AddMAPResult)
         {
             string connectionString = "mongodb://127.0.0.1";
@@ -142,7 +190,7 @@ namespace MC.Buiness
             MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
             MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
 
-           //  collection1.RemoveAll();
+            //  collection1.RemoveAll();
             if (AddMAPResult == null)
             {
                 MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -162,12 +210,40 @@ namespace MC.Buiness
                  { "System_Time", DateTime.Now.ToString("MM/dd/yyyy/HH")}, 
                  { "KaiJianHaoMa", item.KaiJianHaoMa} ,
                   { "KaiJianRiqi", item.KaiJianRiqi} ,
-                       { "Xuan", item.Xuan} 
+                { "Xuan", item.Xuan} ,
+                { "Caipiaomingcheng", item.Caipiaomingcheng} 
                  };
                 collection.Insert(fruit_1);
             }
         }
 
+        public List<inputCaipiaoDATA> InputCaipiaoleixing(ref BackgroundWorker bgWorker, string path)
+        {
+            try
+            {
+                List<CaipiaoZhongLeiDATA> Result = new List<CaipiaoZhongLeiDATA>();
+                ProcessLogger.Fatal("2006-- Input Caipiaoleixing" + DateTime.Now.ToString());
+                bgWorker1 = bgWorker;
+                if (!path.Contains(".txt"))
+                {
+                    MessageBox.Show("错误导入类型文件，请重新选择", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (path.Contains(".txt"))
+                    Result = Readcaipiaoleixing_TXT(path);
+                if (Result.Count != 0)
+                    Save_CaiPiaoZhongLei(Result);
+
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                return null;
+
+            }
+            return null;
+        }
         #endregion
 
         #region 读取彩票数据
@@ -203,12 +279,14 @@ namespace MC.Buiness
                     if (emp.Contains("JiShu1"))
                         item.JiShu1 = (emp["JiShu1"].AsString);
                     if (emp.Contains("JiShu2"))
-                        item.JiShu2= (emp["JiShu2"].AsString);
+                        item.JiShu2 = (emp["JiShu2"].AsString);
                     if (emp.Contains("JiShu3"))
                         item.JiShu3 = (emp["JiShu3"].AsString);
                     if (emp.Contains("Xuan"))
                         item.Xuan = (emp["Xuan"].AsString);
-                 
+
+                    if (emp.Contains("Caipiaomingcheng"))
+                        item.Caipiaomingcheng = (emp["Caipiaomingcheng"].AsString);
                     #endregion
                     ClaimReport_Server.Add(item);
                 }
@@ -238,7 +316,7 @@ namespace MC.Buiness
                 MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
                 MongoCollection<BsonDocument> employees = db.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
 
-                var query = new QueryDocument("Xuan", findtext);
+                var query = new QueryDocument("Caipiaomingcheng", findtext);
 
                 foreach (BsonDocument emp in employees.Find(query))
                 {
@@ -265,6 +343,9 @@ namespace MC.Buiness
                         item.Xuan = (emp["Xuan"].AsString);
                     if (emp.Contains("KaiJianRiqi"))
                         item.KaiJianRiqi = (emp["KaiJianRiqi"].AsString);
+
+                    if (emp.Contains("Caipiaomingcheng"))
+                        item.Caipiaomingcheng = (emp["Caipiaomingcheng"].AsString);
                     #endregion
                     ClaimReport_Server.Add(item);
                 }
@@ -280,7 +361,7 @@ namespace MC.Buiness
             }
             #endregion
         }
-     
+
 
         public List<inputCaipiaoDATA> ReadCaiPiaoData_One(string findtext)
         {
@@ -324,6 +405,10 @@ namespace MC.Buiness
 
                     if (emp.Contains("Xuan"))
                         item.Xuan = (emp["Xuan"].AsString);
+
+
+                    if (emp.Contains("Caipiaomingcheng"))
+                        item.Caipiaomingcheng = (emp["Caipiaomingcheng"].AsString);
                     #endregion
                     ClaimReport_Server.Add(item);
                 }
@@ -339,7 +424,7 @@ namespace MC.Buiness
             }
             #endregion
         }
-       
+
 
         public List<FangAnLieBiaoDATA> Read_FangAn(string findtext)
         {
@@ -523,7 +608,7 @@ namespace MC.Buiness
 
                     if (emp.Contains("MoRenXuanzhong"))
                         item.MoRenXuanzhong = (emp["MoRenXuanzhong"].AsString);
- 
+
 
 
                     if (emp.Contains("JiBenHaoMaS"))
@@ -812,7 +897,8 @@ namespace MC.Buiness
                 { "Xuan", item.Xuan },
                 { "Check_TeBieHao", item.Check_TeBieHao },
                 { "TeBieHaoS", item.TeBieHaoS },
-                { "TeBieHaoT", item.TeBieHaoT },            
+                { "TeBieHaoT", item.TeBieHaoT },       
+                { "Jiaxuantebiehao", item.Jiaxuantebiehao },       
                 { "MoRenXuanzhong", "NO" },  
                 { "Input_Date", DateTime.Now.ToString("MM/dd/yyyy/HHss")}  
                  };
@@ -852,7 +938,8 @@ namespace MC.Buiness
                 { "Xuan", item.Xuan },
                 { "Check_TeBieHao", item.Check_TeBieHao },
                 { "TeBieHaoS", item.TeBieHaoS },
-                { "TeBieHaoT", item.TeBieHaoT },            
+                { "TeBieHaoT", item.TeBieHaoT },       
+                 { "Jiaxuantebiehao", item.Jiaxuantebiehao },     
                { "MoRenXuanzhong", item.MoRenXuanzhong },  
                 { "Input_Date", DateTime.Now.ToString("MM/dd/yyyy/HHss")}  
                  };
@@ -881,8 +968,8 @@ namespace MC.Buiness
                 QueryDocument query1 = new QueryDocument("MoRenXuanzhong", "YES");
                 var update = Update.Set("MoRenXuanzhong", "");
                 collection1.Update(query1, update);
-                 query1 = new QueryDocument("MoRenXuanzhong", "NO");
-                 update = Update.Set("MoRenXuanzhong", "");
+                query1 = new QueryDocument("MoRenXuanzhong", "NO");
+                update = Update.Set("MoRenXuanzhong", "");
                 collection1.Update(query1, update);
 
                 //更新默认逐渐

@@ -50,12 +50,18 @@ namespace MasterClassified
                 else
                     checkBox1.Checked = false;
 
+                if (item.Jiaxuantebiehao == "YES")
+                    checkBox2.Checked = true;
+
+                else
+                    checkBox2.Checked = false;
+
                 this.comboBox3.Text = item.Xuan;
 
                 this.comboBox5.Text = item.TeBieHaoS;
 
                 this.comboBox4.Text = item.TeBieHaoT;
-
+                this.textBox2.Text = item.Caipiaowenjianming;
             }
 
 
@@ -76,6 +82,7 @@ namespace MasterClassified
                 CaipiaoZhongLeiDATA item = new CaipiaoZhongLeiDATA();
 
                 item.Name = textBox1.Text.Trim();
+                item.Caipiaowenjianming = textBox2.Text.Trim();
                 item.JiBenHaoMaS = this.comboBox1.Text.Trim();
                 item.JiBenHaoMaT = this.comboBox2.Text.Trim();
                 if (checkBox1.Checked == true)
@@ -85,6 +92,12 @@ namespace MasterClassified
                 item.Xuan = this.comboBox3.Text.Trim();
                 item.TeBieHaoS = this.comboBox5.Text.Trim();
                 item.TeBieHaoT = this.comboBox4.Text.Trim();
+                if (checkBox2.Checked == true)
+                    item.Jiaxuantebiehao = "YES";
+                else
+                    item.Jiaxuantebiehao = "NO";
+
+               
                 ClaimReport_Server.Add(item);
                 clsAllnew BusinessHelp = new clsAllnew();
                 BusinessHelp.Save_CaiPiaoZhongLei(ClaimReport_Server);
@@ -101,18 +114,25 @@ namespace MasterClassified
                 CaipiaoZhongLeiDATA item = new CaipiaoZhongLeiDATA();
 
                 item.Name = textBox1.Text.Trim();
+                item.Caipiaowenjianming = textBox2.Text.Trim();
                 item.JiBenHaoMaS = this.comboBox1.Text.Trim();
                 item.JiBenHaoMaT = this.comboBox2.Text.Trim();
                 if (checkBox1.Checked == true)
                     item.Check_TeBieHao = "YES";
                 else
                     item.Check_TeBieHao = "NO";
+                if (checkBox2.Checked == true)
+                    item.Jiaxuantebiehao = "YES";
+                else
+                    item.Jiaxuantebiehao = "NO";
+
+
                 item.Xuan = this.comboBox3.Text.Trim();
                 item.TeBieHaoS = this.comboBox5.Text.Trim();
                 item.TeBieHaoT = this.comboBox4.Text.Trim();
                 ClaimReport_Server.Add(item);
                 clsAllnew BusinessHelp = new clsAllnew();
-                BusinessHelp.Update_CaiPiaoZhongLei(checkname,ClaimReport_Server);
+                BusinessHelp.Update_CaiPiaoZhongLei(checkname, ClaimReport_Server);
 
                 MessageBox.Show("修改成功！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

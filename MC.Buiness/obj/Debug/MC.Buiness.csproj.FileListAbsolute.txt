@@ -55,3 +55,6 @@ D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\obj\D
 D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csproj.ResolveComReference.cache
 D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
 D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csproj.ResolveComReference.cache

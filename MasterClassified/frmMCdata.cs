@@ -69,7 +69,7 @@ namespace MasterClassified
 
             DateTime oldDate = DateTime.Now;
             ClaimReport_Server = new List<inputCaipiaoDATA>();
-            ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(this.label8.Text);
+            ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(this.label2.Text);
             ClaimReport_Server.Sort(new Comp());
             //this.dataGridView1.DataSource = null;
             //this.dataGridView1.AutoGenerateColumns = false;

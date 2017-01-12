@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
+using System.IO;
 
 namespace MasterClassified
 {
@@ -119,7 +120,7 @@ namespace MasterClassified
                     int lie = 2;
                     for (int i = 0; i < temp1.Length; i++)
                     {
-                        if (i >= temp1.Length)
+                        if (i >= temp1.Length || lie - Convert.ToInt32(temptong[0]) > 1)
                             continue;
 
                         qtyTable.Rows[jk][lie] = temp1[i];
@@ -181,7 +182,7 @@ namespace MasterClassified
             InitialSystemInfo();
             //dataGridView1.FirstDisplayedCell = dataGridView1.Rows[dataGridView1.RowCount - 1].Cells[0]; 
             //dataGridView1.FirstDisplayedScrollingRowIndex = dataGridView1.RowCount - 1;// ;
-            dataGridView1.Rows[dataGridView1.RowCount - 1].Selected = true; 
+            dataGridView1.Rows[dataGridView1.RowCount - 1].Selected = true;
             //DataGridViewRow row = new DataGridViewRow();
             //DataGridViewComboBoxCell comboxcell = new DataGridViewComboBoxCell();
             //row.Cells.Add(comboxcell);
@@ -348,7 +349,7 @@ namespace MasterClassified
 
                 }
                 dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
-                
+
                 if (frmTimeSelect == null)
                 {
                     frmTimeSelect = new frmTimeSelect();
@@ -455,7 +456,7 @@ namespace MasterClassified
             inputCaipiaoDATA item = new inputCaipiaoDATA();
             item.QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
             item.KaiJianRiqi = this.dataGridView1.Rows[RowRemark].Cells[1].EditedFormattedValue.ToString();
-       
+
             item.Xuan = this.label8.Text;
             item.Caipiaomingcheng = this.label2.Text.ToString();
             for (int i = 2; i < dataGridView1.ColumnCount; i++)
@@ -473,7 +474,7 @@ namespace MasterClassified
             clsAllnew BusinessHelp = new clsAllnew();
 
             BusinessHelp.SPInputclaimreport_Server(Result);
-            
+
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -615,6 +616,80 @@ namespace MasterClassified
                 //                    Console.WriteLine("Key -- {0}; Value --{1}.", entry.Key, entry.Value);
             }
             return rows.Distinct();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+
+            {
+
+                {
+
+                    {
+                        if (this.dataGridView1.Rows.Count == 0)
+                        {
+                            MessageBox.Show("当前界面没有数据，请确认 !", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        var saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.DefaultExt = ".csv";
+                        saveFileDialog.Filter = "csv|*.csv";
+                        string strFileName = "Data " + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+                        saveFileDialog.FileName = strFileName;
+                        if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+                        {
+                            strFileName = saveFileDialog.FileName.ToString();
+                        }
+                        else
+                        {
+                            return;
+                        }
+                        FileStream fa = new FileStream(strFileName, FileMode.Create);
+                        StreamWriter sw = new StreamWriter(fa, Encoding.Unicode);
+                        string delimiter = "\t";
+                        string strHeader = "";
+                        for (int i = 0; i < this.dataGridView1.Columns.Count; i++)
+                        {
+                            strHeader += this.dataGridView1.Columns[i].HeaderText + delimiter;
+                        }
+                        sw.WriteLine(strHeader);
+
+                        //output rows data
+                        for (int j = 0; j < this.dataGridView1.Rows.Count; j++)
+                        {
+                            string strRowValue = "";
+
+                            for (int k = 0; k < this.dataGridView1.Columns.Count; k++)
+                            {
+                                if (this.dataGridView1.Rows[j].Cells[k].Value != null)
+                                {
+                                    strRowValue += this.dataGridView1.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "") + delimiter;
+                                    if (this.dataGridView1.Rows[j].Cells[k].Value.ToString() == "LIP201507-35")
+                                    {
+
+                                    }
+
+                                }
+                                else
+                                {
+                                    strRowValue += this.dataGridView1.Rows[j].Cells[k].Value + delimiter;
+                                }
+                            }
+                            sw.WriteLine(strRowValue);
+                        }
+                        sw.Close();
+                        fa.Close();
+                        MessageBox.Show("下载完成！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+
+                }
+
+
+
+
+            }
+
         }
     }
 }

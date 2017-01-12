@@ -342,7 +342,7 @@ namespace MC.Buiness
                     if (emp.Contains("Xuan"))
                         item.Xuan = (emp["Xuan"].AsString);
                     if (emp.Contains("KaiJianRiqi"))
-                        item.KaiJianRiqi = (emp["KaiJianRiqi"].AsString);
+                        item.KaiJianRiqi = clsCommHelp.objToDateTime(emp["KaiJianRiqi"].AsString); 
 
                     if (emp.Contains("Caipiaomingcheng"))
                         item.Caipiaomingcheng = (emp["Caipiaomingcheng"].AsString);

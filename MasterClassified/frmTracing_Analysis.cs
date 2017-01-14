@@ -18,6 +18,7 @@ namespace MasterClassified
 {
     public partial class frmTracing_Analysis : DockContent
     {
+        private List<int> JIDTA = new List<int>();
         private Thread GetDataforOutlookThread;
         public log4net.ILog ProcessLogger { get; set; }
         public log4net.ILog ExceptionLogger { get; set; }
@@ -37,8 +38,9 @@ namespace MasterClassified
         private frmImport_MCleixing_Data frmImport_MCleixing_Data;
         private frmQianQiFenXi_Zidingyifenxi frmQianQiFenXi_Zidingyifenxi;
         List<int> newi;
+        List<string> showSuijiResultlist = new List<string>();
         int qianqiqishu = 0;
-
+        List<int> newlist;
         private SortableBindingList<inputCaipiaoDATA> sortablePendingOrderList;
         public frmTracing_Analysis()
         {
@@ -110,9 +112,16 @@ namespace MasterClassified
 
             //按照彩票的Xuan 添加基数列的列数多少
             InitialUDF = new List<int>();
+            if (CaipiaozhongleiResult[0].Xuan != null)
+            {
+                InitialUDF.Add(Convert.ToInt32(CaipiaozhongleiResult[0].Xuan));
+            }
+            else
+            {
+                MessageBox.Show("彩票数据缺失,请维护完整!", "错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
 
-            InitialUDF.Add(Convert.ToInt32(CaipiaozhongleiResult[0].Xuan));
-
+            }
             NewMethodtab1();
 
         }
@@ -216,10 +225,12 @@ namespace MasterClassified
 
                     toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
 
-                    GetDataforOutlookThread = new Thread(tab2);
-                    GetDataforOutlookThread.Start();
+                    //GetDataforOutlookThread = new Thread(tab2);
+                    //GetDataforOutlookThread.Start();
                     // tab2(BusinessHelp);
+                    tab2();
 
+                    QianQI_Zidingyi_InitialSystemInfo();
 
 
                 }
@@ -255,6 +266,9 @@ namespace MasterClassified
                     {
                         indexing++;
                         int xiangtongindex = 0;
+                        if (item.KaiJianHaoMa == null || temp.KaiJianHaoMa == null)
+                            continue;
+
                         string[] temp3 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
                         string[] temp1 = System.Text.RegularExpressions.Regex.Split(temp.KaiJianHaoMa, " ");
                         #region 匹配相同次数
@@ -394,7 +408,12 @@ namespace MasterClassified
             // this.dataGridView1.DataSource = this.bindingSource1;
 
             dataGridView2.DataSource = qtyTable;
-
+            if (dataGridView2.Rows.Count != 0)
+            {
+                int ii = dataGridView2.Rows.Count - 1;
+                dataGridView2.CurrentCell = dataGridView2[0, ii]; // 强制将光标指向i行
+                dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
+            }
             string width = "";
 
             for (int j = 2; j < dataGridView2.ColumnCount; j++)
@@ -588,7 +607,12 @@ namespace MasterClassified
                 this.dataGridView1.DataSource = this.bindingSource1;
 
                 dataGridView2.DataSource = qtyTable;
-
+                if (dataGridView2.Rows.Count != 0)
+                {
+                    int ii = dataGridView2.Rows.Count - 1;
+                    dataGridView2.CurrentCell = dataGridView2[0, ii]; // 强制将光标指向i行
+                    dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
+                }
                 string width = "";
 
                 for (int j = 2; j < dataGridView2.ColumnCount; j++)
@@ -632,6 +656,8 @@ namespace MasterClassified
                     foreach (FangAnLieBiaoDATA temp in Result)
                     {
                         string[] temp1 = System.Text.RegularExpressions.Regex.Split(temp.Data, "\r\n");
+                        if (item.KaiJianHaoMa == null)
+                            continue;
 
                         string[] temp2 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
                         for (int ii = 0; ii < temp2.Length; ii++)
@@ -831,7 +857,7 @@ namespace MasterClassified
                 // this.toolStripComboBox1.Items.Add("全部");
 
 
-                toolStripLabel7.Text = "结束";
+                toolStripLabel7.Text = "运行结束";
                 #endregion
             }
             catch (Exception ex)
@@ -1382,7 +1408,7 @@ namespace MasterClassified
                         {
                             JISHUIN++;
                             qtyTable.Columns.Add("基" + m, System.Type.GetType("System.String"));
-                          //  dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { Width = 30, DataPropertyName = "基" + m });
+                            //  dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { Width = 30, DataPropertyName = "基" + m });
 
                         }
                     }
@@ -1396,14 +1422,14 @@ namespace MasterClassified
                             InitialUDF.Sort();
                             for (int m = 1; m <= InitialUDF[InitialUDF.Count - 1]; m++)
                             {
-                         
+
                                 qtyTable.Columns.Add("基" + m, System.Type.GetType("System.String"));
                                 //  dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { Width = 30, DataPropertyName = "基" + m });
 
                             }
                         }
-                    
-                       // return;
+
+                        // return;
 
                         //for (int m = 1; m <= 9; m++)
                         //{
@@ -1437,12 +1463,12 @@ namespace MasterClassified
                         jicloumn = Convert.ToInt32(UDF[UDF.Count - 1]) + 1;
                     else if (InitialUDF != null && InitialUDF.Count != 0)
                         jicloumn = Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) + 1;
-                        
+
                     foreach (var item in ClaimReport_Server)
                     {
                         //cindex = 10 - jicloumn;
                         cindex = jicloumn;
-                        if (qtyTable.Columns.Count != 0 && jicloumn==0)
+                        if (qtyTable.Columns.Count != 0 && jicloumn == 0)
                             cindex = qtyTable.Columns.Count - 1 - Convert.ToInt32(toolStripComboBox4.Text);
                         {
                             string allqian = item.qian1 + " " + item.qian2 + " " + item.qian3 + " " + item.qian4 + " " + item.qian5 + " " + item.qian6 + " " + item.qian7 + " " + item.qian8 + " " + item.qian9 + " " + item.qian10 + " " + item.qian11 + " " + item.qian12 + " " + item.qian13 + " " + item.qian14 + " " + item.qian15 + " " + item.qian16 + " " + item.qian17 + " " + item.qian18 + " " + item.qian19 + " " + item.qian20 + " " + item.qian21 + " " + item.qian22 + " " + item.qian23 + " " + item.qian24 + " " + item.qian25 + " " + item.qian26 + " " + item.qian27 + " " + item.qian28 + " " + item.qian29 + " " + item.qian30 + " " + item.qian31 + " " + item.qian32 + " " + item.qian33 + " " + item.qian34 + " " + item.qian35 + " " + item.qian36 + " " + item.qian37 + " " + item.qian38 + " " + item.qian39 + " " + item.qian40 + " " + item.qian41 + " " + item.qian42 + " " + item.qian43 + " " + item.qian44 + " " + item.qian45 + " " + item.qian46 + " " + item.qian47 + " " + item.qian48 + " " + item.qian49 + " " + item.qian50 + " " + item.qian51 + " " + item.qian52 + " " + item.qian53 + " " + item.qian54 + " " + item.qian55 + " " + item.qian56 + " " + item.qian57 + " " + item.qian58 + " " + item.qian59 + " " + item.qian60 + " " + item.qian61 + " " + item.qian62 + " " + item.qian63 + " " + item.qian64 + " " + item.qian65 + " " + item.qian66 + " " + item.qian67 + " " + item.qian68 + " " + item.qian69 + " " + item.qian70 + " " + item.qian71 + " " + item.qian72 + " " + item.qian73 + " " + item.qian74 + " " + item.qian75 + " " + item.qian76 + " " + item.qian77 + " " + item.qian78 + " " + item.qian79 + " " + item.qian80 + " " + item.qian81 + " " + item.qian82 + " " + item.qian83 + " " + item.qian84 + " " + item.qian85 + " " + item.qian86 + " " + item.qian87 + " " + item.qian88 + " " + item.qian89 + " " + item.qian90 + " " + item.qian91 + " " + item.qian92 + " " + item.qian93 + " " + item.qian94 + " " + item.qian95 + " " + item.qian96 + " " + item.qian97 + " " + item.qian98 + " " + item.qian99 + " " + item.qian100 + " ";
@@ -1500,29 +1526,28 @@ namespace MasterClassified
                         jk++;
                     }
                     //清空自定义的列数
-
-
-
                     this.dataGridView1.DataSource = null;
-
-
                     //  this.dataGridView1.AutoGenerateColumns = false;
                     this.bindingSource2.DataSource = qtyTable;
                     bindingSource2.Sort = "期号  ASC";
                     this.dataGridView1.DataSource = this.bindingSource2;
-                   
-
+                    if (dataGridView1.Rows.Count != 0)
+                    {
+                        int ii = dataGridView1.Rows.Count - 1;
+                        dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
+                        dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
+                    }
                     if (UDF != null && UDF.Count != 0)
                     {
-                        for (int j = 2; j < UDF.Count + 2; j++)
+                        for (int j = 2; j < UDF[UDF.Count - 1] + 2; j++)
                         {
 
                             dataGridView1.Columns[j].Width = 30;
                         }
                     }
-                   else if (InitialUDF != null && InitialUDF.Count != 0)
+                    else if (InitialUDF != null && InitialUDF.Count != 0)
                     {
-                        for (int j = 2; j <InitialUDF[ InitialUDF.Count-1] + 2; j++)
+                        for (int j = 2; j < InitialUDF[InitialUDF.Count - 1] + 2; j++)
                         {
 
                             dataGridView1.Columns[j].Width = 30;
@@ -1879,7 +1904,12 @@ namespace MasterClassified
                 {
                     bindingSource2.Filter = filter;
                     this.dataGridView1.DataSource = bindingSource2;
-
+                    if (dataGridView1.Rows.Count != 0)
+                    {
+                        int ii = dataGridView1.Rows.Count - 1;
+                        dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
+                        dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
+                    }
                 }
 
             }
@@ -1895,5 +1925,471 @@ namespace MasterClassified
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.checkBox1.Checked = false;
+            this.checkBox2.Checked = false;
+            this.checkBox3.Checked = false;
+            this.checkBox4.Checked = false;
+            this.checkBox5.Checked = false;
+            this.checkBox6.Checked = false;
+            this.checkBox7.Checked = false;
+            this.checkBox8.Checked = false;
+            this.checkBox9.Checked = false;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            JIDTA = new List<int>();
+
+            if (checkBox1.Checked == true)
+                JIDTA.Add(1);
+            if (checkBox3.Checked == true)
+                JIDTA.Add(2);
+            if (checkBox2.Checked == true)
+                JIDTA.Add(3);
+            if (checkBox4.Checked == true)
+                JIDTA.Add(4);
+            if (checkBox5.Checked == true)
+                JIDTA.Add(5);
+            if (checkBox6.Checked == true)
+                JIDTA.Add(6);
+            if (checkBox7.Checked == true)
+                JIDTA.Add(7);
+            if (checkBox8.Checked == true)
+                JIDTA.Add(8);
+            if (checkBox9.Checked == true)
+                JIDTA.Add(9);
+            if (checkBox10.Checked == true)
+                JIDTA.Add(10);
+
+
+            if (JIDTA.Count > 0)
+            {
+                UDF = new List<int>();
+                UDF = JIDTA;
+
+                if (UDF.Count != 0)
+                {
+
+
+                    int s = this.tabControl1.SelectedIndex;
+                    if (s == 0)
+                    {
+                        clsAllnew BusinessHelp = new clsAllnew();
+                        List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
+                        ClaimReport_Server = new List<inputCaipiaoDATA>();
+                        ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(CaipiaozhongleiResult[0].Name);
+                        ClaimReport_Server.Sort(new Comp());
+
+                        // InitialSystemInfo();
+                        #region 原始 用  Dav 筛选
+                        //   List<inputCaipiaoDATA> ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
+                        #region 添加 基数 和前几期对比
+
+                        List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAn("YES");
+                        ClaimReport_Server.Sort(new CompsSmall());
+                        foreach (inputCaipiaoDATA item in ClaimReport_Server)
+                        {
+                            foreach (FangAnLieBiaoDATA temp in Result)
+                            {
+                                string[] temp1 = System.Text.RegularExpressions.Regex.Split(temp.Data, "\r\n");
+
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
+                                for (int ii = 0; ii < temp2.Length; ii++)
+                                {
+                                    for (int i = 1; i < temp1.Length; i++)
+                                    {
+                                        string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp1[i], "段");
+                                        int ss = ii + 1;
+                                        bool isrun = false;
+
+                                        for (int j = 0; j < UDF.Count; j++)
+                                        {
+                                            if (UDF[j] == ss)
+                                                isrun = true;
+
+                                        }
+                                        if (isrun == false)
+                                            continue;
+
+                                        if (temp1[i].Contains(temp2[ii]))
+                                        {
+                                            item.JiShu = item.JiShu + "基" + ss.ToString() + " " + temp3[0];
+                                            if (ss == 1)
+                                                item.JiShu1 = temp3[0];
+                                            else if (ss == 2)
+                                                item.JiShu2 = temp3[0];
+                                            else if (ss == 3)
+                                                item.JiShu3 = temp3[0];
+                                            else if (ss == 4)
+                                                item.JiShu4 = temp3[0];
+                                            else if (ss == 5)
+                                                item.JiShu5 = temp3[0];
+                                            else if (ss == 6)
+                                                item.JiShu6 = temp3[0];
+                                            else if (ss == 7)
+                                                item.JiShu7 = temp3[0];
+                                            else if (ss == 8)
+                                                item.JiShu8 = temp3[0];
+                                            else if (ss == 9)
+                                                item.JiShu9 = temp3[0];
+                                            break;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        #endregion
+
+                        //  ClaimReport_Server = new List<inputCaipiaoDATA>();
+
+                        //  ClaimReport_Server.Sort(new Comp());
+                        int indexing = 0;
+                        foreach (inputCaipiaoDATA item in ClaimReport_Server)
+                        {
+                            indexing = 0;
+
+                            foreach (inputCaipiaoDATA temp in ClaimReport_Server)
+                            {
+                                if (Convert.ToInt32(item.QiHao) > Convert.ToInt32(temp.QiHao))
+                                {
+                                    indexing++;
+                                    int xiangtongindex = 0;
+
+                                    #region 匹配相同次数
+                                    for (int j = 0; j < UDF.Count; j++)
+                                    {
+                                        if (item.JiShu1 != null && item.JiShu1 == temp.JiShu1 && UDF[j] == 1)
+                                            xiangtongindex++;
+                                        if (item.JiShu2 != null && item.JiShu2 == temp.JiShu2 && UDF[j] == 2)
+                                            xiangtongindex++;
+                                        if (item.JiShu3 != null && item.JiShu3 == temp.JiShu3 && UDF[j] == 3)
+                                            xiangtongindex++;
+                                        if (item.JiShu4 != null && item.JiShu4 == temp.JiShu4 && UDF[j] == 4)
+                                            xiangtongindex++;
+                                        if (item.JiShu5 != null && item.JiShu5 == temp.JiShu5 && UDF[j] == 5)
+                                            xiangtongindex++;
+                                        if (item.JiShu6 != null && item.JiShu6 == temp.JiShu6 && UDF[j] == 6)
+                                            xiangtongindex++;
+                                        if (item.JiShu7 != null && item.JiShu7 == temp.JiShu7 && UDF[j] == 7)
+                                            xiangtongindex++;
+                                        if (item.JiShu8 != null && item.JiShu8 == temp.JiShu8 && UDF[j] == 8)
+                                            xiangtongindex++;
+                                        if (item.JiShu9 != null && item.JiShu9 == temp.JiShu9 && UDF[j] == 9)
+                                            xiangtongindex++;
+                                    }
+                                    #endregion
+
+                                    #region MyRegion
+                                    if (indexing == 1)
+                                        item.qian1 = xiangtongindex.ToString();
+
+                                    else if (indexing == 2) item.qian2 = xiangtongindex.ToString();
+                                    else if (indexing == 3) item.qian3 = xiangtongindex.ToString();
+                                    else if (indexing == 4) item.qian4 = xiangtongindex.ToString();
+                                    else if (indexing == 5) item.qian5 = xiangtongindex.ToString();
+                                    else if (indexing == 6) item.qian6 = xiangtongindex.ToString();
+                                    else if (indexing == 7) item.qian7 = xiangtongindex.ToString();
+                                    else if (indexing == 8) item.qian8 = xiangtongindex.ToString();
+                                    else if (indexing == 9) item.qian9 = xiangtongindex.ToString();
+                                    else if (indexing == 10) item.qian10 = xiangtongindex.ToString();
+                                    else if (indexing == 11) item.qian11 = xiangtongindex.ToString();
+                                    else if (indexing == 12) item.qian12 = xiangtongindex.ToString();
+                                    else if (indexing == 13) item.qian13 = xiangtongindex.ToString();
+                                    else if (indexing == 14) item.qian14 = xiangtongindex.ToString();
+                                    else if (indexing == 15) item.qian15 = xiangtongindex.ToString();
+                                    else if (indexing == 16) item.qian16 = xiangtongindex.ToString();
+                                    else if (indexing == 17) item.qian17 = xiangtongindex.ToString();
+                                    else if (indexing == 18) item.qian18 = xiangtongindex.ToString();
+                                    else if (indexing == 19) item.qian19 = xiangtongindex.ToString();
+                                    else if (indexing == 20) item.qian20 = xiangtongindex.ToString();
+                                    else if (indexing == 21) item.qian21 = xiangtongindex.ToString();
+                                    else if (indexing == 22) item.qian22 = xiangtongindex.ToString();
+                                    else if (indexing == 23) item.qian23 = xiangtongindex.ToString();
+                                    else if (indexing == 24) item.qian24 = xiangtongindex.ToString();
+                                    else if (indexing == 25) item.qian25 = xiangtongindex.ToString();
+                                    else if (indexing == 26) item.qian26 = xiangtongindex.ToString();
+                                    else if (indexing == 27) item.qian27 = xiangtongindex.ToString();
+                                    else if (indexing == 28) item.qian28 = xiangtongindex.ToString();
+                                    else if (indexing == 29) item.qian29 = xiangtongindex.ToString();
+                                    else if (indexing == 30) item.qian30 = xiangtongindex.ToString();
+                                    else if (indexing == 31) item.qian31 = xiangtongindex.ToString();
+                                    else if (indexing == 32) item.qian32 = xiangtongindex.ToString();
+                                    else if (indexing == 33) item.qian33 = xiangtongindex.ToString();
+                                    else if (indexing == 34) item.qian34 = xiangtongindex.ToString();
+                                    else if (indexing == 35) item.qian35 = xiangtongindex.ToString();
+                                    else if (indexing == 36) item.qian36 = xiangtongindex.ToString();
+                                    else if (indexing == 37) item.qian37 = xiangtongindex.ToString();
+                                    else if (indexing == 38) item.qian38 = xiangtongindex.ToString();
+                                    else if (indexing == 39) item.qian39 = xiangtongindex.ToString();
+                                    else if (indexing == 40) item.qian40 = xiangtongindex.ToString();
+                                    else if (indexing == 41) item.qian41 = xiangtongindex.ToString();
+                                    else if (indexing == 42) item.qian42 = xiangtongindex.ToString();
+                                    else if (indexing == 43) item.qian43 = xiangtongindex.ToString();
+                                    else if (indexing == 44) item.qian44 = xiangtongindex.ToString();
+                                    else if (indexing == 45) item.qian45 = xiangtongindex.ToString();
+                                    else if (indexing == 46) item.qian46 = xiangtongindex.ToString();
+                                    else if (indexing == 47) item.qian47 = xiangtongindex.ToString();
+                                    else if (indexing == 48) item.qian48 = xiangtongindex.ToString();
+                                    else if (indexing == 49) item.qian49 = xiangtongindex.ToString();
+                                    else if (indexing == 50) item.qian50 = xiangtongindex.ToString();
+                                    else if (indexing == 51) item.qian51 = xiangtongindex.ToString();
+                                    else if (indexing == 52) item.qian52 = xiangtongindex.ToString();
+                                    else if (indexing == 53) item.qian53 = xiangtongindex.ToString();
+                                    else if (indexing == 54) item.qian54 = xiangtongindex.ToString();
+                                    else if (indexing == 55) item.qian55 = xiangtongindex.ToString();
+                                    else if (indexing == 56) item.qian56 = xiangtongindex.ToString();
+                                    else if (indexing == 57) item.qian57 = xiangtongindex.ToString();
+                                    else if (indexing == 58) item.qian58 = xiangtongindex.ToString();
+                                    else if (indexing == 59) item.qian59 = xiangtongindex.ToString();
+                                    else if (indexing == 60) item.qian60 = xiangtongindex.ToString();
+                                    else if (indexing == 61) item.qian61 = xiangtongindex.ToString();
+                                    else if (indexing == 62) item.qian62 = xiangtongindex.ToString();
+                                    else if (indexing == 63) item.qian63 = xiangtongindex.ToString();
+                                    else if (indexing == 64) item.qian64 = xiangtongindex.ToString();
+                                    else if (indexing == 65) item.qian65 = xiangtongindex.ToString();
+                                    else if (indexing == 66) item.qian66 = xiangtongindex.ToString();
+                                    else if (indexing == 67) item.qian67 = xiangtongindex.ToString();
+                                    else if (indexing == 68) item.qian68 = xiangtongindex.ToString();
+                                    else if (indexing == 69) item.qian69 = xiangtongindex.ToString();
+                                    else if (indexing == 70) item.qian70 = xiangtongindex.ToString();
+                                    else if (indexing == 71) item.qian71 = xiangtongindex.ToString();
+                                    else if (indexing == 72) item.qian72 = xiangtongindex.ToString();
+                                    else if (indexing == 73) item.qian73 = xiangtongindex.ToString();
+                                    else if (indexing == 74) item.qian74 = xiangtongindex.ToString();
+                                    else if (indexing == 75) item.qian75 = xiangtongindex.ToString();
+                                    else if (indexing == 76) item.qian76 = xiangtongindex.ToString();
+                                    else if (indexing == 77) item.qian77 = xiangtongindex.ToString();
+                                    else if (indexing == 78) item.qian78 = xiangtongindex.ToString();
+                                    else if (indexing == 79) item.qian79 = xiangtongindex.ToString();
+                                    else if (indexing == 80) item.qian80 = xiangtongindex.ToString();
+                                    else if (indexing == 81) item.qian81 = xiangtongindex.ToString();
+                                    else if (indexing == 82) item.qian82 = xiangtongindex.ToString();
+                                    else if (indexing == 83) item.qian83 = xiangtongindex.ToString();
+                                    else if (indexing == 84) item.qian84 = xiangtongindex.ToString();
+                                    else if (indexing == 85) item.qian85 = xiangtongindex.ToString();
+                                    else if (indexing == 86) item.qian86 = xiangtongindex.ToString();
+                                    else if (indexing == 87) item.qian87 = xiangtongindex.ToString();
+                                    else if (indexing == 88) item.qian88 = xiangtongindex.ToString();
+                                    else if (indexing == 89) item.qian89 = xiangtongindex.ToString();
+                                    else if (indexing == 90) item.qian90 = xiangtongindex.ToString();
+                                    else if (indexing == 91) item.qian91 = xiangtongindex.ToString();
+                                    else if (indexing == 92) item.qian92 = xiangtongindex.ToString();
+                                    else if (indexing == 93) item.qian93 = xiangtongindex.ToString();
+                                    else if (indexing == 94) item.qian94 = xiangtongindex.ToString();
+                                    else if (indexing == 95) item.qian95 = xiangtongindex.ToString();
+                                    else if (indexing == 96) item.qian96 = xiangtongindex.ToString();
+                                    else if (indexing == 97) item.qian97 = xiangtongindex.ToString();
+                                    else if (indexing == 98) item.qian98 = xiangtongindex.ToString();
+                                    else if (indexing == 99) item.qian99 = xiangtongindex.ToString();
+
+                                    #endregion
+
+                                }
+                            }
+                        }
+                        #endregion
+                        NewMethod();
+                    }
+                }
+
+
+            }
+            else
+                MessageBox.Show("请选择要分析的条目，否则请点击取消关闭窗口", "Waring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        }
+
+
+        private void QianQI_Zidingyi_InitialSystemInfo()
+        {
+
+
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
+
+            if (CaipiaozhongleiResult.Count == 0)
+            {
+                MessageBox.Show("彩票默认运行类型没有选中,请到【彩票类型界面】选中彩票类型，点击确认", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+            //this.label2.Text = CaipiaozhongleiResult[0].Name;
+            ////this.label4.Text = CaipiaozhongleiResult[0].Name;
+            //this.label6.Text = CaipiaozhongleiResult[0].JiBenHaoMaS + "-" + CaipiaozhongleiResult[0].JiBenHaoMaT;
+            string len = CaipiaozhongleiResult[0].Xuan;
+            for (int i = 0; i < Convert.ToInt32(len); i++)
+            {
+                int con = i + 1;
+
+                clbStatus.Items.Add("第 " + con + " 位");
+            }
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < clbStatus.Items.Count; i++)
+            {
+                clbStatus.SetItemChecked(i, true);
+
+            }
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < clbStatus.Items.Count; i++)
+            {
+                clbStatus.SetItemChecked(i, false);
+
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
+            newi = new List<int>();
+            if (clbStatus.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.clbStatus.CheckedItems)
+                {
+                    newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+
+                }
+            }
+
+            ZidingYi_tab2();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Suiji_NewMethod1();
+        }
+        private void Suiji_NewMethod1()
+        {
+            try
+            {
+                newlist = new List<int>();
+                showSuijiResultlist = new List<string>();
+
+                newlist.Add(0);
+                newlist.Add(1);
+                newlist.Add(2);
+                newlist.Add(3);
+                newlist.Add(4);
+                newlist.Add(5);
+                newlist.Add(6);
+                newlist.Add(7);
+                newlist.Add(8);
+                newlist.Add(9);
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+
+                //随机分段取位数
+                List<int> newlist1 = new List<int>();
+                newlist1.Add(2);
+                newlist1.Add(3);
+                newlist1.Add(4);
+                newlist1.Add(5);
+                newlist1.Add(6);
+                newlist1 = newlist1.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+
+                int duan = newlist1[0];
+                int evertduan = 10 / duan;
+                int ilast = 0;
+                ilast = duan * evertduan;
+
+
+                string first = "";
+                showSuijiResultlist = new List<string>();
+                for (int iq = 1; iq <= duan; iq++)
+                {
+                    string num = "";
+                    int ago = 0;
+
+                    for (int i = 0; i <= evertduan; i++)
+                    {
+                        ago++;
+                        if (ago > evertduan)
+                            break;
+
+                        num = num + " " + newlist[0];
+                        newlist.RemoveAt(0);
+
+                    }
+                    first = first + "\r\n" + iq.ToString() + "段=" + " " + num;
+
+                    showSuijiResultlist.Add(iq.ToString() + " 段= " + " " + num);
+
+                }
+                List<string> showSuijiResultlist1 = new List<string>();
+
+                for (int ii = 0; ii < showSuijiResultlist.Count; ii++)
+                {
+                    for (int i = 0; i < newlist.Count; i++)
+                    {
+                        showSuijiResultlist[ii] = showSuijiResultlist[ii] + " " + newlist[i];
+                        newlist.RemoveAt(i);
+                        break;
+                    }
+                }
+
+                List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
+                FangAnLieBiaoDATA item = new FangAnLieBiaoDATA();
+
+
+                for (int i = 0; i < showSuijiResultlist.Count; i++)
+                {
+                    string[] temp1 = System.Text.RegularExpressions.Regex.Split(showSuijiResultlist[i], "=");
+                    if (i == 0)
+                        item.DuanWei1 = temp1[1].Trim();
+                    else if (i == 1)
+                        item.DuanWei2 = temp1[1].Trim();
+                    else if (i == 2)
+                        item.DuanWei3 = temp1[1].Trim();
+                    else if (i == 3)
+                        item.DuanWei4 = temp1[1].Trim();
+                    else if (i == 4)
+                        item.DuanWei5 = temp1[1].Trim();
+                    else if (i == 5)
+                        item.DuanWei6 = temp1[1].Trim();
+                    else if (i == 6)
+                        item.DuanWei7 = temp1[1].Trim();
+                    else if (i == 7)
+                        item.DuanWei8 = temp1[1].Trim();
+                    else if (i == 8)
+                        item.DuanWei9 = temp1[1].Trim();
+                    else if (i == 9)
+                        item.DuanWei10 = temp1[1].Trim();
+
+                    item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
+                }
+                item.ZhuJian = "YES";
+                item.Name = "默认方案";//保存名称
+                item.DuanShu = showSuijiResultlist.Count.ToString();
+                Result.Add(item);
+                clsAllnew BusinessHelp = new clsAllnew();
+                BusinessHelp.Save_FangAn(Result);
+                NewMethodtab1();
+
+                toolStripLabel7.Text = item.Data.Replace("\r\n", "*");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                return;
+
+                throw;
+            }
+        }
     }
 }

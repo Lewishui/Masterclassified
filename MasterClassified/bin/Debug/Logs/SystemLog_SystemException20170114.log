@@ -64,3 +64,16 @@
    在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
    在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time2017/1/14 15:26:15
+2017-01-14 19:28:25,514 [10] FATAL SystemExceptionLogger [(null)] - System Error 索引超出范围。必须为非负值并小于集合大小。
+参数名: index, Exception Detail Info :   在 System.Collections.ArrayList.get_Item(Int32 index)
+   在 System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   在 System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   在 MasterClassified.frmMCdata.dataGridView1_CellMouseLeave(Object sender, DataGridViewCellEventArgs e)
+   在 System.Windows.Forms.DataGridView.OnCellMouseLeave(DataGridViewCellEventArgs e)
+   在 System.Windows.Forms.DataGridView.OnMouseLeave(EventArgs e)
+   在 System.Windows.Forms.Control.WmMouseLeave(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.DataGridView.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time2017/1/14 19:28:25

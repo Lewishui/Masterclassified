@@ -140,10 +140,12 @@ namespace MasterClassified
             this.bindingSource1.DataSource = qtyTable;
             bindingSource1.Sort = "期号  ASC";
             this.dataGridView1.DataSource = this.bindingSource1;
-
-            //  dataGridView1.DataSource = qtyTable;
-
-
+            if (dataGridView1.Rows.Count != 0)
+            {
+                int ii = dataGridView1.Rows.Count - 1;
+                dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
+                dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
+            }
             #endregion
 
         }
@@ -689,6 +691,31 @@ namespace MasterClassified
 
 
             }
+
+        }
+
+     
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (RowRemark >= dataGridView1.RowCount)
+                return;
+
+            List<inputCaipiaoDATA> Result = new List<inputCaipiaoDATA>();
+            inputCaipiaoDATA item = new inputCaipiaoDATA();
+            item.QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
+            item.KaiJianRiqi = this.dataGridView1.Rows[RowRemark].Cells[1].EditedFormattedValue.ToString();
+
+            for (int i = 2; i < dataGridView1.ColumnCount; i++)
+                item.KaiJianHaoMa = item.KaiJianHaoMa + " " + dataGridView1.Rows[RowRemark].Cells[i].EditedFormattedValue.ToString().Trim();
+
+            item.KaiJianHaoMa = item.KaiJianHaoMa.Trim();
+            item.Xuan = this.label8.Text;
+            item.Caipiaomingcheng = this.label2.Text.ToString();
+            Result.Add(item);
+            clsAllnew BusinessHelp = new clsAllnew();
+            BusinessHelp.SPInputclaimreport_Server(Result);
+
 
         }
     }

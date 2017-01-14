@@ -57,8 +57,30 @@ namespace MasterClassified
                 index++;
             }
             listBox1.SelectedIndex = index;
+            #region 显示默认方案到 显示栏中
 
+            List<FangAnLieBiaoDATA> moreResult = BusinessHelp.Read_FangAn(this.listBox1.Text.ToString());
+
+            showSuijiResultlist = new List<string>();
+
+            foreach (FangAnLieBiaoDATA item in moreResult)
+            {
+                if (item.Data == null)
+                    continue;
+
+                string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.Data, "\r\n");
+
+                for (int i = 1; i < temp1.Length; i++)
+                {
+                    showSuijiResultlist.Add(temp1[i]);
+                }
+                
+            }
+            this.listBox3.DataSource = showSuijiResultlist; 
+            #endregion
         }
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -109,7 +131,7 @@ namespace MasterClassified
                 //{
                 string first = "";
                 showSuijiResultlist = new List<string>();
-                for (int iq = 0; iq < duan; iq++)
+                for (int iq = 1; iq <= duan; iq++)
                 {
                     string num = "";
                     int ago = 0;

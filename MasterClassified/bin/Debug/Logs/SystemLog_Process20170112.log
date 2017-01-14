@@ -296,3 +296,21 @@
 2017-01-12 10:02:31,151 [9] FATAL ProcessLogger [(null)] - initialize1/12/2017 10:02:31
 2017-01-12 10:02:33,153 [9] FATAL ProcessLogger [(null)] - System Start 1/12/2017 10:02:33
 2017-01-12 10:02:33,153 [9] FATAL ProcessLogger [(null)] - System Start 1/12/2017 10:02:33
+2017-01-12 21:14:17,606 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:14:17
+2017-01-12 21:14:17,981 [7] FATAL ProcessLogger [(null)] - initialize2017/1/12 21:14:17
+2017-01-12 21:14:21,863 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:14:21
+2017-01-12 21:14:21,864 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:14:21
+2017-01-12 21:14:23,613 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:14:23
+2017-01-12 21:14:26,426 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:14:26
+2017-01-12 21:14:27,484 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:14:27
+2017-01-12 21:14:27,575 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:14:27
+2017-01-12 21:17:23,787 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:17:23
+2017-01-12 21:17:23,792 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:17:23
+2017-01-12 21:17:38,343 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:17:38
+2017-01-12 21:23:42,429 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:23:42
+2017-01-12 21:23:42,429 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:23:42
+2017-01-12 21:35:39,113 [7] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:35:39
+2017-01-12 21:46:22,072 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:46:22
+2017-01-12 21:46:22,275 [9] FATAL ProcessLogger [(null)] - initialize2017/1/12 21:46:22
+2017-01-12 21:58:54,132 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:58:54
+2017-01-12 21:58:54,134 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/12 21:58:54

@@ -25,9 +25,9 @@ namespace MasterClassified
 
             if (checkBox1.Checked == true)
                 JIDTA.Add(1);
-            if (checkBox2.Checked == true)
-                JIDTA.Add(2);
             if (checkBox3.Checked == true)
+                JIDTA.Add(2);
+            if (checkBox2.Checked == true)
                 JIDTA.Add(3);
             if (checkBox4.Checked == true)
                 JIDTA.Add(4);

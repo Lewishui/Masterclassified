@@ -1784,7 +1784,7 @@ namespace MasterClassified
                 {
 
                     InitialBackGroundWorker();
-                //    bgWorker.DoWork += new DoWorkEventHandler(Refreshdata);
+                    //    bgWorker.DoWork += new DoWorkEventHandler(Refreshdata);
 
                     bgWorker.RunWorkerAsync();
 
@@ -2274,6 +2274,9 @@ namespace MasterClassified
         private void QianQI_Zidingyi_InitialSystemInfo()
         {
 
+
+            for (int i = 0; i < this.clbStatus.Items.Count; i++)
+                clbStatus.Items.Remove(clbStatus.Items[0]);
 
             clsAllnew BusinessHelp = new clsAllnew();
 

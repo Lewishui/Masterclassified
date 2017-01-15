@@ -38,7 +38,7 @@ namespace MasterClassified
             log4net.ILog objLogger = log4net.LogManager.GetLogger("SystemExceptionLogger");
             objLogger.Fatal("System Error " + e.Exception.Message.ToString() + ", Exception Detail Info :" + e.Exception.StackTrace + "Time" + DateTime.Now.ToString());
 
-            MessageBox.Show("System Error，Please contact with admin!", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("系统异常：00000，请关闭并重新启动如继续异常请检查数据信息是否有误!", "系统错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         static bool IsAlreadyRunning()

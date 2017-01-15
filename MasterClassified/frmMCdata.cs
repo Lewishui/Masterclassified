@@ -50,7 +50,7 @@ namespace MasterClassified
             clsAllnew BusinessHelp = new clsAllnew();
 
             List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
-
+            ProcessLogger.Fatal("System Read_CaiPiaoZhongLei_Moren 70104 " + DateTime.Now.ToString());
             if (CaipiaozhongleiResult.Count == 0)
             {
                 MessageBox.Show("彩票默认运行类型没有选中", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -64,14 +64,15 @@ namespace MasterClassified
             this.label8.Text = CaipiaozhongleiResult[0].Xuan;
 
 
-
             ClaimReport_Server = new List<inputCaipiaoDATA>();
 
+            ProcessLogger.Fatal("System ReadclaimreportfromServerBy_Xuan 70105" + DateTime.Now.ToString());
 
             DateTime oldDate = DateTime.Now;
             ClaimReport_Server = new List<inputCaipiaoDATA>();
             ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(this.label2.Text);
             ClaimReport_Server.Sort(new Comp());
+            ProcessLogger.Fatal("System ReadclaimreportfromServerBy_Xuan 70106" + DateTime.Now.ToString());
             //this.dataGridView1.DataSource = null;
             //this.dataGridView1.AutoGenerateColumns = false;
             //if (ClaimReport_Server.Count != 0)
@@ -133,7 +134,7 @@ namespace MasterClassified
 
                 jk++;
             }
-
+            ProcessLogger.Fatal("System  70107" + DateTime.Now.ToString());
             //   sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(qtyTable);
 
             // this.bindingSource1.DataSource = null;
@@ -694,7 +695,7 @@ namespace MasterClassified
 
         }
 
-     
+
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -705,13 +706,48 @@ namespace MasterClassified
             inputCaipiaoDATA item = new inputCaipiaoDATA();
             item.QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
             item.KaiJianRiqi = this.dataGridView1.Rows[RowRemark].Cells[1].EditedFormattedValue.ToString();
+            if (dataGridView1.ColumnCount - 2 != Convert.ToInt32(this.label8.Text))
+            {
+              //  MessageBox.Show("号码填写不准确或位数不匹配当前种类要求，请填写完整！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
 
+            }
             for (int i = 2; i < dataGridView1.ColumnCount; i++)
+            {
+                if (dataGridView1.Rows[RowRemark].Cells[i].EditedFormattedValue.ToString().Trim()=="")
+                    dataGridView1.Rows[RowRemark].Cells[i].Value = "0";
                 item.KaiJianHaoMa = item.KaiJianHaoMa + " " + dataGridView1.Rows[RowRemark].Cells[i].EditedFormattedValue.ToString().Trim();
-
+            }
             item.KaiJianHaoMa = item.KaiJianHaoMa.Trim();
             item.Xuan = this.label8.Text;
             item.Caipiaomingcheng = this.label2.Text.ToString();
+            if (item.QiHao == null || item.QiHao == "")
+            {
+                MessageBox.Show("期号不能为空，请填写完整！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            if (item.KaiJianRiqi == null || item.KaiJianRiqi == "")
+            {
+                MessageBox.Show("开奖日期不能为空，请填写完整！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            if (item.Xuan == null || item.Xuan == "")
+            {
+                MessageBox.Show("彩票类型【选】配置错误，请填写完整！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+            if (item.Caipiaomingcheng == null || item.Caipiaomingcheng == "")
+            {
+                MessageBox.Show("彩票类型[名称]配置错误，请填写完整！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+
+            }
+
             Result.Add(item);
             clsAllnew BusinessHelp = new clsAllnew();
             BusinessHelp.SPInputclaimreport_Server(Result);

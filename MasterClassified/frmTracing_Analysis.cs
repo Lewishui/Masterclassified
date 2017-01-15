@@ -62,67 +62,79 @@ namespace MasterClassified
         }
         private void InitialSystemInfo()
         {
-            #region 初始化配置
-            ProcessLogger = log4net.LogManager.GetLogger("ProcessLogger");
-            ExceptionLogger = log4net.LogManager.GetLogger("SystemExceptionLogger");
-            ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
-            #endregion
-            //按照彩票的Xuan 添加基数列的列数多少
-            InitialUDF = new List<int>();
-            UDF = new List<int>();
-            clsAllnew BusinessHelp = new clsAllnew();
-            List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
-            if (CaipiaozhongleiResult.Count != 0)
-                this.label1.Text = "当前彩票类型：" + CaipiaozhongleiResult[0].Name;
-            else
+            try
             {
-                MessageBox.Show("错误：请选择默认的彩票类型，再继续本界面的操作", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                #region 初始化配置
+                ProcessLogger = log4net.LogManager.GetLogger("ProcessLogger");
+                ExceptionLogger = log4net.LogManager.GetLogger("SystemExceptionLogger");
+                ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
+                #endregion
+                //按照彩票的Xuan 添加基数列的列数多少
+                InitialUDF = new List<int>();
+                UDF = new List<int>();
+                clsAllnew BusinessHelp = new clsAllnew();
+                List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
+                if (CaipiaozhongleiResult.Count != 0)
+                    this.label1.Text = "当前彩票类型：" + CaipiaozhongleiResult[0].Name;
+                else
+                {
+                    MessageBox.Show("错误：请选择默认的彩票类型，再继续本界面的操作", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
 
+                }
+                //+"如数据或设置不能刷新请关闭本界面并重新在主界面打开"
+
+
+                ClaimReport_Server = new List<inputCaipiaoDATA>();
+                ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(CaipiaozhongleiResult[0].Name);
+                ClaimReport_Server.Sort(new Comp());
+
+                this.toolStripComboBox1.ComboBox.DisplayMember = "QiHao";
+                this.toolStripComboBox1.ComboBox.ValueMember = "QiHao";
+                this.toolStripComboBox1.ComboBox.DataSource = ClaimReport_Server;
+
+                this.toolStripComboBox2.ComboBox.DisplayMember = "QiHao";
+                this.toolStripComboBox2.ComboBox.ValueMember = "QiHao";
+                this.toolStripComboBox2.ComboBox.DataSource = ClaimReport_Server;
+
+                if (ClaimReport_Server.Count != 0)
+                {
+                    this.toolStripComboBox1.SelectedIndex = 0;
+                    this.toolStripComboBox2.SelectedIndex = ClaimReport_Server.Count - 1;
+                    this.toolStripComboBox3.SelectedIndex = 2;
+                    this.toolStripComboBox4.SelectedIndex = 2;
+                }
+
+                this.dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+
+
+                toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                //GetDataforOutlookThread = new Thread(NewMethodtab1);
+                //GetDataforOutlookThread.Start();
+
+                //按照彩票的Xuan 添加基数列的列数多少
+                InitialUDF = new List<int>();
+                if (CaipiaozhongleiResult[0].Xuan != null)
+                {
+                    InitialUDF.Add(Convert.ToInt32(CaipiaozhongleiResult[0].Xuan));
+                }
+                else
+                {
+
+                    MessageBox.Show("彩票数据缺失,请维护完整!", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+                NewMethodtab1();
             }
-            //+"如数据或设置不能刷新请关闭本界面并重新在主界面打开"
-
-
-            ClaimReport_Server = new List<inputCaipiaoDATA>();
-            ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(CaipiaozhongleiResult[0].Name);
-            ClaimReport_Server.Sort(new Comp());
-
-            this.toolStripComboBox1.ComboBox.DisplayMember = "QiHao";
-            this.toolStripComboBox1.ComboBox.ValueMember = "QiHao";
-            this.toolStripComboBox1.ComboBox.DataSource = ClaimReport_Server;
-
-            this.toolStripComboBox2.ComboBox.DisplayMember = "QiHao";
-            this.toolStripComboBox2.ComboBox.ValueMember = "QiHao";
-            this.toolStripComboBox2.ComboBox.DataSource = ClaimReport_Server;
-
-            if (ClaimReport_Server.Count != 0)
+            catch (Exception ex)
             {
-                this.toolStripComboBox1.SelectedIndex = 0;
-                this.toolStripComboBox2.SelectedIndex = ClaimReport_Server.Count - 1;
-                this.toolStripComboBox3.SelectedIndex = 2;
-                this.toolStripComboBox4.SelectedIndex = 2;
+                ProcessLogger.Fatal("System Error 60239 " + ex + DateTime.Now.ToString());
+
+                MessageBox.Show("系统初始化失败,请关闭当前界面并重新尝试!", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                throw;
             }
-
-            this.dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-
-
-            toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
-            //GetDataforOutlookThread = new Thread(NewMethodtab1);
-            //GetDataforOutlookThread.Start();
-
-            //按照彩票的Xuan 添加基数列的列数多少
-            InitialUDF = new List<int>();
-            if (CaipiaozhongleiResult[0].Xuan != null)
-            {
-                InitialUDF.Add(Convert.ToInt32(CaipiaozhongleiResult[0].Xuan));
-            }
-            else
-            {
-                MessageBox.Show("彩票数据缺失,请维护完整!", "错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                return;
-
-            }
-            NewMethodtab1();
 
         }
 
@@ -1511,15 +1523,24 @@ namespace MasterClassified
                         }
                         else
                         {
-                            qtyTable.Rows[jk][2] = item.JiShu1;
-                            qtyTable.Rows[jk][3] = item.JiShu2;
-                            qtyTable.Rows[jk][4] = item.JiShu3;
-                            qtyTable.Rows[jk][5] = item.JiShu4;
-                            qtyTable.Rows[jk][6] = item.JiShu5;
-                            qtyTable.Rows[jk][7] = item.JiShu6;
-                            qtyTable.Rows[jk][8] = item.JiShu7;
-                            qtyTable.Rows[jk][9] = item.JiShu8;
-                            qtyTable.Rows[jk][10] = item.JiShu9;
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 0)
+                                qtyTable.Rows[jk][2] = item.JiShu1;
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 1)
+                                qtyTable.Rows[jk][3] = item.JiShu2;
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 2)
+                                qtyTable.Rows[jk][4] = item.JiShu3;
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 3)
+                                qtyTable.Rows[jk][5] = item.JiShu4;
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 4)
+                                qtyTable.Rows[jk][6] = item.JiShu5;
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 5)
+                                qtyTable.Rows[jk][7] = item.JiShu6;
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 6)
+                                qtyTable.Rows[jk][8] = item.JiShu7;
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 7)
+                                qtyTable.Rows[jk][9] = item.JiShu8;
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 8)
+                                qtyTable.Rows[jk][10] = item.JiShu9;
 
                         }
                         // qtyTable.Rows[1][4] = item.QiHao;
@@ -1753,12 +1774,17 @@ namespace MasterClassified
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            toolStripLabel7.Text = "系统在拼命刷新......";
+            Refreshdata();
+            toolStripLabel7.Text = "刷新完成";
+            return;
+
             {
                 try
                 {
 
                     InitialBackGroundWorker();
-                    bgWorker.DoWork += new DoWorkEventHandler(Refreshdata);
+                //    bgWorker.DoWork += new DoWorkEventHandler(Refreshdata);
 
                     bgWorker.RunWorkerAsync();
 
@@ -1791,7 +1817,8 @@ namespace MasterClassified
             }
 
         }
-        private void Refreshdata(object sender, DoWorkEventArgs e)
+        //private void Refreshdata(object sender, DoWorkEventArgs e)
+        private void Refreshdata()
         {
             ClaimReport_Server = new List<inputCaipiaoDATA>();
 
@@ -1813,22 +1840,48 @@ namespace MasterClassified
             ClaimReport_Server = new List<inputCaipiaoDATA>();
             ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(CaipiaozhongleiResult[0].Name);
             ClaimReport_Server.Sort(new Comp());
+            int sq = this.tabControl1.SelectedIndex;
+            if (sq == 0)
 
-            this.toolStripComboBox1.ComboBox.DisplayMember = "QiHao";
-            this.toolStripComboBox1.ComboBox.ValueMember = "QiHao";
-            this.toolStripComboBox1.ComboBox.DataSource = ClaimReport_Server;
-
-            this.toolStripComboBox2.ComboBox.DisplayMember = "QiHao";
-            this.toolStripComboBox2.ComboBox.ValueMember = "QiHao";
-            this.toolStripComboBox2.ComboBox.DataSource = ClaimReport_Server;
-
-            if (ClaimReport_Server.Count != 0)
+                InitialSystemInfo();
+            else if (sq == 1)
             {
-                this.toolStripComboBox1.SelectedIndex = 0;
-                this.toolStripComboBox2.SelectedIndex = ClaimReport_Server.Count - 1;
-                this.toolStripComboBox3.SelectedIndex = 2;
-                this.toolStripComboBox4.SelectedIndex = 2;
+                toolStripComboBox4.Items.Clear();
+                for (int i = 1; i <= 2000; i++)
+                {
+                    toolStripComboBox4.Items.Add(i);
+
+                }
+                toolStripComboBox4.SelectedIndex = 4;
+
+                qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
+
+                toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+
+                //GetDataforOutlookThread = new Thread(tab2);
+                //GetDataforOutlookThread.Start();
+                // tab2(BusinessHelp);
+                tab2();
+
+                QianQI_Zidingyi_InitialSystemInfo();
             }
+            return;
+
+            //this.toolStripComboBox1.ComboBox.DisplayMember = "QiHao";
+            //this.toolStripComboBox1.ComboBox.ValueMember = "QiHao";
+            //this.toolStripComboBox1.ComboBox.DataSource = ClaimReport_Server;
+
+            //this.toolStripComboBox2.ComboBox.DisplayMember = "QiHao";
+            //this.toolStripComboBox2.ComboBox.ValueMember = "QiHao";
+            //this.toolStripComboBox2.ComboBox.DataSource = ClaimReport_Server;
+
+            //if (ClaimReport_Server.Count != 0)
+            //{
+            //    this.toolStripComboBox1.SelectedIndex = 0;
+            //    this.toolStripComboBox2.SelectedIndex = ClaimReport_Server.Count - 1;
+            //    this.toolStripComboBox3.SelectedIndex = 2;
+            //    this.toolStripComboBox4.SelectedIndex = 2;
+            //}
 
 
             DateTime FinishTime = DateTime.Now;
@@ -1883,35 +1936,48 @@ namespace MasterClassified
         }
         private void ApplyBindSourceFilter(string shipper, string county = "", string store = "")
         {
-
-            //if (bindingSource1.Count > 0)
+            try
             {
-                string filter = "";
-                if (shipper.Length > 0)
-                {
-                    filter += " (期号>='" + shipper + "')";
-                }
 
-                if (county.Length > 0 && county != "")
+                //if (bindingSource1.Count > 0)
                 {
-                    if (filter.Length > 0)
+                    string filter = "";
+                    if (shipper.Length > 0)
                     {
-                        filter += " AND ";
+                        filter += " (期号>='" + shipper + "')";
                     }
-                    filter += "(期号<=" + "'" + county + "'" + ")";
-                }
-                if (ClaimReport_Server.Count > 0)
-                {
-                    bindingSource2.Filter = filter;
-                    this.dataGridView1.DataSource = bindingSource2;
-                    if (dataGridView1.Rows.Count != 0)
-                    {
-                        int ii = dataGridView1.Rows.Count - 1;
-                        dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
-                        dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
-                    }
-                }
 
+                    if (county.Length > 0 && county != "")
+                    {
+                        if (filter.Length > 0)
+                        {
+                            filter += " AND ";
+                        }
+                        filter += "(期号<=" + "'" + county + "'" + ")";
+                    }
+                    if (ClaimReport_Server.Count > 0)
+                    {
+                        this.dataGridView1.DataSource = null;
+
+                        bindingSource2.Filter = filter;
+                        this.dataGridView1.DataSource = bindingSource2;
+                        if (dataGridView1.Rows.Count != 0)
+                        {
+                            int ii = dataGridView1.Rows.Count - 1;
+                            dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
+                            dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("刷新异常或数据有误，请关闭当前页面重新尝试", "异常", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+
+                throw;
             }
         }
 

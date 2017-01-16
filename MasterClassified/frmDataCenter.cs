@@ -17,6 +17,8 @@ namespace MasterClassified
 {
     public partial class frmDataCenter : DockContent
     {
+        int RowRemark = 0;
+        int cloumn = 0;
         private SortableBindingList<inputCaipiaoDATA> sortablePendingOrderList;
         List<inputCaipiaoDATA> ClaimReport_Server;
         public frmDataCenter()
@@ -384,6 +386,70 @@ namespace MasterClassified
         }
 
         #endregion
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RowRemark = e.RowIndex;
+            cloumn = e.ColumnIndex;
+        }
+
+        private void notifyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (RowRemark >= dataGridView1.Rows.Count)
+            {
+                RowRemark = RowRemark - 1;
+            }
+            string QiHao = this.dataGridView1.Rows[RowRemark].Cells["_id"].EditedFormattedValue.ToString();
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            BusinessHelp.deleteID_CaiPiaoData(QiHao);
+            #region MyRegion
+
+            NewMethod();
+            #endregion
+        }
+
+        private void NewMethod()
+        {
+            try
+            {
+                clsAllnew BusinessHelp = new clsAllnew();
+                int s = this.tabControl1.SelectedIndex;
+                if (s == 0)
+                {
+
+                    ClaimReport_Server = new List<inputCaipiaoDATA>();
+                    ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
+                    //  ClaimReport_Server.Sort(new Comp());
+
+                    sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(ClaimReport_Server);
+
+                    this.bindingSource1.DataSource = null;
+                    this.bindingSource1.DataSource = sortablePendingOrderList;
+
+                    this.dataGridView1.DataSource = this.bindingSource1;
+                    //this.dataGridView1.DataSource = null;
+                    //this.dataGridView1.AutoGenerateColumns = false;
+                    //if (ClaimReport_Server.Count != 0)
+                    //{
+                    //    this.dataGridView1.DataSource = ClaimReport_Server;
+                    //}
+                }
+                else if (s == 1)
+                {
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                return;
+
+                throw;
+            }
+        }
 
     }
 }

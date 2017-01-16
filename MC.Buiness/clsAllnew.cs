@@ -1105,6 +1105,24 @@ namespace MC.Buiness
             QueryDocument query = new QueryDocument("QiHao", name);
             collection1.Remove(query);
         }
+        public void deleteID_CaiPiaoData(string name)
+        {
+            string connectionString = "mongodb://127.0.0.1";
+            MongoServer server = MongoServer.Create(connectionString);
+            MongoDatabase db1 = server.GetDatabase("MasterClassified");
+            MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
+            MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
+
+            if (name == null)
+            {
+                MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+         //   QueryDocument query = new QueryDocument("ID", name);
+            IMongoQuery query = Query.EQ("_id", new ObjectId(name));
+
+            collection1.Remove(query);
+        }
         public void Clear_CaiPiaoData(string name)
         {
             string connectionString = "mongodb://127.0.0.1";

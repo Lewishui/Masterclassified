@@ -975,3 +975,65 @@
 2017-01-16 16:26:16,574 [1] FATAL ProcessLogger [(null)] - System Start 1/16/2017 16:26:16
 2017-01-16 16:26:16,583 [1] FATAL ProcessLogger [(null)] - System Start 1/16/2017 16:26:16
 2017-01-16 16:26:20,882 [1] FATAL ProcessLogger [(null)] - System Start 1/16/2017 16:26:20
+2017-01-16 19:30:50,449 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:30:50
+2017-01-16 19:30:50,909 [9] FATAL ProcessLogger [(null)] - initialize2017/1/16 19:30:50
+2017-01-16 19:31:05,533 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:05
+2017-01-16 19:31:05,533 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:05
+2017-01-16 19:31:07,169 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:07
+2017-01-16 19:31:14,183 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:14
+2017-01-16 19:31:15,002 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:15
+2017-01-16 19:31:15,146 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:15
+2017-01-16 19:31:15,217 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:15
+2017-01-16 19:31:20,307 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:20
+2017-01-16 19:31:49,509 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:49
+2017-01-16 19:31:49,509 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:31:49
+2017-01-16 19:31:49,541 [9] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2017/1/16 19:31:49
+2017-01-16 19:31:49,541 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052017/1/16 19:31:49
+2017-01-16 19:31:49,791 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062017/1/16 19:31:49
+2017-01-16 19:31:49,944 [9] FATAL ProcessLogger [(null)] - System  701072017/1/16 19:31:49
+2017-01-16 19:32:04,433 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:32:04
+2017-01-16 19:32:12,706 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:32:12
+2017-01-16 19:32:12,706 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:32:12
+2017-01-16 19:32:12,706 [9] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2017/1/16 19:32:12
+2017-01-16 19:32:12,706 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052017/1/16 19:32:12
+2017-01-16 19:32:13,190 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062017/1/16 19:32:13
+2017-01-16 19:32:13,194 [9] FATAL ProcessLogger [(null)] - System  701072017/1/16 19:32:13
+2017-01-16 19:32:24,999 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:32:24
+2017-01-16 19:32:29,190 [9] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:32:29
+2017-01-16 19:36:28,457 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:36:28
+2017-01-16 19:36:28,592 [10] FATAL ProcessLogger [(null)] - initialize2017/1/16 19:36:28
+2017-01-16 19:36:35,306 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:36:35
+2017-01-16 19:36:38,306 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:36:38
+2017-01-16 19:37:16,813 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:37:16
+2017-01-16 19:37:29,986 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:37:29
+2017-01-16 19:37:30,696 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:37:30
+2017-01-16 19:37:44,035 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:37:44
+2017-01-16 19:37:44,788 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:37:44
+2017-01-16 19:45:02,085 [8] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:45:02
+2017-01-16 19:45:02,257 [8] FATAL ProcessLogger [(null)] - initialize2017/1/16 19:45:02
+2017-01-16 19:45:42,196 [8] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:45:42
+2017-01-16 19:45:43,905 [8] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:45:43
+2017-01-16 19:46:30,997 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:46:30
+2017-01-16 19:46:31,395 [10] FATAL ProcessLogger [(null)] - initialize2017/1/16 19:46:31
+2017-01-16 19:46:37,432 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:46:37
+2017-01-16 19:46:40,054 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:46:40
+2017-01-16 19:47:10,227 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:47:10
+2017-01-16 19:47:10,371 [10] FATAL ProcessLogger [(null)] - initialize2017/1/16 19:47:10
+2017-01-16 19:47:16,991 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:47:16
+2017-01-16 19:47:18,390 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:47:18
+2017-01-16 19:47:27,994 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:47:27
+2017-01-16 19:47:30,702 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:47:30
+2017-01-16 19:47:37,230 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:47:37
+2017-01-16 19:47:37,231 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:47:37
+2017-01-16 19:47:42,991 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:47:42
+2017-01-16 19:47:42,991 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:47:42
+2017-01-16 19:48:13,453 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:48:13
+2017-01-16 19:48:26,154 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:48:26
+2017-01-16 19:50:07,493 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:50:07
+2017-01-16 19:55:27,790 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:55:27
+2017-01-16 19:55:32,572 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:55:32
+2017-01-16 19:55:36,232 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:55:36
+2017-01-16 19:55:40,247 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:55:40
+2017-01-16 19:55:40,248 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:55:40
+2017-01-16 19:56:05,450 [10] FATAL ProcessLogger [(null)] - System Start 2017/1/16 19:56:05
+2017-01-16 19:56:05,594 [10] FATAL ProcessLogger [(null)] - initialize2017/1/16 19:56:05

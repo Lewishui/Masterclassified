@@ -35,6 +35,11 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.清空ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.改名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.增加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -51,17 +56,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.清空ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.改名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.增加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -139,7 +140,7 @@
             "默认方案"});
             this.listBox1.Location = new System.Drawing.Point(3, 3);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(214, 452);
+            this.listBox1.Size = new System.Drawing.Size(214, 466);
             this.listBox1.TabIndex = 0;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
@@ -153,6 +154,48 @@
             this.toolStrip1.Size = new System.Drawing.Size(220, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.清空ToolStripMenuItem,
+            this.删除ToolStripMenuItem,
+            this.改名ToolStripMenuItem,
+            this.增加ToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(44, 22);
+            this.toolStripDropDownButton1.Text = "设置";
+            // 
+            // 清空ToolStripMenuItem
+            // 
+            this.清空ToolStripMenuItem.Name = "清空ToolStripMenuItem";
+            this.清空ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.清空ToolStripMenuItem.Text = "清空";
+            this.清空ToolStripMenuItem.Click += new System.EventHandler(this.清空ToolStripMenuItem_Click);
+            // 
+            // 删除ToolStripMenuItem
+            // 
+            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.删除ToolStripMenuItem.Text = "删除";
+            this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
+            // 
+            // 改名ToolStripMenuItem
+            // 
+            this.改名ToolStripMenuItem.Name = "改名ToolStripMenuItem";
+            this.改名ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.改名ToolStripMenuItem.Text = "改名";
+            this.改名ToolStripMenuItem.Click += new System.EventHandler(this.改名ToolStripMenuItem_Click);
+            // 
+            // 增加ToolStripMenuItem
+            // 
+            this.增加ToolStripMenuItem.Name = "增加ToolStripMenuItem";
+            this.增加ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.增加ToolStripMenuItem.Text = "增加";
+            this.增加ToolStripMenuItem.Click += new System.EventHandler(this.增加ToolStripMenuItem_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -183,6 +226,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.checkBox2);
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.checkBox1);
             this.tabPage3.Controls.Add(this.label3);
@@ -360,6 +404,33 @@
             this.toolStrip2.TabIndex = 4;
             this.toolStrip2.Text = "toolStrip2";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::MasterClassified.Properties.Resources.createNewBackup;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(99, 22);
+            this.toolStripButton1.Text = "保存新的方案";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::MasterClassified.Properties.Resources.save;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(51, 22);
+            this.toolStripButton2.Text = "保存";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::MasterClassified.Properties.Resources.clear_co;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(99, 22);
+            this.toolStripButton3.Text = "清空当前分段";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
             // tabControl3
             // 
             this.tabControl3.Controls.Add(this.tabPage4);
@@ -396,77 +467,19 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.ScrollAlwaysVisible = true;
             this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox3.Size = new System.Drawing.Size(443, 171);
+            this.listBox3.Size = new System.Drawing.Size(443, 176);
             this.listBox3.TabIndex = 4;
             // 
-            // toolStripDropDownButton1
+            // checkBox2
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.清空ToolStripMenuItem,
-            this.删除ToolStripMenuItem,
-            this.改名ToolStripMenuItem,
-            this.增加ToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(44, 22);
-            this.toolStripDropDownButton1.Text = "设置";
-            // 
-            // 清空ToolStripMenuItem
-            // 
-            this.清空ToolStripMenuItem.Name = "清空ToolStripMenuItem";
-            this.清空ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.清空ToolStripMenuItem.Text = "清空";
-            this.清空ToolStripMenuItem.Click += new System.EventHandler(this.清空ToolStripMenuItem_Click);
-            // 
-            // 删除ToolStripMenuItem
-            // 
-            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.删除ToolStripMenuItem.Text = "删除";
-            this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
-            // 
-            // 改名ToolStripMenuItem
-            // 
-            this.改名ToolStripMenuItem.Name = "改名ToolStripMenuItem";
-            this.改名ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.改名ToolStripMenuItem.Text = "改名";
-            this.改名ToolStripMenuItem.Click += new System.EventHandler(this.改名ToolStripMenuItem_Click);
-            // 
-            // 增加ToolStripMenuItem
-            // 
-            this.增加ToolStripMenuItem.Name = "增加ToolStripMenuItem";
-            this.增加ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.增加ToolStripMenuItem.Text = "增加";
-            this.增加ToolStripMenuItem.Click += new System.EventHandler(this.增加ToolStripMenuItem_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::MasterClassified.Properties.Resources.createNewBackup;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(99, 22);
-            this.toolStripButton1.Text = "保存新的方案";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::MasterClassified.Properties.Resources.save;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(51, 22);
-            this.toolStripButton2.Text = "保存";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = global::MasterClassified.Properties.Resources.clear_co;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(99, 22);
-            this.toolStripButton3.Text = "清空当前分段";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(10, 91);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(182, 17);
+            this.checkBox2.TabIndex = 9;
+            this.checkBox2.Text = "应用当前段数为默认随机段数";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // frmSetConfig
             // 
@@ -535,5 +548,6 @@
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

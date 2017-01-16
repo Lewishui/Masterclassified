@@ -43,23 +43,22 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.62963F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(231, 191);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(247, 187);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Location = new System.Drawing.Point(9, 8);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.dateTimePicker1.Location = new System.Drawing.Point(9, 9);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.dateTimePicker1_DateChanged);
             // 
             // frmTimeSelect
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(231, 191);
+            this.ClientSize = new System.Drawing.Size(247, 187);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTimeSelect";

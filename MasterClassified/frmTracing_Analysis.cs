@@ -13,6 +13,7 @@ using System.Reflection;
 using System.IO;
 using MC.Common;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace MasterClassified
 {
@@ -87,6 +88,17 @@ namespace MasterClassified
 
                 ClaimReport_Server = new List<inputCaipiaoDATA>();
                 ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(CaipiaozhongleiResult[0].Name);
+                foreach (inputCaipiaoDATA item in ClaimReport_Server)
+                {
+                    bool ischina = HasChineseTest(item.QiHao);
+                    if (ischina == true || Regex.Matches(item.QiHao, "[a-zA-Z]").Count > 0)
+                    {
+                        MessageBox.Show("EX:异常类型,请修改或删除，不然会影响正常的数据判断，期号 ：" + item.QiHao);
+                        return;
+
+
+                    }
+                }
                 ClaimReport_Server.Sort(new Comp());
 
                 this.toolStripComboBox1.ComboBox.DisplayMember = "QiHao";
@@ -446,6 +458,10 @@ namespace MasterClassified
                 int indexing = 0;
                 foreach (inputCaipiaoDATA item in ClaimReport_Server)
                 {
+                    if (item.QiHao == "20161224")
+                    { 
+                    
+                    }
                     item.qianAll = "";
                     item.qianMingcheng = "";
                     item.TongAll = "";
@@ -480,7 +496,7 @@ namespace MasterClassified
                                     bool nexti = false;
                                     for (int oi = 0; oi < newi.Count; oi++)
                                     {
-                                        if (newi[oi] == j1 + 1)
+                                        if (newi[oi] > j1)
                                             nexti = true;
                                     }
                                     if (nexti == false)
@@ -679,7 +695,8 @@ namespace MasterClassified
                                 string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp1[i], "段");
                                 int ss = ii + 1;
 
-                                if (temp1[i].Contains(temp2[ii]))
+                                //if (temp1[i].Contains(temp2[ii]))
+                                if (temp3[1].Contains(temp2[ii]))
                                 {
                                     item.JiShu = item.JiShu + "基" + ss.ToString() + " " + temp3[0];
                                     if (ss == 1)
@@ -717,7 +734,6 @@ namespace MasterClassified
                 foreach (inputCaipiaoDATA item in ClaimReport_Server)
                 {
                     indexing = 0;
-
                     foreach (inputCaipiaoDATA temp in ClaimReport_Server)
                     {
                         if (Convert.ToInt32(item.QiHao) > Convert.ToInt32(temp.QiHao))
@@ -935,7 +951,43 @@ namespace MasterClassified
         {
             public override int Compare(inputCaipiaoDATA item, inputCaipiaoDATA iten1)
             {
+                #region 判断是否为汉字
+                if (iten1.QiHao != null && iten1.QiHao != "")
+                {
+                    char[] c = iten1.QiHao.ToCharArray();
+                    bool ischina = false;
 
+                    for (int i = 0; i < c.Length; i++)
+                    {
+                        if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                            ischina = true;
+                    }
+
+                    if (ischina == true || Regex.Matches(iten1.QiHao, "[a-zA-Z]").Count > 0)
+                    {
+                        return 0;
+                    }
+                }
+                else
+                    return 0;
+
+                if (iten1.QiHao != null && iten1.QiHao != "")
+                {
+                    char[] c = item.QiHao.ToCharArray();
+                    bool ischina = false;
+                    for (int i = 0; i < c.Length; i++)
+                    {
+                        if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                            ischina = true;
+                    }
+                    if (ischina == true || Regex.Matches(item.QiHao, "[a-zA-Z]").Count > 0)
+                    {
+                        return 0;
+                    }
+                }
+                else
+                    return 0;
+                #endregion
                 if (item.QiHao == null && item.QiHao == "")
                 {
                     //  item.DO_NO = "1";
@@ -954,7 +1006,43 @@ namespace MasterClassified
         {
             public override int Compare(inputCaipiaoDATA iten1, inputCaipiaoDATA item)
             {
+                #region 判断是否为汉字
+                if (iten1.QiHao != null && iten1.QiHao != "")
+                {
+                    char[] c = iten1.QiHao.ToCharArray();
+                    bool ischina = false;
 
+                    for (int i = 0; i < c.Length; i++)
+                    {
+                        if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                            ischina = true;
+                    }
+
+                    if (ischina == true || Regex.Matches(iten1.QiHao, "[a-zA-Z]").Count > 0)
+                    {
+                        return 0;
+                    }
+                }
+                else
+                    return 0;
+
+                if (iten1.QiHao != null && iten1.QiHao != "")
+                {
+                    char[] c = item.QiHao.ToCharArray();
+                    bool ischina = false;
+                    for (int i = 0; i < c.Length; i++)
+                    {
+                        if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                            ischina = true;
+                    }
+                    if (ischina == true || Regex.Matches(item.QiHao, "[a-zA-Z]").Count > 0)
+                    {
+                        return 0;
+                    }
+                }
+                else
+                    return 0;
+                #endregion
                 if (item.QiHao == null && item.QiHao == "")
                 {
                     //  item.DO_NO = "1";
@@ -1145,7 +1233,8 @@ namespace MasterClassified
                                         if (isrun == false)
                                             continue;
 
-                                        if (temp1[i].Contains(temp2[ii]))
+                                        //if (temp1[i].Contains(temp2[ii]))
+                                        if (temp3[1].Contains(temp2[ii]))
                                         {
                                             item.JiShu = item.JiShu + "基" + ss.ToString() + " " + temp3[0];
                                             if (ss == 1)
@@ -1724,16 +1813,13 @@ namespace MasterClassified
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == null || textBox1.Text == "")
+                return;
+
             clsAllnew BusinessHelp = new clsAllnew();
 
             ClaimReport_Server = BusinessHelp.Fast_FindData(textBox1.Text.Trim().ToString());
 
-            this.dataGridView1.DataSource = null;
-            this.dataGridView1.AutoGenerateColumns = false;
-            if (ClaimReport_Server.Count != 0)
-            {
-                this.dataGridView1.DataSource = ClaimReport_Server;
-            }
 
             try
             {
@@ -1751,16 +1837,19 @@ namespace MasterClassified
                 //}
                 if (s == 0)
                 {
-                    toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
-                    GetDataforOutlookThread = new Thread(NewMethodtab1);
-                    GetDataforOutlookThread.Start();
+                    //toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                    //GetDataforOutlookThread = new Thread(NewMethodtab1);
+                    //GetDataforOutlookThread.Start();
+                    NewMethodtab1();
+
                 }
                 else if (s == 1)
                 {
-                    toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
-                    GetDataforOutlookThread = new Thread(tab2);
-                    GetDataforOutlookThread.Start();
-                    // tab2(BusinessHelp);
+                    tab2();
+                    //toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                    //GetDataforOutlookThread = new Thread(tab2);
+                    //GetDataforOutlookThread.Start();
+                    //// tab2(BusinessHelp);
                 }
             }
             catch (Exception ex)
@@ -2080,7 +2169,8 @@ namespace MasterClassified
                                         if (isrun == false)
                                             continue;
 
-                                        if (temp1[i].Contains(temp2[ii]))
+                                        //if (temp1[i].Contains(temp2[ii]))
+                                        if (temp3[1].Contains(temp2[ii]))
                                         {
                                             item.JiShu = item.JiShu + "基" + ss.ToString() + " " + temp3[0];
                                             if (ss == 1)
@@ -2274,8 +2364,8 @@ namespace MasterClassified
         private void QianQI_Zidingyi_InitialSystemInfo()
         {
 
-
-            for (int i = 0; i < this.clbStatus.Items.Count; i++)
+            int  vony=this.clbStatus.Items.Count;
+            for (int i = 0; i < vony; i++)
                 clbStatus.Items.Remove(clbStatus.Items[0]);
 
             clsAllnew BusinessHelp = new clsAllnew();
@@ -2285,9 +2375,7 @@ namespace MasterClassified
             if (CaipiaozhongleiResult.Count == 0)
             {
                 MessageBox.Show("彩票默认运行类型没有选中,请到【彩票类型界面】选中彩票类型，点击确认", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 return;
-
             }
             //this.label2.Text = CaipiaozhongleiResult[0].Name;
             ////this.label4.Text = CaipiaozhongleiResult[0].Name;
@@ -2342,7 +2430,38 @@ namespace MasterClassified
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Suiji_NewMethod1();
+            JIDTA = new List<int>();
+
+            if (checkBox1.Checked == true)
+                JIDTA.Add(1);
+            if (checkBox3.Checked == true)
+                JIDTA.Add(2);
+            if (checkBox2.Checked == true)
+                JIDTA.Add(3);
+            if (checkBox4.Checked == true)
+                JIDTA.Add(4);
+            if (checkBox5.Checked == true)
+                JIDTA.Add(5);
+            if (checkBox6.Checked == true)
+                JIDTA.Add(6);
+            if (checkBox7.Checked == true)
+                JIDTA.Add(7);
+            if (checkBox8.Checked == true)
+                JIDTA.Add(8);
+            if (checkBox9.Checked == true)
+                JIDTA.Add(9);
+            if (checkBox10.Checked == true)
+                JIDTA.Add(10);
+
+
+            if (JIDTA.Count > 0)
+            {
+                Suiji_NewMethod1();
+                //button2_Click(object sender, EventArgs e);
+                button2.PerformClick();
+            }
+            else
+                Suiji_NewMethod1();
         }
         private void Suiji_NewMethod1()
         {
@@ -2363,16 +2482,29 @@ namespace MasterClassified
                 newlist.Add(9);
                 newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
 
-                //随机分段取位数
-                List<int> newlist1 = new List<int>();
-                newlist1.Add(2);
-                newlist1.Add(3);
-                newlist1.Add(4);
-                newlist1.Add(5);
-                newlist1.Add(6);
-                newlist1 = newlist1.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+                clsAllnew BusinessHelp = new clsAllnew();
+                List<FangAnLieBiaoDATA> Result12 = BusinessHelp.Read_FangAn("YES");
+                if (Result12[0].MorenDuanShu != null && Result12[0].MorenDuanShu != "")
+                {
 
-                int duan = newlist1[0];
+                }
+                else
+                {
+                    MessageBox.Show("请设置中计选择默认段数，否则无法分配数据", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+
+                ////随机分段取位数
+                //List<int> newlist1 = new List<int>();
+                //newlist1.Add(2);
+                //newlist1.Add(3);
+                //newlist1.Add(4);
+                //newlist1.Add(5);
+                //newlist1.Add(6);
+                //newlist1 = newlist1.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+
+                int duan = Convert.ToInt32(Result12[0].MorenDuanShu);
                 int evertduan = 10 / duan;
                 int ilast = 0;
                 ilast = duan * evertduan;
@@ -2443,10 +2575,12 @@ namespace MasterClassified
                     item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
                 }
                 item.ZhuJian = "YES";
+                if (Result12[0].MorenDuanShu != null && Result12[0].MorenDuanShu != "")
+                    item.MorenDuanShu = Result12[0].MorenDuanShu;//保存名称
                 item.Name = "默认方案";//保存名称
                 item.DuanShu = showSuijiResultlist.Count.ToString();
                 Result.Add(item);
-                clsAllnew BusinessHelp = new clsAllnew();
+
                 BusinessHelp.Save_FangAn(Result);
                 NewMethodtab1();
 
@@ -2459,6 +2593,29 @@ namespace MasterClassified
 
                 throw;
             }
+        }
+
+        //判断是否为汉字
+        public bool HasChineseTest(string text)
+        {
+            //string text = "是不是汉字，ABC,keleyi.com";
+            char[] c = text.ToCharArray();
+            bool ischina = false;
+
+            for (int i = 0; i < c.Length; i++)
+            {
+                if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                {
+                    ischina = true;
+
+                }
+                //else
+                //{
+                //    ischina = false;
+                //}
+            }
+            return ischina;
+
         }
     }
 }

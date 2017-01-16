@@ -20,7 +20,7 @@ namespace MasterClassified
 
         private void dateTimePicker1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            dateclose = dateTimePicker1.SelectionEnd.ToString("yyyy/MM/dd");
+            dateclose = dateTimePicker1.SelectionEnd.ToString("MM/dd/yyyy");
             this.Close();
         }
     }

@@ -74,9 +74,13 @@ namespace MasterClassified
                 {
                     showSuijiResultlist.Add(temp1[i]);
                 }
-                
+
             }
-            this.listBox3.DataSource = showSuijiResultlist; 
+            if (moreResult[0].MorenDuanShu != null && moreResult[0].MorenDuanShu != "")
+                this.comboBox1.Text = moreResult[0].MorenDuanShu;
+            else
+                this.comboBox1.SelectedIndex=0;
+            this.listBox3.DataSource = showSuijiResultlist;
             #endregion
         }
 
@@ -354,6 +358,9 @@ namespace MasterClassified
             if (this.checkBox1.Checked == true)
                 item.ZhuJian = "YES";
 
+            if (this.checkBox2.Checked == true)
+                item.MorenDuanShu = comboBox1.Text;
+
             item.Name = this.listBox1.Text.ToString();//保存名称
             item.DuanShu = showSuijiResultlist.Count.ToString();
             Result.Add(item);
@@ -463,6 +470,8 @@ namespace MasterClassified
                 }
                 if (this.checkBox1.Checked == true)
                     item.ZhuJian = "YES";
+                if (this.checkBox2.Checked == true)
+                    item.MorenDuanShu = comboBox1.Text;
 
                 item.Name = DateTime.Now.ToString("yyyyMMddHHmmss");//保存名称
                 item.DuanShu = showSuijiResultlist.Count.ToString();
@@ -533,6 +542,9 @@ namespace MasterClassified
                 }
                 if (this.checkBox1.Checked == true)
                     item.ZhuJian = "YES";
+
+                if (this.checkBox2.Checked == true)
+                    item.MorenDuanShu = comboBox1.Text;
 
                 item.Name = this.listBox1.Text.ToString();//保存名称
                 item.DuanShu = showSuijiResultlist.Count.ToString();
@@ -606,6 +618,9 @@ namespace MasterClassified
                 }
                 if (this.checkBox1.Checked == true)
                     item.ZhuJian = "YES";
+
+                if (this.checkBox2.Checked == true)
+                    item.MorenDuanShu = comboBox1.Text;
 
                 item.Name = this.listBox1.Text.ToString();//保存名称
                 item.DuanShu = showSuijiResultlist.Count.ToString();

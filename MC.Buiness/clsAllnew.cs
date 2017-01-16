@@ -342,7 +342,7 @@ namespace MC.Buiness
                     if (emp.Contains("Xuan"))
                         item.Xuan = (emp["Xuan"].AsString);
                     if (emp.Contains("KaiJianRiqi"))
-                        item.KaiJianRiqi = clsCommHelp.objToDateTime(emp["KaiJianRiqi"].AsString); 
+                        item.KaiJianRiqi = clsCommHelp.objToDateTime(emp["KaiJianRiqi"].AsString);
 
                     if (emp.Contains("Caipiaomingcheng"))
                         item.Caipiaomingcheng = (emp["Caipiaomingcheng"].AsString);
@@ -494,6 +494,8 @@ namespace MC.Buiness
 
                     if (emp.Contains("ZhuJian"))
                         item.ZhuJian = (emp["ZhuJian"].AsString);
+                    if (emp.Contains("MorenDuanShu"))
+                        item.MorenDuanShu = (emp["MorenDuanShu"].AsString);
                     #endregion
                     Result.Add(item);
                 }
@@ -749,8 +751,56 @@ namespace MC.Buiness
                         item.KaiJianHaoMa = (emp["KaiJianHaoMa"].AsString);
                     if (emp.Contains("Input_Date"))
                         item.Input_Date = (emp["Input_Date"].AsString);
+                    if (emp.Contains("JiShu1"))
+                        item.JiShu1 = (emp["JiShu1"].AsString);
+                    if (emp.Contains("JiShu2"))
+                        item.JiShu2 = (emp["JiShu2"].AsString);
+                    if (emp.Contains("JiShu3"))
+                        item.JiShu3 = (emp["JiShu3"].AsString);
+                    if (emp.Contains("Xuan"))
+                        item.Xuan = (emp["Xuan"].AsString);
+                    if (emp.Contains("KaiJianRiqi"))
+                        item.KaiJianRiqi = clsCommHelp.objToDateTime(emp["KaiJianRiqi"].AsString);
 
+                    if (emp.Contains("Caipiaomingcheng"))
+                        item.Caipiaomingcheng = (emp["Caipiaomingcheng"].AsString);
+                    #endregion
+                    ClaimReport_Server.Add(item);
+                }
+                query = new QueryDocument("KaiJianHaoMa", findtext);
 
+                ///模糊查询
+                query1 = Query<inputCaipiaoDATA>.Matches(c => c.KaiJianHaoMa, new BsonRegularExpression(new Regex(findtext)));
+                data = db.GetCollection("MasterClassified_CaiPiaoData").Find(query1);
+
+                foreach (var emp in data)
+                {
+                    inputCaipiaoDATA item = new inputCaipiaoDATA();
+
+                    #region 数据
+                    if (emp.Contains("_id"))
+                        item._id = (emp["_id"].ToString());
+                    if (emp.Contains("QiHao"))
+                        item.QiHao = (emp["QiHao"].AsString);
+                    if (emp.Contains("Jihao"))
+                        item.Jihao = (emp["Jihao"].ToString());
+                    if (emp.Contains("KaiJianHaoMa"))
+                        item.KaiJianHaoMa = (emp["KaiJianHaoMa"].AsString);
+                    if (emp.Contains("Input_Date"))
+                        item.Input_Date = (emp["Input_Date"].AsString);
+                    if (emp.Contains("JiShu1"))
+                        item.JiShu1 = (emp["JiShu1"].AsString);
+                    if (emp.Contains("JiShu2"))
+                        item.JiShu2 = (emp["JiShu2"].AsString);
+                    if (emp.Contains("JiShu3"))
+                        item.JiShu3 = (emp["JiShu3"].AsString);
+                    if (emp.Contains("Xuan"))
+                        item.Xuan = (emp["Xuan"].AsString);
+                    if (emp.Contains("KaiJianRiqi"))
+                        item.KaiJianRiqi = clsCommHelp.objToDateTime(emp["KaiJianRiqi"].AsString);
+
+                    if (emp.Contains("Caipiaomingcheng"))
+                        item.Caipiaomingcheng = (emp["Caipiaomingcheng"].AsString);
                     #endregion
                     ClaimReport_Server.Add(item);
                 }
@@ -798,6 +848,12 @@ namespace MC.Buiness
                     var update = Update.Set("ZhuJian", "");
                     collection.Update(query1, update);
                 }
+                if (item.MorenDuanShu != null && item.MorenDuanShu != "")
+                {
+                    QueryDocument query1 = new QueryDocument("ZhuJian", "YES");
+                    var update = Update.Set("MorenDuanShu", "");
+                    collection.Update(query1, update);
+                }
                 //插入新数据
                 BsonDocument fruit_1 = new BsonDocument
                  { 
@@ -816,7 +872,7 @@ namespace MC.Buiness
                 { "DuanWei9", item.DuanWei9 },
                 { "DuanWei10", item.DuanWei10 },
                  { "ZhuJian", item.ZhuJian },  
-              
+                { "MorenDuanShu", item.MorenDuanShu },  
                 { "Input_Date", DateTime.Now.ToString("MM/dd/yyyy/HHss")}  
                  };
                 collection.Insert(fruit_1);

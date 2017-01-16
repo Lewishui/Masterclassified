@@ -11,6 +11,7 @@ using MC.Buiness;
 using MC.DB;
 using System.Reflection;
 using WeifenLuo.WinFormsUI.Docking;
+using System.Text.RegularExpressions;
 
 namespace MasterClassified
 {
@@ -159,7 +160,7 @@ namespace MasterClassified
 
                     ClaimReport_Server = new List<inputCaipiaoDATA>();
                     ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
-                    ClaimReport_Server.Sort(new Comp());
+                    //  ClaimReport_Server.Sort(new Comp());
 
                     sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(ClaimReport_Server);
 
@@ -176,7 +177,7 @@ namespace MasterClassified
                 }
                 else if (s == 1)
                 {
-                    
+
 
 
                 }
@@ -196,6 +197,43 @@ namespace MasterClassified
             public override int Compare(inputCaipiaoDATA iten1, inputCaipiaoDATA item)
             {
 
+                #region 判断是否为汉字
+                if (iten1.QiHao != null && iten1.QiHao != "")
+                {
+                    char[] c = iten1.QiHao.ToCharArray();
+                    bool ischina = false;
+
+                    for (int i = 0; i < c.Length; i++)
+                    {
+                        if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                            ischina = true;
+                    }
+
+                    if (ischina == true || Regex.Matches(iten1.QiHao, "[a-zA-Z]").Count > 0)
+                    {
+                        return 0;
+                    }
+                }
+                else
+                    return 0;
+
+                if (iten1.QiHao != null && iten1.QiHao != "")
+                {
+                    char[] c = item.QiHao.ToCharArray();
+                    bool ischina = false;
+                    for (int i = 0; i < c.Length; i++)
+                    {
+                        if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                            ischina = true;
+                    }
+                    if (ischina == true || Regex.Matches(item.QiHao, "[a-zA-Z]").Count > 0)
+                    {
+                        return 0;
+                    }
+                }
+                else
+                    return 0;
+                #endregion
                 if (item.QiHao == null && item.QiHao == "")
                 {
                     //  item.DO_NO = "1";
@@ -209,6 +247,28 @@ namespace MasterClassified
                 ;
 
             }
+        }
+        //判断是否为汉字
+        public bool HasChineseTest(string text)
+        {
+            //string text = "是不是汉字，ABC,keleyi.com";
+            char[] c = text.ToCharArray();
+            bool ischina = false;
+
+            for (int i = 0; i < c.Length; i++)
+            {
+                if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                {
+                    ischina = true;
+
+                }
+                //else
+                //{
+                //    ischina = false;
+                //}
+            }
+            return ischina;
+
         }
         public class SortableBindingList<T> : BindingList<T>
         {

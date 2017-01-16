@@ -12,6 +12,8 @@ using System.Text;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 using System.IO;
+using System.Text.RegularExpressions;
+using MC.Common;
 
 namespace MasterClassified
 {
@@ -34,121 +36,157 @@ namespace MasterClassified
         }
         private void InitialSystemInfo()
         {
-            #region 初始化配置
-            ProcessLogger = log4net.LogManager.GetLogger("ProcessLogger");
-            ExceptionLogger = log4net.LogManager.GetLogger("SystemExceptionLogger");
-            ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
-            #endregion
-
-            this.datagrid_changes = new Hashtable();
-
-            //this.listBox1.DisplayMember = "Name";
-            //clsAllnew BusinessHelp = new clsAllnew();
-            //List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAnName();
-            //List<FangAnLieBiaoDATA> filtered = Result.FindAll(s => s.Name != null);
-            //this.listBox1.DataSource = filtered;
-            clsAllnew BusinessHelp = new clsAllnew();
-
-            List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
-            ProcessLogger.Fatal("System Read_CaiPiaoZhongLei_Moren 70104 " + DateTime.Now.ToString());
-            if (CaipiaozhongleiResult.Count == 0)
+            int errol = 0;
+            try
             {
-                MessageBox.Show("彩票默认运行类型没有选中", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errol = 0;
 
-                return;
+                #region 初始化配置
+                ProcessLogger = log4net.LogManager.GetLogger("ProcessLogger");
+                ExceptionLogger = log4net.LogManager.GetLogger("SystemExceptionLogger");
+                ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
+                #endregion
 
-            }
-            this.label2.Text = CaipiaozhongleiResult[0].Name;
-            //this.label4.Text = CaipiaozhongleiResult[0].Name;
-            this.label6.Text = CaipiaozhongleiResult[0].JiBenHaoMaS + "-" + CaipiaozhongleiResult[0].JiBenHaoMaT;
-            this.label8.Text = CaipiaozhongleiResult[0].Xuan;
+                this.datagrid_changes = new Hashtable();
 
+                //this.listBox1.DisplayMember = "Name";
+                //clsAllnew BusinessHelp = new clsAllnew();
+                //List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAnName();
+                //List<FangAnLieBiaoDATA> filtered = Result.FindAll(s => s.Name != null);
+                //this.listBox1.DataSource = filtered;
+                clsAllnew BusinessHelp = new clsAllnew();
+                errol = 1;
 
-            ClaimReport_Server = new List<inputCaipiaoDATA>();
-
-            ProcessLogger.Fatal("System ReadclaimreportfromServerBy_Xuan 70105" + DateTime.Now.ToString());
-
-            DateTime oldDate = DateTime.Now;
-            ClaimReport_Server = new List<inputCaipiaoDATA>();
-            ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(this.label2.Text);
-            ClaimReport_Server.Sort(new Comp());
-            ProcessLogger.Fatal("System ReadclaimreportfromServerBy_Xuan 70106" + DateTime.Now.ToString());
-            //this.dataGridView1.DataSource = null;
-            //this.dataGridView1.AutoGenerateColumns = false;
-            //if (ClaimReport_Server.Count != 0)
-            //{
-            //    this.dataGridView1.DataSource = ClaimReport_Server;
-            //}
-
-            #region table
-
-            var qtyTable = new DataTable();
-            //foreach (var igrouping in ClaimReport_Server)
-            //{
-            //    // 生成 ioTable, use c{j}  instead of igrouping.Key, datagridview required
-            //    //qtyTable.Columns.Add(igrouping._id, System.Type.GetType("System.String"));
-
-            //    // qtyTable.Columns.Add(igrouping._id, System.Type.GetType("System.Int32"));
-            //}
-
-            string[] temptong = System.Text.RegularExpressions.Regex.Split(CaipiaozhongleiResult[0].Xuan, " ");
-
-            int l = 0;
-            qtyTable.Columns.Add("期号", System.Type.GetType("System.String"));
-            qtyTable.Columns.Add("开奖日期", System.Type.GetType("System.String"));
-
-            int jiindex = 0;
-
-            for (int m = 0; m < Convert.ToInt32(temptong[0]); m++)
-            {
-                jiindex++;
-
-                qtyTable.Columns.Add("基号" + jiindex.ToString(), System.Type.GetType("System.String"));
-
-            }
-            foreach (var k in ClaimReport_Server)
-            {
-                qtyTable.Rows.Add(qtyTable.NewRow());
-            }
-            int jk = 0;
-
-            foreach (var item in ClaimReport_Server)
-            {
-                if (item.KaiJianHaoMa != null)
+                List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
+                ProcessLogger.Fatal("System Read_CaiPiaoZhongLei_Moren 70104 " + DateTime.Now.ToString());
+                if (CaipiaozhongleiResult.Count == 0)
                 {
-                    //  continue;
-                    string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
-                    int lie = 2;
-                    for (int i = 0; i < temp1.Length; i++)
+                    MessageBox.Show("彩票默认运行类型没有选中", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return;
+
+                }
+                errol = 2;
+                this.label2.Text = CaipiaozhongleiResult[0].Name;
+                //this.label4.Text = CaipiaozhongleiResult[0].Name;
+                this.label6.Text = CaipiaozhongleiResult[0].JiBenHaoMaS + "-" + CaipiaozhongleiResult[0].JiBenHaoMaT;
+                this.label8.Text = CaipiaozhongleiResult[0].Xuan;
+
+
+                ClaimReport_Server = new List<inputCaipiaoDATA>();
+
+                ProcessLogger.Fatal("System ReadclaimreportfromServerBy_Xuan 70105" + DateTime.Now.ToString());
+
+                DateTime oldDate = DateTime.Now;
+                ClaimReport_Server = new List<inputCaipiaoDATA>();
+                ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(this.label2.Text);
+                errol = 3;
+                bool runischina = false;
+                foreach (inputCaipiaoDATA item in ClaimReport_Server)
+                {
+                    if (item.QiHao != null && item.QiHao != "")
                     {
-                        if (i >= temp1.Length || lie - Convert.ToInt32(temptong[0]) > 1)
-                            continue;
+                        bool ischina = HasChineseTest(item.QiHao);
+                        if (ischina == true || Regex.Matches(item.QiHao, "[a-zA-Z]").Count > 0)
+                        {
+                            runischina = true;
 
-                        qtyTable.Rows[jk][lie] = temp1[i];
-                        lie++;
+                            MessageBox.Show("EX:异常类型,请修改或删除，不然会影响正常的数据判断，期号 ：" + item.QiHao);
+                            break;
 
+
+                        }
                     }
                 }
-                qtyTable.Rows[jk][0] = item.QiHao;
-                qtyTable.Rows[jk][1] = item.KaiJianRiqi;
+                if (runischina == false)
+                    ClaimReport_Server.Sort(new Comp());
 
-                jk++;
+                ProcessLogger.Fatal("System ReadclaimreportfromServerBy_Xuan 70106" + DateTime.Now.ToString());
+                //this.dataGridView1.DataSource = null;
+                //this.dataGridView1.AutoGenerateColumns = false;
+                //if (ClaimReport_Server.Count != 0)
+                //{
+                //    this.dataGridView1.DataSource = ClaimReport_Server;
+                //}
+
+                #region table
+                errol = 4;
+                var qtyTable = new DataTable();
+                //foreach (var igrouping in ClaimReport_Server)
+                //{
+                //    // 生成 ioTable, use c{j}  instead of igrouping.Key, datagridview required
+                //    //qtyTable.Columns.Add(igrouping._id, System.Type.GetType("System.String"));
+
+                //    // qtyTable.Columns.Add(igrouping._id, System.Type.GetType("System.Int32"));
+                //}
+
+                string[] temptong = System.Text.RegularExpressions.Regex.Split(CaipiaozhongleiResult[0].Xuan, " ");
+
+                int l = 0;
+                qtyTable.Columns.Add("期号", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("开奖日期", System.Type.GetType("System.String"));
+
+                int jiindex = 0;
+
+                for (int m = 0; m < Convert.ToInt32(temptong[0]); m++)
+                {
+                    jiindex++;
+
+                    qtyTable.Columns.Add("基号" + jiindex.ToString(), System.Type.GetType("System.String"));
+
+                }
+                foreach (var k in ClaimReport_Server)
+                {
+                    qtyTable.Rows.Add(qtyTable.NewRow());
+                }
+                int jk = 0;
+
+                foreach (var item in ClaimReport_Server)
+                {
+                    if (item.KaiJianHaoMa != null)
+                    {
+                        //  continue;
+                        string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
+                        int lie = 2;
+                        for (int i = 0; i < temp1.Length; i++)
+                        {
+                            if (i >= temp1.Length || lie - Convert.ToInt32(temptong[0]) > 1)
+                                continue;
+
+                            qtyTable.Rows[jk][lie] = temp1[i];
+                            lie++;
+
+                        }
+                    }
+                    qtyTable.Rows[jk][0] = item.QiHao;
+                    qtyTable.Rows[jk][1] = item.KaiJianRiqi;
+
+                    jk++;
+                }
+                ProcessLogger.Fatal("System  70107" + DateTime.Now.ToString());
+                //   sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(qtyTable);
+
+                // this.bindingSource1.DataSource = null;
+                this.bindingSource1.DataSource = qtyTable;
+                bindingSource1.Sort = "期号  ASC";
+                this.dataGridView1.DataSource = this.bindingSource1;
+                if (dataGridView1.Rows.Count != 0)
+                {
+                    int ii = dataGridView1.Rows.Count - 1;
+                    dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
+                    dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
+                }
+                #endregion
+
             }
-            ProcessLogger.Fatal("System  70107" + DateTime.Now.ToString());
-            //   sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(qtyTable);
-
-            // this.bindingSource1.DataSource = null;
-            this.bindingSource1.DataSource = qtyTable;
-            bindingSource1.Sort = "期号  ASC";
-            this.dataGridView1.DataSource = this.bindingSource1;
-            if (dataGridView1.Rows.Count != 0)
+            catch (Exception ex)
             {
-                int ii = dataGridView1.Rows.Count - 1;
-                dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
-                dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
-            }
-            #endregion
+                ProcessLogger.Fatal("System Start 0802832 :" + errol + DateTime.Now.ToString());
 
+                MessageBox.Show("0802832 EX:数据初始化失败 ：" + ex);
+
+                throw;
+            }
         }
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -199,7 +237,48 @@ namespace MasterClassified
         {
             public override int Compare(inputCaipiaoDATA iten1, inputCaipiaoDATA item)
             {
+                #region 判断是否为汉字
+                if (iten1.QiHao != null && iten1.QiHao != "")
+                {
+                    char[] c = iten1.QiHao.ToCharArray();
+                    bool ischina = false;
 
+                    for (int i = 0; i < c.Length; i++)
+                    {
+                        if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                            ischina = true;
+                    }
+
+                    if (ischina == true || Regex.Matches(iten1.QiHao, "[a-zA-Z]").Count > 0)
+                    {
+                        return 0;
+                    }
+                }
+                else
+                    return 0;
+
+                if (iten1.QiHao != null && iten1.QiHao != "")
+                {
+                    char[] c = item.QiHao.ToCharArray();
+                    bool ischina = false;
+                    for (int i = 0; i < c.Length; i++)
+                    {
+                        if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                            ischina = true;
+                    }
+                    if (ischina == true || Regex.Matches(item.QiHao, "[a-zA-Z]").Count > 0)
+                    {
+                        return 0;
+                    }
+                }
+                else
+                    return 0;
+                #endregion
+                if (iten1.QiHao.Length > 7 || item.QiHao.Length > 7)
+                {
+                    return 0;
+
+                }
                 if (item.QiHao == null && item.QiHao == "")
                 {
                     //  item.DO_NO = "1";
@@ -339,62 +418,17 @@ namespace MasterClassified
             RowRemark = e.RowIndex;
             cloumn = e.ColumnIndex;
             return;
-            if (e.ColumnIndex == 1)
-            {
-                //  dataGridView1.Rows[RowRemark].Cells[cloumn] = new DataGridViewComboBoxCell();
-
-                var form = new frmTimeSelect();
-                //var form1 = form.ShowDialog();
-
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
-
-                }
-                dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
-
-                if (frmTimeSelect == null)
-                {
-                    frmTimeSelect = new frmTimeSelect();
-                    frmTimeSelect.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
-                }
-                if (frmTimeSelect == null)
-                {
-                    frmTimeSelect = new frmTimeSelect();
-                }
-                frmTimeSelect.Show();
-            }
-            //System.Drawing.Rectangle rect = dataGridView1.GetCellDisplayRectangle(dataGridView1.CurrentCell.ColumnIndex, dataGridView1.CurrentCell.RowIndex, false);
-            //frmTimeSelect.Left = rect.Left;
-            //frmTimeSelect.Top = rect.Top;
-            //frmTimeSelect.Width = rect.Width;
-            //frmTimeSelect.Height = rect.Height;
-
-
-            ////this.frmTimeSelect.Location = new System.Drawing.Point(RowRemark, cloumn);
-
-
-
-            //DataGridViewTextBoxCell starttime = ((DataGridViewTextBoxCell)dataGridView1.Rows[e.RowIndex].Cells["qihao"]);
             //if (e.ColumnIndex == 1)
             //{
-            //    _Rectangle = dataGridView1.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
-
-            //    //得到所在单元格位置和大小
-            //    dtp.Size = new Size(_Rectangle.Width, _Rectangle.Height);
-
-            //    //把单元格大小赋给时间控件
-            //    dtp.Location = new Point(_Rectangle.X, _Rectangle.Y); //把单元格位置赋给时间控件
-            //    dtp.Visible = true;  //可以显示控件了
-            //    starttime.Value = DateTime.Now;
-
-
+            //    //  dataGridView1.Rows[RowRemark].Cells[cloumn] = new DataGridViewComboBoxCell();
+            //    var form = new frmTimeSelect();
+            //    //var form1 = form.ShowDialog();
+            //    if (form.ShowDialog() == DialogResult.OK)
+            //    {
+            //        dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
+            //    }
+            //    dataGridView1.Rows[RowRemark].Cells[cloumn].Value = form.dateclose;
             //}
-            //else
-            //{
-            //    dtp.Visible = false;
-            //}
-
         }
         private void BindGvApply()
         {
@@ -708,13 +742,13 @@ namespace MasterClassified
             item.KaiJianRiqi = this.dataGridView1.Rows[RowRemark].Cells[1].EditedFormattedValue.ToString();
             if (dataGridView1.ColumnCount - 2 != Convert.ToInt32(this.label8.Text))
             {
-              //  MessageBox.Show("号码填写不准确或位数不匹配当前种类要求，请填写完整！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //  MessageBox.Show("号码填写不准确或位数不匹配当前种类要求，请填写完整！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
             }
             for (int i = 2; i < dataGridView1.ColumnCount; i++)
             {
-                if (dataGridView1.Rows[RowRemark].Cells[i].EditedFormattedValue.ToString().Trim()=="")
+                if (dataGridView1.Rows[RowRemark].Cells[i].EditedFormattedValue.ToString().Trim() == "")
                     dataGridView1.Rows[RowRemark].Cells[i].Value = "0";
                 item.KaiJianHaoMa = item.KaiJianHaoMa + " " + dataGridView1.Rows[RowRemark].Cells[i].EditedFormattedValue.ToString().Trim();
             }
@@ -747,11 +781,55 @@ namespace MasterClassified
                 return;
 
             }
+            //判断期号是否包含字母，汉字
+            bool ischina = HasChineseTest(item.QiHao);
+            if (ischina == true || Regex.Matches(item.QiHao, "[a-zA-Z]").Count > 0)
+            {
+                MessageBox.Show("开奖号码填写信息类型错误，请重新填写！", "类型错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //判断KaiJianHaoMa是否包含字母，汉字
+            ischina = HasChineseTest(item.KaiJianHaoMa);
+            if (ischina == true || Regex.Matches(item.KaiJianHaoMa, "[a-zA-Z]").Count > 0)
+            {
+                MessageBox.Show("开奖号码填写信息类型错误，请重新填写！", "类型错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //   string a = clsCommHelp.objToDateTime(item.KaiJianRiqi);
+            ischina = HasChineseTest(item.KaiJianRiqi);
+            if (ischina == true || Regex.Matches(item.KaiJianRiqi, "[a-zA-Z]").Count > 0)
+            {
+                MessageBox.Show("开奖日期---填写信息类型错误，请重新填写！", "类型错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             Result.Add(item);
             clsAllnew BusinessHelp = new clsAllnew();
             BusinessHelp.SPInputclaimreport_Server(Result);
 
+
+        }
+        //判断是否为汉字
+        public bool HasChineseTest(string text)
+        {
+            //string text = "是不是汉字，ABC,keleyi.com";
+            char[] c = text.ToCharArray();
+            bool ischina = false;
+
+            for (int i = 0; i < c.Length; i++)
+            {
+                if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                {
+                    ischina = true;
+
+                }
+                //else
+                //{
+                //    ischina = false;
+                //}
+            }
+            return ischina;
 
         }
     }

@@ -26,6 +26,8 @@ namespace MasterClassified
         private frmTimeSelect frmTimeSelect;
         int RowRemark = 0;
         int cloumn = 0;
+        string zhiqianqianqi;
+
         DateTimePicker dtp = new DateTimePicker();
         Rectangle _Rectangle; //用来判断时间控件的位置
         public frmMCdata()
@@ -123,7 +125,7 @@ namespace MasterClassified
                 string[] temptong = System.Text.RegularExpressions.Regex.Split(CaipiaozhongleiResult[0].Xuan, " ");
 
                 int l = 0;
-                qtyTable.Columns.Add("期号", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("期号", System.Type.GetType("System.Int32"));
                 qtyTable.Columns.Add("开奖日期", System.Type.GetType("System.String"));
 
                 int jiindex = 0;
@@ -175,6 +177,7 @@ namespace MasterClassified
                     int ii = dataGridView1.Rows.Count - 1;
                     dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
                     dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
+                    RowRemark = ii;
                 }
                 #endregion
 
@@ -203,8 +206,8 @@ namespace MasterClassified
             }
             else
             {
-                ClaimReport_Server.Sort(new Comp());
-                qi = ClaimReport_Server[ClaimReport_Server.Count - 1].QiHao;
+                //ClaimReport_Server.Sort(new Comp());
+                qi = ClaimReport_Server[0].QiHao;
             }
             //int index = this.dataGridView1.Rows.Add();
 
@@ -276,7 +279,7 @@ namespace MasterClassified
                 else
                     return 0;
                 #endregion
-                if (iten1.QiHao.Length > 7 || item.QiHao.Length > 7)
+                if (iten1.QiHao.Length > 10 || item.QiHao.Length > 10)
                 {
                     return 0;
 
@@ -419,6 +422,8 @@ namespace MasterClassified
         {
             RowRemark = e.RowIndex;
             cloumn = e.ColumnIndex;
+            zhiqianqianqi = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
+
             return;
             //if (e.ColumnIndex == 1)
             //{
@@ -808,8 +813,15 @@ namespace MasterClassified
 
             Result.Add(item);
             clsAllnew BusinessHelp = new clsAllnew();
-            BusinessHelp.SPInputclaimreport_Server(Result);
-            ClaimReport_Server.Add(item);
+            if (zhiqianqianqi != item.QiHao)
+                BusinessHelp.SPInputclaimreport_Server1(Result, zhiqianqianqi);
+            else
+                BusinessHelp.SPInputclaimreport_Server(Result);
+
+            ClaimReport_Server = new List<inputCaipiaoDATA>();
+            ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(this.label2.Text);
+
+            ClaimReport_Server.Sort(new Comp());
 
         }
         //判断是否为汉字

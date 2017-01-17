@@ -217,6 +217,41 @@ namespace MC.Buiness
             }
         }
 
+        public void SPInputclaimreport_Server1(List<inputCaipiaoDATA> AddMAPResult,string zhiqianqianqi)
+        {
+            string connectionString = "mongodb://127.0.0.1";
+            MongoServer server = MongoServer.Create(connectionString);
+            MongoDatabase db1 = server.GetDatabase("MasterClassified");
+            MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
+            MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
+
+            //  collection1.RemoveAll();
+            if (AddMAPResult == null)
+            {
+                MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            foreach (inputCaipiaoDATA item in AddMAPResult)
+            {
+                QueryDocument query = new QueryDocument("QiHao", zhiqianqianqi);
+                collection1.Remove(query);
+
+                MongoDatabase db = server.GetDatabase("MasterClassified");
+                MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
+                BsonDocument fruit_1 = new BsonDocument
+                 { 
+                 { "QiHao", item.QiHao },
+                 { "Jihao", item.Jihao },
+                 { "System_Time", DateTime.Now.ToString("MM/dd/yyyy/HH")}, 
+                 { "KaiJianHaoMa", item.KaiJianHaoMa} ,
+                  { "KaiJianRiqi", item.KaiJianRiqi} ,
+                { "Xuan", item.Xuan} ,
+                { "Caipiaomingcheng", item.Caipiaomingcheng} 
+                 };
+                collection.Insert(fruit_1);
+            }
+        }
+
         public List<inputCaipiaoDATA> InputCaipiaoleixing(ref BackgroundWorker bgWorker, string path)
         {
             try

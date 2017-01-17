@@ -383,7 +383,7 @@ namespace MasterClassified
                 indexing++;
             }
 
-            qtyTable.Columns.Add("期号", System.Type.GetType("System.String"));
+            qtyTable.Columns.Add("期号", System.Type.GetType("System.Int32"));
             qtyTable.Columns.Add("开奖号码", System.Type.GetType("System.String"));
 
             for (int m = 0; m < qianmingcheng.Count; m++)
@@ -467,9 +467,10 @@ namespace MasterClassified
                     item.TongAll = "";
                     indexing = 0;
                     string text = "";
-                    string shifouyijingpanduanguozhegeshuzi = "";
+               
                     foreach (inputCaipiaoDATA temp in ClaimReport_Server)
                     {
+                        string shifouyijingpanduanguozhegeshuzi = "";
                         if (Convert.ToInt32(item.QiHao) > Convert.ToInt32(temp.QiHao) && indexing < Convert.ToInt32(qianqiqishu))
                         {
                             indexing++;
@@ -586,7 +587,7 @@ namespace MasterClassified
                     indexing++;
                 }
 
-                qtyTable.Columns.Add("期号", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("期号", System.Type.GetType("System.Int32"));
                 qtyTable.Columns.Add("开奖号码", System.Type.GetType("System.String"));
 
                 for (int m = 0; m < qianmingcheng.Count; m++)

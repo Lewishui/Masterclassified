@@ -202,8 +202,10 @@ namespace MasterClassified
                 qi = DateTime.Now.ToString("yyyyMMddss");
             }
             else
-                qi = ClaimReport_Server[0].QiHao;
-
+            {
+                ClaimReport_Server.Sort(new Comp());
+                qi = ClaimReport_Server[ClaimReport_Server.Count - 1].QiHao;
+            }
             //int index = this.dataGridView1.Rows.Add();
 
             //this.dataGridView1.Rows[index].Cells[0].Value = Convert.ToInt32(qi) + 1;
@@ -807,7 +809,7 @@ namespace MasterClassified
             Result.Add(item);
             clsAllnew BusinessHelp = new clsAllnew();
             BusinessHelp.SPInputclaimreport_Server(Result);
-
+            ClaimReport_Server.Add(item);
 
         }
         //判断是否为汉字

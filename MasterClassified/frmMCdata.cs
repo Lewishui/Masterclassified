@@ -664,75 +664,9 @@ namespace MasterClassified
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-
-            {
-
-                {
-
-                    {
-                        if (this.dataGridView1.Rows.Count == 0)
-                        {
-                            MessageBox.Show("当前界面没有数据，请确认 !", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        var saveFileDialog = new SaveFileDialog();
-                        saveFileDialog.DefaultExt = ".csv";
-                        saveFileDialog.Filter = "csv|*.csv";
-                        string strFileName = "Data " + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
-                        saveFileDialog.FileName = strFileName;
-                        if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-                        {
-                            strFileName = saveFileDialog.FileName.ToString();
-                        }
-                        else
-                        {
-                            return;
-                        }
-                        FileStream fa = new FileStream(strFileName, FileMode.Create);
-                        StreamWriter sw = new StreamWriter(fa, Encoding.Unicode);
-                        string delimiter = "\t";
-                        string strHeader = "";
-                        for (int i = 0; i < this.dataGridView1.Columns.Count; i++)
-                        {
-                            strHeader += this.dataGridView1.Columns[i].HeaderText + delimiter;
-                        }
-                        sw.WriteLine(strHeader);
-
-                        //output rows data
-                        for (int j = 0; j < this.dataGridView1.Rows.Count; j++)
-                        {
-                            string strRowValue = "";
-
-                            for (int k = 0; k < this.dataGridView1.Columns.Count; k++)
-                            {
-                                if (this.dataGridView1.Rows[j].Cells[k].Value != null)
-                                {
-                                    strRowValue += this.dataGridView1.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "") + delimiter;
-                                    if (this.dataGridView1.Rows[j].Cells[k].Value.ToString() == "LIP201507-35")
-                                    {
-
-                                    }
-
-                                }
-                                else
-                                {
-                                    strRowValue += this.dataGridView1.Rows[j].Cells[k].Value + delimiter;
-                                }
-                            }
-                            sw.WriteLine(strRowValue);
-                        }
-                        sw.Close();
-                        fa.Close();
-                        MessageBox.Show("下载完成！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    }
-
-                }
+            InitialSystemInfo();
 
 
-
-
-            }
 
         }
 
@@ -844,6 +778,83 @@ namespace MasterClassified
                 //}
             }
             return ischina;
+
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            {
+
+                {
+
+                    {
+
+                        {
+                            if (this.dataGridView1.Rows.Count == 0)
+                            {
+                                MessageBox.Show("当前界面没有数据，请确认 !", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            var saveFileDialog = new SaveFileDialog();
+                            saveFileDialog.DefaultExt = ".csv";
+                            saveFileDialog.Filter = "csv|*.csv";
+                            string strFileName = "Data " + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+                            saveFileDialog.FileName = strFileName;
+                            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+                            {
+                                strFileName = saveFileDialog.FileName.ToString();
+                            }
+                            else
+                            {
+                                return;
+                            }
+                            FileStream fa = new FileStream(strFileName, FileMode.Create);
+                            StreamWriter sw = new StreamWriter(fa, Encoding.Unicode);
+                            string delimiter = "\t";
+                            string strHeader = "";
+                            for (int i = 0; i < this.dataGridView1.Columns.Count; i++)
+                            {
+                                strHeader += this.dataGridView1.Columns[i].HeaderText + delimiter;
+                            }
+                            sw.WriteLine(strHeader);
+
+                            //output rows data
+                            for (int j = 0; j < this.dataGridView1.Rows.Count; j++)
+                            {
+                                string strRowValue = "";
+
+                                for (int k = 0; k < this.dataGridView1.Columns.Count; k++)
+                                {
+                                    if (this.dataGridView1.Rows[j].Cells[k].Value != null)
+                                    {
+                                        strRowValue += this.dataGridView1.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "") + delimiter;
+                                        if (this.dataGridView1.Rows[j].Cells[k].Value.ToString() == "LIP201507-35")
+                                        {
+
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        strRowValue += this.dataGridView1.Rows[j].Cells[k].Value + delimiter;
+                                    }
+                                }
+                                sw.WriteLine(strRowValue);
+                            }
+                            sw.Close();
+                            fa.Close();
+                            MessageBox.Show("下载完成！", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+
+                    }
+
+
+
+
+                }
+
+            }
 
         }
     }

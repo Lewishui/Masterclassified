@@ -234,7 +234,7 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(56, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(55, 22);
             this.toolStripLabel3.Text = "分析范围";
             // 
             // toolStripComboBox1
@@ -242,11 +242,12 @@
             this.toolStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(100, 25);
+            this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_SelectedIndexChanged);
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(32, 22);
+            this.toolStripLabel4.Size = new System.Drawing.Size(31, 22);
             this.toolStripLabel4.Text = "期到";
             // 
             // toolStripComboBox2
@@ -261,8 +262,9 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(44, 22);
+            this.toolStripLabel5.Size = new System.Drawing.Size(43, 22);
             this.toolStripLabel5.Text = "除数：";
+            this.toolStripLabel5.Visible = false;
             // 
             // toolStripComboBox3
             // 
@@ -278,12 +280,13 @@
             "8",
             "9"});
             this.toolStripComboBox3.Name = "toolStripComboBox3";
-            this.toolStripComboBox3.Size = new System.Drawing.Size(35, 25);
+            this.toolStripComboBox3.Size = new System.Drawing.Size(35, 23);
+            this.toolStripComboBox3.Visible = false;
             // 
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(44, 22);
+            this.toolStripLabel6.Size = new System.Drawing.Size(43, 22);
             this.toolStripLabel6.Text = "期数：";
             // 
             // toolStripComboBox4
@@ -392,7 +395,7 @@
             "99",
             "100"});
             this.toolStripComboBox4.Name = "toolStripComboBox4";
-            this.toolStripComboBox4.Size = new System.Drawing.Size(40, 25);
+            this.toolStripComboBox4.Size = new System.Drawing.Size(40, 23);
             this.toolStripComboBox4.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox4_SelectedIndexChanged);
             // 
             // toolStripLabel7
@@ -725,7 +728,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1065, 391);
+            this.tabPage3.Size = new System.Drawing.Size(1072, 391);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "前期分析";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -743,7 +746,7 @@
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1059, 385);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1066, 385);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // dataGridView2
@@ -761,7 +764,7 @@
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(931, 379);
+            this.dataGridView2.Size = new System.Drawing.Size(937, 379);
             this.dataGridView2.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -773,13 +776,13 @@
             this.tableLayoutPanel8.Controls.Add(this.clbStatus, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(940, 3);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(946, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 240F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(116, 379);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(117, 379);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
             // toolStrip3
@@ -802,7 +805,7 @@
             this.toolStripButton3.Image = global::MasterClassified.Properties.Resources.sucaiwcom54660jvp;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(109, 21);
+            this.toolStripButton3.Size = new System.Drawing.Size(109, 20);
             this.toolStripButton3.Text = "确认";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -811,7 +814,7 @@
             this.toolStripButton4.Image = global::MasterClassified.Properties.Resources.clear_co1;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(109, 21);
+            this.toolStripButton4.Size = new System.Drawing.Size(109, 20);
             this.toolStripButton4.Text = "清空";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -820,7 +823,7 @@
             this.toolStripButton5.Image = global::MasterClassified.Properties.Resources.save1;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(109, 21);
+            this.toolStripButton5.Size = new System.Drawing.Size(109, 20);
             this.toolStripButton5.Text = "全选";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -834,7 +837,7 @@
             this.clbStatus.Location = new System.Drawing.Point(3, 30);
             this.clbStatus.MultiColumn = true;
             this.clbStatus.Name = "clbStatus";
-            this.clbStatus.Size = new System.Drawing.Size(110, 234);
+            this.clbStatus.Size = new System.Drawing.Size(111, 234);
             this.clbStatus.TabIndex = 15;
             // 
             // label3
@@ -844,7 +847,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 27);
+            this.label3.Size = new System.Drawing.Size(111, 27);
             this.label3.TabIndex = 16;
             this.label3.Text = "请选择将分析的段位：";
             // 

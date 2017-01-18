@@ -101,19 +101,29 @@ namespace MasterClassified
                 }
                 ClaimReport_Server.Sort(new Comp());
 
-                this.toolStripComboBox1.ComboBox.DisplayMember = "QiHao";
-                this.toolStripComboBox1.ComboBox.ValueMember = "QiHao";
-                this.toolStripComboBox1.ComboBox.DataSource = ClaimReport_Server;
+         
+                List<inputCaipiaoDATA> ClaimReport_Server1 = new List<inputCaipiaoDATA>();
+                ClaimReport_Server1 = ClaimReport_Server;
 
-                this.toolStripComboBox2.ComboBox.DisplayMember = "QiHao";
-                this.toolStripComboBox2.ComboBox.ValueMember = "QiHao";
-                this.toolStripComboBox2.ComboBox.DataSource = ClaimReport_Server;
+           
+                var counties = ClaimReport_Server1.Select(s => new MockEntity { ShortName = s.QiHao, FullName = s.QiHao }).Distinct().ToList();
+              
+                this.toolStripComboBox2.ComboBox.DisplayMember = "FullName";
+                this.toolStripComboBox2.ComboBox.ValueMember = "ShortName";
+                this.toolStripComboBox2.ComboBox.DataSource = counties;
+
+
+                var counties1 = ClaimReport_Server1.Select(s => new MockEntity { ShortName = s.QiHao, FullName = s.QiHao }).Distinct().ToList();
+                //   counties.Insert(0, new MockEntity { ShortName = "すべて", FullName = "すべて" });
+                this.toolStripComboBox1.ComboBox.DisplayMember = "FullName";
+                this.toolStripComboBox1.ComboBox.ValueMember = "ShortName";
+                this.toolStripComboBox1.ComboBox.DataSource = counties1;
 
                 if (ClaimReport_Server.Count != 0)
                 {
                     this.toolStripComboBox1.SelectedIndex = 0;
-                    this.toolStripComboBox2.SelectedIndex = ClaimReport_Server.Count - 1;
-                    this.toolStripComboBox3.SelectedIndex = 2;
+                    this.toolStripComboBox2.SelectedIndex = counties.Count - 1;
+                    //this.toolStripComboBox3.SelectedIndex = 2;
                     this.toolStripComboBox4.SelectedIndex = 2;
                 }
 
@@ -432,12 +442,7 @@ namespace MasterClassified
             // this.dataGridView1.DataSource = this.bindingSource1;
 
             dataGridView2.DataSource = qtyTable;
-            if (dataGridView2.Rows.Count != 0)
-            {
-                int ii = dataGridView2.Rows.Count - 1;
-                dataGridView2.CurrentCell = dataGridView2[0, ii]; // 强制将光标指向i行
-                dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
-            }
+
             string width = "";
 
             for (int j = 2; j < dataGridView2.ColumnCount; j++)
@@ -445,6 +450,13 @@ namespace MasterClassified
 
                 dataGridView2.Columns[j].Width = 30;
             }
+            if (dataGridView2.Rows.Count != 0)
+            {
+                int ii = dataGridView2.Rows.Count - 1;
+                dataGridView2.CurrentCell = dataGridView2[0, ii]; // 强制将光标指向i行
+                dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
+            }
+
             toolStripLabel7.Text = "结束";
         }
         private void ZidingYi_tab2()
@@ -459,15 +471,15 @@ namespace MasterClassified
                 foreach (inputCaipiaoDATA item in ClaimReport_Server)
                 {
                     if (item.QiHao == "20161224")
-                    { 
-                    
+                    {
+
                     }
                     item.qianAll = "";
                     item.qianMingcheng = "";
                     item.TongAll = "";
                     indexing = 0;
                     string text = "";
-               
+
                     foreach (inputCaipiaoDATA temp in ClaimReport_Server)
                     {
                         string shifouyijingpanduanguozhegeshuzi = "";
@@ -636,18 +648,19 @@ namespace MasterClassified
                 this.dataGridView1.DataSource = this.bindingSource1;
 
                 dataGridView2.DataSource = qtyTable;
-                if (dataGridView2.Rows.Count != 0)
-                {
-                    int ii = dataGridView2.Rows.Count - 1;
-                    dataGridView2.CurrentCell = dataGridView2[0, ii]; // 强制将光标指向i行
-                    dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
-                }
+
                 string width = "";
 
                 for (int j = 2; j < dataGridView2.ColumnCount; j++)
                 {
 
                     dataGridView2.Columns[j].Width = 30;
+                }
+                if (dataGridView2.Rows.Count != 0)
+                {
+                    int ii = dataGridView2.Rows.Count - 1;
+                    dataGridView2.CurrentCell = dataGridView2[0, ii]; // 强制将光标指向i行
+                    dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
                 }
                 toolStripLabel7.Text = "结束";
             }
@@ -664,8 +677,11 @@ namespace MasterClassified
 
                 List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAn("YES");
                 if (Result.Count != 0)
+                {
                     this.label2.Text = "当前方案名称：　" + Result[0].Name;
 
+                    toolStripLabel7.Text = Result[0].Data.Replace("\r\n", "* ");
+                }
                 //showSuijiResultlist = new List<string>();
 
                 //foreach (FangAnLieBiaoDATA item in Result)
@@ -886,7 +902,7 @@ namespace MasterClassified
                 // this.toolStripComboBox1.Items.Add("全部");
 
 
-                toolStripLabel7.Text = "运行结束";
+                //  toolStripLabel7.Text = "运行结束";
                 #endregion
             }
             catch (Exception ex)
@@ -1463,7 +1479,19 @@ namespace MasterClassified
 
         private void toolStripComboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            NewMethod();
+            newi = new List<int>();
+            if (clbStatus.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.clbStatus.CheckedItems)
+                {
+                    newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+
+                }
+                qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
+                ZidingYi_tab2();
+            }
+            else
+                NewMethod();
 
         }
 
@@ -1642,12 +1670,7 @@ namespace MasterClassified
                     this.bindingSource2.DataSource = qtyTable;
                     bindingSource2.Sort = "期号  ASC";
                     this.dataGridView1.DataSource = this.bindingSource2;
-                    if (dataGridView1.Rows.Count != 0)
-                    {
-                        int ii = dataGridView1.Rows.Count - 1;
-                        dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
-                        dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
-                    }
+
                     if (UDF != null && UDF.Count != 0)
                     {
                         for (int j = 2; j < UDF[UDF.Count - 1] + 2; j++)
@@ -1663,6 +1686,12 @@ namespace MasterClassified
 
                             dataGridView1.Columns[j].Width = 30;
                         }
+                    }
+                    if (dataGridView1.Rows.Count != 0)
+                    {
+                        int ii = dataGridView1.Rows.Count - 1;
+                        dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
+                        dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
                     }
 
                     //else
@@ -2022,6 +2051,8 @@ namespace MasterClassified
 
                 //}
             }
+            else
+                ApplyBindSourceFilter1(shipper, county);
 
         }
         private void ApplyBindSourceFilter(string shipper, string county = "", string store = "")
@@ -2056,6 +2087,52 @@ namespace MasterClassified
                             int ii = dataGridView1.Rows.Count - 1;
                             dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
                             dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("刷新异常或数据有误，请关闭当前页面重新尝试", "异常", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+
+                throw;
+            }
+        }
+        private void ApplyBindSourceFilter1(string shipper, string county = "", string store = "")
+        {
+            try
+            {
+
+                //if (bindingSource1.Count > 0)
+                {
+                    string filter = "";
+                    if (shipper.Length > 0)
+                    {
+                        filter += " (期号>='" + shipper + "')";
+                    }
+
+                    if (county.Length > 0 && county != "")
+                    {
+                        if (filter.Length > 0)
+                        {
+                            filter += " AND ";
+                        }
+                        filter += "(期号<=" + "'" + county + "'" + ")";
+                    }
+                    if (ClaimReport_Server.Count > 0)
+                    {
+                        this.dataGridView2.DataSource = null;
+
+                        bindingSource1.Filter = filter;
+                        this.dataGridView2.DataSource = bindingSource1;
+                        if (dataGridView2.Rows.Count != 0)
+                        {
+                            int ii = dataGridView2.Rows.Count - 1;
+                            dataGridView2.CurrentCell = dataGridView2[0, ii]; // 强制将光标指向i行
+                            dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
                         }
                     }
 
@@ -2365,7 +2442,7 @@ namespace MasterClassified
         private void QianQI_Zidingyi_InitialSystemInfo()
         {
 
-            int  vony=this.clbStatus.Items.Count;
+            int vony = this.clbStatus.Items.Count;
             for (int i = 0; i < vony; i++)
                 clbStatus.Items.Remove(clbStatus.Items[0]);
 
@@ -2616,6 +2693,21 @@ namespace MasterClassified
                 //}
             }
             return ischina;
+
+        }
+
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int s = this.tabControl1.SelectedIndex;
+            string shipper = this.toolStripComboBox1.Text;
+            string county = toolStripComboBox2.Text;
+            if (s == 0)
+            {
+                ApplyBindSourceFilter(shipper, county);
+
+            }
+            else
+                ApplyBindSourceFilter1(shipper, county);
 
         }
     }

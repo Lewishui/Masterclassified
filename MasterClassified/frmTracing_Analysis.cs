@@ -39,6 +39,7 @@ namespace MasterClassified
         private frmImport_MCleixing_Data frmImport_MCleixing_Data;
         private frmQianQiFenXi_Zidingyifenxi frmQianQiFenXi_Zidingyifenxi;
         List<int> newi;
+        List<int> qianqi_newi;
         List<string> showSuijiResultlist = new List<string>();
         int qianqiqishu = 0;
         List<int> newlist;
@@ -101,13 +102,13 @@ namespace MasterClassified
                 }
                 ClaimReport_Server.Sort(new Comp());
 
-         
+
                 List<inputCaipiaoDATA> ClaimReport_Server1 = new List<inputCaipiaoDATA>();
                 ClaimReport_Server1 = ClaimReport_Server;
 
-           
+
                 var counties = ClaimReport_Server1.Select(s => new MockEntity { ShortName = s.QiHao, FullName = s.QiHao }).Distinct().ToList();
-              
+
                 this.toolStripComboBox2.ComboBox.DisplayMember = "FullName";
                 this.toolStripComboBox2.ComboBox.ValueMember = "ShortName";
                 this.toolStripComboBox2.ComboBox.DataSource = counties;
@@ -502,15 +503,19 @@ namespace MasterClassified
                                 }
                                 if (next == false)
                                     continue;
+                                //前期数据的 分析数据的位置索引
 
                                 for (int j1 = 0; j1 < temp1.Length; j1++)
                                 {
                                     //判断是否在自定义范围内的数据
                                     bool nexti = false;
-                                    for (int oi = 0; oi < newi.Count; oi++)
+                                    for (int oi = 0; oi < qianqi_newi.Count; oi++)
                                     {
-                                        if (newi[oi] > j1)
+                                        if (qianqi_newi[oi] == j1 + 1)
+                                        {
                                             nexti = true;
+                                            break;
+                                        }
                                     }
                                     if (nexti == false)
                                         continue;
@@ -1480,12 +1485,21 @@ namespace MasterClassified
         private void toolStripComboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
             newi = new List<int>();
+            qianqi_newi = new List<int>();
             if (clbStatus.CheckedItems.Count > 0)
             {
                 foreach (string status in this.clbStatus.CheckedItems)
                 {
                     newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+                    
+                }
+                if (this.checkedListBox1.CheckedItems.Count > 0)
+                {
+                    foreach (string status in this.checkedListBox1.CheckedItems)
+                    {
+                        qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
 
+                    }
                 }
                 qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
                 ZidingYi_tab2();
@@ -2444,8 +2458,10 @@ namespace MasterClassified
 
             int vony = this.clbStatus.Items.Count;
             for (int i = 0; i < vony; i++)
+            {
                 clbStatus.Items.Remove(clbStatus.Items[0]);
-
+                this.checkedListBox1.Items.Remove(checkedListBox1.Items[0]);
+            }
             clsAllnew BusinessHelp = new clsAllnew();
 
             List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
@@ -2464,6 +2480,7 @@ namespace MasterClassified
                 int con = i + 1;
 
                 clbStatus.Items.Add("第 " + con + " 位");
+                this.checkedListBox1.Items.Add("第 " + con + " 位");
             }
         }
 
@@ -2472,6 +2489,7 @@ namespace MasterClassified
             for (int i = 0; i < clbStatus.Items.Count; i++)
             {
                 clbStatus.SetItemChecked(i, true);
+                this.checkedListBox1.SetItemChecked(i, true);
 
             }
         }
@@ -2481,7 +2499,7 @@ namespace MasterClassified
             for (int i = 0; i < clbStatus.Items.Count; i++)
             {
                 clbStatus.SetItemChecked(i, false);
-
+                this.checkedListBox1.SetItemChecked(i, false);
             }
         }
 
@@ -2494,6 +2512,15 @@ namespace MasterClassified
                 foreach (string status in this.clbStatus.CheckedItems)
                 {
                     newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+
+                }
+            }
+            qianqi_newi = new List<int>();
+            if (this.checkedListBox1.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.checkedListBox1.CheckedItems)
+                {
+                    qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
 
                 }
             }

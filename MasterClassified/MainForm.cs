@@ -40,7 +40,7 @@ namespace MasterClassified
         public MainForm()
         {
             InitializeComponent();
-            InitialPassword();
+           // InitialPassword();
             InitialSystemInfo();
             //临时代码
             usename = txtSAPUserId.Text.Trim();
@@ -594,6 +594,12 @@ namespace MasterClassified
 
                 throw;
             }
+        }
+
+        private void 打开本地ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources"), "");
+            System.Diagnostics.Process.Start("explorer.exe", ZFCEPath);
         }
 
 

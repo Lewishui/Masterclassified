@@ -1798,7 +1798,7 @@ namespace MasterClassified
                 }
 
             }
-            else if (s == 0)
+            else if (s == 1)
             {
                 {
                     if (this.dataGridView2.Rows.Count == 0)

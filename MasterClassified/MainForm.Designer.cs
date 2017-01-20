@@ -52,6 +52,7 @@
             this.导入彩票数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.自动安装数据库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.一键配置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打开本地ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtSAPUserId = new System.Windows.Forms.ToolStripTextBox();
             this.tsbLogin = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -65,7 +66,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.打开本地ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -128,6 +128,13 @@
             this.一键配置ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.一键配置ToolStripMenuItem.Text = "一键配置初始化信息";
             this.一键配置ToolStripMenuItem.Click += new System.EventHandler(this.一键配置ToolStripMenuItem_Click);
+            // 
+            // 打开本地ToolStripMenuItem
+            // 
+            this.打开本地ToolStripMenuItem.Name = "打开本地ToolStripMenuItem";
+            this.打开本地ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.打开本地ToolStripMenuItem.Text = "打开本地目录";
+            this.打开本地ToolStripMenuItem.Click += new System.EventHandler(this.打开本地ToolStripMenuItem_Click);
             // 
             // txtSAPUserId
             // 
@@ -228,7 +235,7 @@
             // 追踪分析ToolStripMenuItem
             // 
             this.追踪分析ToolStripMenuItem.Name = "追踪分析ToolStripMenuItem";
-            this.追踪分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.追踪分析ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.追踪分析ToolStripMenuItem.Text = "追踪分析";
             this.追踪分析ToolStripMenuItem.Click += new System.EventHandler(this.追踪分析ToolStripMenuItem_Click);
             // 
@@ -301,13 +308,6 @@
             dockPanelSkin1.DockPaneStripSkin = dockPaneStripSkin1;
             this.dockPanel2.Skin = dockPanelSkin1;
             this.dockPanel2.TabIndex = 9;
-            // 
-            // 打开本地ToolStripMenuItem
-            // 
-            this.打开本地ToolStripMenuItem.Name = "打开本地ToolStripMenuItem";
-            this.打开本地ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.打开本地ToolStripMenuItem.Text = "打开本地目录";
-            this.打开本地ToolStripMenuItem.Click += new System.EventHandler(this.打开本地ToolStripMenuItem_Click);
             // 
             // MainForm
             // 

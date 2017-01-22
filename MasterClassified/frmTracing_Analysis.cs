@@ -77,7 +77,7 @@ namespace MasterClassified
                 clsAllnew BusinessHelp = new clsAllnew();
                 List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
                 if (CaipiaozhongleiResult.Count != 0)
-                    this.label1.Text = "当前彩票类型：" + CaipiaozhongleiResult[0].Name;
+                    this.label1.Text = CaipiaozhongleiResult[0].Name;//"当前彩票类型：" 
                 else
                 {
                     MessageBox.Show("错误：请选择默认的彩票类型，再继续本界面的操作", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -683,7 +683,7 @@ namespace MasterClassified
                 List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAn("YES");
                 if (Result.Count != 0)
                 {
-                    this.label2.Text = "当前方案名称：　" + Result[0].Name;
+                    this.label4.Text = "当前方案名称：　" + Result[0].Name;
 
                     toolStripLabel7.Text = Result[0].Data.Replace("\r\n", "* ");
                 }
@@ -1862,7 +1862,7 @@ namespace MasterClassified
 
             clsAllnew BusinessHelp = new clsAllnew();
 
-            ClaimReport_Server = BusinessHelp.Fast_FindData(textBox1.Text.Trim().ToString());
+            ClaimReport_Server = BusinessHelp.Fast_FindData(textBox1.Text.Trim().ToString(), this.label1.Text);
 
 
             try
@@ -1966,7 +1966,7 @@ namespace MasterClassified
 
             //sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(ClaimReport_Server);
             List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
-            this.label1.Text = "当前彩票类型：" + CaipiaozhongleiResult[0].Name;
+            this.label1.Text = CaipiaozhongleiResult[0].Name;//"当前彩票类型：" + 
             //+"如数据或设置不能刷新请关闭本界面并重新在主界面打开"
 
 

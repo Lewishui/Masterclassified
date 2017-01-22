@@ -542,9 +542,10 @@ namespace MasterClassified
                 RowRemark = RowRemark - 1;
             }
             string QiHao = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
+            string Caipiaomingcheng = this.label2.Text.ToString(); 
             clsAllnew BusinessHelp = new clsAllnew();
 
-            BusinessHelp.delete_CaiPiaoData(QiHao);
+            BusinessHelp.delete_CaiPiaoData(QiHao, Caipiaomingcheng);
             InitialSystemInfo();
         }
 
@@ -592,7 +593,7 @@ namespace MasterClassified
                 return;
             clsAllnew BusinessHelp = new clsAllnew();
 
-            BusinessHelp.delete_CaiPiaoData(this.label8.Text);
+            BusinessHelp.delete_CaiPiaoData_Caipiaomingcheng(this.label8.Text);
             InitialSystemInfo();
         }
 

@@ -22,7 +22,7 @@ namespace MasterClassified
             clsAllnew BusinessHelp = new clsAllnew();
             ReadResult = new List<inputCaipiaoDATA>();
 
-            ReadResult = BusinessHelp.ReadCaiPiaoData_One(qihao);
+            ReadResult = BusinessHelp.ReadCaiPiaoData_One(qihao, mingcheng);
             foreach (inputCaipiaoDATA item in ReadResult)
             {
                 if (item.QiHao != null)

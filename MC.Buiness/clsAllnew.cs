@@ -198,8 +198,10 @@ namespace MC.Buiness
             }
             foreach (inputCaipiaoDATA item in AddMAPResult)
             {
-                QueryDocument query = new QueryDocument("QiHao", item.QiHao);
-                collection1.Remove(query);
+                var dd = Query.And(Query.EQ("QiHao", item.QiHao), Query.EQ("Caipiaomingcheng", item.Caipiaomingcheng));//同时满足多个条件
+
+                // QueryDocument query = new QueryDocument("QiHao", item.QiHao);
+                collection1.Remove(dd);
 
                 MongoDatabase db = server.GetDatabase("MasterClassified");
                 MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
@@ -217,7 +219,7 @@ namespace MC.Buiness
             }
         }
 
-        public void SPInputclaimreport_Server1(List<inputCaipiaoDATA> AddMAPResult,string zhiqianqianqi)
+        public void SPInputclaimreport_Server1(List<inputCaipiaoDATA> AddMAPResult, string zhiqianqianqi)
         {
             string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
@@ -233,8 +235,14 @@ namespace MC.Buiness
             }
             foreach (inputCaipiaoDATA item in AddMAPResult)
             {
-                QueryDocument query = new QueryDocument("QiHao", zhiqianqianqi);
-                collection1.Remove(query);
+                //var dd = Query.And(Query.GTE("shenheriqi_Valume", DateTime.Parse(findtext + "01")), Query.LTE("Input Date", DateTime.Parse(findtext + "31")));//同时满足多个条件
+                var dd = Query.And(Query.EQ("QiHao", zhiqianqianqi), Query.EQ("Caipiaomingcheng", item.Caipiaomingcheng));//同时满足多个条件
+
+             //   QueryDocument query = new QueryDocument("QiHao", zhiqianqianqi);
+                collection1.Remove(dd);
+
+                dd = Query.And(Query.EQ("QiHao", item.QiHao), Query.EQ("Caipiaomingcheng", item.Caipiaomingcheng));//同时满足多个条件              
+                collection1.Remove(dd);
 
                 MongoDatabase db = server.GetDatabase("MasterClassified");
                 MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
@@ -398,7 +406,7 @@ namespace MC.Buiness
         }
 
 
-        public List<inputCaipiaoDATA> ReadCaiPiaoData_One(string findtext)
+        public List<inputCaipiaoDATA> ReadCaiPiaoData_One(string findtext, string Caipiaomingcheng)
         {
 
             #region Read  database info server
@@ -412,9 +420,13 @@ namespace MC.Buiness
                 MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
                 MongoCollection<BsonDocument> employees = db.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
 
-                var query = new QueryDocument("QiHao", findtext);
+                //     var query = new QueryDocument("QiHao", findtext);
+                var dd = Query.And(Query.EQ("QiHao", findtext), Query.EQ("Caipiaomingcheng", Caipiaomingcheng));//同时满足多个条件
 
-                foreach (BsonDocument emp in employees.Find(query))
+
+                foreach (BsonDocument emp in employees.Find(dd))
+
+                //foreach (BsonDocument emp in employees.Find(query))
                 {
                     inputCaipiaoDATA item = new inputCaipiaoDATA();
 
@@ -753,7 +765,7 @@ namespace MC.Buiness
             #endregion
         }
 
-        public List<inputCaipiaoDATA> Fast_FindData(string findtext)
+        public List<inputCaipiaoDATA> Fast_FindData(string findtext, string Caipiaomingcheng)
         {
 
             try
@@ -768,10 +780,13 @@ namespace MC.Buiness
                 var query = new QueryDocument("QiHao", findtext);
 
                 ///模糊查询
-                var query1 = Query<inputCaipiaoDATA>.Matches(c => c.QiHao, new BsonRegularExpression(new Regex(findtext)));
-                var data = db.GetCollection("MasterClassified_CaiPiaoData").Find(query1);
+                //   var query1 = Query<inputCaipiaoDATA>.Matches(c => c.QiHao, new BsonRegularExpression(new Regex(findtext)));
+                var dd = Query.And(Query.EQ("QiHao", findtext), Query.EQ("Caipiaomingcheng", Caipiaomingcheng));//同时满足多个条件
 
-                foreach (var emp in data)
+                //  var data = db.GetCollection("MasterClassified_CaiPiaoData").Find(dd);
+
+                //foreach (var emp in data)
+                foreach (BsonDocument emp in employees.Find(dd))
                 {
                     inputCaipiaoDATA item = new inputCaipiaoDATA();
 
@@ -805,10 +820,13 @@ namespace MC.Buiness
                 query = new QueryDocument("KaiJianHaoMa", findtext);
 
                 ///模糊查询
-                query1 = Query<inputCaipiaoDATA>.Matches(c => c.KaiJianHaoMa, new BsonRegularExpression(new Regex(findtext)));
-                data = db.GetCollection("MasterClassified_CaiPiaoData").Find(query1);
+                //query1 = Query<inputCaipiaoDATA>.Matches(c => c.KaiJianHaoMa, new BsonRegularExpression(new Regex(findtext)));
+                dd = Query.And(Query.EQ("KaiJianHaoMa", findtext), Query.EQ("Caipiaomingcheng", Caipiaomingcheng));//同时满足多个条件
 
-                foreach (var emp in data)
+               // data = db.GetCollection("MasterClassified_CaiPiaoData").Find(dd);
+
+                //foreach (var emp in data)
+                foreach (BsonDocument emp in employees.Find(dd))
                 {
                     inputCaipiaoDATA item = new inputCaipiaoDATA();
 
@@ -1124,7 +1142,7 @@ namespace MC.Buiness
 
 
         }
-        public void delete_CaiPiaoData(string name)
+        public void delete_CaiPiaoData(string name, string Caipiaomingcheng)
         {
             string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
@@ -1137,7 +1155,26 @@ namespace MC.Buiness
                 MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            QueryDocument query = new QueryDocument("QiHao", name);
+            // QueryDocument query = new QueryDocument("QiHao", name);
+            var dd = Query.And(Query.EQ("QiHao", name), Query.EQ("Caipiaomingcheng", Caipiaomingcheng));//同时满足多个条件
+
+            collection1.Remove(dd);
+        }
+        public void delete_CaiPiaoData_Caipiaomingcheng(string Caipiaomingcheng)
+        {
+            string connectionString = "mongodb://127.0.0.1";
+            MongoServer server = MongoServer.Create(connectionString);
+            MongoDatabase db1 = server.GetDatabase("MasterClassified");
+            MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
+            MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterClassified_CaiPiaoData");
+
+            if (Caipiaomingcheng == null)
+            {
+                MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            QueryDocument query = new QueryDocument("Caipiaomingcheng", Caipiaomingcheng);
+
             collection1.Remove(query);
         }
         public void deleteID_CaiPiaoData(string name)
@@ -1153,7 +1190,7 @@ namespace MC.Buiness
                 MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-         //   QueryDocument query = new QueryDocument("ID", name);
+            //   QueryDocument query = new QueryDocument("ID", name);
             IMongoQuery query = Query.EQ("_id", new ObjectId(name));
 
             collection1.Remove(query);

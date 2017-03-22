@@ -150,6 +150,7 @@ namespace MC.DB
         public string DuanWei10 { get; set; }
         public string ZhuJian { get; set; }
         public string MorenDuanShu { get; set; }
+        public string Mobanleibie { get; set; }
     }
     public class CaipiaoZhongLeiDATA
     {

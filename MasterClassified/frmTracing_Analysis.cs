@@ -14,6 +14,7 @@ using System.IO;
 using MC.Common;
 using System.Threading;
 using System.Text.RegularExpressions;
+using System.Collections;
 
 namespace MasterClassified
 {
@@ -60,7 +61,17 @@ namespace MasterClassified
             //    width += dgViewFiles.Columns[i].Width;
 
             //}
-
+            for (int m = 1; m <= InitialUDF[InitialUDF.Count - 1]; m++)
+            {
+                this.comboBox3.Items.Add("随机 " + m + " 位");
+                this.checkedListBox2.Items.Add("基" + m);
+            }
+            this.checkedListBox2.Items.Add("特别号");
+            this.comboBox3.SelectedIndex = 0;
+            for (int i = 0; i < checkedListBox2.Items.Count; i++)
+            {
+                checkedListBox2.SetItemChecked(i, false);
+            }
         }
         private void InitialSystemInfo()
         {
@@ -243,6 +254,7 @@ namespace MasterClassified
                     toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
                     //GetDataforOutlookThread = new Thread(NewMethodtab1);
                     //GetDataforOutlookThread.Start();
+                    this.checkedListBox2.Items.Clear();
                     NewMethodtab1();
 
                 }
@@ -267,7 +279,19 @@ namespace MasterClassified
 
                     QianQI_Zidingyi_InitialSystemInfo();
 
+                    this.toolStripComboBox5.SelectedIndex = 0;
+                    this.toolStripComboBox6.SelectedIndex = 0;
+                    this.comboBox1.SelectedIndex = 0;
+                    this.comboBox2.SelectedIndex = 0;
 
+                    for (int i = 0; i < clbStatus.Items.Count; i++)
+                    {
+                        clbStatus.SetItemChecked(i, false);
+                    }
+                    for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                    {
+                        checkedListBox1.SetItemChecked(i, false);
+                    }
                 }
             }
             catch (Exception ex)
@@ -1491,7 +1515,7 @@ namespace MasterClassified
                 foreach (string status in this.clbStatus.CheckedItems)
                 {
                     newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
-                    
+
                 }
                 if (this.checkedListBox1.CheckedItems.Count > 0)
                 {
@@ -1563,13 +1587,14 @@ namespace MasterClassified
 
                         if (InitialUDF != null && InitialUDF.Count != 0)
                         {
+
                             InitialUDF.Sort();
                             for (int m = 1; m <= InitialUDF[InitialUDF.Count - 1]; m++)
                             {
 
                                 qtyTable.Columns.Add("基" + m, System.Type.GetType("System.String"));
                                 //  dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { Width = 30, DataPropertyName = "基" + m });
-
+                                //   this.checkedListBox2.Items.Add("基" + m);
                             }
                         }
 
@@ -1588,7 +1613,9 @@ namespace MasterClassified
                     {
                         int ss = m + 1;
 
-                        qtyTable.Columns.Add("前第+" + ss + "期相同位置", System.Type.GetType("System.String"));
+                        //qtyTable.Columns.Add("前第+" + ss + "期相同位置", System.Type.GetType("System.String"));
+                        //0322 改名
+                        qtyTable.Columns.Add("前" + ss, System.Type.GetType("System.String"));
 
                     }
                     //  qtyTable.Rows.Add(qtyTable.NewRow());
@@ -1684,10 +1711,13 @@ namespace MasterClassified
                     this.bindingSource2.DataSource = qtyTable;
                     bindingSource2.Sort = "期号  ASC";
                     this.dataGridView1.DataSource = this.bindingSource2;
+                    ////设置【前*】列宽
+                    int qiancout = Convert.ToInt32(toolStripComboBox4.Text);
 
                     if (UDF != null && UDF.Count != 0)
                     {
-                        for (int j = 2; j < UDF[UDF.Count - 1] + 2; j++)
+
+                        for (int j = 2; j < UDF[UDF.Count - 1] + 2 + qiancout; j++)
                         {
 
                             dataGridView1.Columns[j].Width = 30;
@@ -1695,12 +1725,13 @@ namespace MasterClassified
                     }
                     else if (InitialUDF != null && InitialUDF.Count != 0)
                     {
-                        for (int j = 2; j < InitialUDF[InitialUDF.Count - 1] + 2; j++)
+                        for (int j = 2; j < InitialUDF[InitialUDF.Count - 1] + 2 + qiancout; j++)
                         {
 
                             dataGridView1.Columns[j].Width = 30;
                         }
                     }
+
                     if (dataGridView1.Rows.Count != 0)
                     {
                         int ii = dataGridView1.Rows.Count - 1;
@@ -2174,42 +2205,73 @@ namespace MasterClassified
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.checkBox1.Checked = false;
-            this.checkBox2.Checked = false;
-            this.checkBox3.Checked = false;
-            this.checkBox4.Checked = false;
-            this.checkBox5.Checked = false;
-            this.checkBox6.Checked = false;
-            this.checkBox7.Checked = false;
-            this.checkBox8.Checked = false;
-            this.checkBox9.Checked = false;
+            //this.checkBox1.Checked = false;
+            //this.checkBox2.Checked = false;
+            //this.checkBox3.Checked = false;
+            //this.checkBox4.Checked = false;
+            //this.checkBox5.Checked = false;
+            //this.checkBox6.Checked = false;
+            //this.checkBox7.Checked = false;
+            //this.checkBox8.Checked = false;
+            //this.checkBox9.Checked = false;
+            for (int i = 0; i < checkedListBox2.Items.Count; i++)
+            {
+                checkedListBox2.SetItemChecked(i, false);
 
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             JIDTA = new List<int>();
 
-            if (checkBox1.Checked == true)
-                JIDTA.Add(1);
-            if (checkBox3.Checked == true)
-                JIDTA.Add(2);
-            if (checkBox2.Checked == true)
-                JIDTA.Add(3);
-            if (checkBox4.Checked == true)
-                JIDTA.Add(4);
-            if (checkBox5.Checked == true)
-                JIDTA.Add(5);
-            if (checkBox6.Checked == true)
-                JIDTA.Add(6);
-            if (checkBox7.Checked == true)
-                JIDTA.Add(7);
-            if (checkBox8.Checked == true)
-                JIDTA.Add(8);
-            if (checkBox9.Checked == true)
-                JIDTA.Add(9);
-            if (checkBox10.Checked == true)
-                JIDTA.Add(10);
+            //if (checkBox1.Checked == true)
+            //    JIDTA.Add(1);
+            //if (checkBox3.Checked == true)
+            //    JIDTA.Add(2);
+            //if (checkBox2.Checked == true)
+            //    JIDTA.Add(3);
+            //if (checkBox4.Checked == true)
+            //    JIDTA.Add(4);
+            //if (checkBox5.Checked == true)
+            //    JIDTA.Add(5);
+            //if (checkBox6.Checked == true)
+            //    JIDTA.Add(6);
+            //if (checkBox7.Checked == true)
+            //    JIDTA.Add(7);
+            //if (checkBox8.Checked == true)
+            //    JIDTA.Add(8);
+            //if (checkBox9.Checked == true)
+            //    JIDTA.Add(9);
+            //if (checkBox10.Checked == true)
+            //    JIDTA.Add(10);
+            if (checkedListBox2.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.checkedListBox2.CheckedItems)
+                {
+                    if (status.Contains("基"))
+                    {
+                        string[] temp3 = System.Text.RegularExpressions.Regex.Split(status, "基");
+                        JIDTA.Add(Convert.ToInt32(temp3[1]));
+                    }
+                    else if (status.Contains("特"))
+                    {
+                        //string[] temp3 = System.Text.RegularExpressions.Regex.Split(status, "特别号");
+                        JIDTA.Add(10);
+                    }
+                }
+
+
+            }
+
+            //newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+            //string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox2.Text, " ");
+            //string index = temp3[1];
+            //for (int i = 0; i < Convert.ToInt32(index); i++)
+            //{
+
+            //    checkedListBox1.SetItemChecked(newlist[i], true);
+            //}
 
 
             if (JIDTA.Count > 0)
@@ -2475,12 +2537,20 @@ namespace MasterClassified
             ////this.label4.Text = CaipiaozhongleiResult[0].Name;
             //this.label6.Text = CaipiaozhongleiResult[0].JiBenHaoMaS + "-" + CaipiaozhongleiResult[0].JiBenHaoMaT;
             string len = CaipiaozhongleiResult[0].Xuan;
+            toolStripComboBox5.Items.Clear();
+            toolStripComboBox6.Items.Clear();
+
             for (int i = 0; i < Convert.ToInt32(len); i++)
             {
                 int con = i + 1;
 
                 clbStatus.Items.Add("第 " + con + " 位");
                 this.checkedListBox1.Items.Add("第 " + con + " 位");
+
+                toolStripComboBox5.Items.Add("随机 " + con + " 位");
+                toolStripComboBox6.Items.Add("随机 " + con + " 位");
+                this.comboBox1.Items.Add("随机 " + con + " 位");
+                this.comboBox2.Items.Add("随机 " + con + " 位");
             }
         }
 
@@ -2537,36 +2607,56 @@ namespace MasterClassified
         {
             JIDTA = new List<int>();
 
-            if (checkBox1.Checked == true)
-                JIDTA.Add(1);
-            if (checkBox3.Checked == true)
-                JIDTA.Add(2);
-            if (checkBox2.Checked == true)
-                JIDTA.Add(3);
-            if (checkBox4.Checked == true)
-                JIDTA.Add(4);
-            if (checkBox5.Checked == true)
-                JIDTA.Add(5);
-            if (checkBox6.Checked == true)
-                JIDTA.Add(6);
-            if (checkBox7.Checked == true)
-                JIDTA.Add(7);
-            if (checkBox8.Checked == true)
-                JIDTA.Add(8);
-            if (checkBox9.Checked == true)
-                JIDTA.Add(9);
-            if (checkBox10.Checked == true)
-                JIDTA.Add(10);
-
+            //if (checkBox1.Checked == true)
+            //    JIDTA.Add(1);
+            //if (checkBox3.Checked == true)
+            //    JIDTA.Add(2);
+            //if (checkBox2.Checked == true)
+            //    JIDTA.Add(3);
+            //if (checkBox4.Checked == true)
+            //    JIDTA.Add(4);
+            //if (checkBox5.Checked == true)
+            //    JIDTA.Add(5);
+            //if (checkBox6.Checked == true)
+            //    JIDTA.Add(6);
+            //if (checkBox7.Checked == true)
+            //    JIDTA.Add(7);
+            //if (checkBox8.Checked == true)
+            //    JIDTA.Add(8);
+            //if (checkBox9.Checked == true)
+            //    JIDTA.Add(9);
+            //if (checkBox10.Checked == true)
+            //    JIDTA.Add(10);
+            if (checkedListBox2.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.checkedListBox2.CheckedItems)
+                {
+                    if (status.Contains("基"))
+                    {
+                        string[] temp3 = System.Text.RegularExpressions.Regex.Split(status, "基");
+                        JIDTA.Add(Convert.ToInt32(temp3[1]));
+                    }
+                    else if (status.Contains("特"))
+                    {
+                        //string[] temp3 = System.Text.RegularExpressions.Regex.Split(status, "特别号");
+                        JIDTA.Add(10);
+                    }
+                }
+            }
 
             if (JIDTA.Count > 0)
             {
-                Suiji_NewMethod1();
+                //Suiji_NewMethod1();
+                Suiji_NewMethodNEW();
+
                 //button2_Click(object sender, EventArgs e);
                 button2.PerformClick();
             }
             else
-                Suiji_NewMethod1();
+            {
+               // Suiji_NewMethod1();
+                Suiji_NewMethodNEW();
+            }
         }
         private void Suiji_NewMethod1()
         {
@@ -2585,6 +2675,8 @@ namespace MasterClassified
                 newlist.Add(7);
                 newlist.Add(8);
                 newlist.Add(9);
+
+
                 newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
 
                 clsAllnew BusinessHelp = new clsAllnew();
@@ -2699,6 +2791,445 @@ namespace MasterClassified
                 throw;
             }
         }
+        private void Suiji_NewMethodNEW()
+        {
+            try
+            {
+                ArrayList CharList = new ArrayList();
+                newlist = new List<int>();
+                showSuijiResultlist = new List<string>();
+
+                newlist.Add(0);
+                newlist.Add(1);
+                newlist.Add(2);
+                newlist.Add(3);
+                newlist.Add(4);
+                newlist.Add(5);
+                newlist.Add(6);
+                newlist.Add(7);
+                newlist.Add(8);
+                newlist.Add(9);             
+
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+                for (int i = 0; i < newlist.Count; i++)
+                {
+                    CharList.Add(newlist[i].ToString());
+                }
+                clsAllnew BusinessHelp = new clsAllnew();
+                List<FangAnLieBiaoDATA> Result12 = BusinessHelp.Read_FangAn("YES");
+                if (Result12[0].MorenDuanShu != null && Result12[0].MorenDuanShu != "")
+                {
+                }
+                else
+                {
+                    MessageBox.Show("请设置中计选择默认段数，否则无法分配数据", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                int duan = Convert.ToInt32(Result12[0].MorenDuanShu);
+                int evertduan = 10 / duan;
+                int ilast = 0;
+                ilast = duan * evertduan;
+                List<string> SelfNo = new List<string>();
+                #region 判断自定义段位模板按其分配每段的数字个数
+
+                if (Result12[0].Mobanleibie != "" && Result12[0].Mobanleibie != "默认")
+                {
+                    List<int> EverDuanList = ZidingyiMeiDuanGeshu(Result12[0].Mobanleibie);
+                    string first = "";
+                    showSuijiResultlist = new List<string>();
+                    //for (int iq = 1; iq <= duan; iq++)
+                    {
+                        int iq = 0;
+
+                        for (int i = 0; i < EverDuanList.Count; i++)
+                        {
+                            string num = "";
+                            int ago = 0;
+                            //如果有自定义的数字则重新计算当前段数的所添加数字个数
+                            int newEverDuanList = EverDuanList[i];
+                            string newaddselfn0 = "";
+                            #region  //如果有自定义的数字则重新计算当前段数的所添加数字个数
+
+                            for (int ii = 0; ii < SelfNo.Count; ii++)
+                            {
+
+                                if (SelfNo[ii].Contains("一") && i == 0)
+                                {
+                                    string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                    newaddselfn0 = temp2[1];
+
+                                    string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                    newEverDuanList = EverDuanList[0] - temp3.Length;
+                                    break;
+
+                                }
+                                else if (SelfNo[ii].Contains("二") && i == 1)
+                                {
+                                    string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                    newaddselfn0 = temp2[1];
+
+                                    string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                    newEverDuanList = EverDuanList[1] - temp3.Length;
+                                    break;
+
+                                }
+                                else if (SelfNo[ii].Contains("三") && i == 2)
+                                {
+                                    string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                    newaddselfn0 = temp2[1];
+
+                                    string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                    newEverDuanList = EverDuanList[2] - temp3.Length;
+                                    break;
+
+                                }
+                                else if (SelfNo[ii].Contains("四") && i == 3)
+                                {
+                                    string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                    newaddselfn0 = temp2[1];
+
+                                    string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                    newEverDuanList = EverDuanList[3] - temp3.Length;
+                                    break;
+
+                                }
+                                else if (SelfNo[ii].Contains("五") && i == 4)
+                                {
+                                    string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                    newaddselfn0 = temp2[1];
+
+                                    string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                    newEverDuanList = EverDuanList[4] - temp3.Length;
+                                    break;
+
+                                }
+                                else if (SelfNo[ii].Contains("六") && i == 5)
+                                {
+                                    string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                    newaddselfn0 = temp2[1];
+
+                                    string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                    newEverDuanList = EverDuanList[5] - temp3.Length;
+                                    break;
+
+                                }
+                                else if (SelfNo[ii].Contains("七") && i == 6)
+                                {
+                                    string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                    newaddselfn0 = temp2[1];
+
+                                    string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                    newEverDuanList = EverDuanList[6] - temp3.Length;
+                                    break;
+
+                                }
+                                else if (SelfNo[ii].Contains("八") && i == 7)
+                                {
+                                    string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                    newaddselfn0 = temp2[1];
+
+                                    string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                    newEverDuanList = EverDuanList[7] - temp3.Length;
+                                    break;
+
+                                }
+                                else if (SelfNo[ii].Contains("九") && i == 8)
+                                {
+                                    string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                    newaddselfn0 = temp2[1];
+
+                                    string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                    newEverDuanList = EverDuanList[8] - temp3.Length;
+                                    break;
+
+                                }
+
+
+                            }
+                            #endregion
+
+
+                            //for (int j = 0; j <= EverDuanList[i]; j++)
+                            for (int j = 0; j <= newEverDuanList; j++)
+                            {
+                                ago++;
+                                if (ago > newEverDuanList)
+                                    break;
+                                num = num + " " + newlist[0];
+                                newlist.RemoveAt(0);
+                            }
+                            iq = i + 1;
+                            if (newEverDuanList != EverDuanList[i])
+                                num = newaddselfn0 + num;
+
+                            first = first + "\r\n" + iq.ToString() + "段=" + " " + num;
+
+                            showSuijiResultlist.Add(iq.ToString() + " 段= " + " " + num);
+                        }
+
+
+                    }
+                    List<string> showSuijiResultlist1 = new List<string>();
+                    for (int ii = 0; ii < showSuijiResultlist.Count; ii++)
+                    {
+                        for (int i = 0; i < newlist.Count; i++)
+                        {
+                            showSuijiResultlist[ii] = showSuijiResultlist[ii] + " " + newlist[i];
+                            newlist.RemoveAt(i);
+
+                            break;
+                        }
+                    }
+                }
+                #endregion
+                else
+                {
+                    //if (ilast > 0)
+                    //{
+
+                    string first = "";
+                    showSuijiResultlist = new List<string>();
+                    for (int iq = 1; iq <= duan; iq++)
+                    {
+                        string num = "";
+                        int ago = 0;
+
+                        //如果有自定义的数字则重新计算当前段数的所添加数字个数
+                        int newEverDuanList = evertduan;
+                        string newaddselfn0 = "";
+                        #region  //如果有自定义的数字则重新计算当前段数的所添加数字个数
+
+                        for (int ii = 0; ii < SelfNo.Count; ii++)
+                        {
+
+                            if (SelfNo[ii].Contains("一") && iq == 1)
+                            {
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                newaddselfn0 = temp2[1];
+
+                                string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                newEverDuanList = evertduan - temp3.Length;
+                                break;
+
+                            }
+                            else if (SelfNo[ii].Contains("二") && iq == 2)
+                            {
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                newaddselfn0 = temp2[1];
+
+                                string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                newEverDuanList = evertduan - temp3.Length;
+                                break;
+
+                            }
+                            else if (SelfNo[ii].Contains("三") && iq == 3)
+                            {
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                newaddselfn0 = temp2[1];
+
+                                string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                newEverDuanList = evertduan - temp3.Length;
+                                break;
+
+                            }
+                            else if (SelfNo[ii].Contains("四") && iq == 4)
+                            {
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                newaddselfn0 = temp2[1];
+
+                                string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                newEverDuanList = evertduan - temp3.Length;
+                                break;
+
+                            }
+                            else if (SelfNo[ii].Contains("五") && iq == 5)
+                            {
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                newaddselfn0 = temp2[1];
+
+                                string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                newEverDuanList = evertduan - temp3.Length;
+                                break;
+
+                            }
+                            else if (SelfNo[ii].Contains("六") && iq == 6)
+                            {
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                newaddselfn0 = temp2[1];
+
+                                string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                newEverDuanList = evertduan - temp3.Length;
+                                break;
+
+                            }
+                            else if (SelfNo[ii].Contains("七") && iq == 7)
+                            {
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                newaddselfn0 = temp2[1];
+
+                                string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                newEverDuanList = evertduan - temp3.Length;
+                                break;
+
+                            }
+                            else if (SelfNo[ii].Contains("八") && iq == 8)
+                            {
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                newaddselfn0 = temp2[1];
+
+                                string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                newEverDuanList = evertduan - temp3.Length;
+                                break;
+
+                            }
+                            else if (SelfNo[ii].Contains("九") && iq == 9)
+                            {
+                                string[] temp2 = System.Text.RegularExpressions.Regex.Split(SelfNo[ii], "\t");
+                                newaddselfn0 = temp2[1];
+
+                                string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp2[1], " ");
+                                newEverDuanList = evertduan - temp3.Length;
+                                break;
+                            }
+                        }
+                        #endregion
+                        //  for (int i = 0; i <= newlist.Count; i++)
+                        for (int i = 0; i <= newEverDuanList; i++)
+                        {
+                            ago++;
+                            if (ago > newEverDuanList)
+                                break;
+
+                            num = num + " " + newlist[0];
+                            newlist.RemoveAt(0);
+
+                        }
+                        if (newEverDuanList != evertduan)
+                            num = newaddselfn0 + num;
+                        first = first + "\r\n" + iq.ToString() + "段=" + " " + num;
+
+                        showSuijiResultlist.Add(iq.ToString() + " 段= " + " " + num);
+
+                    }
+                    List<string> showSuijiResultlist1 = new List<string>();
+
+                    for (int ii = 0; ii < showSuijiResultlist.Count; ii++)
+                    {
+                        for (int i = 0; i < newlist.Count; i++)
+                        {
+                            showSuijiResultlist[ii] = showSuijiResultlist[ii] + " " + newlist[i];
+                            newlist.RemoveAt(i);
+                            //  showSuijiResultlist1.Add(showSuijiResultlist[ii]);
+
+                            break;
+                        }
+                    }
+                }
+                //this.listBox3.DataSource = showSuijiResultlist;
+                List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
+                FangAnLieBiaoDATA item = new FangAnLieBiaoDATA();
+
+
+                for (int i = 0; i < showSuijiResultlist.Count; i++)
+                {
+                    string[] temp1 = System.Text.RegularExpressions.Regex.Split(showSuijiResultlist[i], "=");
+                    if (i == 0)
+                        item.DuanWei1 = temp1[1].Trim();
+                    else if (i == 1)
+                        item.DuanWei2 = temp1[1].Trim();
+                    else if (i == 2)
+                        item.DuanWei3 = temp1[1].Trim();
+                    else if (i == 3)
+                        item.DuanWei4 = temp1[1].Trim();
+                    else if (i == 4)
+                        item.DuanWei5 = temp1[1].Trim();
+                    else if (i == 5)
+                        item.DuanWei6 = temp1[1].Trim();
+                    else if (i == 6)
+                        item.DuanWei7 = temp1[1].Trim();
+                    else if (i == 7)
+                        item.DuanWei8 = temp1[1].Trim();
+                    else if (i == 8)
+                        item.DuanWei9 = temp1[1].Trim();
+                    else if (i == 9)
+                        item.DuanWei10 = temp1[1].Trim();
+
+                    item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
+                }
+                item.ZhuJian = "YES";
+                if (Result12[0].MorenDuanShu != null && Result12[0].MorenDuanShu != "")
+                    item.MorenDuanShu = Result12[0].MorenDuanShu;//保存名称
+                if (Result12[0].Mobanleibie != null && Result12[0].Mobanleibie != "")
+                    item.Mobanleibie = Result12[0].Mobanleibie;//保存名称
+
+                item.Name = "默认方案";//保存名称
+                item.DuanShu = showSuijiResultlist.Count.ToString();
+                Result.Add(item);
+
+                BusinessHelp.Save_FangAn(Result);
+                NewMethodtab1();
+
+                toolStripLabel7.Text = item.Data.Replace("\r\n", "*");
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                return;
+
+                throw;
+            }
+        }
+        private List<int> ZidingyiMeiDuanGeshu(string NAME)
+        {
+            List<int> EverDuanList = new List<int>();
+
+            if (NAME == "46 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(6);
+            }
+            else if (NAME == "28 模板")
+            {
+                EverDuanList.Add(2);
+                EverDuanList.Add(8);
+            }
+            else if (NAME == "37 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(7);
+            }
+            else if (NAME == "532 模板")
+            {
+                EverDuanList.Add(5);
+                EverDuanList.Add(3);
+                EverDuanList.Add(2);
+            }
+            else if (NAME == "622 模板")
+            {
+                EverDuanList.Add(6);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+            }
+            else if (NAME == "442 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(2);
+            }
+
+
+            else if (NAME == "4222 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+            }
+            return EverDuanList;
+
+        }
 
         //判断是否为汉字
         public bool HasChineseTest(string text)
@@ -2736,6 +3267,108 @@ namespace MasterClassified
             else
                 ApplyBindSourceFilter1(shipper, county);
 
+        }
+
+        private void toolStripComboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            List<int> newlist = new List<int>();
+
+            for (int i = 0; i < clbStatus.Items.Count; i++)
+            {
+                clbStatus.SetItemChecked(i, false);
+                newlist.Add(i);
+
+            }
+            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+            string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripComboBox5.Text, " ");
+            string index = temp3[1];
+            for (int i = 0; i < Convert.ToInt32(index); i++)
+            {
+
+                clbStatus.SetItemChecked(newlist[i], true);
+            }
+        }
+
+        private void toolStripComboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<int> newlist = new List<int>();
+
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
+                newlist.Add(i);
+
+            }
+            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+            string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripComboBox6.Text, " ");
+            string index = temp3[1];
+            for (int i = 0; i < Convert.ToInt32(index); i++)
+            {
+
+                checkedListBox1.SetItemChecked(newlist[i], true);
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            List<int> newlist = new List<int>();
+
+            for (int i = 0; i < clbStatus.Items.Count; i++)
+            {
+                clbStatus.SetItemChecked(i, false);
+                newlist.Add(i);
+
+            }
+            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+            string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox1.Text, " ");
+            string index = temp3[1];
+            for (int i = 0; i < Convert.ToInt32(index); i++)
+            {
+
+                clbStatus.SetItemChecked(newlist[i], true);
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<int> newlist = new List<int>();
+
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
+                newlist.Add(i);
+
+            }
+            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+            string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox2.Text, " ");
+            string index = temp3[1];
+            for (int i = 0; i < Convert.ToInt32(index); i++)
+            {
+
+                checkedListBox1.SetItemChecked(newlist[i], true);
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<int> newlist = new List<int>();
+
+            for (int i = 0; i < checkedListBox2.Items.Count; i++)
+            {
+                checkedListBox2.SetItemChecked(i, false);
+                newlist.Add(i);
+
+            }
+            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+            string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox3.Text, " ");
+            string index = temp3[1];
+            for (int i = 0; i < Convert.ToInt32(index); i++)
+            {
+
+                checkedListBox2.SetItemChecked(newlist[i], true);
+            }
         }
     }
 }

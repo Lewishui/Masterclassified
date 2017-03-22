@@ -543,6 +543,9 @@ namespace MC.Buiness
                         item.ZhuJian = (emp["ZhuJian"].AsString);
                     if (emp.Contains("MorenDuanShu"))
                         item.MorenDuanShu = (emp["MorenDuanShu"].AsString);
+
+                    if (emp.Contains("Mobanleibie"))
+                        item.Mobanleibie = (emp["Mobanleibie"].AsString);
                     #endregion
                     Result.Add(item);
                 }
@@ -926,6 +929,8 @@ namespace MC.Buiness
                 { "DuanWei10", item.DuanWei10 },
                  { "ZhuJian", item.ZhuJian },  
                 { "MorenDuanShu", item.MorenDuanShu },  
+                   { "Mobanleibie", item.Mobanleibie },  
+                
                 { "Input_Date", DateTime.Now.ToString("MM/dd/yyyy/HHss")}  
                  };
                 collection.Insert(fruit_1);

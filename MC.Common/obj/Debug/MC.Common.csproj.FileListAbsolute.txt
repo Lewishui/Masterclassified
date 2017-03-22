@@ -20,3 +20,12 @@ D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\bin\De
 D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\obj\Debug\MC.Common.csprojResolveAssemblyReference.cache
 D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\obj\Debug\MC.Common.dll
 D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Common\obj\Debug\MC.Common.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Debug\MC.Common.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Debug\MC.Common.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Debug\office.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Debug\office.xml
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\obj\Debug\MC.Common.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\obj\Debug\MC.Common.pdb

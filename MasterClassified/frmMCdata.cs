@@ -422,6 +422,9 @@ namespace MasterClassified
         {
             RowRemark = e.RowIndex;
             cloumn = e.ColumnIndex;
+            if (RowRemark == -1)
+                return;
+
             zhiqianqianqi = this.dataGridView1.Rows[RowRemark].Cells[0].EditedFormattedValue.ToString();
 
             return;
@@ -675,7 +678,7 @@ namespace MasterClassified
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (RowRemark >= dataGridView1.RowCount)
+            if (RowRemark >= dataGridView1.RowCount || RowRemark==-1)
                 return;
 
             List<inputCaipiaoDATA> Result = new List<inputCaipiaoDATA>();

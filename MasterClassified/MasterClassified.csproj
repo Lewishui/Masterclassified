@@ -95,6 +95,12 @@
     <Compile Include="backupform.Designer.cs">
       <DependentUpon>backupform.cs</DependentUpon>
     </Compile>
+    <Compile Include="backupfrom2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backupfrom2.Designer.cs">
+      <DependentUpon>backupfrom2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddCaiPiao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </Compile>
     <EmbeddedResource Include="backupform.resx">
       <DependentUpon>backupform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="backupfrom2.resx">
+      <DependentUpon>backupfrom2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddCaiPiao.resx">
       <DependentUpon>frmAddCaiPiao.cs</DependentUpon>

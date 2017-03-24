@@ -1,0 +1,3 @@
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Release\MC.Buiness.csprojResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Release\Interop.Microsoft.Office.Core.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Release\MC.Buiness.csproj.ResolveComReference.cache

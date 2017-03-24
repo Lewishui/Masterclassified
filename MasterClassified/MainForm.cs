@@ -553,6 +553,8 @@ namespace MasterClassified
                 item.ZhuJian = "YES";
                 item.Name = "默认方案";//保存名称
                 item.DuanShu = showSuijiResultlist.Count.ToString();
+                item.Mobanleibie = "默认";
+
                 Result.Add(item);
                 clsAllnew BusinessHelp = new clsAllnew();
                 BusinessHelp.Save_FangAn(Result);

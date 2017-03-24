@@ -61,6 +61,8 @@ namespace MasterClassified
             //    width += dgViewFiles.Columns[i].Width;
 
             //}
+
+
             for (int m = 1; m <= InitialUDF[InitialUDF.Count - 1]; m++)
             {
                 this.comboBox3.Items.Add("随机 " + m + " 位");
@@ -254,7 +256,7 @@ namespace MasterClassified
                     toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
                     //GetDataforOutlookThread = new Thread(NewMethodtab1);
                     //GetDataforOutlookThread.Start();
-                    this.checkedListBox2.Items.Clear();
+                   // this.checkedListBox2.Items.Clear();
                     NewMethodtab1();
 
                 }
@@ -3364,10 +3366,13 @@ namespace MasterClassified
             newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
             string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox3.Text, " ");
             string index = temp3[1];
-            for (int i = 0; i < Convert.ToInt32(index); i++)
+           
             {
+                for (int i = 0; i < Convert.ToInt32(index); i++)
+                {
 
-                checkedListBox2.SetItemChecked(newlist[i], true);
+                    checkedListBox2.SetItemChecked(newlist[i], true);
+                }
             }
         }
     }

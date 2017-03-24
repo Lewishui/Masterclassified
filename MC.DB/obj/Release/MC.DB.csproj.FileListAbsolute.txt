@@ -1,0 +1,5 @@
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\bin\Release\MC.DB.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\bin\Release\MC.DB.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\obj\Release\MC.DB.csprojResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\obj\Release\MC.DB.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\obj\Release\MC.DB.pdb

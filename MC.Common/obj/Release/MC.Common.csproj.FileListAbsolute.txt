@@ -1,0 +1,10 @@
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Release\MC.Common.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Release\MC.Common.pdb
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Release\Microsoft.Office.Interop.Excel.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Release\office.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Release\Microsoft.Vbe.Interop.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Release\Microsoft.Office.Interop.Excel.xml
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\bin\Release\office.xml
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\obj\Release\MC.Common.csprojResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\obj\Release\MC.Common.dll
+C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Common\obj\Release\MC.Common.pdb

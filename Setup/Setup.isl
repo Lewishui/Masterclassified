@@ -345,34 +345,34 @@
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{DE1C9059-9B7F-4C55-A9BA-BF8C9E6F64EE}</td><td>LOGS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{EF99C423-EF34-40A5-9454-477294FCEB2C}</td><td>RESOURCES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{ED31F83C-F5F7-46D0-B624-1D73910A13F0}</td><td>SYSTEM</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Interop.SHDocVw.dll</td><td>{A3C57E14-973F-4CA2-85F0-90C2B0166064}</td><td>INSTALLDIR</td><td>2</td><td/><td>interop.shdocvw.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Interop.SHDocVw.dll</td><td>{0110FBB2-BB02-4919-B9CC-0146421DB22F}</td><td>INSTALLDIR</td><td>2</td><td/><td>interop.shdocvw.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Interop.SHDocVw.dll1</td><td>{CC992CB2-6B32-43DA-93B1-FE3C74F952C6}</td><td>DEBUG</td><td>2</td><td/><td>interop.shdocvw.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>IrisSkin2.dll</td><td>{8CE40A80-0570-47BD-A6E4-755DA9333C16}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>IrisSkin2.dll</td><td>{582D8EE2-6A67-417C-B260-9AE9D8E1EB84}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IrisSkin2.dll1</td><td>{A555FE6D-A54E-42B6-BB8E-C493659A7ABB}</td><td>DEBUG</td><td>2</td><td/><td>irisskin2.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MC.Buiness.dll</td><td>{E76CE7B6-4944-41E2-BE96-C74B797ECB66}</td><td>INSTALLDIR</td><td>2</td><td/><td>mc.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MC.Buiness.dll</td><td>{90BFAEDE-9EEF-485E-BFAD-7A2F01C74781}</td><td>INSTALLDIR</td><td>2</td><td/><td>mc.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>MC.Buiness.dll1</td><td>{0768AC4B-9C5A-41B4-AD12-660E82AB7633}</td><td>DEBUG</td><td>2</td><td/><td>mc.buiness.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MC.Common.dll</td><td>{1D20D92F-9E61-498E-AF9F-579DEEB8D2FD}</td><td>INSTALLDIR</td><td>2</td><td/><td>mc.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MC.Common.dll</td><td>{1EC4E04F-BAA2-4998-BA76-C6CC222A26F4}</td><td>INSTALLDIR</td><td>2</td><td/><td>mc.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>MC.Common.dll1</td><td>{B884E63F-745B-4741-9468-E66FA8C6E845}</td><td>DEBUG</td><td>2</td><td/><td>mc.common.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MC.DB.dll</td><td>{C28765CE-EC1C-4A60-909E-0011B083B5CC}</td><td>INSTALLDIR</td><td>2</td><td/><td>mc.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MC.DB.dll</td><td>{CE5537F0-FAFA-44C4-B90A-B624509496BC}</td><td>INSTALLDIR</td><td>2</td><td/><td>mc.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>MC.DB.dll1</td><td>{1B23CCAD-D0B7-4738-9A52-48EB566782F9}</td><td>DEBUG</td><td>2</td><td/><td>mc.db.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MasterClassified.exe</td><td>{E55F2CE1-3CA9-43A6-B09E-F95643D96C0C}</td><td>INSTALLDIR</td><td>2</td><td/><td>masterclassified.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MasterClassified.exe</td><td>{C10D8DB2-7980-45C7-B9F0-CE487B9E0BAB}</td><td>INSTALLDIR</td><td>2</td><td/><td>masterclassified.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>MasterClassified.exe1</td><td>{0EA2DB62-E96C-4D44-B61D-1DEEA129A1E3}</td><td>DEBUG</td><td>2</td><td/><td>masterclassified.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MasterClassified.vshost.exe</td><td>{7F86D4B6-9D59-4757-A4A9-6B65AA235535}</td><td>INSTALLDIR</td><td>2</td><td/><td>masterclassified.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MasterClassified.vshost.exe</td><td>{754BC061-F8D9-4A6E-ADD1-B0F2A27640FC}</td><td>INSTALLDIR</td><td>2</td><td/><td>masterclassified.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>MasterClassified.vshost.exe1</td><td>{49A2E137-B332-4975-B725-DC3B9F571786}</td><td>DEBUG</td><td>2</td><td/><td>masterclassified.vshost.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{CEF36A9C-9E34-4813-B32E-F5921647C826}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{60C4E4F7-88DE-4F27-9E8C-E475DF28171B}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Microsoft.Office.Interop.Excel.dll1</td><td>{77823735-552A-4D3D-8A7C-F58C58F21077}</td><td>DEBUG</td><td>2</td><td/><td>microsoft.office.interop.exc2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Vbe.Interop.dll</td><td>{BBF0BBEF-B7B1-4126-9192-D9A73D7725F4}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.vbe.interop.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Vbe.Interop.dll</td><td>{B2004BB2-BC96-4CEB-8633-D2C8C2ACA224}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.vbe.interop.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Microsoft.Vbe.Interop.dll1</td><td>{3E7C2747-F3CB-4847-8969-BDFB6485F5DE}</td><td>DEBUG</td><td>2</td><td/><td>microsoft.vbe.interop.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MongoDB.Bson.dll</td><td>{60E256BA-EFA9-4E09-B30D-FF2FC6DABF97}</td><td>INSTALLDIR</td><td>2</td><td/><td>mongodb.bson.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MongoDB.Bson.dll</td><td>{EC22FC58-AB3D-432F-A57F-47B57744A385}</td><td>INSTALLDIR</td><td>2</td><td/><td>mongodb.bson.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>MongoDB.Bson.dll1</td><td>{194F3FD3-7BD1-4369-A247-70EDBECBBFC8}</td><td>DEBUG</td><td>2</td><td/><td>mongodb.bson.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MongoDB.Driver.dll</td><td>{6228DB36-94C6-433B-B650-F783842D0BE4}</td><td>INSTALLDIR</td><td>2</td><td/><td>mongodb.driver.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MongoDB.Driver.dll</td><td>{B9FF8AFD-4596-40AB-BAB1-E870157A6C1E}</td><td>INSTALLDIR</td><td>2</td><td/><td>mongodb.driver.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>MongoDB.Driver.dll1</td><td>{92FCE7F1-CC34-439C-B8FE-3BC257565349}</td><td>DEBUG</td><td>2</td><td/><td>mongodb.driver.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{C31CA2DC-D706-473D-A6EF-4E855B9CA0A5}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{4D50DE0C-E2EA-4E58-9748-2DD0BCF780BF}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{75526380-DB2B-4A1D-A67C-D6AA6B6C2680}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WeifenLuo.WinFormsUI.Docking.dll1</td><td>{E62FB3B6-2222-47A7-BF5C-5FBDFADF35C9}</td><td>DEBUG</td><td>2</td><td/><td>weifenluo.winformsui.docking1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>log4net.dll</td><td>{5C909AB8-DD5B-4D75-BE1D-E5F0E9D387AE}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>log4net.dll</td><td>{ADFD57C9-6FA6-48B4-B78D-B096CFFC16DD}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>log4net.dll1</td><td>{68685461-1786-4D36-AA66-9BABF3F318E0}</td><td>DEBUG</td><td>2</td><td/><td>log4net.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>office.dll</td><td>{9FBA0C82-26BA-43D6-8489-94A308F971FE}</td><td>INSTALLDIR</td><td>2</td><td/><td>office.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>office.dll</td><td>{FE23EE61-61E9-4C73-AF79-E5814D819CB7}</td><td>INSTALLDIR</td><td>2</td><td/><td>office.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>office.dll1</td><td>{5DA65DBD-3FF3-4423-83AC-93FF6D8B088D}</td><td>DEBUG</td><td>2</td><td/><td>office.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1963,6 +1963,7 @@
 		<row><td>masterclassified.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>MASTER~1.PDB|MasterClassified.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MasterClassified.pdb</td><td>1</td><td/></row>
 		<row><td>masterclassified.pdb1</td><td>ISX_DEFAULTCOMPONENT1</td><td>MASTER~1.PDB|MasterClassified.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MasterClassified.pdb</td><td>1</td><td/></row>
 		<row><td>masterclassified.vshost.exe</td><td>MasterClassified.vshost.exe</td><td>MASTER~1.EXE|MasterClassified.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MasterClassified.vshost.exe</td><td>1</td><td/></row>
+		<row><td>masterclassified.vshost.exe.</td><td>ISX_DEFAULTCOMPONENT</td><td>MASTER~1.MAN|MasterClassified.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MasterClassified.vshost.exe.manifest</td><td>1</td><td/></row>
 		<row><td>masterclassified.vshost.exe1</td><td>MasterClassified.vshost.exe1</td><td>MASTER~1.EXE|MasterClassified.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MasterClassified.vshost.exe</td><td>1</td><td/></row>
 		<row><td>mc.buiness.dll</td><td>MC.Buiness.dll</td><td>MCBUIN~1.DLL|MC.Buiness.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.Buiness.dll</td><td>1</td><td/></row>
 		<row><td>mc.buiness.dll1</td><td>MC.Buiness.dll1</td><td>MCBUIN~1.DLL|MC.Buiness.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.Buiness.dll</td><td>1</td><td/></row>
@@ -2257,34 +2258,34 @@
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_20884B1B_034B_4D3E_915C_945675C1078D_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_610C31E4_F254_4006_995B_A86018A50299_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_651C4361_C94C_4B47_B5A7_224DA5079510_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Interop.SHDocVw.dll</td><td/><td/><td>_B328A40B_84C1_4064_A6C6_095453560DF1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Interop.SHDocVw.dll</td><td/><td/><td>_577206E1_1754_42B3_94C6_E5F5984C812C_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Interop.SHDocVw.dll1</td><td/><td/><td>_FFB05DF5_D88E_44BE_8C9C_314919552FBA_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>IrisSkin2.dll</td><td/><td/><td>_21F0F469_7D4C_404A_A543_DC2F8EA8C4E5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>IrisSkin2.dll</td><td/><td/><td>_39FF5744_AEFB_4D99_995F_75B797B8F4C3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IrisSkin2.dll1</td><td/><td/><td>_7EB72585_7B8B_4A31_B142_1ED6472915AC_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MC.Buiness.dll</td><td/><td/><td>_0867138F_7C1B_4EEA_8265_4200DC3C2AFD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MC.Buiness.dll</td><td/><td/><td>_749FC89A_AA36_4483_A390_E9E765FF5E3E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>MC.Buiness.dll1</td><td/><td/><td>_9750A8BD_2443_40C1_ADCF_BA3641A8959C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MC.Common.dll</td><td/><td/><td>_C9166622_2AF2_4307_83CF_1D356B104F2F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MC.Common.dll</td><td/><td/><td>_9EFF586A_7335_400C_ACAA_C42D9F7521F0_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>MC.Common.dll1</td><td/><td/><td>_15BA6F57_0470_4B0A_8006_25B64AE87B72_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MC.DB.dll</td><td/><td/><td>_202EF730_E075_4E05_8CA5_3A08F5D22939_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MC.DB.dll</td><td/><td/><td>_A1099DA7_7C10_4FE4_AF7B_1A9C4979FA61_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>MC.DB.dll1</td><td/><td/><td>_23EFBAAC_6AB3_48DF_A9CA_6C6E2F1C0E81_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MasterClassified.exe</td><td/><td/><td>_CEC12F93_CBC9_4652_9F1C_1F2C9DCE37AE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MasterClassified.exe</td><td/><td/><td>_B392FD3E_50A7_4728_9975_188BD8161EE0_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>MasterClassified.exe1</td><td/><td/><td>_830990B5_E8B5_4DF6_BE9C_2779F36EA6DC_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MasterClassified.vshost.exe</td><td/><td/><td>_1AF9840D_DDA2_4FE9_B69F_14ABBC0E8F74_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MasterClassified.vshost.exe</td><td/><td/><td>_EB8B97DB_8B7D_4707_851E_7A4B43B82456_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>MasterClassified.vshost.exe1</td><td/><td/><td>_848BE581_2B95_41BB_A355_0E3B2B10D242_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_F884A2A6_5D11_4E6F_A91A_330C7E5A3C68_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_02FDFC48_2FCA_4B39_8865_3461FA941C4D_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Microsoft.Office.Interop.Excel.dll1</td><td/><td/><td>_89727F25_5A30_4908_94EA_2431269F962A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Vbe.Interop.dll</td><td/><td/><td>_83C40213_DDE0_4114_A7F8_267CB570DA66_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Vbe.Interop.dll</td><td/><td/><td>_9374E484_24AD_4592_AF21_18BC203799F3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Microsoft.Vbe.Interop.dll1</td><td/><td/><td>_5A323912_9FD1_469C_932B_181C200A0044_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MongoDB.Bson.dll</td><td/><td/><td>_697261A0_DC1E_4713_A61D_0EF6D7BC6430_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MongoDB.Bson.dll</td><td/><td/><td>_15611B4F_7FD8_444A_8991_87C59A2D389E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>MongoDB.Bson.dll1</td><td/><td/><td>_A79E4A6D_E8CF_4604_B477_829101481D4A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MongoDB.Driver.dll</td><td/><td/><td>_D9AB6EBC_AAB1_4424_AA66_034F96B7BFC6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MongoDB.Driver.dll</td><td/><td/><td>_844706CB_32F6_4AF1_A885_029CAC25A416_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>MongoDB.Driver.dll1</td><td/><td/><td>_00A57823_DCC4_43F9_87C5_744DC10E0AB5_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_76614BD7_E970_4A85_8DD9_191E20F85A66_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_B5A8EE89_5186_4E56_B6C4_AC3693F233E3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_1D78456A_AA04_4B14_AF7A_DA960A643785_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WeifenLuo.WinFormsUI.Docking.dll1</td><td/><td/><td>_EFB00441_1D39_4C9F_ACCE_A55E08A50D56_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>log4net.dll</td><td/><td/><td>_667E246D_DE15_4C39_9134_C006FE9042FC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>log4net.dll</td><td/><td/><td>_FD4E4F2B_B5AD_446E_AA8F_C84782C753C6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>log4net.dll1</td><td/><td/><td>_2AFD9EF8_22DB_47D5_9DD5_09871DE05D1D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>office.dll</td><td/><td/><td>_B1F60BE2_2942_4FA8_9085_828AAF1A2D32_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>office.dll</td><td/><td/><td>_C429F9E9_B34C_4D77_A912_7B23051A3218_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>office.dll1</td><td/><td/><td>_077387BE_4113_4B4F_8D22_910E92AFC79B_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
@@ -4272,7 +4273,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{BA658DD3-C2AB-4986-925F-CC6181D14E4B}</td></row>
 		<row><td>ISUSSignature</td><td>{406DD8B2-F7C0-4039-8DC6-F5C18281C83A}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewSystemSearch,viewAppFiles</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewSystemSearch,viewAppFiles,viewRelease</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4723,11 +4724,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>MasterClassified.exe</td><td/><td>company_name</td><td>2</td></row>
-		<row><td>FileKey2</td><td>MasterClassified.exe</td><td/><td>setup</td><td>2</td></row>
-		<row><td>MasterClassified.exe</td><td>MasterClassified.exe</td><td/><td>setup</td><td>2</td></row>
 		<row><td>MasterClassified.exe1</td><td>MasterClassified.exe1</td><td/><td>setup</td><td>2</td></row>
-		<row><td>MasterClassified.vshost.exe</td><td>MasterClassified.vshost.exe</td><td/><td>setup</td><td>2</td></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>NewComponent1</td><td/><td>setup</td><td>2</td></row>
 	</table>
 
@@ -4814,10 +4811,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>MasterClassified.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>MasterClassified.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MasterClassified.e_638EE828021447398687CD27B41B4821.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>MasterClassified.exe1</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>MasterClassified.exe1</td><td>AlwaysInstall</td><td/><td/><td/><td>MasterClassified.e_9C637F8A38E54510B3E2F2FE80500F54.exe</td><td>0</td><td>1</td><td>DEBUG</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>MasterClassified.exe11</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>MasterClassified.exe1</td><td>AlwaysInstall</td><td/><td/><td/><td>MasterClassified.e_8D964EAA25374D388C9D50069A66A944.exe</td><td>0</td><td>1</td><td>DEBUG</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>MasterClassified.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>MasterClassified.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MasterClassified.v_678701A19FD248E1B3A620D22B6C7CBB.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>setup</td><td>UNINST|Uninstall Setup</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {A17065BC-188C-44B6-911E-64F5AA687D7A}</td><td/><td/><td>UNINST_Uninstall_S_8B2A76AF1F1340E681A88A02E1DD749B.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 

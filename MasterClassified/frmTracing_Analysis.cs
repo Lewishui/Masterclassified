@@ -45,6 +45,9 @@ namespace MasterClassified
         int qianqiqishu = 0;
         List<int> newlist;
         private SortableBindingList<inputCaipiaoDATA> sortablePendingOrderList;
+        //private var Combox_qtyTable;
+        DataTable Combox_qtyTable;
+
         public frmTracing_Analysis()
         {
             InitializeComponent();
@@ -68,7 +71,7 @@ namespace MasterClassified
                 this.comboBox3.Items.Add("随机 " + m + " 位");
                 this.checkedListBox2.Items.Add("基" + m);
             }
-            this.checkedListBox2.Items.Add("特别号");
+            //  this.checkedListBox2.Items.Add("特别号");
             this.comboBox3.SelectedIndex = 0;
             for (int i = 0; i < checkedListBox2.Items.Count; i++)
             {
@@ -256,7 +259,7 @@ namespace MasterClassified
                     toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
                     //GetDataforOutlookThread = new Thread(NewMethodtab1);
                     //GetDataforOutlookThread.Start();
-                   // this.checkedListBox2.Items.Clear();
+                    // this.checkedListBox2.Items.Clear();
                     NewMethodtab1();
 
                 }
@@ -497,15 +500,14 @@ namespace MasterClassified
                 int indexing = 0;
                 foreach (inputCaipiaoDATA item in ClaimReport_Server)
                 {
-                    if (item.QiHao == "20161224")
-                    {
 
-                    }
                     item.qianAll = "";
                     item.qianMingcheng = "";
                     item.TongAll = "";
                     indexing = 0;
                     string text = "";
+
+                    // List<inputCaipiaoDATA> filtered = ClaimReport_Server.FindAll(s => Convert.ToInt32(s.QiHao) > Convert.ToInt32(item.QiHao));
 
                     foreach (inputCaipiaoDATA temp in ClaimReport_Server)
                     {
@@ -766,6 +768,26 @@ namespace MasterClassified
                                     else if (ss == 9)
                                         item.JiShu9 = temp3[0];
 
+
+                                    //new 
+
+                                    else if (ss == 10)
+                                        item.JiShu10 = temp3[0];
+
+                                    else if (ss == 11)
+                                        item.JiShu11 = temp3[0];
+
+                                    else if (ss == 12)
+                                        item.JiShu12 = temp3[0];
+
+                                    else if (ss == 13)
+                                        item.JiShu13 = temp3[0];
+
+                                    else if (ss == 14)
+                                        item.JiShu14 = temp3[0];
+
+                                    else if (ss == 15)
+                                        item.JiShu15 = temp3[0];
                                     break;
 
                                 }
@@ -807,6 +829,24 @@ namespace MasterClassified
                                 xiangtongindex++;
                             if (item.JiShu9 != null && item.JiShu9 == temp.JiShu9)
                                 xiangtongindex++;
+                            //new
+                            if (item.JiShu10 != null && item.JiShu10 == temp.JiShu10)
+                                xiangtongindex++;
+                            if (item.JiShu11 != null && item.JiShu11 == temp.JiShu11)
+                                xiangtongindex++;
+                            if (item.JiShu12 != null && item.JiShu12 == temp.JiShu12)
+                                xiangtongindex++;
+                            if (item.JiShu13 != null && item.JiShu13 == temp.JiShu13)
+                                xiangtongindex++;
+                            if (item.JiShu14 != null && item.JiShu14 == temp.JiShu14)
+                                xiangtongindex++;
+                            if (item.JiShu15 != null && item.JiShu15 == temp.JiShu15)
+                                xiangtongindex++;
+
+
+
+
+
                             #endregion
                             #region MyRegion
                             if (indexing == 1)
@@ -1512,6 +1552,9 @@ namespace MasterClassified
         {
             newi = new List<int>();
             qianqi_newi = new List<int>();
+            //int s = this.tabControl1.SelectedIndex;
+            //if (s == 1)
+
             if (clbStatus.CheckedItems.Count > 0)
             {
                 foreach (string status in this.clbStatus.CheckedItems)
@@ -1530,8 +1573,15 @@ namespace MasterClassified
                 qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
                 ZidingYi_tab2();
             }
+
             else
+            {
+                //  QihaoCombox_NewMethod();
+                // return;
+
                 NewMethod();
+
+            }
 
         }
 
@@ -1618,6 +1668,7 @@ namespace MasterClassified
                         //qtyTable.Columns.Add("前第+" + ss + "期相同位置", System.Type.GetType("System.String"));
                         //0322 改名
                         qtyTable.Columns.Add("前" + ss, System.Type.GetType("System.String"));
+                        //this.dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { Width = 80, DataPropertyName = "前" + ss });
 
                     }
                     //  qtyTable.Rows.Add(qtyTable.NewRow());
@@ -1680,6 +1731,24 @@ namespace MasterClassified
                                     qtyTable.Rows[jk][9] = item.JiShu8;
                                 if (UDF[m] == 9)
                                     qtyTable.Rows[jk][10] = item.JiShu9;
+
+                                if (UDF[m] == 10)
+                                    qtyTable.Rows[jk][11] = item.JiShu10;
+
+                                if (UDF[m] == 11)
+                                    qtyTable.Rows[jk][12] = item.JiShu11;
+
+                                if (UDF[m] == 12)
+                                    qtyTable.Rows[jk][13] = item.JiShu12;
+
+                                if (UDF[m] == 13)
+                                    qtyTable.Rows[jk][14] = item.JiShu13;
+
+                                if (UDF[m] == 14)
+                                    qtyTable.Rows[jk][15] = item.JiShu14;
+
+                                if (UDF[m] == 15)
+                                    qtyTable.Rows[jk][16] = item.JiShu15;
                             }
                         }
                         else
@@ -1702,11 +1771,33 @@ namespace MasterClassified
                                 qtyTable.Rows[jk][9] = item.JiShu8;
                             if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 8)
                                 qtyTable.Rows[jk][10] = item.JiShu9;
+                            //new 
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 9)
+                                qtyTable.Rows[jk][11] = item.JiShu10;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 10)
+                                qtyTable.Rows[jk][12] = item.JiShu11;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 11)
+                                qtyTable.Rows[jk][13] = item.JiShu12;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 12)
+                                qtyTable.Rows[jk][14] = item.JiShu13;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 13)
+                                qtyTable.Rows[jk][15] = item.JiShu14;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 14)
+                                qtyTable.Rows[jk][16] = item.JiShu15;
+
 
                         }
                         // qtyTable.Rows[1][4] = item.QiHao;
                         jk++;
                     }
+                    //公有变量
+                    Combox_qtyTable = qtyTable;
+
                     //清空自定义的列数
                     this.dataGridView1.DataSource = null;
                     //  this.dataGridView1.AutoGenerateColumns = false;
@@ -1716,24 +1807,34 @@ namespace MasterClassified
                     ////设置【前*】列宽
                     int qiancout = Convert.ToInt32(toolStripComboBox4.Text);
 
-                    if (UDF != null && UDF.Count != 0)
-                    {
+                    #region 按照固定宽度值设置
 
-                        for (int j = 2; j < UDF[UDF.Count - 1] + 2 + qiancout; j++)
-                        {
+                    //if (UDF != null && UDF.Count != 0)
+                    //{
 
-                            dataGridView1.Columns[j].Width = 30;
-                        }
-                    }
-                    else if (InitialUDF != null && InitialUDF.Count != 0)
-                    {
-                        for (int j = 2; j < InitialUDF[InitialUDF.Count - 1] + 2 + qiancout; j++)
-                        {
+                    //    for (int j = 2; j < UDF[UDF.Count - 1] + 2 + qiancout; j++)
+                    //    {
 
-                            dataGridView1.Columns[j].Width = 30;
-                        }
-                    }
+                    //        dataGridView1.Columns[j].Width = 30;
+                    //    }
+                    //}
+                    //else if (InitialUDF != null && InitialUDF.Count != 0)
+                    //{
+                    //    for (int j = 2; j < InitialUDF[InitialUDF.Count - 1] + 2 + qiancout; j++)
+                    //    {
 
+                    //        dataGridView1.Columns[j].Width = 30;
+                    //    }
+                    //} 
+                    #endregion
+
+                    #region 按照抬头设置宽度  &第一二 列 按照 内同定义宽度
+                    this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    this.dataGridView1.MultiSelect = false;
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+                    dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    #endregion
                     if (dataGridView1.Rows.Count != 0)
                     {
                         int ii = dataGridView1.Rows.Count - 1;
@@ -2347,6 +2448,26 @@ namespace MasterClassified
                                                 item.JiShu8 = temp3[0];
                                             else if (ss == 9)
                                                 item.JiShu9 = temp3[0];
+
+                                            else if (ss == 10)
+                                                item.JiShu10 = temp3[0];
+
+                                            else if (ss == 11)
+                                                item.JiShu11 = temp3[0];
+
+                                            else if (ss == 12)
+                                                item.JiShu12 = temp3[0];
+
+                                            else if (ss == 13)
+                                                item.JiShu13 = temp3[0];
+
+                                            else if (ss == 14)
+                                                item.JiShu14 = temp3[0];
+
+                                            else if (ss == 15)
+                                                item.JiShu15 = temp3[0];
+
+
                                             break;
                                         }
                                     }
@@ -2393,6 +2514,21 @@ namespace MasterClassified
                                             xiangtongindex++;
                                         if (item.JiShu9 != null && item.JiShu9 == temp.JiShu9 && UDF[j] == 9)
                                             xiangtongindex++;
+
+                                        if (item.JiShu10 != null && item.JiShu10 == temp.JiShu10 && UDF[j] == 10)
+                                            xiangtongindex++;
+                                        if (item.JiShu11 != null && item.JiShu11 == temp.JiShu11 && UDF[j] == 11)
+                                            xiangtongindex++;
+                                        if (item.JiShu12 != null && item.JiShu12 == temp.JiShu12 && UDF[j] == 12)
+                                            xiangtongindex++;
+                                        if (item.JiShu13 != null && item.JiShu13 == temp.JiShu13 && UDF[j] == 13)
+                                            xiangtongindex++;
+                                        if (item.JiShu14 != null && item.JiShu14 == temp.JiShu14 && UDF[j] == 14)
+                                            xiangtongindex++;
+                                        if (item.JiShu15 != null && item.JiShu15 == temp.JiShu15 && UDF[j] == 15)
+                                            xiangtongindex++;
+
+
                                     }
                                     #endregion
 
@@ -2656,7 +2792,7 @@ namespace MasterClassified
             }
             else
             {
-               // Suiji_NewMethod1();
+                // Suiji_NewMethod1();
                 Suiji_NewMethodNEW();
             }
         }
@@ -2810,7 +2946,7 @@ namespace MasterClassified
                 newlist.Add(6);
                 newlist.Add(7);
                 newlist.Add(8);
-                newlist.Add(9);             
+                newlist.Add(9);
 
                 newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
                 for (int i = 0; i < newlist.Count; i++)
@@ -3366,7 +3502,7 @@ namespace MasterClassified
             newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
             string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox3.Text, " ");
             string index = temp3[1];
-           
+
             {
                 for (int i = 0; i < Convert.ToInt32(index); i++)
                 {
@@ -3375,5 +3511,205 @@ namespace MasterClassified
                 }
             }
         }
+
+
+        private void QihaoCombox_NewMethod()
+        {
+            try
+            {
+                int s = this.tabControl1.SelectedIndex;
+                if (s == 0)
+                {
+
+                    //自构造table
+                    if (toolStripComboBox4.Text == null || toolStripComboBox4.Text == "")
+                        return;
+
+                    var qtyTable = Combox_qtyTable;
+
+                    int comvalue = Convert.ToInt32(toolStripComboBox4.Text);
+
+                    //qtyTable.Columns.Add("期号", System.Type.GetType("System.String"));
+                    //qtyTable.Columns.Add("开奖号码", System.Type.GetType("System.String"));
+
+                    int JISHUIN = 0;
+                    if (UDF != null && UDF.Count != 0)
+                    {
+                        JISHUIN = UDF.Count;
+                    }
+                    else
+                    {
+                        if (InitialUDF.Count == 0)
+                            return;
+                        if (InitialUDF != null && InitialUDF.Count != 0)
+                        {
+                            JISHUIN = InitialUDF[0];
+                        }
+
+                    }
+                    int add_qianCount = Convert.ToInt32(toolStripComboBox4.Text) - qtyTable.Columns.Count + 2 + JISHUIN;
+
+                    int nowfirtcloumnname = qtyTable.Columns.Count - 2 - JISHUIN;
+
+                    for (int m = 0; m <= add_qianCount; m++)
+                    {
+                        int ss = nowfirtcloumnname + 1;
+                        //0322 改名
+                        if (add_qianCount > 0)
+                            qtyTable.Columns.Add("前" + ss, System.Type.GetType("System.String"));
+                        else
+                            qtyTable.Columns.Remove("前" + add_qianCount);
+                        nowfirtcloumnname++;
+
+                    }
+                    //  qtyTable.Rows.Add(qtyTable.NewRow());
+                    //foreach (var k in ClaimReport_Server)
+                    //{
+                    //    qtyTable.Rows.Add(qtyTable.NewRow());
+                    //}
+
+                    int jk = 0;
+                    int cindex = 12;
+                    int jicloumn = 0;
+                    //if (UDF != null && UDF.Count != 0)
+                    //    jicloumn = 9 - UDF.Count;
+                    UDF.Sort();
+                    if (UDF != null && UDF.Count != 0)
+                        jicloumn = Convert.ToInt32(UDF[UDF.Count - 1]) + 1;
+                    else if (InitialUDF != null && InitialUDF.Count != 0)
+                        jicloumn = Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) + 1;
+
+                    int firtinsterValue = qtyTable.Columns.Count - add_qianCount;
+
+                    foreach (var item in ClaimReport_Server)
+                    {
+                        //cindex = 10 - jicloumn;
+                        cindex = jicloumn;
+                        if (qtyTable.Columns.Count != 0 && jicloumn == 0)
+                            cindex = qtyTable.Columns.Count - 1 - Convert.ToInt32(toolStripComboBox4.Text);
+                        if (add_qianCount > 0)
+                            cindex = firtinsterValue;
+
+                        {
+                            string allqian = item.qian1 + " " + item.qian2 + " " + item.qian3 + " " + item.qian4 + " " + item.qian5 + " " + item.qian6 + " " + item.qian7 + " " + item.qian8 + " " + item.qian9 + " " + item.qian10 + " " + item.qian11 + " " + item.qian12 + " " + item.qian13 + " " + item.qian14 + " " + item.qian15 + " " + item.qian16 + " " + item.qian17 + " " + item.qian18 + " " + item.qian19 + " " + item.qian20 + " " + item.qian21 + " " + item.qian22 + " " + item.qian23 + " " + item.qian24 + " " + item.qian25 + " " + item.qian26 + " " + item.qian27 + " " + item.qian28 + " " + item.qian29 + " " + item.qian30 + " " + item.qian31 + " " + item.qian32 + " " + item.qian33 + " " + item.qian34 + " " + item.qian35 + " " + item.qian36 + " " + item.qian37 + " " + item.qian38 + " " + item.qian39 + " " + item.qian40 + " " + item.qian41 + " " + item.qian42 + " " + item.qian43 + " " + item.qian44 + " " + item.qian45 + " " + item.qian46 + " " + item.qian47 + " " + item.qian48 + " " + item.qian49 + " " + item.qian50 + " " + item.qian51 + " " + item.qian52 + " " + item.qian53 + " " + item.qian54 + " " + item.qian55 + " " + item.qian56 + " " + item.qian57 + " " + item.qian58 + " " + item.qian59 + " " + item.qian60 + " " + item.qian61 + " " + item.qian62 + " " + item.qian63 + " " + item.qian64 + " " + item.qian65 + " " + item.qian66 + " " + item.qian67 + " " + item.qian68 + " " + item.qian69 + " " + item.qian70 + " " + item.qian71 + " " + item.qian72 + " " + item.qian73 + " " + item.qian74 + " " + item.qian75 + " " + item.qian76 + " " + item.qian77 + " " + item.qian78 + " " + item.qian79 + " " + item.qian80 + " " + item.qian81 + " " + item.qian82 + " " + item.qian83 + " " + item.qian84 + " " + item.qian85 + " " + item.qian86 + " " + item.qian87 + " " + item.qian88 + " " + item.qian89 + " " + item.qian90 + " " + item.qian91 + " " + item.qian92 + " " + item.qian93 + " " + item.qian94 + " " + item.qian95 + " " + item.qian96 + " " + item.qian97 + " " + item.qian98 + " " + item.qian99 + " " + item.qian100 + " ";
+
+                            ;
+                            int instercloumuinde = Convert.ToInt32(toolStripComboBox4.Text) - add_qianCount;
+
+                            string[] temp1 = System.Text.RegularExpressions.Regex.Split(allqian, " ");
+                            for (int i = 0; i < temp1.Length; i++)
+                            {
+                                cindex++;
+
+
+                                if (i >= add_qianCount)
+                                    break;
+                                qtyTable.Rows[jk][cindex - 1] = temp1[instercloumuinde];
+                                instercloumuinde++;
+                            }
+                        }
+                        //qtyTable.Rows[jk][0] = item.QiHao;
+                        //qtyTable.Rows[jk][1] = item.KaiJianHaoMa;
+                        //if (UDF != null && UDF.Count != 0)
+                        //{
+                        //    for (int m = 0; m < UDF.Count; m++)
+                        //    {
+                        //        if (UDF[m] == 1)
+                        //            qtyTable.Rows[jk][2] = item.JiShu1;
+                        //        if (UDF[m] == 2)
+                        //            qtyTable.Rows[jk][3] = item.JiShu2;
+                        //        if (UDF[m] == 3)
+                        //            qtyTable.Rows[jk][4] = item.JiShu3;
+                        //        if (UDF[m] == 4)
+                        //            qtyTable.Rows[jk][5] = item.JiShu4;
+                        //        if (UDF[m] == 5)
+                        //            qtyTable.Rows[jk][6] = item.JiShu5;
+                        //        if (UDF[m] == 6)
+                        //            qtyTable.Rows[jk][7] = item.JiShu6;
+                        //        if (UDF[m] == 7)
+                        //            qtyTable.Rows[jk][8] = item.JiShu7;
+                        //        if (UDF[m] == 8)
+                        //            qtyTable.Rows[jk][9] = item.JiShu8;
+                        //        if (UDF[m] == 9)
+                        //            qtyTable.Rows[jk][10] = item.JiShu9;
+                        //    }
+                        //}
+                        //else
+                        //{
+                        //    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 0)
+                        //        qtyTable.Rows[jk][2] = item.JiShu1;
+                        //    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 1)
+                        //        qtyTable.Rows[jk][3] = item.JiShu2;
+                        //    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 2)
+                        //        qtyTable.Rows[jk][4] = item.JiShu3;
+                        //    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 3)
+                        //        qtyTable.Rows[jk][5] = item.JiShu4;
+                        //    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 4)
+                        //        qtyTable.Rows[jk][6] = item.JiShu5;
+                        //    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 5)
+                        //        qtyTable.Rows[jk][7] = item.JiShu6;
+                        //    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 6)
+                        //        qtyTable.Rows[jk][8] = item.JiShu7;
+                        //    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 7)
+                        //        qtyTable.Rows[jk][9] = item.JiShu8;
+                        //    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 8)
+                        //        qtyTable.Rows[jk][10] = item.JiShu9;
+
+                        //}
+                        // qtyTable.Rows[1][4] = item.QiHao;
+                        jk++;
+                    }
+                    //清空自定义的列数
+                    this.dataGridView1.DataSource = null;
+                    //  this.dataGridView1.AutoGenerateColumns = false;
+                    this.bindingSource2.DataSource = qtyTable;
+                    bindingSource2.Sort = "期号  ASC";
+                    this.dataGridView1.DataSource = this.bindingSource2;
+                    ////设置【前*】列宽
+                    //int qiancout = Convert.ToInt32(toolStripComboBox4.Text);
+                    //this.dataGridView1.RowHeadersWidth = 30;
+                    //dataGridView1.Columns[1].Width = 40;
+                    this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                    //if (UDF != null && UDF.Count != 0)
+                    //{
+
+                    //    for (int j = 2; j < UDF[UDF.Count - 1] + 2 + qiancout; j++)
+                    //    {
+
+                    //        dataGridView1.Columns[j].Width = 30;
+                    //    }
+                    //}
+                    //else if (InitialUDF != null && InitialUDF.Count != 0)
+                    //{
+                    //    for (int j = 2; j < InitialUDF[InitialUDF.Count - 1] + 2 + qiancout; j++)
+                    //    {
+
+                    //        dataGridView1.Columns[j].Width = 30;
+                    //    }
+                    //}
+
+                    if (dataGridView1.Rows.Count != 0)
+                    {
+                        int ii = dataGridView1.Rows.Count - 1;
+                        dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
+                        dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
+                    }
+                    UDF = new List<int>();
+                }
+                else if (s == 1)
+                {
+
+                    qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
+                    tab2();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("数据构造失败，请检查数据源", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+                throw;
+            }
+        }
+
     }
 }

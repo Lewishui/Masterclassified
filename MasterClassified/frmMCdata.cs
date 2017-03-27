@@ -178,6 +178,8 @@ namespace MasterClassified
                     dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
                     dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
                     RowRemark = ii;
+                    toolStripLabel1.Text ="共计"+ dataGridView1.Rows.Count.ToString();
+
                 }
                 #endregion
 

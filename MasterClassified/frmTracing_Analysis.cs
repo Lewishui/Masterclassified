@@ -2109,11 +2109,30 @@ namespace MasterClassified
             ClaimReport_Server.Sort(new Comp());
             int sq = this.tabControl1.SelectedIndex;
             if (sq == 0)
-
+            {
                 InitialSystemInfo();
+
+                this.checkedListBox2.Items.Clear();
+
+                for (int m = 1; m <= InitialUDF[InitialUDF.Count - 1]; m++)
+                {
+                    this.comboBox3.Items.Add("随机 " + m + " 位");
+                    this.checkedListBox2.Items.Add("基" + m);
+                }
+                //  this.checkedListBox2.Items.Add("特别号");
+                this.comboBox3.SelectedIndex = 0;
+                for (int i = 0; i < checkedListBox2.Items.Count; i++)
+                {
+                    checkedListBox2.SetItemChecked(i, false);
+                }
+            }
             else if (sq == 1)
             {
+                this.clbStatus.Items.Clear();
+                this.checkedListBox1.Items.Clear();
                 toolStripComboBox4.Items.Clear();
+                comboBox1.Items.Clear();
+                comboBox2.Items.Clear();
                 for (int i = 1; i <= 2000; i++)
                 {
                     toolStripComboBox4.Items.Add(i);
@@ -2131,6 +2150,22 @@ namespace MasterClassified
                 tab2();
 
                 QianQI_Zidingyi_InitialSystemInfo();
+
+                //new  
+                this.toolStripComboBox5.SelectedIndex = 0;
+                this.toolStripComboBox6.SelectedIndex = 0;
+                this.comboBox1.SelectedIndex = 0;
+                this.comboBox2.SelectedIndex = 0;
+
+                for (int i = 0; i < clbStatus.Items.Count; i++)
+                {
+                    clbStatus.SetItemChecked(i, false);
+                }
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, false);
+                }
+
             }
             return;
 

@@ -2110,6 +2110,8 @@ namespace MasterClassified
             int sq = this.tabControl1.SelectedIndex;
             if (sq == 0)
             {
+                checkedListBox2.Items.Clear();
+                comboBox3.Items.Clear();
                 InitialSystemInfo();
 
                 this.checkedListBox2.Items.Clear();

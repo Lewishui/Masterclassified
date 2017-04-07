@@ -35,60 +35,70 @@ namespace MasterClassified
         }
         private void InitialSystemInfo()
         {
-            #region 初始化配置
-            ProcessLogger = log4net.LogManager.GetLogger("ProcessLogger");
-            ExceptionLogger = log4net.LogManager.GetLogger("SystemExceptionLogger");
-            ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
-            #endregion
-
-
-            this.listBox1.DisplayMember = "Name";
-            clsAllnew BusinessHelp = new clsAllnew();
-            List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAnName();
-            List<FangAnLieBiaoDATA> filtered = Result.FindAll(s => s.Name != null);
-            this.listBox1.DataSource = filtered;
-            List<FangAnLieBiaoDATA> Result12 = BusinessHelp.Read_FangAn("YES");
-            int index = 0;
-
-            foreach (FangAnLieBiaoDATA ite in filtered)
+            try
             {
+                #region 初始化配置
+                ProcessLogger = log4net.LogManager.GetLogger("ProcessLogger");
+                ExceptionLogger = log4net.LogManager.GetLogger("SystemExceptionLogger");
+                ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
+                #endregion
 
-                if (Result12[0].Name == ite.Name)
-                    break;
-                index++;
-            }
-            listBox1.SelectedIndex = index;
-            #region 显示默认方案到 显示栏中
 
-            List<FangAnLieBiaoDATA> moreResult = BusinessHelp.Read_FangAn(this.listBox1.Text.ToString());
-
-            showSuijiResultlist = new List<string>();
-
-            foreach (FangAnLieBiaoDATA item in moreResult)
-            {
-                if (item.Data == null)
-                    continue;
-
-                string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.Data, "\r\n");
-
-                for (int i = 1; i < temp1.Length; i++)
+                this.listBox1.DisplayMember = "Name";
+                clsAllnew BusinessHelp = new clsAllnew();
+                List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAnName();
+                List<FangAnLieBiaoDATA> filtered = Result.FindAll(s => s.Name != null);
+                this.listBox1.DataSource = filtered;
+                List<FangAnLieBiaoDATA> Result12 = BusinessHelp.Read_FangAn("YES");
+                int index = 0;
+                ProcessLogger.Fatal("68013 Read FangAN " + DateTime.Now.ToString());
+                foreach (FangAnLieBiaoDATA ite in filtered)
                 {
-                    showSuijiResultlist.Add(temp1[i]);
+
+                    if (Result12 != null && Result12.Count > 0 && Result12[0].Name == ite.Name)
+                        break;
+                    index++;
                 }
+                listBox1.SelectedIndex = index;
+                #region 显示默认方案到 显示栏中
+                ProcessLogger.Fatal("68014 Read FangAN " + DateTime.Now.ToString());
+                List<FangAnLieBiaoDATA> moreResult = BusinessHelp.Read_FangAn(this.listBox1.Text.ToString());
 
+                showSuijiResultlist = new List<string>();
+
+                foreach (FangAnLieBiaoDATA item in moreResult)
+                {
+                    if (item.Data == null)
+                        continue;
+
+                    string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.Data, "\r\n");
+
+                    for (int i = 1; i < temp1.Length; i++)
+                    {
+                        showSuijiResultlist.Add(temp1[i]);
+                    }
+
+                }
+                ProcessLogger.Fatal("68015 Read FangAN " + DateTime.Now.ToString());
+                if (moreResult[0].MorenDuanShu != null && moreResult.Count > 0 && moreResult[0].MorenDuanShu != "")
+                    this.comboBox1.Text = moreResult[0].MorenDuanShu;
+                else
+                    this.comboBox1.SelectedIndex = 0;
+
+                if (moreResult[0].Mobanleibie != null && moreResult.Count > 0 && moreResult[0].Mobanleibie != "")
+                    this.comboBox3.Text = moreResult[0].Mobanleibie;
+                else
+                    this.comboBox3.SelectedIndex = 0;
+                ProcessLogger.Fatal("68016 Read FangAN " + DateTime.Now.ToString());
+                this.listBox3.DataSource = showSuijiResultlist;
+                #endregion
             }
-            if (moreResult[0].MorenDuanShu != null && moreResult[0].MorenDuanShu != "")
-                this.comboBox1.Text = moreResult[0].MorenDuanShu;
-            else
-                this.comboBox1.SelectedIndex = 0;
-
-            if (moreResult[0].Mobanleibie != null && moreResult[0].Mobanleibie != "")
-                this.comboBox3.Text = moreResult[0].Mobanleibie;
-            else
-                this.comboBox3.SelectedIndex = 0; 
-
-            this.listBox3.DataSource = showSuijiResultlist;
-            #endregion
+            catch (Exception ex)
+            {
+                MessageBox.Show("错误" + ex + "请到备份界面点击左侧【初始化默认方案】按钮", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+                throw;
+            }
         }
 
 
@@ -762,7 +772,7 @@ namespace MasterClassified
                 }
                 //  
             }
-          
+
 
             this.listBox3.DataSource = showSuijiResultlist;
 

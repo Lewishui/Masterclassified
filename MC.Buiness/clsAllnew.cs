@@ -472,6 +472,95 @@ namespace MC.Buiness
             #endregion
         }
 
+        public List<FangAnLieBiaoDATA> Read_AllFangAn( )
+        {
+            #region Read  database info server
+            try
+            {
+                List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
+
+                string connectionString = "mongodb://127.0.0.1";
+                MongoServer server = MongoServer.Create(connectionString);
+                MongoDatabase db1 = server.GetDatabase("MasterClassified");
+                MongoCollection collection1 = db1.GetCollection("MasterFangAn");
+                MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterFangAn");
+
+
+                foreach (BsonDocument emp in employees1.FindAll())
+                {
+
+                    FangAnLieBiaoDATA item = new FangAnLieBiaoDATA();
+
+                    #region 数据聚合
+                    if (emp.Contains("_id"))
+                        item._id = (emp["_id"].ToString());
+
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+                    if (emp.Contains("DuanShu"))
+                        item.DuanShu = (emp["DuanShu"].ToString());
+
+                    if (emp.Contains("Data"))
+                        item.Data = (emp["Data"].AsString);
+
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+
+                    if (emp.Contains("Input_Date"))
+                        item.Input_Date = (emp["Input_Date"].AsString);
+
+                    if (emp.Contains("DuanWei1"))
+                        item.DuanWei1 = (emp["DuanWei1"].AsString);
+
+                    if (emp.Contains("DuanWei2"))
+                        item.DuanWei2 = (emp["DuanWei2"].AsString);
+
+                    if (emp.Contains("DuanWei3"))
+                        item.DuanWei3 = (emp["DuanWei3"].AsString);
+
+                    if (emp.Contains("DuanWei4"))
+                        item.DuanWei4 = (emp["DuanWei4"].AsString);
+
+                    if (emp.Contains("DuanWei5"))
+                        item.DuanWei5 = (emp["DuanWei5"].AsString);
+
+                    if (emp.Contains("DuanWei6"))
+                        item.DuanWei6 = (emp["DuanWei6"].AsString);
+
+                    if (emp.Contains("DuanWei7"))
+                        item.DuanWei7 = (emp["DuanWei7"].AsString);
+
+                    if (emp.Contains("DuanWei8"))
+                        item.DuanWei8 = (emp["DuanWei8"].AsString);
+
+                    if (emp.Contains("DuanWei9"))
+                        item.DuanWei9 = (emp["DuanWei9"].AsString);
+
+                    if (emp.Contains("DuanWei10"))
+                        item.DuanWei10 = (emp["DuanWei10"].AsString);
+
+                    if (emp.Contains("ZhuJian"))
+                        item.ZhuJian = (emp["ZhuJian"].AsString);
+                    if (emp.Contains("MorenDuanShu"))
+                        item.MorenDuanShu = (emp["MorenDuanShu"].AsString);
+
+                    if (emp.Contains("Mobanleibie"))
+                        item.Mobanleibie = (emp["Mobanleibie"].AsString);
+                    #endregion
+                    Result.Add(item);
+                }
+                return Result;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            #endregion
+        }
 
         public List<FangAnLieBiaoDATA> Read_FangAn(string findtext)
         {
@@ -1122,11 +1211,29 @@ namespace MC.Buiness
                 collection1.Remove(query);
 
             }
-
-
-
-
         }
+
+        public void deleteID_FangAn(string name)
+        {
+            string connectionString = "mongodb://127.0.0.1";
+            MongoServer server = MongoServer.Create(connectionString);
+            MongoDatabase db1 = server.GetDatabase("MasterClassified");
+            MongoCollection collection1 = db1.GetCollection("MasterFangAn");
+            MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterFangAn");
+
+            if (name == null)
+            {
+                MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }         
+            IMongoQuery query = Query.EQ("_id", new ObjectId(name));
+
+            collection1.Remove(query);
+        }
+
+
+
+
         public void delete_CaiPiaoZhongLei(string name)
         {
             string connectionString = "mongodb://127.0.0.1";

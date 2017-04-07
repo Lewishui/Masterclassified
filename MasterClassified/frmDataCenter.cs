@@ -17,9 +17,12 @@ namespace MasterClassified
 {
     public partial class frmDataCenter : DockContent
     {
+        List<int> newlist;
+        List<string> showSuijiResultlist = new List<string>();
         int RowRemark = 0;
         int cloumn = 0;
         private SortableBindingList<inputCaipiaoDATA> sortablePendingOrderList;
+        private SortableBindingList<FangAnLieBiaoDATA> sortablePendingOrderList1;
         List<inputCaipiaoDATA> ClaimReport_Server;
         public frmDataCenter()
         {
@@ -179,7 +182,13 @@ namespace MasterClassified
                 }
                 else if (s == 1)
                 {
+                    List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_AllFangAn();
+                    sortablePendingOrderList1 = new SortableBindingList<FangAnLieBiaoDATA>(Result);
 
+                    this.bindingSource2.DataSource = null;
+                    this.bindingSource2.DataSource = sortablePendingOrderList1;
+
+                    this.dataGridView2.DataSource = this.bindingSource2;
 
 
                 }
@@ -387,6 +396,114 @@ namespace MasterClassified
 
         #endregion
 
+        private void NewMethod1()
+        {
+            try
+            {
+                newlist = new List<int>();
+                showSuijiResultlist = new List<string>();
+
+                newlist.Add(0);
+                newlist.Add(1);
+                newlist.Add(2);
+                newlist.Add(3);
+                newlist.Add(4);
+                newlist.Add(5);
+                newlist.Add(6);
+                newlist.Add(7);
+                newlist.Add(8);
+                newlist.Add(9);
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+
+                int duan = 3;
+                int evertduan = 10 / duan;
+                int ilast = 0;
+                ilast = duan * evertduan;
+
+
+                string first = "";
+                showSuijiResultlist = new List<string>();
+                for (int iq = 0; iq < duan; iq++)
+                {
+                    string num = "";
+                    int ago = 0;
+
+                    for (int i = 0; i <= evertduan; i++)
+                    {
+                        ago++;
+                        if (ago > evertduan)
+                            break;
+
+                        num = num + " " + newlist[0];
+                        newlist.RemoveAt(0);
+
+                    }
+                    first = first + "\r\n" + iq.ToString() + "段=" + " " + num;
+
+                    showSuijiResultlist.Add(iq.ToString() + " 段= " + " " + num);
+
+                }
+                List<string> showSuijiResultlist1 = new List<string>();
+
+                for (int ii = 0; ii < showSuijiResultlist.Count; ii++)
+                {
+                    for (int i = 0; i < newlist.Count; i++)
+                    {
+                        showSuijiResultlist[ii] = showSuijiResultlist[ii] + " " + newlist[i];
+                        newlist.RemoveAt(i);
+                        break;
+                    }
+                }
+
+                List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
+                FangAnLieBiaoDATA item = new FangAnLieBiaoDATA();
+
+
+                for (int i = 0; i < showSuijiResultlist.Count; i++)
+                {
+                    string[] temp1 = System.Text.RegularExpressions.Regex.Split(showSuijiResultlist[i], "=");
+                    if (i == 0)
+                        item.DuanWei1 = temp1[1].Trim();
+                    else if (i == 1)
+                        item.DuanWei2 = temp1[1].Trim();
+                    else if (i == 2)
+                        item.DuanWei3 = temp1[1].Trim();
+                    else if (i == 3)
+                        item.DuanWei4 = temp1[1].Trim();
+                    else if (i == 4)
+                        item.DuanWei5 = temp1[1].Trim();
+                    else if (i == 5)
+                        item.DuanWei6 = temp1[1].Trim();
+                    else if (i == 6)
+                        item.DuanWei7 = temp1[1].Trim();
+                    else if (i == 7)
+                        item.DuanWei8 = temp1[1].Trim();
+                    else if (i == 8)
+                        item.DuanWei9 = temp1[1].Trim();
+                    else if (i == 9)
+                        item.DuanWei10 = temp1[1].Trim();
+
+                    item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
+                }
+                item.ZhuJian = "YES";
+                item.Name = "默认方案";//保存名称
+                item.DuanShu = showSuijiResultlist.Count.ToString();
+                item.Mobanleibie = "默认";
+
+                Result.Add(item);
+                clsAllnew BusinessHelp = new clsAllnew();
+                BusinessHelp.Save_FangAn(Result);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                return;
+
+                throw;
+            }
+        }
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             RowRemark = e.RowIndex;
@@ -395,17 +512,34 @@ namespace MasterClassified
 
         private void notifyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (RowRemark >= dataGridView1.Rows.Count)
+            int s = this.tabControl1.SelectedIndex;
+            if (s == 0)
             {
-                RowRemark = RowRemark - 1;
-            }
-            string QiHao = this.dataGridView1.Rows[RowRemark].Cells["_id"].EditedFormattedValue.ToString();
-            clsAllnew BusinessHelp = new clsAllnew();
+                if (RowRemark >= dataGridView1.Rows.Count)
+                {
+                    RowRemark = RowRemark - 1;
+                }
+                string QiHao = this.dataGridView1.Rows[RowRemark].Cells["_id"].EditedFormattedValue.ToString();
+                clsAllnew BusinessHelp = new clsAllnew();
 
-            BusinessHelp.deleteID_CaiPiaoData(QiHao);
+                BusinessHelp.deleteID_CaiPiaoData(QiHao);
+            }
+            else if (s == 1)
+            {
+                if (RowRemark >= dataGridView2.Rows.Count)
+                {
+                    RowRemark = RowRemark - 1;
+                }
+                string QiHao = this.dataGridView2.Rows[RowRemark].Cells["_id"].EditedFormattedValue.ToString();
+                clsAllnew BusinessHelp = new clsAllnew();
+
+                BusinessHelp.deleteID_FangAn(QiHao);
+            }
+
             #region MyRegion
 
             NewMethod();
+
             #endregion
         }
 
@@ -438,6 +572,13 @@ namespace MasterClassified
                 else if (s == 1)
                 {
 
+                    List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_AllFangAn();
+                    sortablePendingOrderList1 = new SortableBindingList<FangAnLieBiaoDATA>(Result);
+
+                    this.bindingSource2.DataSource = null;
+                    this.bindingSource2.DataSource = sortablePendingOrderList1;
+
+                    this.dataGridView2.DataSource = this.bindingSource2;
 
 
                 }
@@ -449,6 +590,31 @@ namespace MasterClassified
 
                 throw;
             }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NewMethod1();
+                MessageBox.Show("初始化成功，请到数据分析中设置下的方案界面查询");
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                return;
+
+                throw;
+            }
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RowRemark = e.RowIndex;
+            cloumn = e.ColumnIndex;
         }
 
     }

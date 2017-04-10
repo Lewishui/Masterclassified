@@ -78,7 +78,6 @@ C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClas
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.DB.dll
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\Microsoft.Office.Interop.Excel.dll
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\office.dll
-C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\Microsoft.Vbe.Interop.dll
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.Buiness.pdb
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.Common.pdb
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\bin\Debug\MC.DB.pdb

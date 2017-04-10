@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             WeifenLuo.WinFormsUI.Docking.DockPanelSkin dockPanelSkin1 = new WeifenLuo.WinFormsUI.Docking.DockPanelSkin();
             WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin autoHideStripSkin1 = new WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin();
             WeifenLuo.WinFormsUI.Docking.DockPanelGradient dockPanelGradient1 = new WeifenLuo.WinFormsUI.Docking.DockPanelGradient();
@@ -44,7 +45,6 @@
             WeifenLuo.WinFormsUI.Docking.DockPanelGradient dockPanelGradient3 = new WeifenLuo.WinFormsUI.Docking.DockPanelGradient();
             WeifenLuo.WinFormsUI.Docking.TabGradient tabGradient6 = new WeifenLuo.WinFormsUI.Docking.TabGradient();
             WeifenLuo.WinFormsUI.Docking.TabGradient tabGradient7 = new WeifenLuo.WinFormsUI.Docking.TabGradient();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.invoiceProcessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,13 +59,13 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pBBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.追踪分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -201,6 +201,44 @@
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pBBToolStripMenuItem});
+            this.toolStripDropDownButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(55, 25);
+            this.toolStripDropDownButton2.Text = "选择";
+            // 
+            // pBBToolStripMenuItem
+            // 
+            this.pBBToolStripMenuItem.Name = "pBBToolStripMenuItem";
+            this.pBBToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.pBBToolStripMenuItem.Text = "选择彩票";
+            this.pBBToolStripMenuItem.Click += new System.EventHandler(this.pBBToolStripMenuItem_Click);
+            // 
+            // toolStripDropDownButton3
+            // 
+            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.追踪分析ToolStripMenuItem});
+            this.toolStripDropDownButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(55, 25);
+            this.toolStripDropDownButton3.Text = "分析";
+            // 
+            // 追踪分析ToolStripMenuItem
+            // 
+            this.追踪分析ToolStripMenuItem.Name = "追踪分析ToolStripMenuItem";
+            this.追踪分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.追踪分析ToolStripMenuItem.Text = "追踪分析";
+            this.追踪分析ToolStripMenuItem.Click += new System.EventHandler(this.追踪分析ToolStripMenuItem_Click);
+            // 
             // panel1
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -270,44 +308,6 @@
             dockPanelSkin1.DockPaneStripSkin = dockPaneStripSkin1;
             this.dockPanel2.Skin = dockPanelSkin1;
             this.dockPanel2.TabIndex = 9;
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pBBToolStripMenuItem});
-            this.toolStripDropDownButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(55, 25);
-            this.toolStripDropDownButton2.Text = "选择";
-            // 
-            // pBBToolStripMenuItem
-            // 
-            this.pBBToolStripMenuItem.Name = "pBBToolStripMenuItem";
-            this.pBBToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.pBBToolStripMenuItem.Text = "选择彩票";
-            this.pBBToolStripMenuItem.Click += new System.EventHandler(this.pBBToolStripMenuItem_Click);
-            // 
-            // toolStripDropDownButton3
-            // 
-            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.追踪分析ToolStripMenuItem});
-            this.toolStripDropDownButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(55, 25);
-            this.toolStripDropDownButton3.Text = "分析";
-            // 
-            // 追踪分析ToolStripMenuItem
-            // 
-            this.追踪分析ToolStripMenuItem.Name = "追踪分析ToolStripMenuItem";
-            this.追踪分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.追踪分析ToolStripMenuItem.Text = "追踪分析";
-            this.追踪分析ToolStripMenuItem.Click += new System.EventHandler(this.追踪分析ToolStripMenuItem_Click);
             // 
             // MainForm
             // 

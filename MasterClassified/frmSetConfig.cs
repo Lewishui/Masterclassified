@@ -566,6 +566,20 @@ namespace MasterClassified
                         EverDuanList.Add(4);
                         EverDuanList.Add(2);
                     }
+                    //0409
+                    else if (this.comboBox3.Text == "541 模板")
+                    {
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(1);
+                    }
+
+                    else if (this.comboBox3.Text == "631 模板")
+                    {
+                        EverDuanList.Add(6);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(1);
+                    }
 
                 }
                 else if (this.comboBox1.Text == "4")
@@ -578,7 +592,35 @@ namespace MasterClassified
                         EverDuanList.Add(2);
                     }
 
-
+                    //new 0409
+                    if (this.comboBox3.Text == "4411 模板")
+                    {
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(1);
+                        EverDuanList.Add(1);
+                    }
+                    if (this.comboBox3.Text == "3331 模板")
+                    {
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(1);
+                    }
+                    if (this.comboBox3.Text == "4321 模板")
+                    {
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(1);
+                    }
+                    if (this.comboBox3.Text == "5311 模板")
+                    {
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(1);
+                        EverDuanList.Add(1);
+                    }
                 }
 
             }
@@ -1029,12 +1071,20 @@ namespace MasterClassified
                 comboBox3.Items.Add("532 模板");
                 comboBox3.Items.Add("622 模板");
                 comboBox3.Items.Add("442 模板");
+                //new 0409
+                comboBox3.Items.Add("541 模板");
+                comboBox3.Items.Add("631 模板");
 
             }
             else if (this.comboBox1.Text == "4")
             {
 
                 comboBox3.Items.Add("4222 模板");
+                //new 0409
+                comboBox3.Items.Add("4411 模板");
+                comboBox3.Items.Add("3331 模板");
+                comboBox3.Items.Add("4321 模板");
+                comboBox3.Items.Add("5311 模板");
             }
             this.comboBox3.SelectedIndex = 0;
             string amewi = this.textBox1.Text;//\t\r\n

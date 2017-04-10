@@ -3748,5 +3748,170 @@ namespace MasterClassified
             }
         }
 
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolStripLabel8.Text = "";
+            #region 获取选中的基数
+
+            List<int> JIDTA1 = new List<int>();
+
+            if (checkedListBox2.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.checkedListBox2.CheckedItems)
+                {
+                    if (status.Contains("基"))
+                    {
+                        string[] temp3 = System.Text.RegularExpressions.Regex.Split(status, "基");
+                        JIDTA1.Add(Convert.ToInt32(temp3[1]));
+                    }
+                    else if (status.Contains("特"))
+                    {
+
+                        JIDTA1.Add(10);
+                    }
+                }
+
+
+            }
+
+            #endregion
+            //toolStripLabel8.Text = GetRowIndexAt(e.Y).ToString();
+            int r = this.dataGridView1.HitTest(e.X, e.Y).RowIndex; //行
+            int c = this.dataGridView1.HitTest(e.X, e.Y).ColumnIndex; //列
+
+            if (c > 0 && r > 0)
+            {
+                if (dataGridView1.Columns[c].HeaderText.Contains("前"))
+                {
+                    int qianqishu = Convert.ToInt32(dataGridView1.Columns[c].HeaderText.Replace("前", "")) + 2;
+                    int ii = dataGridView1.Rows.Count - qianqishu;
+                    //  int iia = dataGridView1.Rows.Count - ii;
+                    dataGridView1.CurrentCell = dataGridView1[0, ii];
+                    toolStripLabel8.Text = dataGridView1.Rows[ii].Cells[1].EditedFormattedValue.ToString();
+
+                    #region 切分显示内容
+                    if (JIDTA1.Count > 0)
+                    {
+                        string showmessage = "";
+
+                        string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripLabel8.Text, " ");
+                        for (int i = 0; i < JIDTA1.Count; i++)
+                        {
+                            showmessage = showmessage + temp3[JIDTA1[i] - 1];
+
+                        }
+                        toolStripLabel8.Text = showmessage;
+
+                    }
+
+                    #endregion
+                    toolStripLabel8.Text = "  选中信息：" + toolStripLabel8.Text;
+                }
+                else
+                    toolStripLabel8.Text = "  选中信息：请鼠标移动到相应的【前】列上!";
+            }
+
+
+        }
+        public int GetRowIndexAt(int mouseLocation_Y)
+        {
+            if (dataGridView1.FirstDisplayedScrollingRowIndex < 0)
+            {
+                return -1;  // no rows.   
+            }
+            if (dataGridView1.ColumnHeadersVisible == true && mouseLocation_Y <= dataGridView1.ColumnHeadersHeight)
+            {
+                return -1;
+            }
+            int index = dataGridView1.FirstDisplayedScrollingRowIndex;
+            int displayedCount = dataGridView1.DisplayedRowCount(true);
+            for (int k = 1; k <= displayedCount; )  // 因为行不能ReOrder，故只需要搜索显示的行   
+            {
+                if (dataGridView1.Rows[index].Visible == true)
+                {
+                    Rectangle rect = dataGridView1.GetRowDisplayRectangle(index, true);  // 取该区域的显示部分区域   
+                    if (rect.Top <= mouseLocation_Y && mouseLocation_Y < rect.Bottom)
+                    {
+                        return index;
+                    }
+                    k++;  // 只计数显示的行;   
+                }
+                index++;
+            }
+            return -1;
+        }
+
+        private void dataGridView2_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolStripLabel8.Text = "";
+
+            #region 获取选中的基数
+
+            List<int> JIDTA1 = new List<int>();
+
+            if (checkedListBox1.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.checkedListBox1.CheckedItems)
+                {
+                    if (status.Contains("第"))
+                    {
+                        string[] temp3 = System.Text.RegularExpressions.Regex.Split(status, " ");
+                        JIDTA1.Add(Convert.ToInt32(temp3[1]));
+                    }
+                    else if (status.Contains("特"))
+                    {
+
+                        JIDTA1.Add(10);
+                    }
+                }
+
+
+            }
+
+            #endregion
+            //toolStripLabel8.Text = GetRowIndexAt(e.Y).ToString();
+            int r = this.dataGridView2.HitTest(e.X, e.Y).RowIndex; //行
+            int c = this.dataGridView2.HitTest(e.X, e.Y).ColumnIndex; //列
+
+            if (c > 0 && r > 0)
+            {
+                if (dataGridView2.Columns[c].HeaderText.Contains("前"))
+                {
+                    int qianqishu = Convert.ToInt32(dataGridView2.Columns[c].HeaderText.Replace("前", "")) + 2;
+                    int ii = dataGridView1.Rows.Count - qianqishu;
+                    //  int iia = dataGridView1.Rows.Count - ii;
+                    dataGridView2.CurrentCell = dataGridView2[0, ii];
+                    toolStripLabel8.Text = dataGridView2.Rows[ii].Cells[1].EditedFormattedValue.ToString();
+
+                    #region 切分显示内容
+                    if (JIDTA1.Count > 0)
+                    {
+                        string showmessage = "";
+
+                        string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripLabel8.Text, " ");
+                        for (int i = 0; i < JIDTA1.Count; i++)
+                        {
+                            showmessage = showmessage + temp3[JIDTA1[i] - 1];
+
+                        }
+                        toolStripLabel8.Text = showmessage;
+
+                    }
+
+                    #endregion
+                    toolStripLabel8.Text = "  选中信息：" + toolStripLabel8.Text;
+                }
+                else
+
+                    toolStripLabel8.Text = "  选中信息：请鼠标移动到相应的【前】列上!";
+            }
+
+
+        }
     }
 }

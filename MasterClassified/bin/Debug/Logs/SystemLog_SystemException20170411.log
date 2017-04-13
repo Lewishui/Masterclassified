@@ -1,0 +1,13 @@
+2017-04-11 20:21:57,692 [1] FATAL SystemExceptionLogger [(null)] - System Error Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index, Exception Detail Info :   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at MasterClassified.frmTracing_Analysis.dataGridView1_MouseMove(Object sender, MouseEventArgs e)
+   at System.Windows.Forms.Control.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseMove(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time4/11/2017 20:21:57

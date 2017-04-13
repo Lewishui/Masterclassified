@@ -235,7 +235,7 @@
             // 追踪分析ToolStripMenuItem
             // 
             this.追踪分析ToolStripMenuItem.Name = "追踪分析ToolStripMenuItem";
-            this.追踪分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.追踪分析ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.追踪分析ToolStripMenuItem.Text = "追踪分析";
             this.追踪分析ToolStripMenuItem.Click += new System.EventHandler(this.追踪分析ToolStripMenuItem_Click);
             // 

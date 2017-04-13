@@ -28,6 +28,7 @@ namespace MasterClassified
         private frmUDF frmUDF;
         private List<int> UDF;
         private List<int> InitialUDF;
+        private List<int> changeInitialUDF;
         List<inputCaipiaoDATA> ClaimReport_Server;
         // 后台执行控件
         private BackgroundWorker bgWorker;
@@ -65,6 +66,8 @@ namespace MasterClassified
 
             //}
 
+            changeInitialUDF = new List<int>();
+            changeInitialUDF = InitialUDF;
 
             for (int m = 1; m <= InitialUDF[InitialUDF.Count - 1]; m++)
             {
@@ -712,8 +715,8 @@ namespace MasterClassified
                 if (Result.Count != 0)
                 {
                     this.label4.Text = "当前方案名称：　" + Result[0].Name;
-
-                    toolStripLabel7.Text = Result[0].Data.Replace("\r\n", "* ");
+                    if (Result[0].Data != null)
+                        toolStripLabel7.Text = Result[0].Data.Replace("\r\n", "* ");
                 }
                 //showSuijiResultlist = new List<string>();
 
@@ -733,6 +736,9 @@ namespace MasterClassified
 
                     foreach (FangAnLieBiaoDATA temp in Result)
                     {
+                        if (temp.Data == null)
+                            continue;
+
                         string[] temp1 = System.Text.RegularExpressions.Regex.Split(temp.Data, "\r\n");
                         if (item.KaiJianHaoMa == null)
                             continue;
@@ -1631,6 +1637,10 @@ namespace MasterClassified
                             //  dataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { Width = 30, DataPropertyName = "基" + m });
 
                         }
+                        //最新的基数列数
+                        changeInitialUDF = new List<int>();
+                        changeInitialUDF = UDF;
+
                     }
                     else
                     {
@@ -2115,6 +2125,8 @@ namespace MasterClassified
                 InitialSystemInfo();
 
                 this.checkedListBox2.Items.Clear();
+                changeInitialUDF = new List<int>();
+                changeInitialUDF = InitialUDF;
 
                 for (int m = 1; m <= InitialUDF[InitialUDF.Count - 1]; m++)
                 {
@@ -3402,6 +3414,48 @@ namespace MasterClassified
                 EverDuanList.Add(2);
                 EverDuanList.Add(2);
             }
+            //0409
+            else if (NAME == "541 模板")
+            {
+                EverDuanList.Add(5);
+                EverDuanList.Add(4);
+                EverDuanList.Add(1);
+            }
+            else if (NAME == "631 模板")
+            {
+                EverDuanList.Add(6);
+                EverDuanList.Add(3);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "4411 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "3331 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "4321 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(3);
+                EverDuanList.Add(2);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "5311 模板")
+            {
+                EverDuanList.Add(5);
+                EverDuanList.Add(3);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+
             return EverDuanList;
 
         }
@@ -3788,29 +3842,38 @@ namespace MasterClassified
             {
                 if (dataGridView1.Columns[c].HeaderText.Contains("前"))
                 {
-                    int qianqishu = Convert.ToInt32(dataGridView1.Columns[c].HeaderText.Replace("前", "")) + 2;
+                    int qianqishu = Convert.ToInt32(dataGridView1.Columns[c].HeaderText.Replace("前", "")) + 1;
                     int ii = dataGridView1.Rows.Count - qianqishu;
-                    //  int iia = dataGridView1.Rows.Count - ii;
-                    dataGridView1.CurrentCell = dataGridView1[0, ii];
-                    toolStripLabel8.Text = dataGridView1.Rows[ii].Cells[1].EditedFormattedValue.ToString();
-
-                    #region 切分显示内容
-                    if (JIDTA1.Count > 0)
-                    {
-                        string showmessage = "";
-
-                        string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripLabel8.Text, " ");
-                        for (int i = 0; i < JIDTA1.Count; i++)
+                    if (ii > 0)
+                    {  //  int iia = dataGridView1.Rows.Count - ii;
+                        //    dataGridView1.CurrentCell = dataGridView1[0, ii];
+                        //得到所有基数
+                        for (int m = 2; m <= changeInitialUDF[changeInitialUDF.Count - 1] + 1; m++)
                         {
-                            showmessage = showmessage + temp3[JIDTA1[i] - 1];
+                            if (dataGridView1.Rows[ii].Cells[m].EditedFormattedValue != null && dataGridView1.Rows[ii].Cells[m].EditedFormattedValue.ToString() != "")
+                                toolStripLabel8.Text = toolStripLabel8.Text + dataGridView1.Rows[ii].Cells[m].EditedFormattedValue.ToString();
+                            else
+                                toolStripLabel8.Text = toolStripLabel8.Text + " ";
+                        }
+
+                        #region 切分显示内容
+                        if (JIDTA1.Count > 0)
+                        {
+                            string showmessage = "";
+
+                            string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripLabel8.Text, " ");
+                            for (int i = 0; i < JIDTA1.Count; i++)
+                            {
+                                showmessage = showmessage + temp3[JIDTA1[i] - 1];
+
+                            }
+                            toolStripLabel8.Text = showmessage;
 
                         }
-                        toolStripLabel8.Text = showmessage;
 
+                        #endregion
+                        toolStripLabel8.Text = "  选中信息：" + toolStripLabel8.Text;
                     }
-
-                    #endregion
-                    toolStripLabel8.Text = "  选中信息：" + toolStripLabel8.Text;
                 }
                 else
                     toolStripLabel8.Text = "  选中信息：请鼠标移动到相应的【前】列上!";
@@ -3882,10 +3945,10 @@ namespace MasterClassified
             {
                 if (dataGridView2.Columns[c].HeaderText.Contains("前"))
                 {
-                    int qianqishu = Convert.ToInt32(dataGridView2.Columns[c].HeaderText.Replace("前", "")) + 2;
-                    int ii = dataGridView1.Rows.Count - qianqishu;
+                    int qianqishu = Convert.ToInt32(dataGridView2.Columns[c].HeaderText.Replace("前", "")) + 1;
+                    int ii = dataGridView2.Rows.Count - qianqishu;
                     //  int iia = dataGridView1.Rows.Count - ii;
-                    dataGridView2.CurrentCell = dataGridView2[0, ii];
+                    //   dataGridView2.CurrentCell = dataGridView2[0, ii];
                     toolStripLabel8.Text = dataGridView2.Rows[ii].Cells[1].EditedFormattedValue.ToString();
 
                     #region 切分显示内容
@@ -3912,6 +3975,48 @@ namespace MasterClassified
             }
 
 
+        }
+
+        private void dataGridView1_MouseEnter(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void dataGridView1_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                //dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightBlue;
+                dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.LightBlue;
+            }
+        }
+
+        private void dataGridView1_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            //Color c = this.dataGridView1.CurrentRow.Cells[0].InheritedStyle.ForeColor;
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                //dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 192);
+                //dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.Aqua;
+                dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 255, 192);
+            }
+        }
+
+        private void dataGridView2_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.LightBlue;
+            }
+        }
+
+        private void dataGridView2_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 255, 192);
+            }
         }
     }
 }

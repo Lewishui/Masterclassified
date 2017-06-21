@@ -29,6 +29,23 @@ namespace MC.DB
         public string JiShu13 { get; set; }
         public string JiShu14 { get; set; }
         public string JiShu15 { get; set; }
+        //new0621
+        public string JiShu16 { get; set; }
+        public string JiShu17 { get; set; }
+        public string JiShu18 { get; set; }
+        public string JiShu19 { get; set; }
+        public string JiShu20 { get; set; }
+        public string JiShu21 { get; set; }
+        public string JiShu22 { get; set; }
+        public string JiShu23 { get; set; }
+        public string JiShu24 { get; set; }
+        public string JiShu25 { get; set; }
+        public string JiShu26 { get; set; }
+        public string JiShu27 { get; set; }
+        public string JiShu28 { get; set; }
+        public string JiShu29 { get; set; }
+        public string JiShu30 { get; set; }
+       
 
 
         public string qianAll { get; set; }

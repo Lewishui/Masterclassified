@@ -43,6 +43,8 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -63,8 +65,6 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -247,6 +247,27 @@
             this.tabPage3.Text = "随机分段";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(71, 94);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(94, 21);
+            this.comboBox3.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 16);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "模板类别";
+            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
@@ -328,7 +349,8 @@
             "6",
             "7",
             "8",
-            "9"});
+            "9",
+            "10"});
             this.comboBox1.Location = new System.Drawing.Point(71, 68);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(94, 21);
@@ -485,27 +507,6 @@
             this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox3.Size = new System.Drawing.Size(444, 181);
             this.listBox3.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 16);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "模板类别";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(71, 94);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(94, 21);
-            this.comboBox3.TabIndex = 11;
             // 
             // frmSetConfig
             // 

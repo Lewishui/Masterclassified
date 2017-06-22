@@ -635,6 +635,13 @@ namespace MasterClassified
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
                     }
+                    if (this.comboBox3.Text == "6211 模板")
+                    {
+                        EverDuanList.Add(6);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(1);
+                        EverDuanList.Add(1);
+                    }
                 }
                 //new 0621
                 else if (this.comboBox1.Text == "5")

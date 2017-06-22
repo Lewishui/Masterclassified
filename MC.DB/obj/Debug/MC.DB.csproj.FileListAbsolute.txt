@@ -17,4 +17,3 @@ C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\bin\
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\bin\Debug\MC.DB.pdb
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\obj\Debug\MC.DB.dll
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\obj\Debug\MC.DB.pdb
-C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.DB\obj\Debug\MC.DB.csprojResolveAssemblyReference.cache

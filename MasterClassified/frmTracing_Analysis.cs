@@ -3693,7 +3693,120 @@ namespace MasterClassified
                 EverDuanList.Add(1);
                 EverDuanList.Add(1);
             }
+            //new 621
+            if (NAME == "721 模板")
+            {
+                EverDuanList.Add(7);
+                EverDuanList.Add(2);
+                EverDuanList.Add(1);
+            }
+            //new 0621
+            if (NAME == "7111 模板")
+            {
+                EverDuanList.Add(7);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "6211 模板")
+            {
+                EverDuanList.Add(6);
+                EverDuanList.Add(2);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            //new 0621
+            if (NAME == "52111 模板")
+            {
+                EverDuanList.Add(5);
+                EverDuanList.Add(2);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "61111 模板")
+            {
+                EverDuanList.Add(6);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
 
+            if (NAME == "42211 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "32221 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "43111 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(3);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "511111 模板")
+            {
+                EverDuanList.Add(5);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "421111 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(2);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            if (NAME == "331111 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            //7 段
+            if (NAME == "4111111 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
+            //new 0621 8段
+            if (NAME == "31111111 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+                EverDuanList.Add(1);
+            }
             return EverDuanList;
 
         }

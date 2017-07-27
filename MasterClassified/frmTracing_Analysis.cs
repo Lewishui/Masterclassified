@@ -26,8 +26,8 @@ namespace MasterClassified
         public log4net.ILog ExceptionLogger { get; set; }
         private frmSetConfig frmSetConfig;
         private frmUDF frmUDF;
-        private List<int> UDF;
-        private List<int> InitialUDF;
+        private List<int> UDF;//选择要分析的基数条目
+        private List<int> InitialUDF;//按照彩票的Xuan 添加基数列的列数多少
         private List<int> changeInitialUDF;
         List<inputCaipiaoDATA> ClaimReport_Server;
         // 后台执行控件
@@ -299,6 +299,39 @@ namespace MasterClassified
                     for (int i = 0; i < checkedListBox1.Items.Count; i++)
                     {
                         checkedListBox1.SetItemChecked(i, false);
+                    }
+                }
+                else if (s == 2)
+                {
+                    toolStripComboBox4.Items.Clear();
+                    for (int i = 1; i <= 2000; i++)
+                    {
+                        toolStripComboBox4.Items.Add(i);
+
+                    }
+                    toolStripComboBox4.SelectedIndex = 4;
+
+                    qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
+
+                    toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+
+
+                    tab3();
+
+                    JISHU_Zidingyi_InitialSystemInfo();
+
+                    //this.toolStripComboBox5.SelectedIndex = 0;
+                    //this.toolStripComboBox6.SelectedIndex = 0;
+                    this.comboBox5.SelectedIndex = 0;
+                    this.comboBox4.SelectedIndex = 0;
+
+                    for (int i = 0; i < checkedListBox4.Items.Count; i++)
+                    {
+                        checkedListBox4.SetItemChecked(i, false);
+                    }
+                    for (int i = 0; i < checkedListBox3.Items.Count; i++)
+                    {
+                        checkedListBox3.SetItemChecked(i, false);
                     }
                 }
             }
@@ -806,7 +839,7 @@ namespace MasterClassified
                                         item.JiShu18 = temp3[0];
 
                                     else if (ss == 19)
-                                        item.JiShu19= temp3[0];
+                                        item.JiShu19 = temp3[0];
 
                                     else if (ss == 20)
                                         item.JiShu20 = temp3[0];
@@ -815,7 +848,7 @@ namespace MasterClassified
                                         item.JiShu21 = temp3[0];
 
                                     else if (ss == 22)
-                                        item.JiShu22= temp3[0];
+                                        item.JiShu22 = temp3[0];
 
                                     else if (ss == 23)
                                         item.JiShu23 = temp3[0];
@@ -836,12 +869,12 @@ namespace MasterClassified
                                         item.JiShu28 = temp3[0];
 
                                     else if (ss == 29)
-                                        item.JiShu29= temp3[0];
+                                        item.JiShu29 = temp3[0];
 
                                     else if (ss == 30)
                                         item.JiShu30 = temp3[0];
 
-                                   
+
                                     break;
 
                                 }
@@ -1635,27 +1668,80 @@ namespace MasterClassified
             qianqi_newi = new List<int>();
             //int s = this.tabControl1.SelectedIndex;
             //if (s == 1)
+            int s2 = this.tabControl1.SelectedIndex;
 
-            if (clbStatus.CheckedItems.Count > 0)
+            if (s2 == 1)
             {
-                foreach (string status in this.clbStatus.CheckedItems)
+                if (clbStatus.CheckedItems.Count > 0)
                 {
-                    newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
-
-                }
-                if (this.checkedListBox1.CheckedItems.Count > 0)
-                {
-                    foreach (string status in this.checkedListBox1.CheckedItems)
+                    foreach (string status in this.clbStatus.CheckedItems)
                     {
-                        qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+                        newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
 
                     }
-                }
-                qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
-                ZidingYi_tab2();
-            }
+                    if (this.checkedListBox1.CheckedItems.Count > 0)
+                    {
+                        foreach (string status in this.checkedListBox1.CheckedItems)
+                        {
+                            qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
 
-            else
+                        }
+                    }
+                    qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
+                    ZidingYi_tab2();
+                }
+            }
+            if (s2 == 2)
+            {
+                if (checkedListBox4.CheckedItems.Count > 0)
+                {
+                    foreach (string status in this.checkedListBox4.CheckedItems)
+                    {
+                        newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+
+                    }
+                    if (this.checkedListBox3.CheckedItems.Count > 0)
+                    {
+                        foreach (string status in this.checkedListBox3.CheckedItems)
+                        {
+                            qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+
+                        }
+                    }
+                    qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
+                    //ZidingYi_tab2();
+                    chufafenxijishu_ZidingYi_tab3();
+                }
+                else
+                {
+
+                   // this.toolStripLabel8.Text = "请选中基数";
+
+                }
+
+                //newi = new List<int>();
+                //if (checkedListBox4.CheckedItems.Count > 0)
+                //{
+                //    foreach (string status in this.checkedListBox4.CheckedItems)
+                //    {
+                //        newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+
+                //    }
+                //}
+                //qianqi_newi = new List<int>();
+                //if (this.checkedListBox3.CheckedItems.Count > 0)
+                //{
+                //    foreach (string status in this.checkedListBox3.CheckedItems)
+                //    {
+                //        qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+
+                //    }
+                //}
+
+
+
+            }
+            else if (s2 == 0)
             {
                 //  QihaoCombox_NewMethod();
                 // return;
@@ -1880,7 +1966,7 @@ namespace MasterClassified
                                 if (UDF[m] == 30)
                                     qtyTable.Rows[jk][31] = item.JiShu30;
 
-                               
+
                             }
                         }
                         else
@@ -1918,12 +2004,12 @@ namespace MasterClassified
 
                             if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 13)
                                 qtyTable.Rows[jk][15] = item.JiShu14;
-                                                
+
 
                             //new 0621
                             if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 14)
                                 qtyTable.Rows[jk][16] = item.JiShu15;
-                          
+
                             if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 15)
                                 qtyTable.Rows[jk][17] = item.JiShu16;
                             if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 16)
@@ -1954,8 +2040,8 @@ namespace MasterClassified
                                 qtyTable.Rows[jk][30] = item.JiShu29;
                             if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 29)
                                 qtyTable.Rows[jk][31] = item.JiShu30;
-                        
-                          
+
+
 
                         }
                         // qtyTable.Rows[1][4] = item.QiHao;
@@ -2383,8 +2469,6 @@ namespace MasterClassified
             string shipper = this.toolStripComboBox1.Text;
             string county = toolStripComboBox2.Text;
 
-
-
             if (s == 0)
             {
 
@@ -2404,9 +2488,10 @@ namespace MasterClassified
 
                 //}
             }
-            else
+            else if (s == 1)
                 ApplyBindSourceFilter1(shipper, county);
-
+            else if (s == 2)
+                ApplyBindSourceFilter2(shipper, county);
         }
         private void ApplyBindSourceFilter(string shipper, string county = "", string store = "")
         {
@@ -2486,6 +2571,59 @@ namespace MasterClassified
                             int ii = dataGridView2.Rows.Count - 1;
                             dataGridView2.CurrentCell = dataGridView2[0, ii]; // 强制将光标指向i行
                             dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("刷新异常或数据有误，请关闭当前页面重新尝试", "异常", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+
+                throw;
+            }
+        }
+        private void ApplyBindSourceFilter2(string shipper, string county = "", string store = "")
+        {
+            try
+            {
+
+                //if (bindingSource1.Count > 0)
+                {
+                    string filter = "";
+                    if (shipper.Length > 0)
+                    {
+                        filter += " (期号>='" + shipper + "')";
+                    }
+
+                    if (county.Length > 0 && county != "")
+                    {
+                        if (filter.Length > 0)
+                        {
+                            filter += " AND ";
+                        }
+                        filter += "(期号<=" + "'" + county + "'" + ")";
+                    }
+                    if (ClaimReport_Server.Count > 0)
+                    {
+                        this.dataGridView3.DataSource = null;
+
+                        bindingSource1.Filter = filter;
+                        this.dataGridView3.DataSource = bindingSource1;
+                        for (int j = 3; j < dataGridView3.ColumnCount; j++)
+                        {
+
+                            dataGridView3.Columns[j].Width = 30;
+                        }
+                        
+
+                        if (dataGridView3.Rows.Count != 0)
+                        {
+                            int ii = dataGridView3.Rows.Count - 1;
+                            dataGridView3.CurrentCell = dataGridView3[0, ii]; // 强制将光标指向i行
+                            dataGridView3.Rows[ii].Selected = true;   //光标显示至i行 
                         }
                     }
 
@@ -2721,7 +2859,7 @@ namespace MasterClassified
                                             else if (ss == 30)
                                                 item.JiShu30 = temp3[0];
 
-                                         
+
 
                                             break;
                                         }
@@ -2810,11 +2948,11 @@ namespace MasterClassified
                                             xiangtongindex++;
                                         if (item.JiShu28 != null && item.JiShu28 == temp.JiShu28 && UDF[j] == 28)
                                             xiangtongindex++;
-                                        if (item.JiShu29!= null && item.JiShu29 == temp.JiShu29 && UDF[j] == 29)
+                                        if (item.JiShu29 != null && item.JiShu29 == temp.JiShu29 && UDF[j] == 29)
                                             xiangtongindex++;
                                         if (item.JiShu30 != null && item.JiShu30 == temp.JiShu30 && UDF[j] == 30)
                                             xiangtongindex++;
-                                      
+
 
                                     }
                                     #endregion
@@ -3844,112 +3982,131 @@ namespace MasterClassified
                 ApplyBindSourceFilter(shipper, county);
 
             }
-            else
+            else if (s == 1)
                 ApplyBindSourceFilter1(shipper, county);
-
+            else if (s == 2)
+                ApplyBindSourceFilter2(shipper, county);
         }
 
         private void toolStripComboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            List<int> newlist = new List<int>();
-
-            for (int i = 0; i < clbStatus.Items.Count; i++)
+            int sq = this.tabControl1.SelectedIndex;
+            if (sq == 1)
             {
-                clbStatus.SetItemChecked(i, false);
-                newlist.Add(i);
+                List<int> newlist = new List<int>();
 
-            }
-            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
-            string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripComboBox5.Text, " ");
-            string index = temp3[1];
-            for (int i = 0; i < Convert.ToInt32(index); i++)
-            {
+                for (int i = 0; i < clbStatus.Items.Count; i++)
+                {
+                    clbStatus.SetItemChecked(i, false);
+                    newlist.Add(i);
 
-                clbStatus.SetItemChecked(newlist[i], true);
+                }
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+                string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripComboBox5.Text, " ");
+                string index = temp3[1];
+                for (int i = 0; i < Convert.ToInt32(index); i++)
+                {
+
+                    clbStatus.SetItemChecked(newlist[i], true);
+                }
             }
         }
 
         private void toolStripComboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<int> newlist = new List<int>();
-
-            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            int sq = this.tabControl1.SelectedIndex;
+            if (sq == 1)
             {
-                checkedListBox1.SetItemChecked(i, false);
-                newlist.Add(i);
+                List<int> newlist = new List<int>();
 
-            }
-            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
-            string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripComboBox6.Text, " ");
-            string index = temp3[1];
-            for (int i = 0; i < Convert.ToInt32(index); i++)
-            {
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, false);
+                    newlist.Add(i);
 
-                checkedListBox1.SetItemChecked(newlist[i], true);
+                }
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+                string[] temp3 = System.Text.RegularExpressions.Regex.Split(toolStripComboBox6.Text, " ");
+                string index = temp3[1];
+                for (int i = 0; i < Convert.ToInt32(index); i++)
+                {
+
+                    checkedListBox1.SetItemChecked(newlist[i], true);
+                }
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            List<int> newlist = new List<int>();
-
-            for (int i = 0; i < clbStatus.Items.Count; i++)
+            int sq = this.tabControl1.SelectedIndex;
+            if (sq == 1)
             {
-                clbStatus.SetItemChecked(i, false);
-                newlist.Add(i);
+                List<int> newlist = new List<int>();
 
-            }
-            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
-            string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox1.Text, " ");
-            string index = temp3[1];
-            for (int i = 0; i < Convert.ToInt32(index); i++)
-            {
+                for (int i = 0; i < clbStatus.Items.Count; i++)
+                {
+                    clbStatus.SetItemChecked(i, false);
+                    newlist.Add(i);
 
-                clbStatus.SetItemChecked(newlist[i], true);
+                }
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+                string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox1.Text, " ");
+                string index = temp3[1];
+                for (int i = 0; i < Convert.ToInt32(index); i++)
+                {
+
+                    clbStatus.SetItemChecked(newlist[i], true);
+                }
             }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<int> newlist = new List<int>();
-
-            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            int sq = this.tabControl1.SelectedIndex;
+            if (sq == 1)
             {
-                checkedListBox1.SetItemChecked(i, false);
-                newlist.Add(i);
+                List<int> newlist = new List<int>();
 
-            }
-            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
-            string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox2.Text, " ");
-            string index = temp3[1];
-            for (int i = 0; i < Convert.ToInt32(index); i++)
-            {
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, false);
+                    newlist.Add(i);
 
-                checkedListBox1.SetItemChecked(newlist[i], true);
+                }
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+                string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox2.Text, " ");
+                string index = temp3[1];
+                for (int i = 0; i < Convert.ToInt32(index); i++)
+                {
+
+                    checkedListBox1.SetItemChecked(newlist[i], true);
+                }
             }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<int> newlist = new List<int>();
-
-            for (int i = 0; i < checkedListBox2.Items.Count; i++)
+            int sq = this.tabControl1.SelectedIndex;
+            if (sq == 0)
             {
-                checkedListBox2.SetItemChecked(i, false);
-                newlist.Add(i);
+                List<int> newlist = new List<int>();
 
-            }
-            newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
-            string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox3.Text, " ");
-            string index = temp3[1];
-
-            {
-                for (int i = 0; i < Convert.ToInt32(index); i++)
+                for (int i = 0; i < checkedListBox2.Items.Count; i++)
                 {
+                    checkedListBox2.SetItemChecked(i, false);
+                    newlist.Add(i);
 
-                    checkedListBox2.SetItemChecked(newlist[i], true);
+                }
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+                string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox3.Text, " ");
+                string index = temp3[1];
+
+                {
+                    for (int i = 0; i < Convert.ToInt32(index); i++)
+                    {
+
+                        checkedListBox2.SetItemChecked(newlist[i], true);
+                    }
                 }
             }
         }
@@ -4369,5 +4526,692 @@ namespace MasterClassified
                 dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 255, 192);
             }
         }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            newi = new List<int>();
+            if (checkedListBox4.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.checkedListBox4.CheckedItems)
+                {
+                    newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+
+                }
+            }
+            qianqi_newi = new List<int>();
+            if (this.checkedListBox3.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.checkedListBox3.CheckedItems)
+                {
+                    qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+
+                }
+            }
+            qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
+            chufafenxijishu_ZidingYi_tab3();
+        }
+        private void chufafenxijishu_ZidingYi_tab3()
+        {
+            {
+                clsAllnew BusinessHelp = new clsAllnew();
+                List<string> qianmingcheng = new List<string>();
+                //ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
+
+                ClaimReport_Server.Sort(new CompsSmall());
+                int indexing = 0;
+                foreach (inputCaipiaoDATA item in ClaimReport_Server)
+                {
+
+                    item.qianAll = "";
+                    item.qianMingcheng = "";
+                    item.TongAll = "";
+                    indexing = 0;
+                    string text = "";
+
+                    // List<inputCaipiaoDATA> filtered = ClaimReport_Server.FindAll(s => Convert.ToInt32(s.QiHao) > Convert.ToInt32(item.QiHao));
+
+                    foreach (inputCaipiaoDATA temp in ClaimReport_Server)
+                    {
+                        string shifouyijingpanduanguozhegeshuzi = "";
+                        if (Convert.ToInt32(item.QiHao) > Convert.ToInt32(temp.QiHao) && indexing <= Convert.ToInt32(qianqiqishu))
+                        {
+                            indexing++;
+                            int xiangtongindex = 0;
+                            string jishutotal = "";
+                            string jishutota2 = "";
+
+                            jishutotal = hebing_jishu(item, jishutotal);
+                            jishutota2 = hebing_jishu(temp, jishutota2);
+
+                            string[] temp3 = System.Text.RegularExpressions.Regex.Split(jishutotal.Trim(), " ");
+                            string[] temp1 = System.Text.RegularExpressions.Regex.Split(jishutota2.Trim(), " ");
+
+                            #region 匹配相同次数
+                            for (int i = 0; i < temp3.Length; i++)
+                            {
+                                //判断是否在自定义范围内的数据
+                                bool next = false;
+                                for (int oi = 0; oi < newi.Count; oi++)
+                                {
+                                    if (newi[oi] == i + 1)
+                                        next = true;
+                                }
+                                if (next == false)
+                                    continue;
+                                //前期数据的 分析数据的位置索引
+
+                                for (int j1 = 0; j1 < temp1.Length; j1++)
+                                {
+                                    //判断是否在自定义范围内的数据
+                                    bool nexti = false;
+                                    for (int oi = 0; oi < qianqi_newi.Count; oi++)
+                                    {
+                                        if (qianqi_newi[oi] == j1 + 1)
+                                        {
+                                            nexti = true;
+                                            break;
+                                        }
+                                    }
+                                    if (nexti == false)
+                                        continue;
+                                    //判断一组号码内相同数字只判断一次
+                                    string[] tempi = System.Text.RegularExpressions.Regex.Split(shifouyijingpanduanguozhegeshuzi, " ");
+                                    int isruns = 0;
+
+                                    for (int ih = 0; ih < tempi.Length; ih++)
+                                    {
+                                        if (temp3[i] == tempi[ih])
+                                        {
+                                            isruns++;
+                                            break;
+
+                                        }
+                                    }
+                                    if (isruns > 0)
+                                        break;
+
+                                    if (temp3[i] == temp1[j1])
+                                    {
+                                        shifouyijingpanduanguozhegeshuzi = temp3[i] + " " + shifouyijingpanduanguozhegeshuzi;
+                                        xiangtongindex++;
+                                    }
+                                }
+                            }
+
+                            #endregion
+                            //item.qianAll = item.qianAll + "\r\n前" + indexing + " " + xiangtongindex.ToString();
+                            text = text + " " + xiangtongindex.ToString();
+                            item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
+                            item.qianMingcheng = item.qianMingcheng + "\r\n前" + indexing;
+                            //  qianmingcheng = item.qianMingcheng + "\r\n前" + indexing; ;
+                            int isrun = 0;
+                            for (int m = 0; m < qianmingcheng.Count; m++)
+                            {
+                                if (qianmingcheng[m] == "前" + indexing)
+                                    isrun++;
+                            }
+                            if (isrun == 0)
+                                qianmingcheng.Add("前" + indexing);
+
+                        }
+                        else if (indexing > Convert.ToInt32(qianqiqishu))
+                        {
+                            break;
+
+                        }
+
+
+                    }
+                    string[] temptong = System.Text.RegularExpressions.Regex.Split(text, " ");
+
+                    for (int j = 0; j < 30; j++)
+                    {
+                        int xiangtongindex = 0;
+
+                        for (int i = 1; i < temptong.Length; i++)
+                        {
+                            if (j.ToString() == temptong[i])
+                            {
+                                xiangtongindex++;
+                            }
+
+                        }
+                        item.TongAll = item.TongAll + "\r\n同" + j + " " + xiangtongindex.ToString();
+
+                    }
+
+                }
+                var qtyTable = new DataTable();
+
+                int l = 0;
+                //添加 抬头名称，如果 选中了前几期的combox 
+                indexing = 1;
+                qianmingcheng = new List<string>();
+                for (int i = 1; i <= qianqiqishu; i++)
+                {
+                    qianmingcheng.Add("前" + indexing);
+                    indexing++;
+                }
+
+                qtyTable.Columns.Add("期号", System.Type.GetType("System.Int32"));
+                qtyTable.Columns.Add("开奖号码", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("基数", System.Type.GetType("System.String"));
+                for (int m = 0; m < qianmingcheng.Count; m++)
+                {
+                    qtyTable.Columns.Add(qianmingcheng[m], System.Type.GetType("System.String"));
+
+                }
+                //  qtyTable.Rows.Add(qtyTable.NewRow());
+                foreach (var k in ClaimReport_Server)
+                {
+                    qtyTable.Rows.Add(qtyTable.NewRow());
+                }
+
+                int jk = 0;
+                int cindex = 0;
+
+                foreach (var item in ClaimReport_Server)
+                {
+                    cindex = 0;
+
+                    if (item.qianAll != null)
+                    {
+                        string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.qianAll, " ");
+                        for (int i = 0; i < temp1.Length; i++)
+                        {
+                            cindex++;
+
+                            if (i == 0 || i >= temp1.Length)
+                                continue;
+
+                            qtyTable.Rows[jk][cindex] = temp1[i];
+                        }
+                    }
+                    qtyTable.Rows[jk][0] = item.QiHao;
+                    qtyTable.Rows[jk][1] = item.KaiJianHaoMa;
+                    // qtyTable.Rows[1][4] = item.QiHao;
+                    string jishutotal = "";
+
+                    #region 判断该显示多少个基数 然后合并到一起
+                    jishutotal = hebing_jishu(item, jishutotal);
+                    qtyTable.Rows[jk][2] = jishutotal.Trim();
+                    #endregion
+                    jk++;
+                }
+
+                //   sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(qtyTable);
+                //qtyTable.Sort(new Comp());
+                //  this.bindingSource1.DataSource = null;
+                this.bindingSource1.DataSource = qtyTable;
+                bindingSource1.Sort = "期号  ASC";
+
+                this.dataGridView1.DataSource = this.bindingSource1;
+
+                dataGridView3.DataSource = qtyTable;
+
+                string width = "";
+
+                for (int j = 3; j < dataGridView3.ColumnCount; j++)
+                {
+
+                    dataGridView3.Columns[j].Width = 30;
+                }
+                if (dataGridView3.Rows.Count != 0)
+                {
+                    int ii = dataGridView3.Rows.Count - 1;
+                    dataGridView3.CurrentCell = dataGridView3[0, ii]; // 强制将光标指向i行
+                    dataGridView3.Rows[ii].Selected = true;   //光标显示至i行 
+                }
+                toolStripLabel7.Text = "结束";
+            }
+        }
+        private void tab3()
+        {
+            try
+            {
+                clsAllnew BusinessHelp = new clsAllnew();
+                List<string> qianmingcheng = new List<string>();
+
+                ClaimReport_Server.Sort(new CompsSmall());
+                int indexing = 0;
+                foreach (inputCaipiaoDATA item in ClaimReport_Server)
+                {
+                    item.qianAll = "";
+                    item.qianMingcheng = "";
+                    item.TongAll = "";
+                    indexing = 0;
+                    string text = "";
+
+                    foreach (inputCaipiaoDATA temp in ClaimReport_Server)
+                    {
+                        if (Convert.ToInt32(item.QiHao) > Convert.ToInt32(temp.QiHao) && indexing <= Convert.ToInt32(qianqiqishu))
+                        {
+                            indexing++;
+                            int xiangtongindex = 0;
+                            if (item.KaiJianHaoMa == null || temp.KaiJianHaoMa == null)
+                                continue;
+
+                            string[] temp3 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
+                            string[] temp1 = System.Text.RegularExpressions.Regex.Split(temp.KaiJianHaoMa, " ");
+                            #region 匹配相同次数
+                            string shifouyijingpanduanguozhegeshuzi = "";
+                            for (int i = 0; i < temp3.Length; i++)
+                            {
+                                for (int j1 = 0; j1 < temp1.Length; j1++)
+                                {
+                                    string[] tempi = System.Text.RegularExpressions.Regex.Split(shifouyijingpanduanguozhegeshuzi, " ");
+                                    int isruns = 0;
+
+                                    for (int ih = 0; ih < tempi.Length; ih++)
+                                    {
+                                        if (temp3[i] == tempi[ih])
+                                        {
+                                            isruns++;
+                                            break;
+
+                                        }
+                                    }
+                                    if (isruns > 0)
+                                        break;
+
+
+                                    if (temp3[i] == temp1[j1])
+                                    {
+                                        shifouyijingpanduanguozhegeshuzi = temp3[i] + " " + shifouyijingpanduanguozhegeshuzi;
+                                        xiangtongindex++;
+                                    }
+                                }
+                            }
+
+                            #endregion
+
+                            text = text + " " + xiangtongindex.ToString();
+                            item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
+                            item.qianMingcheng = item.qianMingcheng + "\r\n前" + indexing;
+
+                            int isrun = 0;
+                            for (int m = 0; m < qianmingcheng.Count; m++)
+                            {
+                                if (qianmingcheng[m] == "前" + indexing)
+                                    isrun++;
+                            }
+                            if (isrun == 0)
+                                qianmingcheng.Add("前" + indexing);
+                        }
+                        else if (indexing > Convert.ToInt32(qianqiqishu))
+                        {
+                            break;
+
+                        }
+                    }
+                    string[] temptong = System.Text.RegularExpressions.Regex.Split(text, " ");
+
+                    for (int j = 0; j < 30; j++)
+                    {
+                        int xiangtongindex = 0;
+
+                        for (int i = 1; i < temptong.Length; i++)
+                        {
+                            if (j.ToString() == temptong[i])
+                            {
+                                xiangtongindex++;
+                            }
+
+                        }
+                        item.TongAll = item.TongAll + "\r\n同" + j + " " + xiangtongindex.ToString();
+
+                    }
+
+                }
+                var qtyTable = new DataTable();
+
+                int l = 0;
+                //添加 抬头名称，如果 选中了前几期的combox 
+                indexing = 1;
+                qianmingcheng = new List<string>();
+                for (int i = 1; i <= qianqiqishu; i++)
+                {
+                    qianmingcheng.Add("前" + indexing);
+                    indexing++;
+                }
+
+                qtyTable.Columns.Add("期号", System.Type.GetType("System.Int32"));
+                qtyTable.Columns.Add("开奖号码", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("基数", System.Type.GetType("System.String"));
+                for (int m = 0; m < qianmingcheng.Count; m++)
+                {
+                    qtyTable.Columns.Add(qianmingcheng[m], System.Type.GetType("System.String"));
+
+                }
+                //  qtyTable.Rows.Add(qtyTable.NewRow());
+                foreach (var k in ClaimReport_Server)
+                {
+                    qtyTable.Rows.Add(qtyTable.NewRow());
+                }
+
+                int jk = 0;
+                int cindex = 0;
+
+                foreach (var item in ClaimReport_Server)
+                {
+                    cindex = 0;
+
+                    if (item.qianAll != null)
+                    {
+                        string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.qianAll, " ");
+                        for (int i = 0; i < temp1.Length; i++)
+                        {
+                            cindex++;
+
+                            if (i == 0 || i >= temp1.Length)
+                                continue;
+
+                            qtyTable.Rows[jk][cindex] = temp1[i];
+                        }
+                    }
+                    qtyTable.Rows[jk][0] = item.QiHao;
+                    qtyTable.Rows[jk][1] = item.KaiJianHaoMa;
+
+                    string jishutotal = "";
+
+                    #region 判断该显示多少个基数 然后合并到一起
+                    jishutotal = hebing_jishu(item, jishutotal);
+                    #endregion
+                    qtyTable.Rows[jk][2] = jishutotal.Trim();
+                    jk++;
+                }
+                this.bindingSource1.DataSource = qtyTable;
+                bindingSource1.Sort = "期号  ASC";
+                dataGridView3.DataSource = qtyTable;
+
+                string width = "";
+
+                for (int j = 3; j < dataGridView3.ColumnCount; j++)
+                {
+
+                    dataGridView3.Columns[j].Width = 30;
+                }
+                if (dataGridView3.Rows.Count != 0)
+                {
+                    int ii = dataGridView3.Rows.Count - 1;
+                    dataGridView3.CurrentCell = dataGridView3[0, ii]; // 强制将光标指向i行
+                    dataGridView3.Rows[ii].Selected = true;   //光标显示至i行 
+                }
+
+                toolStripLabel7.Text = "结束";
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private string hebing_jishu(inputCaipiaoDATA item, string jishutotal)
+        {
+            if (UDF != null && UDF.Count != 0)
+            {
+                for (int m = 0; m < UDF.Count; m++)
+                {
+                    if (UDF[m] == 1)
+                        jishutotal = item.JiShu1;
+                    if (UDF[m] == 2)
+                        jishutotal += item.JiShu2;
+                    if (UDF[m] == 3)
+                        jishutotal += item.JiShu3;
+                    if (UDF[m] == 4)
+                        jishutotal += item.JiShu4;
+                    if (UDF[m] == 5)
+                        jishutotal += item.JiShu5;
+                    if (UDF[m] == 6)
+                        jishutotal += item.JiShu6;
+                    if (UDF[m] == 7)
+                        jishutotal += item.JiShu7;
+                    if (UDF[m] == 8)
+                        jishutotal += item.JiShu8;
+                    if (UDF[m] == 9)
+                        jishutotal += item.JiShu9;
+
+                    if (UDF[m] == 10)
+                        jishutotal += item.JiShu10;
+
+                    if (UDF[m] == 11)
+                        jishutotal += item.JiShu11;
+
+                    if (UDF[m] == 12)
+                        jishutotal += item.JiShu12;
+
+                    if (UDF[m] == 13)
+                        jishutotal += item.JiShu13;
+
+                    if (UDF[m] == 14)
+                        jishutotal += item.JiShu14;
+
+                    if (UDF[m] == 15)
+                        jishutotal += item.JiShu15;
+                    //new0621
+                    if (UDF[m] == 16)
+                        jishutotal += item.JiShu16;
+
+                    if (UDF[m] == 17)
+                        jishutotal += item.JiShu17;
+
+                    if (UDF[m] == 18)
+                        jishutotal += item.JiShu18;
+
+                    if (UDF[m] == 19)
+                        jishutotal += item.JiShu19;
+
+                    if (UDF[m] == 20)
+                        jishutotal += item.JiShu20;
+
+                    if (UDF[m] == 21)
+                        jishutotal += item.JiShu21;
+
+                    if (UDF[m] == 22)
+                        jishutotal += item.JiShu22;
+
+                    if (UDF[m] == 23)
+                        jishutotal += item.JiShu23;
+
+                    if (UDF[m] == 24)
+                        jishutotal += item.JiShu24;
+
+                    if (UDF[m] == 25)
+                        jishutotal += item.JiShu25;
+
+                    if (UDF[m] == 26)
+                        jishutotal += item.JiShu26;
+
+                    if (UDF[m] == 27)
+                        jishutotal += item.JiShu27;
+
+                    if (UDF[m] == 28)
+                        jishutotal += item.JiShu27;
+
+                    if (UDF[m] == 29)
+                        jishutotal += item.JiShu29;
+
+                    if (UDF[m] == 30)
+                        jishutotal += item.JiShu30;
+
+
+                }
+            }
+            else
+            {
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 0)
+                    jishutotal += item.JiShu1;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 1)
+                    jishutotal += item.JiShu2;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 2)
+                    jishutotal += item.JiShu3;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 3)
+                    jishutotal += item.JiShu4;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 4)
+                    jishutotal += item.JiShu5;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 5)
+                    jishutotal += item.JiShu6;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 6)
+                    jishutotal += item.JiShu7;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 7)
+                    jishutotal += item.JiShu8;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 8)
+                    jishutotal += item.JiShu9;
+                //new 
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 9)
+                    jishutotal += item.JiShu10;
+
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 10)
+                    jishutotal += item.JiShu11;
+
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 11)
+                    jishutotal += item.JiShu12;
+
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 12)
+                    jishutotal += item.JiShu13;
+
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 13)
+                    jishutotal += item.JiShu14;
+
+
+                //new 0621
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 14)
+                    jishutotal += item.JiShu15;
+
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 15)
+                    jishutotal += item.JiShu16;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 16)
+                    jishutotal += item.JiShu17;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 17)
+                    jishutotal += item.JiShu18;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 18)
+                    jishutotal += item.JiShu19;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 19)
+                    jishutotal += item.JiShu20;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 20)
+                    jishutotal += item.JiShu21;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 21)
+                    jishutotal += item.JiShu22;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 22)
+                    jishutotal += item.JiShu23;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 23)
+                    jishutotal += item.JiShu24;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 24)
+                    jishutotal += item.JiShu25;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 25)
+                    jishutotal += item.JiShu26;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 26)
+                    jishutotal += item.JiShu27;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 27)
+                    jishutotal += item.JiShu28;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 28)
+                    jishutotal += item.JiShu29;
+                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 29)
+                    jishutotal += item.JiShu30;
+
+
+
+            }
+            return jishutotal;
+        }
+
+        private void JISHU_Zidingyi_InitialSystemInfo()
+        {
+
+            int vony = this.checkedListBox4.Items.Count;
+            for (int i = 0; i < vony; i++)
+            {
+                checkedListBox4.Items.Remove(checkedListBox4.Items[0]);
+                this.checkedListBox3.Items.Remove(checkedListBox3.Items[0]);
+            }
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            List<CaipiaoZhongLeiDATA> CaipiaozhongleiResult = BusinessHelp.Read_CaiPiaoZhongLei_Moren("YES");
+
+            if (CaipiaozhongleiResult.Count == 0)
+            {
+                MessageBox.Show("彩票默认运行类型没有选中,请到【彩票类型界面】选中彩票类型，点击确认", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string len = CaipiaozhongleiResult[0].Xuan;
+            toolStripComboBox5.Items.Clear();
+            toolStripComboBox6.Items.Clear();
+
+            for (int i = 0; i < Convert.ToInt32(len); i++)
+            {
+                int con = i + 1;
+
+                checkedListBox4.Items.Add("第 " + con + " 位");
+                this.checkedListBox3.Items.Add("第 " + con + " 位");
+
+                toolStripComboBox5.Items.Add("随机 " + con + " 位");
+                toolStripComboBox6.Items.Add("随机 " + con + " 位");
+                this.comboBox5.Items.Add("随机 " + con + " 位");
+                this.comboBox4.Items.Add("随机 " + con + " 位");
+
+            }
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int sq = this.tabControl1.SelectedIndex;
+            if (sq == 2)
+            {
+                List<int> newlist = new List<int>();
+
+                for (int i = 0; i < checkedListBox4.Items.Count; i++)
+                {
+                    checkedListBox4.SetItemChecked(i, false);
+                    newlist.Add(i);
+
+                }
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+                string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox5.Text, " ");
+                string index = temp3[1];
+                for (int i = 0; i < Convert.ToInt32(index); i++)
+                {
+
+                    checkedListBox4.SetItemChecked(newlist[i], true);
+                }
+            }
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int sq = this.tabControl1.SelectedIndex;
+            if (sq == 2)
+            {
+                List<int> newlist = new List<int>();
+
+                for (int i = 0; i < checkedListBox3.Items.Count; i++)
+                {
+                    checkedListBox3.SetItemChecked(i, false);
+                    newlist.Add(i);
+
+                }
+                newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
+                string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox4.Text, " ");
+                string index = temp3[1];
+                for (int i = 0; i < Convert.ToInt32(index); i++)
+                {
+
+                    checkedListBox3.SetItemChecked(newlist[i], true);
+                }
+            }
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox4.Items.Count; i++)
+            {
+                checkedListBox4.SetItemChecked(i, true);
+                this.checkedListBox3.SetItemChecked(i, true);
+
+            }
+        }
+
+
     }
 }

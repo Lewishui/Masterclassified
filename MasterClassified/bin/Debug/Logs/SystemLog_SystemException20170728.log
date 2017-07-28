@@ -1,0 +1,18 @@
+2017-07-28 21:16:37,117 [10] FATAL SystemExceptionLogger [(null)] - System Error Index was outside the bounds of the array., Exception Detail Info :   at MasterClassified.frmTracing_Analysis.dataGridView3_MouseMove(Object sender, MouseEventArgs e) in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 5328
+   at System.Windows.Forms.Control.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseMove(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time7/28/2017 21:16:37
+2017-07-28 21:26:10,541 [10] FATAL SystemExceptionLogger [(null)] - System Error Index was outside the bounds of the array., Exception Detail Info :   at MasterClassified.frmTracing_Analysis.dataGridView3_MouseMove(Object sender, MouseEventArgs e) in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 5328
+   at System.Windows.Forms.Control.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseMove(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time7/28/2017 21:26:10

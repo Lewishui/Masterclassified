@@ -56,17 +56,6 @@ namespace MasterClassified
 
             InitialSystemInfo();
 
-            //for (int j = 11; j < dataGridView1.ColumnCount; j++)
-            //{
-            //    // dataGridView1.Columns[j].Width = 30;
-
-            //    //将每一列都调整为自动适应模式
-            //    dgViewFiles.AutoResizeColumn(i, DataGridViewAutoSizeColumnMode.AllCells);
-            //    //记录整个DataGridView的宽度
-            //    width += dgViewFiles.Columns[i].Width;
-
-            //}
-
             changeInitialUDF = new List<int>();
             changeInitialUDF = InitialUDF;
 
@@ -105,8 +94,6 @@ namespace MasterClassified
 
                 }
                 //+"如数据或设置不能刷新请关闭本界面并重新在主界面打开"
-
-
                 ClaimReport_Server = new List<inputCaipiaoDATA>();
                 ClaimReport_Server = BusinessHelp.ReadclaimreportfromServerBy_Xuan(CaipiaozhongleiResult[0].Name);
                 foreach (inputCaipiaoDATA item in ClaimReport_Server)
@@ -116,13 +103,9 @@ namespace MasterClassified
                     {
                         MessageBox.Show("EX:异常类型,请修改或删除，不然会影响正常的数据判断，期号 ：" + item.QiHao);
                         return;
-
-
                     }
                 }
                 ClaimReport_Server.Sort(new Comp());
-
-
                 List<inputCaipiaoDATA> ClaimReport_Server1 = new List<inputCaipiaoDATA>();
                 ClaimReport_Server1 = ClaimReport_Server;
 
@@ -150,11 +133,8 @@ namespace MasterClassified
 
                 this.dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
 
-
-                toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
-                //GetDataforOutlookThread = new Thread(NewMethodtab1);
-                //GetDataforOutlookThread.Start();
-
+               toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+              
                 //按照彩票的Xuan 添加基数列的列数多少
                 InitialUDF = new List<int>();
                 if (CaipiaozhongleiResult[0].Xuan != null)
@@ -163,10 +143,8 @@ namespace MasterClassified
                 }
                 else
                 {
-
                     MessageBox.Show("彩票数据缺失,请维护完整!", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
-
                 }
                 NewMethodtab1();
             }
@@ -260,7 +238,7 @@ namespace MasterClassified
                 int s = this.tabControl1.SelectedIndex;
                 if (s == 0)
                 {
-                    toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                   toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
                     //GetDataforOutlookThread = new Thread(NewMethodtab1);
                     //GetDataforOutlookThread.Start();
                     // this.checkedListBox2.Items.Clear();
@@ -279,7 +257,7 @@ namespace MasterClassified
 
                     qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
 
-                    toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                    toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
 
                     //GetDataforOutlookThread = new Thread(tab2);
                     //GetDataforOutlookThread.Start();
@@ -319,18 +297,19 @@ namespace MasterClassified
 
         private void RunTAB3()
         {
-            toolStripComboBox4.Items.Clear();
-            for (int i = 1; i <= 2000; i++)
+            if (qianqiqishu == 0)
             {
-                toolStripComboBox4.Items.Add(i);
+                toolStripComboBox4.Items.Clear();
+                for (int i = 1; i <= 2000; i++)
+                {
+                    toolStripComboBox4.Items.Add(i);
 
-            }
-            //if (qianqiqishu == 0)
+                }
                 toolStripComboBox4.SelectedIndex = 4;
-
+            }
             qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
             if (tab3shuiji == false)
-                toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
 
 
             tab3();
@@ -530,7 +509,7 @@ namespace MasterClassified
                 dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
             }
 
-            toolStripLabel7.Text = "结束";
+            toolStripLabel8.Text = "结束";
         }
         private void ZidingYi_tab2()
         {
@@ -738,7 +717,7 @@ namespace MasterClassified
                     dataGridView2.CurrentCell = dataGridView2[0, ii]; // 强制将光标指向i行
                     dataGridView2.Rows[ii].Selected = true;   //光标显示至i行 
                 }
-                toolStripLabel7.Text = "结束";
+                toolStripLabel8.Text = "结束";
             }
         }
 
@@ -814,7 +793,6 @@ namespace MasterClassified
                                     else if (ss == 9)
                                         item.JiShu9 = temp3[0];
 
-
                                     //new 
 
                                     else if (ss == 10)
@@ -880,7 +858,6 @@ namespace MasterClassified
 
                                     else if (ss == 30)
                                         item.JiShu30 = temp3[0];
-
 
                                     break;
 
@@ -1072,29 +1049,17 @@ namespace MasterClassified
                             else if (indexing == 99) item.qian99 = xiangtongindex.ToString();
                             #endregion
                         }
-
                     }
                 }
                 #region 显示信息
-                //this.dataGridView1.DataSource = null;
-                //this.dataGridView1.AutoGenerateColumns = false;
+            
                 if (ClaimReport_Server.Count != 0)
                 {
                     NewMethod();
 
-                    //sortablePendingOrderList = new SortableBindingList<inputCaipiaoDATA>(ClaimReport_Server);
-                    //this.bindingSource2.DataSource = sortablePendingOrderList;
-                    //this.dataGridView1.DataSource = this.bindingSource2;
-                    //this.dataGridView1.DataSource = ClaimReport_Server;
                 }
-                //  inputCaipiaoDATA item1 = new inputCaipiaoDATA();
-
-                //item1.QiHao = "全部";
-                //ClaimReport_Server.Insert(0, item1);
-                // this.toolStripComboBox1.Items.Add("全部");
-
-
-                //  toolStripLabel7.Text = "运行结束";
+                
+                toolStripLabel8.Text = "运行结束";
                 #endregion
             }
             catch (Exception ex)
@@ -1125,7 +1090,7 @@ namespace MasterClassified
             int s = this.tabControl1.SelectedIndex;
             if (s == 0)
             {
-                toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
                 //GetDataforOutlookThread = new Thread(NewMethodtab1);
                 //GetDataforOutlookThread.Start();
                 NewMethodtab1();
@@ -1705,7 +1670,7 @@ namespace MasterClassified
 
                     QianQI_Zidingyi_InitialSystemInfo();
 
-                
+
                 }
             }
             if (s2 == 2)
@@ -2316,9 +2281,9 @@ namespace MasterClassified
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            toolStripLabel7.Text = "系统在拼命刷新......";
+            toolStripLabel8.Text = "系统在拼命刷新......";
             Refreshdata();
-            toolStripLabel7.Text = "刷新完成";
+            toolStripLabel8.Text = "刷新完成";
             return;
 
             {
@@ -2339,16 +2304,7 @@ namespace MasterClassified
                     // 数据读取成功后在画面显示
                     if (blnBackGroundWorkIsOK)
                     {
-                        //this.dataGridView1.DataSource = null;
-                        //this.dataGridView1.AutoGenerateColumns = false;
-                        //if (ClaimReport_Server.Count != 0)
-                        //{
-                        //    this.bindingSource1.DataSource = null;
-                        //    this.bindingSource1.DataSource = sortablePendingOrderList;
-
-                        //    this.dataGridView1.DataSource = this.bindingSource1;
-                        //    //this.dataGridView1.DataSource = ClaimReport_Server;
-                        //}
+                        
                     }
                 }
                 catch (Exception ex)
@@ -2359,7 +2315,6 @@ namespace MasterClassified
             }
 
         }
-        //private void Refreshdata(object sender, DoWorkEventArgs e)
         private void Refreshdata()
         {
             ClaimReport_Server = new List<inputCaipiaoDATA>();
@@ -2421,7 +2376,7 @@ namespace MasterClassified
 
                 qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
 
-                toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
 
                 //GetDataforOutlookThread = new Thread(tab2);
                 //GetDataforOutlookThread.Start();
@@ -2466,7 +2421,7 @@ namespace MasterClassified
 
                 qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
 
-                toolStripLabel7.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
 
 
                 tab3();
@@ -2490,22 +2445,7 @@ namespace MasterClassified
 
             return;
 
-            //this.toolStripComboBox1.ComboBox.DisplayMember = "QiHao";
-            //this.toolStripComboBox1.ComboBox.ValueMember = "QiHao";
-            //this.toolStripComboBox1.ComboBox.DataSource = ClaimReport_Server;
-
-            //this.toolStripComboBox2.ComboBox.DisplayMember = "QiHao";
-            //this.toolStripComboBox2.ComboBox.ValueMember = "QiHao";
-            //this.toolStripComboBox2.ComboBox.DataSource = ClaimReport_Server;
-
-            //if (ClaimReport_Server.Count != 0)
-            //{
-            //    this.toolStripComboBox1.SelectedIndex = 0;
-            //    this.toolStripComboBox2.SelectedIndex = ClaimReport_Server.Count - 1;
-            //    this.toolStripComboBox3.SelectedIndex = 2;
-            //    this.toolStripComboBox4.SelectedIndex = 2;
-            //}
-
+            
 
             DateTime FinishTime = DateTime.Now;
             TimeSpan s = DateTime.Now - oldDate;
@@ -4828,7 +4768,7 @@ namespace MasterClassified
                     dataGridView3.CurrentCell = dataGridView3[0, ii]; // 强制将光标指向i行
                     dataGridView3.Rows[ii].Selected = true;   //光标显示至i行 
                 }
-                toolStripLabel7.Text = "结束";
+                toolStripLabel8.Text = "结束";
             }
         }
         private void tab3()
@@ -5016,7 +4956,7 @@ namespace MasterClassified
                     dataGridView3.Rows[ii].Selected = true;   //光标显示至i行 
                 }
                 if (tab3shuiji == false)
-                    toolStripLabel7.Text = "结束";
+                    toolStripLabel8.Text = "结束";
             }
             catch (Exception)
             {
@@ -5118,77 +5058,79 @@ namespace MasterClassified
             }
             else
             {
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 0)
-                    jishutotal += item.JiShu1;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 1)
-                    jishutotal += item.JiShu2;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 2)
-                    jishutotal += item.JiShu3;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 3)
-                    jishutotal += item.JiShu4;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 4)
-                    jishutotal += item.JiShu5;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 5)
-                    jishutotal += item.JiShu6;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 6)
-                    jishutotal += item.JiShu7;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 7)
-                    jishutotal += item.JiShu8;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 8)
-                    jishutotal += item.JiShu9;
-                //new 
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 9)
-                    jishutotal += item.JiShu10;
+                if (InitialUDF.Count > 0)
+                {
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 0)
+                        jishutotal += item.JiShu1;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 1)
+                        jishutotal += item.JiShu2;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 2)
+                        jishutotal += item.JiShu3;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 3)
+                        jishutotal += item.JiShu4;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 4)
+                        jishutotal += item.JiShu5;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 5)
+                        jishutotal += item.JiShu6;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 6)
+                        jishutotal += item.JiShu7;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 7)
+                        jishutotal += item.JiShu8;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 8)
+                        jishutotal += item.JiShu9;
+                    //new 
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 9)
+                        jishutotal += item.JiShu10;
 
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 10)
-                    jishutotal += item.JiShu11;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 10)
+                        jishutotal += item.JiShu11;
 
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 11)
-                    jishutotal += item.JiShu12;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 11)
+                        jishutotal += item.JiShu12;
 
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 12)
-                    jishutotal += item.JiShu13;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 12)
+                        jishutotal += item.JiShu13;
 
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 13)
-                    jishutotal += item.JiShu14;
-
-
-                //new 0621
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 14)
-                    jishutotal += item.JiShu15;
-
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 15)
-                    jishutotal += item.JiShu16;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 16)
-                    jishutotal += item.JiShu17;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 17)
-                    jishutotal += item.JiShu18;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 18)
-                    jishutotal += item.JiShu19;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 19)
-                    jishutotal += item.JiShu20;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 20)
-                    jishutotal += item.JiShu21;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 21)
-                    jishutotal += item.JiShu22;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 22)
-                    jishutotal += item.JiShu23;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 23)
-                    jishutotal += item.JiShu24;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 24)
-                    jishutotal += item.JiShu25;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 25)
-                    jishutotal += item.JiShu26;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 26)
-                    jishutotal += item.JiShu27;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 27)
-                    jishutotal += item.JiShu28;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 28)
-                    jishutotal += item.JiShu29;
-                if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 29)
-                    jishutotal += item.JiShu30;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 13)
+                        jishutotal += item.JiShu14;
 
 
+                    //new 0621
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 14)
+                        jishutotal += item.JiShu15;
+
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 15)
+                        jishutotal += item.JiShu16;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 16)
+                        jishutotal += item.JiShu17;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 17)
+                        jishutotal += item.JiShu18;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 18)
+                        jishutotal += item.JiShu19;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 19)
+                        jishutotal += item.JiShu20;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 20)
+                        jishutotal += item.JiShu21;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 21)
+                        jishutotal += item.JiShu22;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 22)
+                        jishutotal += item.JiShu23;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 23)
+                        jishutotal += item.JiShu24;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 24)
+                        jishutotal += item.JiShu25;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 25)
+                        jishutotal += item.JiShu26;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 26)
+                        jishutotal += item.JiShu27;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 27)
+                        jishutotal += item.JiShu28;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 28)
+                        jishutotal += item.JiShu29;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 29)
+                        jishutotal += item.JiShu30;
+
+                }
 
             }
             return jishutotal;
@@ -5216,6 +5158,8 @@ namespace MasterClassified
             string len = CaipiaozhongleiResult[0].Xuan;
             toolStripComboBox5.Items.Clear();
             toolStripComboBox6.Items.Clear();
+            comboBox5.Items.Clear();
+            comboBox4.Items.Clear();
 
             for (int i = 0; i < Convert.ToInt32(len); i++)
             {
@@ -5379,6 +5323,7 @@ namespace MasterClassified
         private void button5_Click(object sender, EventArgs e)
         {
             tab3shuiji = true;
+            qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
 
             button4_Click(this, EventArgs.Empty);
             RunTAB3();
@@ -5395,6 +5340,11 @@ namespace MasterClassified
                 checkedListBox4.SetItemChecked(i, false);
                 this.checkedListBox3.SetItemChecked(i, false);
             }
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
 

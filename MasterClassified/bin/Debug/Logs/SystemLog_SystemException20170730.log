@@ -1,0 +1,98 @@
+2017-07-30 10:22:38,753 [10] FATAL SystemExceptionLogger [(null)] - System Error Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index, Exception Detail Info :   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at MasterClassified.frmTracing_Analysis.hebing_jishu(inputCaipiaoDATA item, String jishutotal) in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 5121
+   at MasterClassified.frmTracing_Analysis.tab3() in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 5024
+   at MasterClassified.frmTracing_Analysis.toolStripComboBox4_SelectedIndexChanged(Object sender, EventArgs e) in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 1736
+   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   at System.Windows.Forms.ToolStripComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ToolStripComboBox.HandleSelectedIndexChanged(Object sender, EventArgs e)
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.set_SelectedIndex(Int32 value)
+   at System.Windows.Forms.ToolStripComboBox.set_SelectedIndex(Int32 value)
+   at MasterClassified.frmTracing_Analysis.InitialSystemInfo() in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 179
+   at MasterClassified.frmTracing_Analysis.Refreshdata() in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 2451
+   at MasterClassified.frmTracing_Analysis.toolStripButton1_Click(Object sender, EventArgs e) in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 2320
+   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time7/30/2017 10:22:38
+2017-07-30 10:22:59,647 [10] FATAL SystemExceptionLogger [(null)] - System Error Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index, Exception Detail Info :   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at MasterClassified.frmTracing_Analysis.hebing_jishu(inputCaipiaoDATA item, String jishutotal) in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 5121
+   at MasterClassified.frmTracing_Analysis.chufafenxijishu_ZidingYi_tab3() in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 4649
+   at MasterClassified.frmTracing_Analysis.toolStripButton2_Click_1(Object sender, EventArgs e) in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 4617
+   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time7/30/2017 10:22:59
+2017-07-30 10:23:07,909 [10] FATAL SystemExceptionLogger [(null)] - System Error Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index, Exception Detail Info :   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at MasterClassified.frmTracing_Analysis.hebing_jishu(inputCaipiaoDATA item, String jishutotal) in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 5121
+   at MasterClassified.frmTracing_Analysis.chufafenxijishu_ZidingYi_tab3() in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 4649
+   at MasterClassified.frmTracing_Analysis.toolStripButton2_Click_1(Object sender, EventArgs e) in c:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MasterClassified\frmTracing_Analysis.cs:line 4617
+   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time7/30/2017 10:23:07
+2017-07-30 10:31:16,687 [10] FATAL SystemExceptionLogger [(null)] - System Error Parameter is not valid., Exception Detail Info :   at System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   at System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   at Sunisoft.IrisSkin.x97d171718e5c7e7f.xc33f5f7a18a754cb(Graphics x41347a961b838962, Int32 x067d6ddeefb41622)
+   at Sunisoft.IrisSkin.x97d171718e5c7e7f.x8bc95f030953f87b(Graphics x4b101060f4767186)
+   at Sunisoft.IrisSkin.x97d171718e5c7e7f.PaintControl()
+   at Sunisoft.IrisSkin.xbd3f2493841f18a1.x2bf160cd2bad82a5(Object xe0292b9ed559da7d, EventArgs xfbf34718e704c6bc)
+   at System.Windows.Forms.Control.OnGotFocus(EventArgs e)
+   at System.Windows.Forms.Control.WmSetFocus(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.TabControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time7/30/2017 10:31:16
+2017-07-30 12:01:16,821 [9] FATAL SystemExceptionLogger [(null)] - System Error Parameter is not valid., Exception Detail Info :   at System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   at System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   at Sunisoft.IrisSkin.x97d171718e5c7e7f.xc33f5f7a18a754cb(Graphics x41347a961b838962, Int32 x067d6ddeefb41622)
+   at Sunisoft.IrisSkin.x97d171718e5c7e7f.x8bc95f030953f87b(Graphics x4b101060f4767186)
+   at Sunisoft.IrisSkin.x97d171718e5c7e7f.PaintControl()
+   at Sunisoft.IrisSkin.xbd3f2493841f18a1.x2bf160cd2bad82a5(Object xe0292b9ed559da7d, EventArgs xfbf34718e704c6bc)
+   at System.Windows.Forms.Control.OnGotFocus(EventArgs e)
+   at System.Windows.Forms.Control.WmSetFocus(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.TabControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time7/30/2017 12:01:16

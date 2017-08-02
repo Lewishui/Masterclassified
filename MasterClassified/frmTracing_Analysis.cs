@@ -133,8 +133,8 @@ namespace MasterClassified
 
                 this.dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
 
-               toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
-              
+                toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+
                 //按照彩票的Xuan 添加基数列的列数多少
                 InitialUDF = new List<int>();
                 if (CaipiaozhongleiResult[0].Xuan != null)
@@ -238,7 +238,7 @@ namespace MasterClassified
                 int s = this.tabControl1.SelectedIndex;
                 if (s == 0)
                 {
-                   toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
+                    toolStripLabel8.Text = "系统正在读取数据和内部计算，需要一段时间，请稍后....";
                     //GetDataforOutlookThread = new Thread(NewMethodtab1);
                     //GetDataforOutlookThread.Start();
                     // this.checkedListBox2.Items.Clear();
@@ -282,7 +282,9 @@ namespace MasterClassified
                 }
                 else if (s == 2)
                 {
-                    RunTAB3();
+                    tab3shuiji = false;
+                   RunTAB3();
+                 //  button5_Click(this, EventArgs.Empty);
                 }
             }
             catch (Exception ex)
@@ -314,10 +316,20 @@ namespace MasterClassified
 
             tab3();
 
-            JISHU_Zidingyi_InitialSystemInfo();
+          
 
             //this.toolStripComboBox5.SelectedIndex = 0;
             //this.toolStripComboBox6.SelectedIndex = 0;
+            if (tab3shuiji == false)
+            {
+                JISHU_Zidingyi_InitialSystemInfo();
+                Chushihuatab3kongjian();
+            
+            }
+        }
+
+        private void Chushihuatab3kongjian()
+        {
             this.comboBox5.SelectedIndex = 0;
             this.comboBox4.SelectedIndex = 0;
 
@@ -1052,13 +1064,13 @@ namespace MasterClassified
                     }
                 }
                 #region 显示信息
-            
+
                 if (ClaimReport_Server.Count != 0)
                 {
                     NewMethod();
 
                 }
-                
+
                 toolStripLabel8.Text = "运行结束";
                 #endregion
             }
@@ -2304,7 +2316,7 @@ namespace MasterClassified
                     // 数据读取成功后在画面显示
                     if (blnBackGroundWorkIsOK)
                     {
-                        
+
                     }
                 }
                 catch (Exception ex)
@@ -2403,6 +2415,7 @@ namespace MasterClassified
             }
             else if (sq == 2)
             {
+                tab3shuiji = false;
                 InitialSystemInfo();
                 this.checkedListBox4.Items.Clear();
                 this.checkedListBox3.Items.Clear();
@@ -2445,7 +2458,7 @@ namespace MasterClassified
 
             return;
 
-            
+
 
             DateTime FinishTime = DateTime.Now;
             TimeSpan s = DateTime.Now - oldDate;
@@ -3107,7 +3120,8 @@ namespace MasterClassified
             string len = CaipiaozhongleiResult[0].Xuan;
             toolStripComboBox5.Items.Clear();
             toolStripComboBox6.Items.Clear();
-
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
             for (int i = 0; i < Convert.ToInt32(len); i++)
             {
                 int con = i + 1;
@@ -5322,13 +5336,16 @@ namespace MasterClassified
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             tab3shuiji = true;
             qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
 
             button4_Click(this, EventArgs.Empty);
             RunTAB3();
-
-
+            if (checkedListBox4.CheckedItems.Count > 0 || checkedListBox3.CheckedItems.Count > 0)
+            {
+                toolStripButton2_Click_1(this, EventArgs.Empty);
+            }
 
 
         }

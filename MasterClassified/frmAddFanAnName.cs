@@ -15,8 +15,9 @@ namespace MasterClassified
     {
         string changname = "";
 
+        int danORpiliang;
 
-        public frmAddFanAnName(string name)
+        public frmAddFanAnName(string name,int danORpiliang1)
         {
             InitializeComponent();
             changname = name;
@@ -26,6 +27,8 @@ namespace MasterClassified
                 this.Text = "更改名称";
 
             }
+            danORpiliang = danORpiliang1;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -44,8 +47,11 @@ namespace MasterClassified
                 }
           
                 clsAllnew BusinessHelp = new clsAllnew();
+                if (danORpiliang==0)
                 BusinessHelp.Update_FangAn(changname, textBox1.Text.Trim().ToString());
-
+                else
+                    BusinessHelp.Update_PiLiang_FangAn(changname, textBox1.Text.Trim().ToString());
+              
                 MessageBox.Show("修改成功 ！", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
@@ -62,8 +68,10 @@ namespace MasterClassified
                 item.Name = textBox1.Text.Trim();//保存名称
                 Result.Add(item);
                 clsAllnew BusinessHelp = new clsAllnew();
+                if (danORpiliang == 0)
                 BusinessHelp.Save_FangAn(Result);
-
+                else
+                    BusinessHelp.Save_Piliang_FangAn(Result);
                 MessageBox.Show("创建成功 ！", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

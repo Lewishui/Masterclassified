@@ -957,12 +957,12 @@ namespace MasterClassified
 
             if (frmAddFanAnName == null)
             {
-                frmAddFanAnName = new frmAddFanAnName("");
+                frmAddFanAnName = new frmAddFanAnName("",0);
                 frmAddFanAnName.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
             }
             if (frmAddFanAnName == null)
             {
-                frmAddFanAnName = new frmAddFanAnName("");
+                frmAddFanAnName = new frmAddFanAnName("",0);
             }
             frmAddFanAnName.Show();
 
@@ -1116,12 +1116,12 @@ namespace MasterClassified
         {
             if (frmAddFanAnName == null)
             {
-                frmAddFanAnName = new frmAddFanAnName(this.listBox1.Text);
+                frmAddFanAnName = new frmAddFanAnName(this.listBox1.Text,0);
                 frmAddFanAnName.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
             }
             if (frmAddFanAnName == null)
             {
-                frmAddFanAnName = new frmAddFanAnName(this.listBox1.Text);
+                frmAddFanAnName = new frmAddFanAnName(this.listBox1.Text,0);
             }
             frmAddFanAnName.Show();
 

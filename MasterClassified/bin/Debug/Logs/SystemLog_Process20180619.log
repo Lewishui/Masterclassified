@@ -1,0 +1,70 @@
+2018-06-19 21:36:24,925 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:36:24
+2018-06-19 21:36:26,295 [9] FATAL ProcessLogger [(null)] - initialize2018/6/19 21:36:26
+2018-06-19 21:36:48,055 [9] FATAL ProcessLogger [(null)] - 1001--Create Folder txt2018/6/19 21:36:48
+2018-06-19 21:36:48,125 [9] FATAL ProcessLogger [(null)] - 1002--copy bin2018/6/19 21:36:48
+2018-06-19 21:37:15,766 [9] FATAL ProcessLogger [(null)] - 1003--install db Start2018/6/19 21:37:15
+2018-06-19 21:44:54,830 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:44:54
+2018-06-19 21:44:55,208 [10] FATAL ProcessLogger [(null)] - initialize2018/6/19 21:44:55
+2018-06-19 21:45:06,165 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:45:06
+2018-06-19 21:45:08,775 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:45:08
+2018-06-19 21:45:13,833 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:45:13
+2018-06-19 21:45:13,833 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:45:13
+2018-06-19 21:45:13,859 [10] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2018/6/19 21:45:13
+2018-06-19 21:45:18,484 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:45:18
+2018-06-19 21:45:18,484 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:45:18
+2018-06-19 21:45:22,873 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:45:22
+2018-06-19 21:45:28,084 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:45:28
+2018-06-19 21:45:28,084 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:45:28
+2018-06-19 21:45:28,084 [10] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2018/6/19 21:45:28
+2018-06-19 21:45:28,084 [10] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052018/6/19 21:45:28
+2018-06-19 21:45:28,143 [10] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062018/6/19 21:45:28
+2018-06-19 21:45:28,496 [10] FATAL ProcessLogger [(null)] - System  701072018/6/19 21:45:28
+2018-06-19 21:46:14,619 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:46:14
+2018-06-19 21:46:14,619 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:46:14
+2018-06-19 21:46:14,959 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:46:14
+2018-06-19 21:46:18,217 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:46:18
+2018-06-19 21:46:18,217 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:46:18
+2018-06-19 21:46:18,217 [10] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2018/6/19 21:46:18
+2018-06-19 21:46:18,217 [10] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2018/6/19 21:46:18
+2018-06-19 21:46:18,217 [10] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2018/6/19 21:46:18
+2018-06-19 21:46:18,217 [10] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2018/6/19 21:46:18
+2018-06-19 21:46:54,206 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:46:54
+2018-06-19 21:46:54,971 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:46:54
+2018-06-19 21:46:57,976 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:46:57
+2018-06-19 21:47:01,545 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:47:01
+2018-06-19 21:47:01,545 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:47:01
+2018-06-19 21:47:01,545 [10] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2018/6/19 21:47:01
+2018-06-19 21:47:01,545 [10] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2018/6/19 21:47:01
+2018-06-19 21:47:01,545 [10] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2018/6/19 21:47:01
+2018-06-19 21:47:01,545 [10] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2018/6/19 21:47:01
+2018-06-19 21:47:14,776 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:47:14
+2018-06-19 21:47:17,701 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:47:17
+2018-06-19 21:47:19,281 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:47:19
+2018-06-19 21:47:19,296 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:47:19
+2018-06-19 21:47:20,328 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:47:20
+2018-06-19 21:47:20,328 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 21:47:20
+2018-06-19 22:54:18,373 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/19 22:54:18
+2018-06-19 22:54:18,753 [9] FATAL ProcessLogger [(null)] - initialize2018/6/19 22:54:18
+2018-06-19 22:59:39,941 [8] FATAL ProcessLogger [(null)] - System Start 2018/6/19 22:59:39
+2018-06-19 22:59:40,087 [8] FATAL ProcessLogger [(null)] - initialize2018/6/19 22:59:40
+2018-06-19 22:59:45,335 [8] FATAL ProcessLogger [(null)] - System Start 2018/6/19 22:59:45
+2018-06-19 22:59:45,337 [8] FATAL ProcessLogger [(null)] - System Start 2018/6/19 22:59:45
+2018-06-19 22:59:46,489 [8] FATAL ProcessLogger [(null)] - System Start 2018/6/19 22:59:46
+2018-06-19 22:59:51,605 [8] FATAL ProcessLogger [(null)] - System Start 2018/6/19 22:59:51
+2018-06-19 22:59:51,605 [8] FATAL ProcessLogger [(null)] - System Start 2018/6/19 22:59:51
+2018-06-19 22:59:51,612 [8] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2018/6/19 22:59:51
+2018-06-19 22:59:51,612 [8] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2018/6/19 22:59:51
+2018-06-19 22:59:51,613 [8] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2018/6/19 22:59:51
+2018-06-19 22:59:51,614 [8] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2018/6/19 22:59:51
+2018-06-19 23:00:39,671 [8] FATAL ProcessLogger [(null)] - System Start 2018/6/19 23:00:39
+2018-06-19 23:31:40,683 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 23:31:40
+2018-06-19 23:31:40,839 [10] FATAL ProcessLogger [(null)] - initialize2018/6/19 23:31:40
+2018-06-19 23:31:56,542 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 23:31:56
+2018-06-19 23:31:56,542 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 23:31:56
+2018-06-19 23:31:57,089 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 23:31:57
+2018-06-19 23:32:00,621 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 23:32:00
+2018-06-19 23:32:00,621 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/19 23:32:00
+2018-06-19 23:32:00,621 [10] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2018/6/19 23:32:00
+2018-06-19 23:32:00,621 [10] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2018/6/19 23:32:00
+2018-06-19 23:32:00,636 [10] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2018/6/19 23:32:00
+2018-06-19 23:32:00,636 [10] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2018/6/19 23:32:00

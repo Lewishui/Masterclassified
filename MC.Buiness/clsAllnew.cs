@@ -238,7 +238,7 @@ namespace MC.Buiness
                 //var dd = Query.And(Query.GTE("shenheriqi_Valume", DateTime.Parse(findtext + "01")), Query.LTE("Input Date", DateTime.Parse(findtext + "31")));//同时满足多个条件
                 var dd = Query.And(Query.EQ("QiHao", zhiqianqianqi), Query.EQ("Caipiaomingcheng", item.Caipiaomingcheng));//同时满足多个条件
 
-             //   QueryDocument query = new QueryDocument("QiHao", zhiqianqianqi);
+                //   QueryDocument query = new QueryDocument("QiHao", zhiqianqianqi);
                 collection1.Remove(dd);
 
                 dd = Query.And(Query.EQ("QiHao", item.QiHao), Query.EQ("Caipiaomingcheng", item.Caipiaomingcheng));//同时满足多个条件              
@@ -472,7 +472,7 @@ namespace MC.Buiness
             #endregion
         }
 
-        public List<FangAnLieBiaoDATA> Read_AllFangAn( )
+        public List<FangAnLieBiaoDATA> Read_AllFangAn()
         {
             #region Read  database info server
             try
@@ -561,7 +561,95 @@ namespace MC.Buiness
             }
             #endregion
         }
+        public List<FangAnLieBiaoDATA> Read_Piliang_AllFangAn()
+        {
+            #region Read  database info server
+            try
+            {
+                List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
+                string connectionString = "mongodb://127.0.0.1";
+                MongoServer server = MongoServer.Create(connectionString);
+                MongoDatabase db1 = server.GetDatabase("MasterClassified");
+                MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
+                MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterPiLiangFangAn");
+
+
+                foreach (BsonDocument emp in employees1.FindAll())
+                {
+
+                    FangAnLieBiaoDATA item = new FangAnLieBiaoDATA();
+
+                    #region 数据聚合
+                    if (emp.Contains("_id"))
+                        item._id = (emp["_id"].ToString());
+
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+                    if (emp.Contains("DuanShu"))
+                        item.DuanShu = (emp["DuanShu"].ToString());
+
+                    if (emp.Contains("Data"))
+                        item.Data = (emp["Data"].AsString);
+
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+
+                    if (emp.Contains("Input_Date"))
+                        item.Input_Date = (emp["Input_Date"].AsString);
+
+                    if (emp.Contains("DuanWei1"))
+                        item.DuanWei1 = (emp["DuanWei1"].AsString);
+
+                    if (emp.Contains("DuanWei2"))
+                        item.DuanWei2 = (emp["DuanWei2"].AsString);
+
+                    if (emp.Contains("DuanWei3"))
+                        item.DuanWei3 = (emp["DuanWei3"].AsString);
+
+                    if (emp.Contains("DuanWei4"))
+                        item.DuanWei4 = (emp["DuanWei4"].AsString);
+
+                    if (emp.Contains("DuanWei5"))
+                        item.DuanWei5 = (emp["DuanWei5"].AsString);
+
+                    if (emp.Contains("DuanWei6"))
+                        item.DuanWei6 = (emp["DuanWei6"].AsString);
+
+                    if (emp.Contains("DuanWei7"))
+                        item.DuanWei7 = (emp["DuanWei7"].AsString);
+
+                    if (emp.Contains("DuanWei8"))
+                        item.DuanWei8 = (emp["DuanWei8"].AsString);
+
+                    if (emp.Contains("DuanWei9"))
+                        item.DuanWei9 = (emp["DuanWei9"].AsString);
+
+                    if (emp.Contains("DuanWei10"))
+                        item.DuanWei10 = (emp["DuanWei10"].AsString);
+
+                    if (emp.Contains("ZhuJian"))
+                        item.ZhuJian = (emp["ZhuJian"].AsString);
+                    if (emp.Contains("MorenDuanShu"))
+                        item.MorenDuanShu = (emp["MorenDuanShu"].AsString);
+
+                    if (emp.Contains("Mobanleibie"))
+                        item.Mobanleibie = (emp["Mobanleibie"].AsString);
+                    #endregion
+                    Result.Add(item);
+                }
+                return Result;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            #endregion
+        }
         public List<FangAnLieBiaoDATA> Read_FangAn(string findtext)
         {
             #region Read  database info server
@@ -574,6 +662,91 @@ namespace MC.Buiness
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterFangAn");
                 MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterFangAn");
+
+                var query = new QueryDocument("Name", findtext);
+                if (findtext == "YES")
+                    query = new QueryDocument("ZhuJian", findtext);
+                foreach (BsonDocument emp in employees1.Find(query))
+                {
+
+                    FangAnLieBiaoDATA item = new FangAnLieBiaoDATA();
+
+                    #region 数据聚合
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+                    if (emp.Contains("DuanShu"))
+                        item.DuanShu = (emp["DuanShu"].ToString());
+
+                    if (emp.Contains("Data"))
+                        item.Data = (emp["Data"].AsString);
+
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+
+                    if (emp.Contains("Input_Date"))
+                        item.Input_Date = (emp["Input_Date"].AsString);
+
+                    if (emp.Contains("DuanWei1"))
+                        item.DuanWei1 = (emp["DuanWei1"].AsString);
+
+                    if (emp.Contains("DuanWei2"))
+                        item.DuanWei2 = (emp["DuanWei2"].AsString);
+
+                    if (emp.Contains("DuanWei3"))
+                        item.DuanWei3 = (emp["DuanWei3"].AsString);
+
+                    if (emp.Contains("DuanWei4"))
+                        item.DuanWei4 = (emp["DuanWei4"].AsString);
+
+                    if (emp.Contains("DuanWei5"))
+                        item.DuanWei5 = (emp["DuanWei5"].AsString);
+
+                    if (emp.Contains("DuanWei6"))
+                        item.DuanWei6 = (emp["DuanWei6"].AsString);
+
+                    if (emp.Contains("DuanWei7"))
+                        item.DuanWei7 = (emp["DuanWei7"].AsString);
+
+                    if (emp.Contains("DuanWei8"))
+                        item.DuanWei8 = (emp["DuanWei8"].AsString);
+
+                    if (emp.Contains("DuanWei9"))
+                        item.DuanWei9 = (emp["DuanWei9"].AsString);
+
+                    if (emp.Contains("DuanWei10"))
+                        item.DuanWei10 = (emp["DuanWei10"].AsString);
+
+                    if (emp.Contains("ZhuJian"))
+                        item.ZhuJian = (emp["ZhuJian"].AsString);
+                    if (emp.Contains("MorenDuanShu"))
+                        item.MorenDuanShu = (emp["MorenDuanShu"].AsString);
+
+                    if (emp.Contains("Mobanleibie"))
+                        item.Mobanleibie = (emp["Mobanleibie"].AsString);
+                    #endregion
+                    Result.Add(item);
+                }
+                return Result;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            #endregion
+        }
+        public List<FangAnLieBiaoDATA> Read_Piliang_FangAn(string findtext)
+        {
+            #region Read  database info server
+            try
+            {
+                List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
+
+                string connectionString = "mongodb://127.0.0.1";
+                MongoServer server = MongoServer.Create(connectionString);
+                MongoDatabase db1 = server.GetDatabase("MasterClassified");
+                MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
+                MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterPiLiangFangAn");
 
                 var query = new QueryDocument("Name", findtext);
                 if (findtext == "YES")
@@ -684,7 +857,42 @@ namespace MC.Buiness
             }
             #endregion
         }
+        public List<FangAnLieBiaoDATA> Read_Piliang_FangAnName()
+        {
+            #region Read  database info server
+            try
+            {
+                List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
+                string connectionString = "mongodb://127.0.0.1";
+                MongoServer server = MongoServer.Create(connectionString);
+                MongoDatabase db1 = server.GetDatabase("MasterClassified");
+                MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
+                MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterPiLiangFangAn");
+
+
+                foreach (BsonDocument emp in employees1.FindAll())
+                {
+
+                    FangAnLieBiaoDATA item = new FangAnLieBiaoDATA();
+
+                    #region 数据聚合
+                    if (emp.Contains("Name"))
+                        item.Name = (emp["Name"].AsString);
+
+
+                    #endregion
+                    Result.Add(item);
+                }
+                return Result;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            #endregion
+        }
         public List<CaipiaoZhongLeiDATA> Read_CaiPiaoZhongLei()
         {
             #region Read  database info server
@@ -915,7 +1123,7 @@ namespace MC.Buiness
                 //query1 = Query<inputCaipiaoDATA>.Matches(c => c.KaiJianHaoMa, new BsonRegularExpression(new Regex(findtext)));
                 dd = Query.And(Query.EQ("KaiJianHaoMa", findtext), Query.EQ("Caipiaomingcheng", Caipiaomingcheng));//同时满足多个条件
 
-               // data = db.GetCollection("MasterClassified_CaiPiaoData").Find(dd);
+                // data = db.GetCollection("MasterClassified_CaiPiaoData").Find(dd);
 
                 //foreach (var emp in data)
                 foreach (BsonDocument emp in employees.Find(dd))
@@ -1029,6 +1237,68 @@ namespace MC.Buiness
 
 
         }
+        public void Save_Piliang_FangAn(List<FangAnLieBiaoDATA> NEWResult)
+        {
+            string connectionString = "mongodb://127.0.0.1";
+            MongoServer server = MongoServer.Create(connectionString);
+            MongoDatabase db1 = server.GetDatabase("MasterClassified");
+            MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
+            MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterPiLiangFangAn");
+
+            if (NEWResult == null)
+            {
+                MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            foreach (FangAnLieBiaoDATA item in NEWResult)
+            {
+                QueryDocument query = new QueryDocument("Name", item.Name);
+                collection1.Remove(query);
+
+                MongoDatabase db = server.GetDatabase("MasterClassified");
+                MongoCollection collection = db.GetCollection("MasterPiLiangFangAn");
+                //更新主键
+                if (item.ZhuJian == "YES")
+                {
+                    QueryDocument query1 = new QueryDocument("ZhuJian", "YES");
+                    var update = Update.Set("ZhuJian", "");
+                    collection.Update(query1, update);
+                }
+                if (item.MorenDuanShu != null && item.MorenDuanShu != "")
+                {
+                    QueryDocument query1 = new QueryDocument("ZhuJian", "YES");
+                    var update = Update.Set("MorenDuanShu", "");
+                    collection.Update(query1, update);
+                }
+                //插入新数据
+                BsonDocument fruit_1 = new BsonDocument
+                 { 
+                 { "DuanShu", item.DuanShu },
+                 { "Data", item.Data },    
+                 { "Name", item.Name }, 
+                { "DuanWei", item.DuanShu },
+                { "DuanWei1", item.DuanWei1 },
+                { "DuanWei2", item.DuanWei2 },
+                { "DuanWei3", item.DuanWei3 },
+                { "DuanWei4", item.DuanWei4 },
+                { "DuanWei5", item.DuanWei5 },
+                { "DuanWei6", item.DuanWei6 },
+                { "DuanWei7", item.DuanWei7 },
+                { "DuanWei8", item.DuanWei8 },
+                { "DuanWei9", item.DuanWei9 },
+                { "DuanWei10", item.DuanWei10 },
+                 { "ZhuJian", item.ZhuJian },  
+                { "MorenDuanShu", item.MorenDuanShu },  
+                   { "Mobanleibie", item.Mobanleibie },                  
+                { "Input_Date", DateTime.Now.ToString("MM/dd/yyyy/HHss")}  
+                 };
+                collection.Insert(fruit_1);
+            }
+
+
+
+
+        }
 
         public void Update_FangAn(string findtext, string newname)
         {
@@ -1042,6 +1312,38 @@ namespace MC.Buiness
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterFangAn");
                 MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterFangAn");
+
+                var query = new QueryDocument("Name", findtext);
+
+                foreach (BsonDocument emp in employees1.Find(query))
+                {
+                    {
+                        QueryDocument query1 = new QueryDocument("Name", findtext);
+                        var update = Update.Set("Name", newname);
+                        collection1.Update(query1, update);
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            #endregion
+        }
+        public void Update_PiLiang_FangAn(string findtext, string newname)
+        {
+            #region Read  database info server
+            try
+            {
+                List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
+
+                string connectionString = "mongodb://127.0.0.1";
+                MongoServer server = MongoServer.Create(connectionString);
+                MongoDatabase db1 = server.GetDatabase("MasterClassified");
+                MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
+                MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterPiLiangFangAn");
 
                 var query = new QueryDocument("Name", findtext);
 
@@ -1212,7 +1514,22 @@ namespace MC.Buiness
 
             }
         }
+        public void delete_PiLiang_FangAn(string name)
+        {
+            string connectionString = "mongodb://127.0.0.1";
+            MongoServer server = MongoServer.Create(connectionString);
+            MongoDatabase db1 = server.GetDatabase("MasterClassified");
+            MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
+            MongoCollection<BsonDocument> employees1 = db1.GetCollection<BsonDocument>("MasterPiLiangFangAn");
 
+
+
+            {
+                QueryDocument query = new QueryDocument("Name", name);
+                collection1.Remove(query);
+
+            }
+        }
         public void deleteID_FangAn(string name)
         {
             string connectionString = "mongodb://127.0.0.1";
@@ -1225,7 +1542,7 @@ namespace MC.Buiness
             {
                 MessageBox.Show("No Data  input Sever", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }         
+            }
             IMongoQuery query = Query.EQ("_id", new ObjectId(name));
 
             collection1.Remove(query);

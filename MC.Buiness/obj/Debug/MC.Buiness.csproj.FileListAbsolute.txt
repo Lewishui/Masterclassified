@@ -57,3 +57,16 @@ D:\Dev Project\shengyangcaipiao\vs2012_Version\Masterclassified\MC.Buiness\bin\D
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\bin\Debug\Interop.Microsoft.Office.Core.dll
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Debug\Interop.Microsoft.Office.Core.dll
 C:\mysteap\work_office\ProjectOut\Masterclassified12\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csproj.ResolveComReference.cache
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csprojResolveAssemblyReference.cache
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\obj\Debug\Interop.Microsoft.Office.Core.dll
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csproj.ResolveComReference.cache
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.dll
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.pdb
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\MC.Common.dll
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\MC.DB.dll
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\MC.Common.pdb
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\MC.DB.pdb
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\Interop.Microsoft.Office.Core.dll
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
+D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb

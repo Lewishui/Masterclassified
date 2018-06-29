@@ -1,0 +1,91 @@
+2018-06-20 22:14:59,969 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 22:14:59
+2018-06-20 22:15:00,235 [9] FATAL ProcessLogger [(null)] - initialize2018/6/20 22:15:00
+2018-06-20 22:16:33,985 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 22:16:33
+2018-06-20 22:16:33,985 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 22:16:33
+2018-06-20 22:16:36,329 [9] FATAL ProcessLogger [(null)] - System Error 60239 MongoDB.Driver.MongoConnectionException: Unable to connect to server 127.0.0.1:27017: 未将对象引用设置到对象的实例。. ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 MongoDB.Driver.MongoServerInstance.RefreshStateAsSoonAsPossible()
+   在 MongoDB.Driver.Internal.MongoConnection.HandleException(Exception ex)
+   在 MongoDB.Driver.Internal.MongoConnection.SendMessage(BsonBuffer buffer, Int32 requestId)
+   在 MongoDB.Driver.Internal.MongoConnection.SendMessage(MongoRequestMessage message)
+   在 MongoDB.Driver.Operations.CommandOperation`1.Execute(MongoConnection connection)
+   在 MongoDB.Driver.MongoServerInstance.RunCommandAs[TCommandResult](MongoConnection connection, String databaseName, IMongoCommand command)
+   在 MongoDB.Driver.MongoServerInstance.Ping(MongoConnection connection)
+   在 MongoDB.Driver.MongoServerInstance.Connect()
+   在 MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MC.Buiness.clsAllnew.Read_CaiPiaoZhongLei_Moren(String findtext) 位置 d:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\clsAllnew.cs:行号 787
+   在 MasterClassified.frmTracing_Analysis.InitialSystemInfo() 位置 d:\Dev Project\SY_caipiao\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 892018/6/20 22:16:36
+2018-06-20 22:20:59,833 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 22:20:59
+2018-06-20 22:20:59,833 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 22:20:59
+2018-06-20 22:21:01,190 [9] FATAL ProcessLogger [(null)] - System Error 60239 MongoDB.Driver.MongoConnectionException: Unable to connect to server 127.0.0.1:27017: 由于目标计算机积极拒绝，无法连接。 127.0.0.1:27017. ---> System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。 127.0.0.1:27017
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   在 System.Net.Sockets.TcpClient.Connect(IPEndPoint remoteEP)
+   在 MongoDB.Driver.Internal.MongoConnection.Open()
+   在 MongoDB.Driver.Internal.MongoConnection.GetNetworkStream()
+   在 MongoDB.Driver.Internal.MongoConnection.SendMessage(BsonBuffer buffer, Int32 requestId)
+   在 MongoDB.Driver.Internal.MongoConnection.SendMessage(MongoRequestMessage message)
+   在 MongoDB.Driver.Operations.CommandOperation`1.Execute(MongoConnection connection)
+   在 MongoDB.Driver.MongoServerInstance.RunCommandAs[TCommandResult](MongoConnection connection, String databaseName, IMongoCommand command)
+   在 MongoDB.Driver.MongoServerInstance.Ping(MongoConnection connection)
+   在 MongoDB.Driver.MongoServerInstance.Connect()
+   在 MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MC.Buiness.clsAllnew.Read_CaiPiaoZhongLei_Moren(String findtext) 位置 d:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\clsAllnew.cs:行号 787
+   在 MasterClassified.frmTracing_Analysis.InitialSystemInfo() 位置 d:\Dev Project\SY_caipiao\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 892018/6/20 22:21:01
+2018-06-20 22:21:12,208 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 22:21:12
+2018-06-20 22:21:12,392 [10] FATAL ProcessLogger [(null)] - initialize2018/6/20 22:21:12
+2018-06-20 22:31:54,112 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 22:31:54
+2018-06-20 22:31:54,113 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 22:31:54
+2018-06-20 22:31:55,901 [10] FATAL ProcessLogger [(null)] - System Error 60239 MongoDB.Driver.MongoConnectionException: Unable to connect to server 127.0.0.1:27017: 未将对象引用设置到对象的实例。. ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 MongoDB.Driver.MongoServerInstance.RefreshStateAsSoonAsPossible()
+   在 MongoDB.Driver.Internal.MongoConnection.HandleException(Exception ex)
+   在 MongoDB.Driver.Internal.MongoConnection.SendMessage(BsonBuffer buffer, Int32 requestId)
+   在 MongoDB.Driver.Internal.MongoConnection.SendMessage(MongoRequestMessage message)
+   在 MongoDB.Driver.Operations.CommandOperation`1.Execute(MongoConnection connection)
+   在 MongoDB.Driver.MongoServerInstance.RunCommandAs[TCommandResult](MongoConnection connection, String databaseName, IMongoCommand command)
+   在 MongoDB.Driver.MongoServerInstance.Ping(MongoConnection connection)
+   在 MongoDB.Driver.MongoServerInstance.Connect()
+   在 MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MC.Buiness.clsAllnew.Read_CaiPiaoZhongLei_Moren(String findtext) 位置 d:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\clsAllnew.cs:行号 787
+   在 MasterClassified.frmTracing_Analysis.InitialSystemInfo() 位置 d:\Dev Project\SY_caipiao\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 892018/6/20 22:31:55
+2018-06-20 23:14:07,396 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:14:07
+2018-06-20 23:14:08,325 [9] FATAL ProcessLogger [(null)] - initialize2018/6/20 23:14:08
+2018-06-20 23:14:51,736 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:14:51
+2018-06-20 23:14:51,738 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:14:51
+2018-06-20 23:14:53,730 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:14:53
+2018-06-20 23:14:59,665 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:14:59
+2018-06-20 23:14:59,665 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:14:59
+2018-06-20 23:14:59,674 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2018/6/20 23:14:59
+2018-06-20 23:14:59,675 [9] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2018/6/20 23:14:59
+2018-06-20 23:14:59,676 [9] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2018/6/20 23:14:59
+2018-06-20 23:14:59,676 [9] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2018/6/20 23:14:59
+2018-06-20 23:34:01,203 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:01
+2018-06-20 23:34:01,569 [9] FATAL ProcessLogger [(null)] - initialize2018/6/20 23:34:01
+2018-06-20 23:34:05,513 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:05
+2018-06-20 23:34:05,513 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:05
+2018-06-20 23:34:06,463 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:06
+2018-06-20 23:34:10,154 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:10
+2018-06-20 23:34:10,155 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:10
+2018-06-20 23:34:10,162 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2018/6/20 23:34:10
+2018-06-20 23:34:10,162 [9] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2018/6/20 23:34:10
+2018-06-20 23:34:10,163 [9] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2018/6/20 23:34:10
+2018-06-20 23:34:10,163 [9] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2018/6/20 23:34:10
+2018-06-20 23:34:20,960 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:20
+2018-06-20 23:34:24,064 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:24
+2018-06-20 23:34:25,441 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:25
+2018-06-20 23:34:28,107 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:34:28
+2018-06-20 23:36:08,738 [9] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:36:08
+2018-06-20 23:57:44,402 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:57:44
+2018-06-20 23:57:44,527 [10] FATAL ProcessLogger [(null)] - initialize2018/6/20 23:57:44
+2018-06-20 23:58:19,277 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:58:19
+2018-06-20 23:58:19,277 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:58:19
+2018-06-20 23:58:19,777 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:58:19
+2018-06-20 23:58:22,824 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:58:22
+2018-06-20 23:58:22,824 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:58:22
+2018-06-20 23:58:22,824 [10] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2018/6/20 23:58:22
+2018-06-20 23:58:22,824 [10] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2018/6/20 23:58:22
+2018-06-20 23:58:22,824 [10] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2018/6/20 23:58:22
+2018-06-20 23:58:22,824 [10] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2018/6/20 23:58:22
+2018-06-20 23:58:41,980 [10] FATAL ProcessLogger [(null)] - System Start 2018/6/20 23:58:41

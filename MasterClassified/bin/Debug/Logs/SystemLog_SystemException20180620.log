@@ -1,0 +1,20 @@
+2018-06-20 22:20:54,625 [9] FATAL SystemExceptionLogger [(null)] - System Error Unable to connect to server 127.0.0.1:27017: 未将对象引用设置到对象的实例。., Exception Detail Info :   在 MC.Buiness.clsAllnew.Read_CaiPiaoZhongLei_Moren(String findtext) 位置 d:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\clsAllnew.cs:行号 787
+   在 MasterClassified.frmTracing_Analysis.InitialSystemInfo() 位置 d:\Dev Project\SY_caipiao\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 159
+   在 MasterClassified.frmTracing_Analysis..ctor() 位置 d:\Dev Project\SY_caipiao\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 59
+   在 MasterClassified.MainForm.追踪分析ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 d:\Dev Project\SY_caipiao\Masterclassified\MasterClassified\MainForm.cs:行号 200
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time2018/6/20 22:20:54

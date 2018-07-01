@@ -19,7 +19,7 @@ namespace MasterClassified
 
         public string fanganindex;
         List<inputCaipiaoDATA> ClaimReport_ServerNew;
-        public List<string> oncheckinfo ;
+        public List<string> oncheckinfo;
 
         public frmSelfPiLiangFangAN(List<inputCaipiaoDATA> ClaimReport_Server)
         {
@@ -101,7 +101,7 @@ namespace MasterClassified
                 {
                     var item1 = oncheckinfo.Find((x) => { return x.Contains(status); });
                     alist.Add(status + "-" + item1.Replace(status, ""));
-                 
+
                 }
             }
             this.listBox2.DataSource = null;
@@ -111,7 +111,8 @@ namespace MasterClassified
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checkinfo = checkedListBox1.SelectedItem.ToString();
+            if (checkedListBox1.SelectedItem != null)
+                checkinfo = checkedListBox1.SelectedItem.ToString();
 
         }
 

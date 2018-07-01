@@ -157,6 +157,7 @@ namespace MasterClassified
                     return;
                 }
                 NewMethodtab1();
+
             }
             catch (Exception ex)
             {
@@ -1069,6 +1070,108 @@ namespace MasterClassified
                             else if (indexing == 97) item.qian97 = xiangtongindex.ToString();
                             else if (indexing == 98) item.qian98 = xiangtongindex.ToString();
                             else if (indexing == 99) item.qian99 = xiangtongindex.ToString();
+                            //20180630
+                            else if (indexing == 100) item.qian100 = xiangtongindex.ToString();
+                            else if (indexing == 101) item.qian101 = xiangtongindex.ToString();
+                            else if (indexing == 102) item.qian102 = xiangtongindex.ToString();
+                            else if (indexing == 103) item.qian103 = xiangtongindex.ToString();
+                            else if (indexing == 104) item.qian104 = xiangtongindex.ToString();
+                            else if (indexing == 105) item.qian105 = xiangtongindex.ToString();
+                            else if (indexing == 106) item.qian106 = xiangtongindex.ToString();
+                            else if (indexing == 107) item.qian107 = xiangtongindex.ToString();
+                            else if (indexing == 108) item.qian108 = xiangtongindex.ToString();
+                            else if (indexing == 109) item.qian109 = xiangtongindex.ToString();
+                            else if (indexing == 110) item.qian110 = xiangtongindex.ToString();
+                            else if (indexing == 111) item.qian111 = xiangtongindex.ToString();
+                            else if (indexing == 112) item.qian112 = xiangtongindex.ToString();
+                            else if (indexing == 113) item.qian113 = xiangtongindex.ToString();
+                            else if (indexing == 114) item.qian114 = xiangtongindex.ToString();
+                            else if (indexing == 115) item.qian115 = xiangtongindex.ToString();
+                            else if (indexing == 116) item.qian116 = xiangtongindex.ToString();
+                            else if (indexing == 117) item.qian117 = xiangtongindex.ToString();
+                            else if (indexing == 118) item.qian118 = xiangtongindex.ToString();
+                            else if (indexing == 119) item.qian119 = xiangtongindex.ToString();
+                            else if (indexing == 120) item.qian120 = xiangtongindex.ToString();
+                            else if (indexing == 121) item.qian121 = xiangtongindex.ToString();
+                            else if (indexing == 122) item.qian122 = xiangtongindex.ToString();
+                            else if (indexing == 123) item.qian123 = xiangtongindex.ToString();
+                            else if (indexing == 124) item.qian124 = xiangtongindex.ToString();
+                            else if (indexing == 125) item.qian125 = xiangtongindex.ToString();
+                            else if (indexing == 126) item.qian126 = xiangtongindex.ToString();
+                            else if (indexing == 127) item.qian127 = xiangtongindex.ToString();
+                            else if (indexing == 128) item.qian128 = xiangtongindex.ToString();
+                            else if (indexing == 129) item.qian129 = xiangtongindex.ToString();
+                            else if (indexing == 130) item.qian130 = xiangtongindex.ToString();
+                            else if (indexing == 131) item.qian131 = xiangtongindex.ToString();
+                            else if (indexing == 132) item.qian132 = xiangtongindex.ToString();
+                            else if (indexing == 133) item.qian133 = xiangtongindex.ToString();
+                            else if (indexing == 134) item.qian134 = xiangtongindex.ToString();
+                            else if (indexing == 135) item.qian135 = xiangtongindex.ToString();
+                            else if (indexing == 136) item.qian136 = xiangtongindex.ToString();
+                            else if (indexing == 137) item.qian137 = xiangtongindex.ToString();
+                            else if (indexing == 138) item.qian138 = xiangtongindex.ToString();
+                            else if (indexing == 139) item.qian139 = xiangtongindex.ToString();
+                            else if (indexing == 140) item.qian140 = xiangtongindex.ToString();
+                            else if (indexing == 141) item.qian141 = xiangtongindex.ToString();
+                            else if (indexing == 142) item.qian142 = xiangtongindex.ToString();
+                            else if (indexing == 143) item.qian143 = xiangtongindex.ToString();
+                            else if (indexing == 144) item.qian144 = xiangtongindex.ToString();
+                            else if (indexing == 145) item.qian145 = xiangtongindex.ToString();
+                            else if (indexing == 146) item.qian146 = xiangtongindex.ToString();
+                            else if (indexing == 147) item.qian147 = xiangtongindex.ToString();
+                            else if (indexing == 148) item.qian148 = xiangtongindex.ToString();
+                            else if (indexing == 149) item.qian149 = xiangtongindex.ToString();
+                            else if (indexing == 150) item.qian150 = xiangtongindex.ToString();
+                            else if (indexing == 151) item.qian151 = xiangtongindex.ToString();
+                            else if (indexing == 152) item.qian152 = xiangtongindex.ToString();
+                            else if (indexing == 153) item.qian153 = xiangtongindex.ToString();
+                            else if (indexing == 154) item.qian154 = xiangtongindex.ToString();
+                            else if (indexing == 155) item.qian155 = xiangtongindex.ToString();
+                            else if (indexing == 156) item.qian156 = xiangtongindex.ToString();
+                            else if (indexing == 157) item.qian157 = xiangtongindex.ToString();
+                            else if (indexing == 158) item.qian158 = xiangtongindex.ToString();
+                            else if (indexing == 159) item.qian159 = xiangtongindex.ToString();
+                            else if (indexing == 160) item.qian160 = xiangtongindex.ToString();
+                            else if (indexing == 161) item.qian161 = xiangtongindex.ToString();
+                            else if (indexing == 162) item.qian162 = xiangtongindex.ToString();
+                            else if (indexing == 163) item.qian163 = xiangtongindex.ToString();
+                            else if (indexing == 164) item.qian164 = xiangtongindex.ToString();
+                            else if (indexing == 165) item.qian165 = xiangtongindex.ToString();
+                            else if (indexing == 166) item.qian166 = xiangtongindex.ToString();
+                            else if (indexing == 167) item.qian167 = xiangtongindex.ToString();
+                            else if (indexing == 168) item.qian168 = xiangtongindex.ToString();
+                            else if (indexing == 169) item.qian169 = xiangtongindex.ToString();
+                            else if (indexing == 170) item.qian170 = xiangtongindex.ToString();
+                            else if (indexing == 171) item.qian171 = xiangtongindex.ToString();
+                            else if (indexing == 172) item.qian172 = xiangtongindex.ToString();
+                            else if (indexing == 173) item.qian173 = xiangtongindex.ToString();
+                            else if (indexing == 174) item.qian174 = xiangtongindex.ToString();
+                            else if (indexing == 175) item.qian175 = xiangtongindex.ToString();
+                            else if (indexing == 176) item.qian176 = xiangtongindex.ToString();
+                            else if (indexing == 177) item.qian177 = xiangtongindex.ToString();
+                            else if (indexing == 178) item.qian178 = xiangtongindex.ToString();
+                            else if (indexing == 179) item.qian179 = xiangtongindex.ToString();
+                            else if (indexing == 180) item.qian180 = xiangtongindex.ToString();
+                            else if (indexing == 181) item.qian181 = xiangtongindex.ToString();
+                            else if (indexing == 182) item.qian182 = xiangtongindex.ToString();
+                            else if (indexing == 183) item.qian183 = xiangtongindex.ToString();
+                            else if (indexing == 184) item.qian184 = xiangtongindex.ToString();
+                            else if (indexing == 185) item.qian185 = xiangtongindex.ToString();
+                            else if (indexing == 186) item.qian186 = xiangtongindex.ToString();
+                            else if (indexing == 187) item.qian187 = xiangtongindex.ToString();
+                            else if (indexing == 188) item.qian188 = xiangtongindex.ToString();
+                            else if (indexing == 189) item.qian189 = xiangtongindex.ToString();
+                            else if (indexing == 190) item.qian190 = xiangtongindex.ToString();
+                            else if (indexing == 191) item.qian191 = xiangtongindex.ToString();
+                            else if (indexing == 192) item.qian192 = xiangtongindex.ToString();
+                            else if (indexing == 193) item.qian193 = xiangtongindex.ToString();
+                            else if (indexing == 194) item.qian194 = xiangtongindex.ToString();
+                            else if (indexing == 195) item.qian195 = xiangtongindex.ToString();
+                            else if (indexing == 196) item.qian196 = xiangtongindex.ToString();
+                            else if (indexing == 197) item.qian197 = xiangtongindex.ToString();
+                            else if (indexing == 198) item.qian198 = xiangtongindex.ToString();
+                            else if (indexing == 199) item.qian199 = xiangtongindex.ToString();
+                            else if (indexing == 200) item.qian200 = xiangtongindex.ToString();
                             #endregion
                         }
                     }
@@ -1613,6 +1716,108 @@ namespace MasterClassified
                                     else if (indexing == 97) item.qian97 = xiangtongindex.ToString();
                                     else if (indexing == 98) item.qian98 = xiangtongindex.ToString();
                                     else if (indexing == 99) item.qian99 = xiangtongindex.ToString();
+                                    //20180630
+                                    else if (indexing == 100) item.qian100 = xiangtongindex.ToString();
+                                    else if (indexing == 101) item.qian101 = xiangtongindex.ToString();
+                                    else if (indexing == 102) item.qian102 = xiangtongindex.ToString();
+                                    else if (indexing == 103) item.qian103 = xiangtongindex.ToString();
+                                    else if (indexing == 104) item.qian104 = xiangtongindex.ToString();
+                                    else if (indexing == 105) item.qian105 = xiangtongindex.ToString();
+                                    else if (indexing == 106) item.qian106 = xiangtongindex.ToString();
+                                    else if (indexing == 107) item.qian107 = xiangtongindex.ToString();
+                                    else if (indexing == 108) item.qian108 = xiangtongindex.ToString();
+                                    else if (indexing == 109) item.qian109 = xiangtongindex.ToString();
+                                    else if (indexing == 110) item.qian110 = xiangtongindex.ToString();
+                                    else if (indexing == 111) item.qian111 = xiangtongindex.ToString();
+                                    else if (indexing == 112) item.qian112 = xiangtongindex.ToString();
+                                    else if (indexing == 113) item.qian113 = xiangtongindex.ToString();
+                                    else if (indexing == 114) item.qian114 = xiangtongindex.ToString();
+                                    else if (indexing == 115) item.qian115 = xiangtongindex.ToString();
+                                    else if (indexing == 116) item.qian116 = xiangtongindex.ToString();
+                                    else if (indexing == 117) item.qian117 = xiangtongindex.ToString();
+                                    else if (indexing == 118) item.qian118 = xiangtongindex.ToString();
+                                    else if (indexing == 119) item.qian119 = xiangtongindex.ToString();
+                                    else if (indexing == 120) item.qian120 = xiangtongindex.ToString();
+                                    else if (indexing == 121) item.qian121 = xiangtongindex.ToString();
+                                    else if (indexing == 122) item.qian122 = xiangtongindex.ToString();
+                                    else if (indexing == 123) item.qian123 = xiangtongindex.ToString();
+                                    else if (indexing == 124) item.qian124 = xiangtongindex.ToString();
+                                    else if (indexing == 125) item.qian125 = xiangtongindex.ToString();
+                                    else if (indexing == 126) item.qian126 = xiangtongindex.ToString();
+                                    else if (indexing == 127) item.qian127 = xiangtongindex.ToString();
+                                    else if (indexing == 128) item.qian128 = xiangtongindex.ToString();
+                                    else if (indexing == 129) item.qian129 = xiangtongindex.ToString();
+                                    else if (indexing == 130) item.qian130 = xiangtongindex.ToString();
+                                    else if (indexing == 131) item.qian131 = xiangtongindex.ToString();
+                                    else if (indexing == 132) item.qian132 = xiangtongindex.ToString();
+                                    else if (indexing == 133) item.qian133 = xiangtongindex.ToString();
+                                    else if (indexing == 134) item.qian134 = xiangtongindex.ToString();
+                                    else if (indexing == 135) item.qian135 = xiangtongindex.ToString();
+                                    else if (indexing == 136) item.qian136 = xiangtongindex.ToString();
+                                    else if (indexing == 137) item.qian137 = xiangtongindex.ToString();
+                                    else if (indexing == 138) item.qian138 = xiangtongindex.ToString();
+                                    else if (indexing == 139) item.qian139 = xiangtongindex.ToString();
+                                    else if (indexing == 140) item.qian140 = xiangtongindex.ToString();
+                                    else if (indexing == 141) item.qian141 = xiangtongindex.ToString();
+                                    else if (indexing == 142) item.qian142 = xiangtongindex.ToString();
+                                    else if (indexing == 143) item.qian143 = xiangtongindex.ToString();
+                                    else if (indexing == 144) item.qian144 = xiangtongindex.ToString();
+                                    else if (indexing == 145) item.qian145 = xiangtongindex.ToString();
+                                    else if (indexing == 146) item.qian146 = xiangtongindex.ToString();
+                                    else if (indexing == 147) item.qian147 = xiangtongindex.ToString();
+                                    else if (indexing == 148) item.qian148 = xiangtongindex.ToString();
+                                    else if (indexing == 149) item.qian149 = xiangtongindex.ToString();
+                                    else if (indexing == 150) item.qian150 = xiangtongindex.ToString();
+                                    else if (indexing == 151) item.qian151 = xiangtongindex.ToString();
+                                    else if (indexing == 152) item.qian152 = xiangtongindex.ToString();
+                                    else if (indexing == 153) item.qian153 = xiangtongindex.ToString();
+                                    else if (indexing == 154) item.qian154 = xiangtongindex.ToString();
+                                    else if (indexing == 155) item.qian155 = xiangtongindex.ToString();
+                                    else if (indexing == 156) item.qian156 = xiangtongindex.ToString();
+                                    else if (indexing == 157) item.qian157 = xiangtongindex.ToString();
+                                    else if (indexing == 158) item.qian158 = xiangtongindex.ToString();
+                                    else if (indexing == 159) item.qian159 = xiangtongindex.ToString();
+                                    else if (indexing == 160) item.qian160 = xiangtongindex.ToString();
+                                    else if (indexing == 161) item.qian161 = xiangtongindex.ToString();
+                                    else if (indexing == 162) item.qian162 = xiangtongindex.ToString();
+                                    else if (indexing == 163) item.qian163 = xiangtongindex.ToString();
+                                    else if (indexing == 164) item.qian164 = xiangtongindex.ToString();
+                                    else if (indexing == 165) item.qian165 = xiangtongindex.ToString();
+                                    else if (indexing == 166) item.qian166 = xiangtongindex.ToString();
+                                    else if (indexing == 167) item.qian167 = xiangtongindex.ToString();
+                                    else if (indexing == 168) item.qian168 = xiangtongindex.ToString();
+                                    else if (indexing == 169) item.qian169 = xiangtongindex.ToString();
+                                    else if (indexing == 170) item.qian170 = xiangtongindex.ToString();
+                                    else if (indexing == 171) item.qian171 = xiangtongindex.ToString();
+                                    else if (indexing == 172) item.qian172 = xiangtongindex.ToString();
+                                    else if (indexing == 173) item.qian173 = xiangtongindex.ToString();
+                                    else if (indexing == 174) item.qian174 = xiangtongindex.ToString();
+                                    else if (indexing == 175) item.qian175 = xiangtongindex.ToString();
+                                    else if (indexing == 176) item.qian176 = xiangtongindex.ToString();
+                                    else if (indexing == 177) item.qian177 = xiangtongindex.ToString();
+                                    else if (indexing == 178) item.qian178 = xiangtongindex.ToString();
+                                    else if (indexing == 179) item.qian179 = xiangtongindex.ToString();
+                                    else if (indexing == 180) item.qian180 = xiangtongindex.ToString();
+                                    else if (indexing == 181) item.qian181 = xiangtongindex.ToString();
+                                    else if (indexing == 182) item.qian182 = xiangtongindex.ToString();
+                                    else if (indexing == 183) item.qian183 = xiangtongindex.ToString();
+                                    else if (indexing == 184) item.qian184 = xiangtongindex.ToString();
+                                    else if (indexing == 185) item.qian185 = xiangtongindex.ToString();
+                                    else if (indexing == 186) item.qian186 = xiangtongindex.ToString();
+                                    else if (indexing == 187) item.qian187 = xiangtongindex.ToString();
+                                    else if (indexing == 188) item.qian188 = xiangtongindex.ToString();
+                                    else if (indexing == 189) item.qian189 = xiangtongindex.ToString();
+                                    else if (indexing == 190) item.qian190 = xiangtongindex.ToString();
+                                    else if (indexing == 191) item.qian191 = xiangtongindex.ToString();
+                                    else if (indexing == 192) item.qian192 = xiangtongindex.ToString();
+                                    else if (indexing == 193) item.qian193 = xiangtongindex.ToString();
+                                    else if (indexing == 194) item.qian194 = xiangtongindex.ToString();
+                                    else if (indexing == 195) item.qian195 = xiangtongindex.ToString();
+                                    else if (indexing == 196) item.qian196 = xiangtongindex.ToString();
+                                    else if (indexing == 197) item.qian197 = xiangtongindex.ToString();
+                                    else if (indexing == 198) item.qian198 = xiangtongindex.ToString();
+                                    else if (indexing == 199) item.qian199 = xiangtongindex.ToString();
+                                    else if (indexing == 200) item.qian200 = xiangtongindex.ToString();
 
                                     #endregion
 
@@ -1887,9 +2092,112 @@ namespace MasterClassified
                         if (qtyTable.Columns.Count != 0 && jicloumn == 0)
                             cindex = qtyTable.Columns.Count - 1 - Convert.ToInt32(toolStripComboBox4.Text);
                         {
-                            string allqian = item.qian1 + " " + item.qian2 + " " + item.qian3 + " " + item.qian4 + " " + item.qian5 + " " + item.qian6 + " " + item.qian7 + " " + item.qian8 + " " + item.qian9 + " " + item.qian10 + " " + item.qian11 + " " + item.qian12 + " " + item.qian13 + " " + item.qian14 + " " + item.qian15 + " " + item.qian16 + " " + item.qian17 + " " + item.qian18 + " " + item.qian19 + " " + item.qian20 + " " + item.qian21 + " " + item.qian22 + " " + item.qian23 + " " + item.qian24 + " " + item.qian25 + " " + item.qian26 + " " + item.qian27 + " " + item.qian28 + " " + item.qian29 + " " + item.qian30 + " " + item.qian31 + " " + item.qian32 + " " + item.qian33 + " " + item.qian34 + " " + item.qian35 + " " + item.qian36 + " " + item.qian37 + " " + item.qian38 + " " + item.qian39 + " " + item.qian40 + " " + item.qian41 + " " + item.qian42 + " " + item.qian43 + " " + item.qian44 + " " + item.qian45 + " " + item.qian46 + " " + item.qian47 + " " + item.qian48 + " " + item.qian49 + " " + item.qian50 + " " + item.qian51 + " " + item.qian52 + " " + item.qian53 + " " + item.qian54 + " " + item.qian55 + " " + item.qian56 + " " + item.qian57 + " " + item.qian58 + " " + item.qian59 + " " + item.qian60 + " " + item.qian61 + " " + item.qian62 + " " + item.qian63 + " " + item.qian64 + " " + item.qian65 + " " + item.qian66 + " " + item.qian67 + " " + item.qian68 + " " + item.qian69 + " " + item.qian70 + " " + item.qian71 + " " + item.qian72 + " " + item.qian73 + " " + item.qian74 + " " + item.qian75 + " " + item.qian76 + " " + item.qian77 + " " + item.qian78 + " " + item.qian79 + " " + item.qian80 + " " + item.qian81 + " " + item.qian82 + " " + item.qian83 + " " + item.qian84 + " " + item.qian85 + " " + item.qian86 + " " + item.qian87 + " " + item.qian88 + " " + item.qian89 + " " + item.qian90 + " " + item.qian91 + " " + item.qian92 + " " + item.qian93 + " " + item.qian94 + " " + item.qian95 + " " + item.qian96 + " " + item.qian97 + " " + item.qian98 + " " + item.qian99 + " " + item.qian100 + " ";
+                            #region MyRegion
+                            string allqian = item.qian1 + " " + item.qian2 + " " + item.qian3 + " " + item.qian4 + " " + item.qian5 + " " + item.qian6 + " " + item.qian7 + " " + item.qian8 + " " + item.qian9 + " " + item.qian10 + " " + item.qian11 + " " + item.qian12 + " " + item.qian13 + " " + item.qian14 + " " + item.qian15 + " " + item.qian16 + " " + item.qian17 + " " + item.qian18 + " " + item.qian19 + " " + item.qian20 + " " + item.qian21 + " " + item.qian22 + " " + item.qian23 + " " + item.qian24 + " " + item.qian25 + " " + item.qian26 + " " + item.qian27 + " " + item.qian28 + " " + item.qian29 + " " + item.qian30 + " " + item.qian31 + " " + item.qian32 + " " + item.qian33 + " " + item.qian34 + " " + item.qian35 + " " + item.qian36 + " " + item.qian37 + " " + item.qian38 + " " + item.qian39 + " " + item.qian40 + " " + item.qian41 + " " + item.qian42 + " " + item.qian43 + " " + item.qian44 + " " + item.qian45 + " " + item.qian46 + " " + item.qian47 + " " + item.qian48 + " " + item.qian49 + " " + item.qian50 + " " + item.qian51 + " " + item.qian52 + " " + item.qian53 + " " + item.qian54 + " " + item.qian55 + " " + item.qian56 + " " + item.qian57 + " " + item.qian58 + " " + item.qian59 + " " + item.qian60 + " " + item.qian61 + " " + item.qian62 + " " + item.qian63 + " " + item.qian64 + " " + item.qian65 + " " + item.qian66 + " " + item.qian67 + " " + item.qian68 + " " + item.qian69 + " " + item.qian70 + " " + item.qian71 + " " + item.qian72 + " " + item.qian73 + " " + item.qian74 + " " + item.qian75 + " " + item.qian76 + " " + item.qian77 + " " + item.qian78 + " " + item.qian79 + " " + item.qian80 + " " + item.qian81 + " " + item.qian82 + " " + item.qian83 + " " + item.qian84 + " " + item.qian85 + " " + item.qian86 + " " + item.qian87 + " " + item.qian88 + " " + item.qian89 + " " + item.qian90 + " " + item.qian91 + " " + item.qian92 + " " + item.qian93 + " " + item.qian94 + " " + item.qian95 + " " + item.qian96 + " " + item.qian97 + " " + item.qian98 + " " + item.qian99 + " " + item.qian100 + " "
+                                                + item.qian101 + " "
+                                                + item.qian102 + " "
+                                                + item.qian103 + " "
+                                                + item.qian104 + " "
+                                                + item.qian105 + " "
+                                                + item.qian106 + " "
+                                                + item.qian107 + " "
+                                                + item.qian108 + " "
+                                                + item.qian109 + " "
+                                                + item.qian110 + " "
+                                                + item.qian111 + " "
+                                                + item.qian112 + " "
+                                                + item.qian113 + " "
+                                                + item.qian114 + " "
+                                                + item.qian115 + " "
+                                                + item.qian116 + " "
+                                                + item.qian117 + " "
+                                                + item.qian118 + " "
+                                                + item.qian119 + " "
+                                                + item.qian120 + " "
+                                                + item.qian121 + " "
+                                                + item.qian122 + " "
+                                                + item.qian123 + " "
+                                                + item.qian124 + " "
+                                                + item.qian125 + " "
+                                                + item.qian126 + " "
+                                                + item.qian127 + " "
+                                                + item.qian128 + " "
+                                                + item.qian129 + " "
+                                                + item.qian130 + " "
+                                                + item.qian131 + " "
+                                                + item.qian132 + " "
+                                                + item.qian133 + " "
+                                                + item.qian134 + " "
+                                                + item.qian135 + " "
+                                                + item.qian136 + " "
+                                                + item.qian137 + " "
+                                                + item.qian138 + " "
+                                                + item.qian139 + " "
+                                                + item.qian140 + " "
+                                                + item.qian141 + " "
+                                                + item.qian142 + " "
+                                                + item.qian143 + " "
+                                                + item.qian144 + " "
+                                                + item.qian145 + " "
+                                                + item.qian146 + " "
+                                                + item.qian147 + " "
+                                                + item.qian148 + " "
+                                                + item.qian149 + " "
+                                                + item.qian150 + " "
+                                                + item.qian151 + " "
+                                                + item.qian152 + " "
+                                                + item.qian153 + " "
+                                                + item.qian154 + " "
+                                                + item.qian155 + " "
+                                                + item.qian156 + " "
+                                                + item.qian157 + " "
+                                                + item.qian158 + " "
+                                                + item.qian159 + " "
+                                                + item.qian160 + " "
+                                                + item.qian161 + " "
+                                                + item.qian162 + " "
+                                                + item.qian163 + " "
+                                                + item.qian164 + " "
+                                                + item.qian165 + " "
+                                                + item.qian166 + " "
+                                                + item.qian167 + " "
+                                                + item.qian168 + " "
+                                                + item.qian169 + " "
+                                                + item.qian170 + " "
+                                                + item.qian171 + " "
+                                                + item.qian172 + " "
+                                                + item.qian173 + " "
+                                                + item.qian174 + " "
+                                                + item.qian175 + " "
+                                                + item.qian176 + " "
+                                                + item.qian177 + " "
+                                                + item.qian178 + " "
+                                                + item.qian179 + " "
+                                                + item.qian180 + " "
+                                                + item.qian181 + " "
+                                                + item.qian182 + " "
+                                                + item.qian183 + " "
+                                                + item.qian184 + " "
+                                                + item.qian185 + " "
+                                                + item.qian186 + " "
+                                                + item.qian187 + " "
+                                                + item.qian188 + " "
+                                                + item.qian189 + " "
+                                                + item.qian190 + " "
+                                                + item.qian191 + " "
+                                                + item.qian192 + " "
+                                                + item.qian193 + " "
+                                                + item.qian194 + " "
+                                                + item.qian195 + " "
+                                                + item.qian196 + " "
+                                                + item.qian197 + " "
+                                                + item.qian198 + " "
+                                                + item.qian199 + " "
+                                                + item.qian200 + " "
+                                                ;
+                            #endregion
 
-                            ;
+
                             string[] temp1 = System.Text.RegularExpressions.Regex.Split(allqian, " ");
                             for (int i = 0; i < temp1.Length; i++)
                             {
@@ -3098,7 +3406,108 @@ namespace MasterClassified
                                     else if (indexing == 97) item.qian97 = xiangtongindex.ToString();
                                     else if (indexing == 98) item.qian98 = xiangtongindex.ToString();
                                     else if (indexing == 99) item.qian99 = xiangtongindex.ToString();
-
+                                    //20180630
+                                    else if (indexing == 100) item.qian100 = xiangtongindex.ToString();
+                                    else if (indexing == 101) item.qian101 = xiangtongindex.ToString();
+                                    else if (indexing == 102) item.qian102 = xiangtongindex.ToString();
+                                    else if (indexing == 103) item.qian103 = xiangtongindex.ToString();
+                                    else if (indexing == 104) item.qian104 = xiangtongindex.ToString();
+                                    else if (indexing == 105) item.qian105 = xiangtongindex.ToString();
+                                    else if (indexing == 106) item.qian106 = xiangtongindex.ToString();
+                                    else if (indexing == 107) item.qian107 = xiangtongindex.ToString();
+                                    else if (indexing == 108) item.qian108 = xiangtongindex.ToString();
+                                    else if (indexing == 109) item.qian109 = xiangtongindex.ToString();
+                                    else if (indexing == 110) item.qian110 = xiangtongindex.ToString();
+                                    else if (indexing == 111) item.qian111 = xiangtongindex.ToString();
+                                    else if (indexing == 112) item.qian112 = xiangtongindex.ToString();
+                                    else if (indexing == 113) item.qian113 = xiangtongindex.ToString();
+                                    else if (indexing == 114) item.qian114 = xiangtongindex.ToString();
+                                    else if (indexing == 115) item.qian115 = xiangtongindex.ToString();
+                                    else if (indexing == 116) item.qian116 = xiangtongindex.ToString();
+                                    else if (indexing == 117) item.qian117 = xiangtongindex.ToString();
+                                    else if (indexing == 118) item.qian118 = xiangtongindex.ToString();
+                                    else if (indexing == 119) item.qian119 = xiangtongindex.ToString();
+                                    else if (indexing == 120) item.qian120 = xiangtongindex.ToString();
+                                    else if (indexing == 121) item.qian121 = xiangtongindex.ToString();
+                                    else if (indexing == 122) item.qian122 = xiangtongindex.ToString();
+                                    else if (indexing == 123) item.qian123 = xiangtongindex.ToString();
+                                    else if (indexing == 124) item.qian124 = xiangtongindex.ToString();
+                                    else if (indexing == 125) item.qian125 = xiangtongindex.ToString();
+                                    else if (indexing == 126) item.qian126 = xiangtongindex.ToString();
+                                    else if (indexing == 127) item.qian127 = xiangtongindex.ToString();
+                                    else if (indexing == 128) item.qian128 = xiangtongindex.ToString();
+                                    else if (indexing == 129) item.qian129 = xiangtongindex.ToString();
+                                    else if (indexing == 130) item.qian130 = xiangtongindex.ToString();
+                                    else if (indexing == 131) item.qian131 = xiangtongindex.ToString();
+                                    else if (indexing == 132) item.qian132 = xiangtongindex.ToString();
+                                    else if (indexing == 133) item.qian133 = xiangtongindex.ToString();
+                                    else if (indexing == 134) item.qian134 = xiangtongindex.ToString();
+                                    else if (indexing == 135) item.qian135 = xiangtongindex.ToString();
+                                    else if (indexing == 136) item.qian136 = xiangtongindex.ToString();
+                                    else if (indexing == 137) item.qian137 = xiangtongindex.ToString();
+                                    else if (indexing == 138) item.qian138 = xiangtongindex.ToString();
+                                    else if (indexing == 139) item.qian139 = xiangtongindex.ToString();
+                                    else if (indexing == 140) item.qian140 = xiangtongindex.ToString();
+                                    else if (indexing == 141) item.qian141 = xiangtongindex.ToString();
+                                    else if (indexing == 142) item.qian142 = xiangtongindex.ToString();
+                                    else if (indexing == 143) item.qian143 = xiangtongindex.ToString();
+                                    else if (indexing == 144) item.qian144 = xiangtongindex.ToString();
+                                    else if (indexing == 145) item.qian145 = xiangtongindex.ToString();
+                                    else if (indexing == 146) item.qian146 = xiangtongindex.ToString();
+                                    else if (indexing == 147) item.qian147 = xiangtongindex.ToString();
+                                    else if (indexing == 148) item.qian148 = xiangtongindex.ToString();
+                                    else if (indexing == 149) item.qian149 = xiangtongindex.ToString();
+                                    else if (indexing == 150) item.qian150 = xiangtongindex.ToString();
+                                    else if (indexing == 151) item.qian151 = xiangtongindex.ToString();
+                                    else if (indexing == 152) item.qian152 = xiangtongindex.ToString();
+                                    else if (indexing == 153) item.qian153 = xiangtongindex.ToString();
+                                    else if (indexing == 154) item.qian154 = xiangtongindex.ToString();
+                                    else if (indexing == 155) item.qian155 = xiangtongindex.ToString();
+                                    else if (indexing == 156) item.qian156 = xiangtongindex.ToString();
+                                    else if (indexing == 157) item.qian157 = xiangtongindex.ToString();
+                                    else if (indexing == 158) item.qian158 = xiangtongindex.ToString();
+                                    else if (indexing == 159) item.qian159 = xiangtongindex.ToString();
+                                    else if (indexing == 160) item.qian160 = xiangtongindex.ToString();
+                                    else if (indexing == 161) item.qian161 = xiangtongindex.ToString();
+                                    else if (indexing == 162) item.qian162 = xiangtongindex.ToString();
+                                    else if (indexing == 163) item.qian163 = xiangtongindex.ToString();
+                                    else if (indexing == 164) item.qian164 = xiangtongindex.ToString();
+                                    else if (indexing == 165) item.qian165 = xiangtongindex.ToString();
+                                    else if (indexing == 166) item.qian166 = xiangtongindex.ToString();
+                                    else if (indexing == 167) item.qian167 = xiangtongindex.ToString();
+                                    else if (indexing == 168) item.qian168 = xiangtongindex.ToString();
+                                    else if (indexing == 169) item.qian169 = xiangtongindex.ToString();
+                                    else if (indexing == 170) item.qian170 = xiangtongindex.ToString();
+                                    else if (indexing == 171) item.qian171 = xiangtongindex.ToString();
+                                    else if (indexing == 172) item.qian172 = xiangtongindex.ToString();
+                                    else if (indexing == 173) item.qian173 = xiangtongindex.ToString();
+                                    else if (indexing == 174) item.qian174 = xiangtongindex.ToString();
+                                    else if (indexing == 175) item.qian175 = xiangtongindex.ToString();
+                                    else if (indexing == 176) item.qian176 = xiangtongindex.ToString();
+                                    else if (indexing == 177) item.qian177 = xiangtongindex.ToString();
+                                    else if (indexing == 178) item.qian178 = xiangtongindex.ToString();
+                                    else if (indexing == 179) item.qian179 = xiangtongindex.ToString();
+                                    else if (indexing == 180) item.qian180 = xiangtongindex.ToString();
+                                    else if (indexing == 181) item.qian181 = xiangtongindex.ToString();
+                                    else if (indexing == 182) item.qian182 = xiangtongindex.ToString();
+                                    else if (indexing == 183) item.qian183 = xiangtongindex.ToString();
+                                    else if (indexing == 184) item.qian184 = xiangtongindex.ToString();
+                                    else if (indexing == 185) item.qian185 = xiangtongindex.ToString();
+                                    else if (indexing == 186) item.qian186 = xiangtongindex.ToString();
+                                    else if (indexing == 187) item.qian187 = xiangtongindex.ToString();
+                                    else if (indexing == 188) item.qian188 = xiangtongindex.ToString();
+                                    else if (indexing == 189) item.qian189 = xiangtongindex.ToString();
+                                    else if (indexing == 190) item.qian190 = xiangtongindex.ToString();
+                                    else if (indexing == 191) item.qian191 = xiangtongindex.ToString();
+                                    else if (indexing == 192) item.qian192 = xiangtongindex.ToString();
+                                    else if (indexing == 193) item.qian193 = xiangtongindex.ToString();
+                                    else if (indexing == 194) item.qian194 = xiangtongindex.ToString();
+                                    else if (indexing == 195) item.qian195 = xiangtongindex.ToString();
+                                    else if (indexing == 196) item.qian196 = xiangtongindex.ToString();
+                                    else if (indexing == 197) item.qian197 = xiangtongindex.ToString();
+                                    else if (indexing == 198) item.qian198 = xiangtongindex.ToString();
+                                    else if (indexing == 199) item.qian199 = xiangtongindex.ToString();
+                                    else if (indexing == 200) item.qian200 = xiangtongindex.ToString();
                                     #endregion
 
                                 }
@@ -4230,8 +4639,107 @@ namespace MasterClassified
                             cindex = firtinsterValue;
 
                         {
-                            string allqian = item.qian1 + " " + item.qian2 + " " + item.qian3 + " " + item.qian4 + " " + item.qian5 + " " + item.qian6 + " " + item.qian7 + " " + item.qian8 + " " + item.qian9 + " " + item.qian10 + " " + item.qian11 + " " + item.qian12 + " " + item.qian13 + " " + item.qian14 + " " + item.qian15 + " " + item.qian16 + " " + item.qian17 + " " + item.qian18 + " " + item.qian19 + " " + item.qian20 + " " + item.qian21 + " " + item.qian22 + " " + item.qian23 + " " + item.qian24 + " " + item.qian25 + " " + item.qian26 + " " + item.qian27 + " " + item.qian28 + " " + item.qian29 + " " + item.qian30 + " " + item.qian31 + " " + item.qian32 + " " + item.qian33 + " " + item.qian34 + " " + item.qian35 + " " + item.qian36 + " " + item.qian37 + " " + item.qian38 + " " + item.qian39 + " " + item.qian40 + " " + item.qian41 + " " + item.qian42 + " " + item.qian43 + " " + item.qian44 + " " + item.qian45 + " " + item.qian46 + " " + item.qian47 + " " + item.qian48 + " " + item.qian49 + " " + item.qian50 + " " + item.qian51 + " " + item.qian52 + " " + item.qian53 + " " + item.qian54 + " " + item.qian55 + " " + item.qian56 + " " + item.qian57 + " " + item.qian58 + " " + item.qian59 + " " + item.qian60 + " " + item.qian61 + " " + item.qian62 + " " + item.qian63 + " " + item.qian64 + " " + item.qian65 + " " + item.qian66 + " " + item.qian67 + " " + item.qian68 + " " + item.qian69 + " " + item.qian70 + " " + item.qian71 + " " + item.qian72 + " " + item.qian73 + " " + item.qian74 + " " + item.qian75 + " " + item.qian76 + " " + item.qian77 + " " + item.qian78 + " " + item.qian79 + " " + item.qian80 + " " + item.qian81 + " " + item.qian82 + " " + item.qian83 + " " + item.qian84 + " " + item.qian85 + " " + item.qian86 + " " + item.qian87 + " " + item.qian88 + " " + item.qian89 + " " + item.qian90 + " " + item.qian91 + " " + item.qian92 + " " + item.qian93 + " " + item.qian94 + " " + item.qian95 + " " + item.qian96 + " " + item.qian97 + " " + item.qian98 + " " + item.qian99 + " " + item.qian100 + " ";
-
+                            string allqian = item.qian1 + " " + item.qian2 + " " + item.qian3 + " " + item.qian4 + " " + item.qian5 + " " + item.qian6 + " " + item.qian7 + " " + item.qian8 + " " + item.qian9 + " " + item.qian10 + " " + item.qian11 + " " + item.qian12 + " " + item.qian13 + " " + item.qian14 + " " + item.qian15 + " " + item.qian16 + " " + item.qian17 + " " + item.qian18 + " " + item.qian19 + " " + item.qian20 + " " + item.qian21 + " " + item.qian22 + " " + item.qian23 + " " + item.qian24 + " " + item.qian25 + " " + item.qian26 + " " + item.qian27 + " " + item.qian28 + " " + item.qian29 + " " + item.qian30 + " " + item.qian31 + " " + item.qian32 + " " + item.qian33 + " " + item.qian34 + " " + item.qian35 + " " + item.qian36 + " " + item.qian37 + " " + item.qian38 + " " + item.qian39 + " " + item.qian40 + " " + item.qian41 + " " + item.qian42 + " " + item.qian43 + " " + item.qian44 + " " + item.qian45 + " " + item.qian46 + " " + item.qian47 + " " + item.qian48 + " " + item.qian49 + " " + item.qian50 + " " + item.qian51 + " " + item.qian52 + " " + item.qian53 + " " + item.qian54 + " " + item.qian55 + " " + item.qian56 + " " + item.qian57 + " " + item.qian58 + " " + item.qian59 + " " + item.qian60 + " " + item.qian61 + " " + item.qian62 + " " + item.qian63 + " " + item.qian64 + " " + item.qian65 + " " + item.qian66 + " " + item.qian67 + " " + item.qian68 + " " + item.qian69 + " " + item.qian70 + " " + item.qian71 + " " + item.qian72 + " " + item.qian73 + " " + item.qian74 + " " + item.qian75 + " " + item.qian76 + " " + item.qian77 + " " + item.qian78 + " " + item.qian79 + " " + item.qian80 + " " + item.qian81 + " " + item.qian82 + " " + item.qian83 + " " + item.qian84 + " " + item.qian85 + " " + item.qian86 + " " + item.qian87 + " " + item.qian88 + " " + item.qian89 + " " + item.qian90 + " " + item.qian91 + " " + item.qian92 + " " + item.qian93 + " " + item.qian94 + " " + item.qian95 + " " + item.qian96 + " " + item.qian97 + " " + item.qian98 + " " + item.qian99 + " " + item.qian100 + " "
+                                                 + item.qian101 + " "
+                                                + item.qian102 + " "
+                                                + item.qian103 + " "
+                                                + item.qian104 + " "
+                                                + item.qian105 + " "
+                                                + item.qian106 + " "
+                                                + item.qian107 + " "
+                                                + item.qian108 + " "
+                                                + item.qian109 + " "
+                                                + item.qian110 + " "
+                                                + item.qian111 + " "
+                                                + item.qian112 + " "
+                                                + item.qian113 + " "
+                                                + item.qian114 + " "
+                                                + item.qian115 + " "
+                                                + item.qian116 + " "
+                                                + item.qian117 + " "
+                                                + item.qian118 + " "
+                                                + item.qian119 + " "
+                                                + item.qian120 + " "
+                                                + item.qian121 + " "
+                                                + item.qian122 + " "
+                                                + item.qian123 + " "
+                                                + item.qian124 + " "
+                                                + item.qian125 + " "
+                                                + item.qian126 + " "
+                                                + item.qian127 + " "
+                                                + item.qian128 + " "
+                                                + item.qian129 + " "
+                                                + item.qian130 + " "
+                                                + item.qian131 + " "
+                                                + item.qian132 + " "
+                                                + item.qian133 + " "
+                                                + item.qian134 + " "
+                                                + item.qian135 + " "
+                                                + item.qian136 + " "
+                                                + item.qian137 + " "
+                                                + item.qian138 + " "
+                                                + item.qian139 + " "
+                                                + item.qian140 + " "
+                                                + item.qian141 + " "
+                                                + item.qian142 + " "
+                                                + item.qian143 + " "
+                                                + item.qian144 + " "
+                                                + item.qian145 + " "
+                                                + item.qian146 + " "
+                                                + item.qian147 + " "
+                                                + item.qian148 + " "
+                                                + item.qian149 + " "
+                                                + item.qian150 + " "
+                                                + item.qian151 + " "
+                                                + item.qian152 + " "
+                                                + item.qian153 + " "
+                                                + item.qian154 + " "
+                                                + item.qian155 + " "
+                                                + item.qian156 + " "
+                                                + item.qian157 + " "
+                                                + item.qian158 + " "
+                                                + item.qian159 + " "
+                                                + item.qian160 + " "
+                                                + item.qian161 + " "
+                                                + item.qian162 + " "
+                                                + item.qian163 + " "
+                                                + item.qian164 + " "
+                                                + item.qian165 + " "
+                                                + item.qian166 + " "
+                                                + item.qian167 + " "
+                                                + item.qian168 + " "
+                                                + item.qian169 + " "
+                                                + item.qian170 + " "
+                                                + item.qian171 + " "
+                                                + item.qian172 + " "
+                                                + item.qian173 + " "
+                                                + item.qian174 + " "
+                                                + item.qian175 + " "
+                                                + item.qian176 + " "
+                                                + item.qian177 + " "
+                                                + item.qian178 + " "
+                                                + item.qian179 + " "
+                                                + item.qian180 + " "
+                                                + item.qian181 + " "
+                                                + item.qian182 + " "
+                                                + item.qian183 + " "
+                                                + item.qian184 + " "
+                                                + item.qian185 + " "
+                                                + item.qian186 + " "
+                                                + item.qian187 + " "
+                                                + item.qian188 + " "
+                                                + item.qian189 + " "
+                                                + item.qian190 + " "
+                                                + item.qian191 + " "
+                                                + item.qian192 + " "
+                                                + item.qian193 + " "
+                                                + item.qian194 + " "
+                                                + item.qian195 + " "
+                                                + item.qian196 + " "
+                                                + item.qian197 + " "
+                                                + item.qian198 + " "
+                                                + item.qian199 + " "
+                                                + item.qian200 + " "
                             ;
                             int instercloumuinde = Convert.ToInt32(toolStripComboBox4.Text) - add_qianCount;
 
@@ -5470,7 +5978,9 @@ namespace MasterClassified
         {
             try
             {
-                //ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
+
+                UDF = new List<int>();
+
                 clsAllnew BusinessHelp = new clsAllnew();
 
                 #region 添加 基数 和前几期对比
@@ -5482,27 +5992,13 @@ namespace MasterClassified
                     if (Result[0].Data != null)
                         toolStripLabel7.Text = Result[0].Data.Replace("\r\n", "* ");
                 }
-                //showSuijiResultlist = new List<string>();
 
-                //foreach (FangAnLieBiaoDATA item in Result)
-                //{
-                //    string[] temp1 = System.Text.RegularExpressions.Regex.Split(item.Data, "\r\n");
-
-                //    for (int i = 1; i < temp1.Length; i++)
-                //    {
-                //        showSuijiResultlist.Add(temp1[i]);
-                //    }
-
-                //}
                 ClaimReport_Server.Sort(new CompsSmall());
                 foreach (inputCaipiaoDATA item in ClaimReport_Server)
                 {
 
-                    //foreach (FangAnLieBiaoDATA temp in Result)
                     {
 
-
-                        //string[] temp1 = System.Text.RegularExpressions.Regex.Split(temp.Data, "\r\n");
                         if (item.KaiJianHaoMa == null)
                             continue;
 
@@ -5510,7 +6006,7 @@ namespace MasterClassified
                         for (int ii = 0; ii < temp2.Length; ii++)
                         {
                             int dsjsk = ii + 1;
-                            var itemaa = checkfanganindex.Find((x) => { return x.Contains("第" + dsjsk.ToString()+"位"); });
+                            var itemaa = checkfanganindex.Find((x) => { return x.Contains("第" + dsjsk.ToString() + "位"); });
                             if (itemaa == null)
                                 continue;
                             FangAnLieBiaoDATA filtered = piliangfangan_Result.Find(s => itemaa.Contains(s.Name));
@@ -5519,8 +6015,24 @@ namespace MasterClassified
                             {
                                 string[] temp3 = System.Text.RegularExpressions.Regex.Split(temp1[i], "段");
                                 int ss = ii + 1;
+                                #region 如果不再选中范围内不进行检查
 
-                                //if (temp1[i].Contains(temp2[ii]))
+                                bool isrun = false;
+
+                                for (int j = 0; j < checkfanganindex.Count; j++)
+                                {
+                                    if (checkfanganindex[j].Contains("第" + ss.ToString() + "位"))
+                                    {
+                                        isrun = true;
+                                        var nn = UDF.Find((x) => { return x.ToString().Contains(ss.ToString()); });
+                                        if (nn == 0)
+                                            UDF.Add(Convert.ToInt32(ss));
+                                    }
+                                }
+                                if (isrun == false)
+                                    continue;
+                                #endregion
+
                                 if (temp3[1].Contains(temp2[ii]))
                                 {
                                     item.JiShu = item.JiShu + "基" + ss.ToString() + " " + temp3[0];
@@ -5620,7 +6132,6 @@ namespace MasterClassified
 
                 #endregion
 
-                // ClaimReport_Server.Sort(new Comp());
                 int indexing = 0;
                 foreach (inputCaipiaoDATA item in ClaimReport_Server)
                 {
@@ -5797,6 +6308,108 @@ namespace MasterClassified
                             else if (indexing == 97) item.qian97 = xiangtongindex.ToString();
                             else if (indexing == 98) item.qian98 = xiangtongindex.ToString();
                             else if (indexing == 99) item.qian99 = xiangtongindex.ToString();
+                            //   20180630
+                            else if (indexing == 100) item.qian100 = xiangtongindex.ToString();
+                            else if (indexing == 101) item.qian101 = xiangtongindex.ToString();
+                            else if (indexing == 102) item.qian102 = xiangtongindex.ToString();
+                            else if (indexing == 103) item.qian103 = xiangtongindex.ToString();
+                            else if (indexing == 104) item.qian104 = xiangtongindex.ToString();
+                            else if (indexing == 105) item.qian105 = xiangtongindex.ToString();
+                            else if (indexing == 106) item.qian106 = xiangtongindex.ToString();
+                            else if (indexing == 107) item.qian107 = xiangtongindex.ToString();
+                            else if (indexing == 108) item.qian108 = xiangtongindex.ToString();
+                            else if (indexing == 109) item.qian109 = xiangtongindex.ToString();
+                            else if (indexing == 110) item.qian110 = xiangtongindex.ToString();
+                            else if (indexing == 111) item.qian111 = xiangtongindex.ToString();
+                            else if (indexing == 112) item.qian112 = xiangtongindex.ToString();
+                            else if (indexing == 113) item.qian113 = xiangtongindex.ToString();
+                            else if (indexing == 114) item.qian114 = xiangtongindex.ToString();
+                            else if (indexing == 115) item.qian115 = xiangtongindex.ToString();
+                            else if (indexing == 116) item.qian116 = xiangtongindex.ToString();
+                            else if (indexing == 117) item.qian117 = xiangtongindex.ToString();
+                            else if (indexing == 118) item.qian118 = xiangtongindex.ToString();
+                            else if (indexing == 119) item.qian119 = xiangtongindex.ToString();
+                            else if (indexing == 120) item.qian120 = xiangtongindex.ToString();
+                            else if (indexing == 121) item.qian121 = xiangtongindex.ToString();
+                            else if (indexing == 122) item.qian122 = xiangtongindex.ToString();
+                            else if (indexing == 123) item.qian123 = xiangtongindex.ToString();
+                            else if (indexing == 124) item.qian124 = xiangtongindex.ToString();
+                            else if (indexing == 125) item.qian125 = xiangtongindex.ToString();
+                            else if (indexing == 126) item.qian126 = xiangtongindex.ToString();
+                            else if (indexing == 127) item.qian127 = xiangtongindex.ToString();
+                            else if (indexing == 128) item.qian128 = xiangtongindex.ToString();
+                            else if (indexing == 129) item.qian129 = xiangtongindex.ToString();
+                            else if (indexing == 130) item.qian130 = xiangtongindex.ToString();
+                            else if (indexing == 131) item.qian131 = xiangtongindex.ToString();
+                            else if (indexing == 132) item.qian132 = xiangtongindex.ToString();
+                            else if (indexing == 133) item.qian133 = xiangtongindex.ToString();
+                            else if (indexing == 134) item.qian134 = xiangtongindex.ToString();
+                            else if (indexing == 135) item.qian135 = xiangtongindex.ToString();
+                            else if (indexing == 136) item.qian136 = xiangtongindex.ToString();
+                            else if (indexing == 137) item.qian137 = xiangtongindex.ToString();
+                            else if (indexing == 138) item.qian138 = xiangtongindex.ToString();
+                            else if (indexing == 139) item.qian139 = xiangtongindex.ToString();
+                            else if (indexing == 140) item.qian140 = xiangtongindex.ToString();
+                            else if (indexing == 141) item.qian141 = xiangtongindex.ToString();
+                            else if (indexing == 142) item.qian142 = xiangtongindex.ToString();
+                            else if (indexing == 143) item.qian143 = xiangtongindex.ToString();
+                            else if (indexing == 144) item.qian144 = xiangtongindex.ToString();
+                            else if (indexing == 145) item.qian145 = xiangtongindex.ToString();
+                            else if (indexing == 146) item.qian146 = xiangtongindex.ToString();
+                            else if (indexing == 147) item.qian147 = xiangtongindex.ToString();
+                            else if (indexing == 148) item.qian148 = xiangtongindex.ToString();
+                            else if (indexing == 149) item.qian149 = xiangtongindex.ToString();
+                            else if (indexing == 150) item.qian150 = xiangtongindex.ToString();
+                            else if (indexing == 151) item.qian151 = xiangtongindex.ToString();
+                            else if (indexing == 152) item.qian152 = xiangtongindex.ToString();
+                            else if (indexing == 153) item.qian153 = xiangtongindex.ToString();
+                            else if (indexing == 154) item.qian154 = xiangtongindex.ToString();
+                            else if (indexing == 155) item.qian155 = xiangtongindex.ToString();
+                            else if (indexing == 156) item.qian156 = xiangtongindex.ToString();
+                            else if (indexing == 157) item.qian157 = xiangtongindex.ToString();
+                            else if (indexing == 158) item.qian158 = xiangtongindex.ToString();
+                            else if (indexing == 159) item.qian159 = xiangtongindex.ToString();
+                            else if (indexing == 160) item.qian160 = xiangtongindex.ToString();
+                            else if (indexing == 161) item.qian161 = xiangtongindex.ToString();
+                            else if (indexing == 162) item.qian162 = xiangtongindex.ToString();
+                            else if (indexing == 163) item.qian163 = xiangtongindex.ToString();
+                            else if (indexing == 164) item.qian164 = xiangtongindex.ToString();
+                            else if (indexing == 165) item.qian165 = xiangtongindex.ToString();
+                            else if (indexing == 166) item.qian166 = xiangtongindex.ToString();
+                            else if (indexing == 167) item.qian167 = xiangtongindex.ToString();
+                            else if (indexing == 168) item.qian168 = xiangtongindex.ToString();
+                            else if (indexing == 169) item.qian169 = xiangtongindex.ToString();
+                            else if (indexing == 170) item.qian170 = xiangtongindex.ToString();
+                            else if (indexing == 171) item.qian171 = xiangtongindex.ToString();
+                            else if (indexing == 172) item.qian172 = xiangtongindex.ToString();
+                            else if (indexing == 173) item.qian173 = xiangtongindex.ToString();
+                            else if (indexing == 174) item.qian174 = xiangtongindex.ToString();
+                            else if (indexing == 175) item.qian175 = xiangtongindex.ToString();
+                            else if (indexing == 176) item.qian176 = xiangtongindex.ToString();
+                            else if (indexing == 177) item.qian177 = xiangtongindex.ToString();
+                            else if (indexing == 178) item.qian178 = xiangtongindex.ToString();
+                            else if (indexing == 179) item.qian179 = xiangtongindex.ToString();
+                            else if (indexing == 180) item.qian180 = xiangtongindex.ToString();
+                            else if (indexing == 181) item.qian181 = xiangtongindex.ToString();
+                            else if (indexing == 182) item.qian182 = xiangtongindex.ToString();
+                            else if (indexing == 183) item.qian183 = xiangtongindex.ToString();
+                            else if (indexing == 184) item.qian184 = xiangtongindex.ToString();
+                            else if (indexing == 185) item.qian185 = xiangtongindex.ToString();
+                            else if (indexing == 186) item.qian186 = xiangtongindex.ToString();
+                            else if (indexing == 187) item.qian187 = xiangtongindex.ToString();
+                            else if (indexing == 188) item.qian188 = xiangtongindex.ToString();
+                            else if (indexing == 189) item.qian189 = xiangtongindex.ToString();
+                            else if (indexing == 190) item.qian190 = xiangtongindex.ToString();
+                            else if (indexing == 191) item.qian191 = xiangtongindex.ToString();
+                            else if (indexing == 192) item.qian192 = xiangtongindex.ToString();
+                            else if (indexing == 193) item.qian193 = xiangtongindex.ToString();
+                            else if (indexing == 194) item.qian194 = xiangtongindex.ToString();
+                            else if (indexing == 195) item.qian195 = xiangtongindex.ToString();
+                            else if (indexing == 196) item.qian196 = xiangtongindex.ToString();
+                            else if (indexing == 197) item.qian197 = xiangtongindex.ToString();
+                            else if (indexing == 198) item.qian198 = xiangtongindex.ToString();
+                            else if (indexing == 199) item.qian199 = xiangtongindex.ToString();
+                            else if (indexing == 200) item.qian200 = xiangtongindex.ToString();
                             #endregion
                         }
                     }
@@ -5810,6 +6423,7 @@ namespace MasterClassified
                 }
 
                 toolStripLabel8.Text = "运行结束";
+                MessageBox.Show(toolStripLabel8.Text);
                 #endregion
             }
             catch (Exception ex)
@@ -5823,17 +6437,34 @@ namespace MasterClassified
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string getinfo = dataGridView1.Columns[e.ColumnIndex].HeaderText;
-            if (getinfo.Contains("基"))
+            if (e.ColumnIndex >= 0)
             {
-                var itemaa = checkfanganindex.Find((x) => { return x.Contains("第"+getinfo.Replace("基","").ToString()+"位"); });
-                if (itemaa == null)
-                    return;
-                FangAnLieBiaoDATA filtered = piliangfangan_Result.Find(s => itemaa.Contains(s.Name));
-                toolStripLabel7.Text ="第"+getinfo.Replace("基","").ToString()+"位 "+ filtered.Data.Replace("\r\n", "*");
+                string getinfo = dataGridView1.Columns[e.ColumnIndex].HeaderText;
+                if (getinfo.Contains("基"))
+                {
+                    var itemaa = checkfanganindex.Find((x) => { return x.Contains("第" + getinfo.Replace("基", "").ToString() + "位"); });
+                    if (itemaa == null)
+                        return;
+                    FangAnLieBiaoDATA filtered = piliangfangan_Result.Find(s => itemaa.Contains(s.Name));
+                    toolStripLabel7.Text = "第" + getinfo.Replace("基", "").ToString() + "位 " + filtered.Data.Replace("\r\n", "*");
+
+                }
+            }
+
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            if (this.tabControl1.SelectedIndex == 0)
+            {
+                if (dataGridView1.Rows.Count != 0)
+                {
+                    int ii = dataGridView1.Rows.Count - 1;
+                    dataGridView1.CurrentCell = dataGridView1[0, ii]; // 强制将光标指向i行
+                    dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
+                }
 
             }
-    
         }
 
     }

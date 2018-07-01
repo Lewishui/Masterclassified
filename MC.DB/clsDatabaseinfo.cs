@@ -24,7 +24,7 @@ namespace MC.DB
         public string JiShu9 { get; set; }
         //new add
         public string JiShu10 { get; set; }
-        public string JiShu11{ get; set; }
+        public string JiShu11 { get; set; }
         public string JiShu12 { get; set; }
         public string JiShu13 { get; set; }
         public string JiShu14 { get; set; }
@@ -45,7 +45,7 @@ namespace MC.DB
         public string JiShu28 { get; set; }
         public string JiShu29 { get; set; }
         public string JiShu30 { get; set; }
-       
+
 
 
         public string qianAll { get; set; }
@@ -150,7 +150,110 @@ namespace MC.DB
         public string qian97 { get; set; }
         public string qian98 { get; set; }
         public string qian99 { get; set; }
+        //20180630
         public string qian100 { get; set; }
+        public string qian101 { get; set; }
+        public string qian102 { get; set; }
+        public string qian103 { get; set; }
+        public string qian104 { get; set; }
+        public string qian105 { get; set; }
+        public string qian106 { get; set; }
+        public string qian107 { get; set; }
+        public string qian108 { get; set; }
+        public string qian109 { get; set; }
+        public string qian110 { get; set; }
+        public string qian111 { get; set; }
+        public string qian112 { get; set; }
+        public string qian113 { get; set; }
+        public string qian114 { get; set; }
+        public string qian115 { get; set; }
+        public string qian116 { get; set; }
+        public string qian117 { get; set; }
+        public string qian118 { get; set; }
+        public string qian119 { get; set; }
+        public string qian120 { get; set; }
+        public string qian121 { get; set; }
+        public string qian122 { get; set; }
+        public string qian123 { get; set; }
+        public string qian124 { get; set; }
+        public string qian125 { get; set; }
+        public string qian126 { get; set; }
+        public string qian127 { get; set; }
+        public string qian128 { get; set; }
+        public string qian129 { get; set; }
+        public string qian130 { get; set; }
+        public string qian131 { get; set; }
+        public string qian132 { get; set; }
+        public string qian133 { get; set; }
+        public string qian134 { get; set; }
+        public string qian135 { get; set; }
+        public string qian136 { get; set; }
+        public string qian137 { get; set; }
+        public string qian138 { get; set; }
+        public string qian139 { get; set; }
+        public string qian140 { get; set; }
+        public string qian141 { get; set; }
+        public string qian142 { get; set; }
+        public string qian143 { get; set; }
+        public string qian144 { get; set; }
+        public string qian145 { get; set; }
+        public string qian146 { get; set; }
+        public string qian147 { get; set; }
+        public string qian148 { get; set; }
+        public string qian149 { get; set; }
+        public string qian150 { get; set; }
+        public string qian151 { get; set; }
+        public string qian152 { get; set; }
+        public string qian153 { get; set; }
+        public string qian154 { get; set; }
+        public string qian155 { get; set; }
+        public string qian156 { get; set; }
+        public string qian157 { get; set; }
+        public string qian158 { get; set; }
+        public string qian159 { get; set; }
+        public string qian160 { get; set; }
+        public string qian161 { get; set; }
+        public string qian162 { get; set; }
+        public string qian163 { get; set; }
+        public string qian164 { get; set; }
+        public string qian165 { get; set; }
+        public string qian166 { get; set; }
+        public string qian167 { get; set; }
+        public string qian168 { get; set; }
+        public string qian169 { get; set; }
+        public string qian170 { get; set; }
+        public string qian171 { get; set; }
+        public string qian172 { get; set; }
+        public string qian173 { get; set; }
+        public string qian174 { get; set; }
+        public string qian175 { get; set; }
+        public string qian176 { get; set; }
+        public string qian177 { get; set; }
+        public string qian178 { get; set; }
+        public string qian179 { get; set; }
+        public string qian180 { get; set; }
+        public string qian181 { get; set; }
+        public string qian182 { get; set; }
+        public string qian183 { get; set; }
+        public string qian184 { get; set; }
+        public string qian185 { get; set; }
+        public string qian186 { get; set; }
+        public string qian187 { get; set; }
+        public string qian188 { get; set; }
+        public string qian189 { get; set; }
+        public string qian190 { get; set; }
+        public string qian191 { get; set; }
+        public string qian192 { get; set; }
+        public string qian193 { get; set; }
+        public string qian194 { get; set; }
+        public string qian195 { get; set; }
+        public string qian196 { get; set; }
+        public string qian197 { get; set; }
+        public string qian198 { get; set; }
+        public string qian199 { get; set; }
+        public string qian200 { get; set; }
+
+
         public string qianMingcheng { get; set; }
         public string KaiJianRiqi { get; set; }
         public string Xuan { get; set; }

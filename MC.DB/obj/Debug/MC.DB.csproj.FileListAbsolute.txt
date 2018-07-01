@@ -21,3 +21,4 @@ D:\Dev Project\SY_caipiao\Masterclassified\MC.DB\bin\Debug\MC.DB.dll
 D:\Dev Project\SY_caipiao\Masterclassified\MC.DB\bin\Debug\MC.DB.pdb
 D:\Dev Project\SY_caipiao\Masterclassified\MC.DB\obj\Debug\MC.DB.dll
 D:\Dev Project\SY_caipiao\Masterclassified\MC.DB\obj\Debug\MC.DB.pdb
+D:\Dev Project\SY_caipiao\Masterclassified\MC.DB\obj\Debug\MC.DB.csprojResolveAssemblyReference.cache

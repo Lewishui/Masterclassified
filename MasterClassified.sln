@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MC.Buiness", "MC.Buiness\MC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MC.DB", "MC.DB\MC.DB.csproj", "{C6755495-AB18-4634-8C3C-5CDD811B2DC0}"
 EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup", "Setup\Setup.isproj", "{0062F01C-1237-45D5-AF27-24C589F2765F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B99C7D98-4A26-4DDD-89EA-EC8F12CB58A1} = {B99C7D98-4A26-4DDD-89EA-EC8F12CB58A1}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -58,6 +63,16 @@ Global
 		{C6755495-AB18-4634-8C3C-5CDD811B2DC0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6755495-AB18-4634-8C3C-5CDD811B2DC0}.SingleImage|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6755495-AB18-4634-8C3C-5CDD811B2DC0}.SingleImage|Any CPU.Build.0 = Debug|Any CPU
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.Debug|Any CPU.ActiveCfg = DVD-5
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.Debug|Any CPU.Build.0 = DVD-5
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.DVD-5|Any CPU.Build.0 = DVD-5
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.Release|Any CPU.ActiveCfg = SingleImage
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.Release|Any CPU.Build.0 = SingleImage
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{0062F01C-1237-45D5-AF27-24C589F2765F}.SingleImage|Any CPU.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

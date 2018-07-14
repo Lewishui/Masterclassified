@@ -55,7 +55,7 @@ namespace MasterClassified
         List<string> checkfanganindex;
 
         List<FangAnLieBiaoDATA> piliangfangan_Result;
-
+        List<inputCaipiaoDATA> ClaimReport_Server_Initial;
         public frmTracing_Analysis()
         {
             InitializeComponent();
@@ -118,8 +118,8 @@ namespace MasterClassified
                 ClaimReport_Server.Sort(new Comp());
                 List<inputCaipiaoDATA> ClaimReport_Server1 = new List<inputCaipiaoDATA>();
                 ClaimReport_Server1 = ClaimReport_Server;
-
-
+                ClaimReport_Server_Initial = new List<inputCaipiaoDATA>();
+                ClaimReport_Server_Initial = ClaimReport_Server;
                 var counties = ClaimReport_Server1.Select(s => new MockEntity { ShortName = s.QiHao, FullName = s.QiHao }).Distinct().ToList();
 
                 this.toolStripComboBox2.ComboBox.DisplayMember = "FullName";
@@ -3236,6 +3236,7 @@ namespace MasterClassified
                                     #region 匹配相同次数
                                     for (int j = 0; j < UDF.Count; j++)
                                     {
+                                        //f000
                                         if (item.JiShu1 != null && item.JiShu1 == temp.JiShu1 && UDF[j] == 1)
                                             xiangtongindex++;
                                         if (item.JiShu2 != null && item.JiShu2 == temp.JiShu2 && UDF[j] == 2)
@@ -5935,6 +5936,7 @@ namespace MasterClassified
         private void 自选方案ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             checkfangan();
+            Initial_Resulit();
             NewMethodtab2();
 
         }
@@ -5942,9 +5944,16 @@ namespace MasterClassified
         private void 自选方案ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             checkfangan();
+            Initial_Resulit();
             //checkfanganindex
             NewMethodtab2();
 
+        }
+
+        private void Initial_Resulit()
+        {
+            ClaimReport_Server = new List<inputCaipiaoDATA>();
+            ClaimReport_Server = ClaimReport_Server_Initial;
         }
 
         private void checkfangan()
@@ -6035,6 +6044,8 @@ namespace MasterClassified
 
                                 if (temp3[1].Contains(temp2[ii]))
                                 {
+
+
                                     item.JiShu = item.JiShu + "基" + ss.ToString() + " " + temp3[0];
                                     if (ss == 1)
                                         item.JiShu1 = temp3[0];
@@ -6142,72 +6153,82 @@ namespace MasterClassified
                         {
                             indexing++;
                             int xiangtongindex = 0;
+                            #region 判断选中的基数尾数式否应该判断此范围
+                            //int dsjsk1 = indexing;
+                            //var itemaa1 = checkfanganindex.Find((x) => { return x.Contains("第" + indexing.ToString() + "位"); });
+                            //if (itemaa1 == null)
+                            //    continue;
+                            #endregion
                             #region 匹配相同次数
-                            if (item.JiShu1 != null && item.JiShu1 == temp.JiShu1)
-                                xiangtongindex++;
-                            if (item.JiShu2 != null && item.JiShu2 == temp.JiShu2)
-                                xiangtongindex++;
-                            if (item.JiShu3 != null && item.JiShu3 == temp.JiShu3)
-                                xiangtongindex++;
-                            if (item.JiShu4 != null && item.JiShu4 == temp.JiShu4)
-                                xiangtongindex++;
-                            if (item.JiShu5 != null && item.JiShu5 == temp.JiShu5)
-                                xiangtongindex++;
-                            if (item.JiShu6 != null && item.JiShu6 == temp.JiShu6)
-                                xiangtongindex++;
-                            if (item.JiShu7 != null && item.JiShu7 == temp.JiShu7)
-                                xiangtongindex++;
-                            if (item.JiShu8 != null && item.JiShu8 == temp.JiShu8)
-                                xiangtongindex++;
-                            if (item.JiShu9 != null && item.JiShu9 == temp.JiShu9)
-                                xiangtongindex++;
-                            //new
-                            if (item.JiShu10 != null && item.JiShu10 == temp.JiShu10)
-                                xiangtongindex++;
-                            if (item.JiShu11 != null && item.JiShu11 == temp.JiShu11)
-                                xiangtongindex++;
-                            if (item.JiShu12 != null && item.JiShu12 == temp.JiShu12)
-                                xiangtongindex++;
-                            if (item.JiShu13 != null && item.JiShu13 == temp.JiShu13)
-                                xiangtongindex++;
-                            if (item.JiShu14 != null && item.JiShu14 == temp.JiShu14)
-                                xiangtongindex++;
-                            if (item.JiShu15 != null && item.JiShu15 == temp.JiShu15)
-                                xiangtongindex++;
-                            //new 0621
-                            if (item.JiShu16 != null && item.JiShu16 == temp.JiShu16)
-                                xiangtongindex++;
-                            if (item.JiShu17 != null && item.JiShu17 == temp.JiShu17)
-                                xiangtongindex++;
-                            if (item.JiShu18 != null && item.JiShu18 == temp.JiShu18)
-                                xiangtongindex++;
-                            if (item.JiShu19 != null && item.JiShu19 == temp.JiShu19)
-                                xiangtongindex++;
-                            if (item.JiShu20 != null && item.JiShu20 == temp.JiShu20)
-                                xiangtongindex++;
-                            if (item.JiShu21 != null && item.JiShu21 == temp.JiShu21)
-                                xiangtongindex++;
-                            if (item.JiShu22 != null && item.JiShu22 == temp.JiShu22)
-                                xiangtongindex++;
-                            if (item.JiShu23 != null && item.JiShu23 == temp.JiShu23)
-                                xiangtongindex++;
-                            if (item.JiShu24 != null && item.JiShu24 == temp.JiShu24)
-                                xiangtongindex++;
-                            if (item.JiShu25 != null && item.JiShu25 == temp.JiShu25)
-                                xiangtongindex++;
-                            if (item.JiShu26 != null && item.JiShu26 == temp.JiShu26)
-                                xiangtongindex++;
-                            if (item.JiShu27 != null && item.JiShu27 == temp.JiShu27)
-                                xiangtongindex++;
-                            if (item.JiShu28 != null && item.JiShu28 == temp.JiShu28)
-                                xiangtongindex++;
-                            if (item.JiShu29 != null && item.JiShu29 == temp.JiShu29)
-                                xiangtongindex++;
-                            if (item.JiShu30 != null && item.JiShu30 == temp.JiShu30)
-                                xiangtongindex++;
-
+                            for (int j = 0; j < UDF.Count; j++)
+                            {
+                                if (item.JiShu1 != null && item.JiShu1 == temp.JiShu1 && UDF[j] == 1)
+                                    xiangtongindex++;
+                                if (item.JiShu2 != null && item.JiShu2 == temp.JiShu2 && UDF[j] == 2)
+                                    xiangtongindex++;
+                                if (item.JiShu3 != null && item.JiShu3 == temp.JiShu3 && UDF[j] == 3)
+                                    xiangtongindex++;
+                                if (item.JiShu4 != null && item.JiShu4 == temp.JiShu4 && UDF[j] == 4)
+                                    xiangtongindex++;
+                                if (item.JiShu5 != null && item.JiShu5 == temp.JiShu5 && UDF[j] == 5)
+                                    xiangtongindex++;
+                                if (item.JiShu6 != null && item.JiShu6 == temp.JiShu6 && UDF[j] == 6)
+                                    xiangtongindex++;
+                                if (item.JiShu7 != null && item.JiShu7 == temp.JiShu7 && UDF[j] == 7)
+                                    xiangtongindex++;
+                                if (item.JiShu8 != null && item.JiShu8 == temp.JiShu8 && UDF[j] == 8)
+                                    xiangtongindex++;
+                                if (item.JiShu9 != null && item.JiShu9 == temp.JiShu9 && UDF[j] == 9)
+                                    xiangtongindex++;
+                                //new
+                                if (item.JiShu10 != null && item.JiShu10 == temp.JiShu10)
+                                    xiangtongindex++;
+                                if (item.JiShu11 != null && item.JiShu11 == temp.JiShu11)
+                                    xiangtongindex++;
+                                if (item.JiShu12 != null && item.JiShu12 == temp.JiShu12)
+                                    xiangtongindex++;
+                                if (item.JiShu13 != null && item.JiShu13 == temp.JiShu13)
+                                    xiangtongindex++;
+                                if (item.JiShu14 != null && item.JiShu14 == temp.JiShu14)
+                                    xiangtongindex++;
+                                if (item.JiShu15 != null && item.JiShu15 == temp.JiShu15)
+                                    xiangtongindex++;
+                                //new 0621
+                                if (item.JiShu16 != null && item.JiShu16 == temp.JiShu16)
+                                    xiangtongindex++;
+                                if (item.JiShu17 != null && item.JiShu17 == temp.JiShu17)
+                                    xiangtongindex++;
+                                if (item.JiShu18 != null && item.JiShu18 == temp.JiShu18)
+                                    xiangtongindex++;
+                                if (item.JiShu19 != null && item.JiShu19 == temp.JiShu19)
+                                    xiangtongindex++;
+                                if (item.JiShu20 != null && item.JiShu20 == temp.JiShu20)
+                                    xiangtongindex++;
+                                if (item.JiShu21 != null && item.JiShu21 == temp.JiShu21)
+                                    xiangtongindex++;
+                                if (item.JiShu22 != null && item.JiShu22 == temp.JiShu22)
+                                    xiangtongindex++;
+                                if (item.JiShu23 != null && item.JiShu23 == temp.JiShu23)
+                                    xiangtongindex++;
+                                if (item.JiShu24 != null && item.JiShu24 == temp.JiShu24)
+                                    xiangtongindex++;
+                                if (item.JiShu25 != null && item.JiShu25 == temp.JiShu25)
+                                    xiangtongindex++;
+                                if (item.JiShu26 != null && item.JiShu26 == temp.JiShu26)
+                                    xiangtongindex++;
+                                if (item.JiShu27 != null && item.JiShu27 == temp.JiShu27)
+                                    xiangtongindex++;
+                                if (item.JiShu28 != null && item.JiShu28 == temp.JiShu28)
+                                    xiangtongindex++;
+                                if (item.JiShu29 != null && item.JiShu29 == temp.JiShu29)
+                                    xiangtongindex++;
+                                if (item.JiShu30 != null && item.JiShu30 == temp.JiShu30)
+                                    xiangtongindex++;
+                            }
                             #endregion
                             #region MyRegion
+
+
                             if (indexing == 1)
                                 item.qian1 = xiangtongindex.ToString();
                             else if (indexing == 2) item.qian2 = xiangtongindex.ToString();

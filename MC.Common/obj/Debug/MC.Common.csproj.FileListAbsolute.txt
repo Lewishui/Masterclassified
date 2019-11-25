@@ -34,3 +34,8 @@ D:\Dev Project\SY_caipiao\Masterclassified\MC.Common\bin\Debug\MC.Common.pdb
 D:\Dev Project\SY_caipiao\Masterclassified\MC.Common\obj\Debug\MC.Common.csprojResolveAssemblyReference.cache
 D:\Dev Project\SY_caipiao\Masterclassified\MC.Common\obj\Debug\MC.Common.dll
 D:\Dev Project\SY_caipiao\Masterclassified\MC.Common\obj\Debug\MC.Common.pdb
+C:\bake40mypc\Devlop\Masterclassified\MC.Common\bin\Debug\MC.Common.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.Common\bin\Debug\MC.Common.pdb
+C:\bake40mypc\Devlop\Masterclassified\MC.Common\obj\Debug\MC.Common.csprojResolveAssemblyReference.cache
+C:\bake40mypc\Devlop\Masterclassified\MC.Common\obj\Debug\MC.Common.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.Common\obj\Debug\MC.Common.pdb

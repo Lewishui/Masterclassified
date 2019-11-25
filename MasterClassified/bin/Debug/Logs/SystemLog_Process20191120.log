@@ -1,0 +1,78 @@
+2019-11-20 09:27:45,516 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 9:27:45
+2019-11-20 09:27:45,595 [9] FATAL ProcessLogger [(null)] - initialize2019/11/20 9:27:45
+2019-11-20 09:33:01,101 [8] FATAL ProcessLogger [(null)] - System Start 2019/11/20 9:33:01
+2019-11-20 09:33:01,173 [8] FATAL ProcessLogger [(null)] - initialize2019/11/20 9:33:01
+2019-11-20 09:33:06,836 [8] FATAL ProcessLogger [(null)] - System Start 2019/11/20 9:33:06
+2019-11-20 09:33:06,837 [8] FATAL ProcessLogger [(null)] - System Start 2019/11/20 9:33:06
+2019-11-20 09:33:07,642 [8] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2019/11/20 9:33:07
+2019-11-20 09:33:07,645 [8] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052019/11/20 9:33:07
+2019-11-20 09:33:08,106 [8] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062019/11/20 9:33:08
+2019-11-20 09:33:08,117 [8] FATAL ProcessLogger [(null)] - System  701072019/11/20 9:33:08
+2019-11-20 10:07:59,995 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:07:59
+2019-11-20 10:08:00,087 [9] FATAL ProcessLogger [(null)] - initialize2019/11/20 10:08:00
+2019-11-20 10:08:20,482 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:08:20
+2019-11-20 10:08:20,482 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:08:20
+2019-11-20 10:08:21,054 [9] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2019/11/20 10:08:21
+2019-11-20 10:08:21,056 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052019/11/20 10:08:21
+2019-11-20 10:08:21,499 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062019/11/20 10:08:21
+2019-11-20 10:08:21,509 [9] FATAL ProcessLogger [(null)] - System  701072019/11/20 10:08:21
+2019-11-20 10:08:41,980 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:08:41
+2019-11-20 10:08:42,054 [9] FATAL ProcessLogger [(null)] - initialize2019/11/20 10:08:42
+2019-11-20 10:09:10,889 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:09:10
+2019-11-20 10:09:10,890 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:09:10
+2019-11-20 10:35:51,885 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:35:51
+2019-11-20 10:35:51,974 [10] FATAL ProcessLogger [(null)] - initialize2019/11/20 10:35:51
+2019-11-20 10:35:59,452 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:35:59
+2019-11-20 10:35:59,453 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:35:59
+2019-11-20 10:36:06,761 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 10:36:06
+2019-11-20 11:53:23,874 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 11:53:23
+2019-11-20 11:53:24,201 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 11:53:24
+2019-11-20 11:53:24,333 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 11:53:24
+2019-11-20 11:53:24,568 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 11:53:24
+2019-11-20 11:53:24,692 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 11:53:24
+2019-11-20 11:53:27,542 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 11:53:27
+2019-11-20 11:53:27,544 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 11:53:27
+2019-11-20 11:58:49,115 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 11:58:49
+2019-11-20 11:58:49,196 [9] FATAL ProcessLogger [(null)] - initialize2019/11/20 11:58:49
+2019-11-20 12:32:26,062 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 12:32:26
+2019-11-20 12:32:26,067 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 12:32:26
+2019-11-20 12:32:27,240 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 12:32:27
+2019-11-20 13:22:49,649 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 13:22:49
+2019-11-20 13:22:49,723 [10] FATAL ProcessLogger [(null)] - initialize2019/11/20 13:22:49
+2019-11-20 13:22:52,662 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 13:22:52
+2019-11-20 13:22:52,663 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 13:22:52
+2019-11-20 13:22:53,663 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 13:22:53
+2019-11-20 13:27:31,958 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 13:27:31
+2019-11-20 13:27:32,023 [10] FATAL ProcessLogger [(null)] - initialize2019/11/20 13:27:32
+2019-11-20 13:27:35,039 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 13:27:35
+2019-11-20 13:27:35,040 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 13:27:35
+2019-11-20 13:27:43,758 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 13:27:43
+2019-11-20 14:17:06,475 [10] FATAL ProcessLogger [(null)] - System Start 2019/11/20 14:17:06
+2019-11-20 20:12:49,244 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:12:49
+2019-11-20 20:12:49,327 [9] FATAL ProcessLogger [(null)] - initialize2019/11/20 20:12:49
+2019-11-20 20:12:53,858 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:12:53
+2019-11-20 20:12:53,859 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:12:53
+2019-11-20 20:13:00,439 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:13:00
+2019-11-20 20:14:02,813 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:14:02
+2019-11-20 20:14:02,891 [9] FATAL ProcessLogger [(null)] - initialize2019/11/20 20:14:02
+2019-11-20 20:16:31,073 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:16:31
+2019-11-20 20:16:31,074 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:16:31
+2019-11-20 20:16:31,996 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:16:31
+2019-11-20 20:29:09,647 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:29:09
+2019-11-20 20:54:52,401 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:54:52
+2019-11-20 20:54:57,927 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:54:57
+2019-11-20 20:54:57,927 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:54:57
+2019-11-20 20:54:58,541 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:54:58
+2019-11-20 20:55:07,343 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:55:07
+2019-11-20 20:58:23,218 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:58:23
+2019-11-20 20:58:23,296 [9] FATAL ProcessLogger [(null)] - initialize2019/11/20 20:58:23
+2019-11-20 20:58:28,355 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:58:28
+2019-11-20 20:58:28,356 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:58:28
+2019-11-20 20:58:29,244 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:58:29
+2019-11-20 20:58:42,978 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 20:58:42
+2019-11-20 22:19:43,564 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 22:19:43
+2019-11-20 22:19:43,647 [9] FATAL ProcessLogger [(null)] - initialize2019/11/20 22:19:43
+2019-11-20 22:19:49,323 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 22:19:49
+2019-11-20 22:19:49,324 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 22:19:49
+2019-11-20 22:19:50,389 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 22:19:50
+2019-11-20 22:19:59,238 [9] FATAL ProcessLogger [(null)] - System Start 2019/11/20 22:19:59

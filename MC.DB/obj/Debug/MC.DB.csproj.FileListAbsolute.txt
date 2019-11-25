@@ -22,3 +22,8 @@ D:\Dev Project\SY_caipiao\Masterclassified\MC.DB\bin\Debug\MC.DB.pdb
 D:\Dev Project\SY_caipiao\Masterclassified\MC.DB\obj\Debug\MC.DB.dll
 D:\Dev Project\SY_caipiao\Masterclassified\MC.DB\obj\Debug\MC.DB.pdb
 D:\Dev Project\SY_caipiao\Masterclassified\MC.DB\obj\Debug\MC.DB.csprojResolveAssemblyReference.cache
+C:\bake40mypc\Devlop\Masterclassified\MC.DB\bin\Debug\MC.DB.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.DB\bin\Debug\MC.DB.pdb
+C:\bake40mypc\Devlop\Masterclassified\MC.DB\obj\Debug\MC.DB.csprojResolveAssemblyReference.cache
+C:\bake40mypc\Devlop\Masterclassified\MC.DB\obj\Debug\MC.DB.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.DB\obj\Debug\MC.DB.pdb

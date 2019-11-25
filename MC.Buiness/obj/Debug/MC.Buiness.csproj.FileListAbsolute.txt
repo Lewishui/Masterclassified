@@ -70,3 +70,29 @@ D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\MC.DB.pdb
 D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\bin\Debug\Interop.Microsoft.Office.Core.dll
 D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
 D:\Dev Project\SY_caipiao\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.pdb
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\bin\Debug\MC.Common.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\bin\Debug\MC.DB.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\bin\Debug\MC.Common.pdb
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\bin\Debug\MC.DB.pdb
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csprojResolveAssemblyReference.cache
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csproj.ResolveComReference.cache
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
+C:\bake40mypc\Devlop\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.dll
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.pdb
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\MC.Common.dll
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\MC.DB.dll
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\MC.Common.pdb
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\MC.DB.pdb
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csprojResolveAssemblyReference.cache
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csproj.ResolveComReference.cache
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb

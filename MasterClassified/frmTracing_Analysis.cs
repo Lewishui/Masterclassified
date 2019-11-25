@@ -81,6 +81,7 @@ namespace MasterClassified
             piliangfangan_Result = new List<FangAnLieBiaoDATA>();
 
         }
+
         private void InitialSystemInfo()
         {
             try
@@ -373,6 +374,9 @@ namespace MasterClassified
                 {
                     if (Convert.ToInt32(item.QiHao) > Convert.ToInt32(temp.QiHao) && indexing < Convert.ToInt32(qianqiqishu))
                     {
+                        //new 20191120  找出哪些 基数相等
+                        List<string> same_list = new List<string>();
+
                         indexing++;
                         int xiangtongindex = 0;
                         if (item.KaiJianHaoMa == null || temp.KaiJianHaoMa == null)
@@ -406,14 +410,19 @@ namespace MasterClassified
                                 {
                                     shifouyijingpanduanguozhegeshuzi = temp3[i] + " " + shifouyijingpanduanguozhegeshuzi;
                                     xiangtongindex++;
+                                    same_list.Add("JiShu" + (i + 1).ToString());
                                 }
                             }
                         }
 
                         #endregion
                         //item.qianAll = item.qianAll + "\r\n前" + indexing + " " + xiangtongindex.ToString();
+
+                        // 20191121 判断基数 有3个以内的做 前期分析用
+                        //same_qianqi_tab2mark(item, same_list, xiangtongindex);
+
                         text = text + " " + xiangtongindex.ToString();
-                        item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
+                         item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
                         item.qianMingcheng = item.qianMingcheng + "\r\n前" + indexing;
                         //  qianmingcheng = item.qianMingcheng + "\r\n前" + indexing; ;
                         int isrun = 0;
@@ -559,6 +568,9 @@ namespace MasterClassified
                         string shifouyijingpanduanguozhegeshuzi = "";
                         if (Convert.ToInt32(item.QiHao) > Convert.ToInt32(temp.QiHao) && indexing < Convert.ToInt32(qianqiqishu))
                         {
+                            //new 20191120  找出哪些 基数相等
+                            List<string> same_list = new List<string>();
+
                             indexing++;
                             int xiangtongindex = 0;
                             string[] temp3 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
@@ -610,16 +622,20 @@ namespace MasterClassified
 
                                     if (temp3[i] == temp1[j1])
                                     {
+
                                         shifouyijingpanduanguozhegeshuzi = temp3[i] + " " + shifouyijingpanduanguozhegeshuzi;
                                         xiangtongindex++;
+
+                                        same_list.Add("JiShu" + (i + 1).ToString());
                                     }
                                 }
                             }
 
                             #endregion
-                            //item.qianAll = item.qianAll + "\r\n前" + indexing + " " + xiangtongindex.ToString();
+                            // 20191121 判断基数 有3个以内的做 前期分析用
+                            same_qianqi_tab2mark(item, same_list, xiangtongindex);
+
                             text = text + " " + xiangtongindex.ToString();
-                            item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
                             item.qianMingcheng = item.qianMingcheng + "\r\n前" + indexing;
                             //  qianmingcheng = item.qianMingcheng + "\r\n前" + indexing; ;
                             int isrun = 0;
@@ -742,6 +758,23 @@ namespace MasterClassified
                 }
                 toolStripLabel8.Text = "结束";
             }
+        }
+
+        private static void same_qianqi_tab2mark(inputCaipiaoDATA item, List<string> same_list, int xiangtongindex)
+        {
+            // same_qian3mark(indexing, item, xiangtongindex, same_list);
+            //列出相同内容
+            string xiangtogn = "";
+            for (int yx = 0; yx < same_list.Count; yx++)
+            {
+                xiangtogn += same_list[yx].Replace("JiShu", "第");
+            }
+            //item.qianAll = item.qianAll + "\r\n前" + indexing + " " + xiangtongindex.ToString();
+
+            if (same_list != null && same_list.Count > 0)
+                item.qianAll = item.qianAll + " " + xiangtongindex.ToString() + ":" + xiangtogn;
+            else
+                item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
         }
 
         private void NewMethodtab1()
@@ -904,70 +937,168 @@ namespace MasterClassified
                         {
                             indexing++;
                             int xiangtongindex = 0;
+
+                            //new 20191120  找出哪些 基数相等
+                            List<string> same_list = new List<string>();
+
                             #region 匹配相同次数
                             if (item.JiShu1 != null && item.JiShu1 == temp.JiShu1)
-                                xiangtongindex++;
-                            if (item.JiShu2 != null && item.JiShu2 == temp.JiShu2)
-                                xiangtongindex++;
-                            if (item.JiShu3 != null && item.JiShu3 == temp.JiShu3)
-                                xiangtongindex++;
-                            if (item.JiShu4 != null && item.JiShu4 == temp.JiShu4)
-                                xiangtongindex++;
-                            if (item.JiShu5 != null && item.JiShu5 == temp.JiShu5)
-                                xiangtongindex++;
-                            if (item.JiShu6 != null && item.JiShu6 == temp.JiShu6)
-                                xiangtongindex++;
-                            if (item.JiShu7 != null && item.JiShu7 == temp.JiShu7)
-                                xiangtongindex++;
-                            if (item.JiShu8 != null && item.JiShu8 == temp.JiShu8)
-                                xiangtongindex++;
-                            if (item.JiShu9 != null && item.JiShu9 == temp.JiShu9)
-                                xiangtongindex++;
-                            //new
-                            if (item.JiShu10 != null && item.JiShu10 == temp.JiShu10)
-                                xiangtongindex++;
-                            if (item.JiShu11 != null && item.JiShu11 == temp.JiShu11)
-                                xiangtongindex++;
-                            if (item.JiShu12 != null && item.JiShu12 == temp.JiShu12)
-                                xiangtongindex++;
-                            if (item.JiShu13 != null && item.JiShu13 == temp.JiShu13)
-                                xiangtongindex++;
-                            if (item.JiShu14 != null && item.JiShu14 == temp.JiShu14)
-                                xiangtongindex++;
-                            if (item.JiShu15 != null && item.JiShu15 == temp.JiShu15)
-                                xiangtongindex++;
-                            //new 0621
-                            if (item.JiShu16 != null && item.JiShu16 == temp.JiShu16)
-                                xiangtongindex++;
-                            if (item.JiShu17 != null && item.JiShu17 == temp.JiShu17)
-                                xiangtongindex++;
-                            if (item.JiShu18 != null && item.JiShu18 == temp.JiShu18)
-                                xiangtongindex++;
-                            if (item.JiShu19 != null && item.JiShu19 == temp.JiShu19)
-                                xiangtongindex++;
-                            if (item.JiShu20 != null && item.JiShu20 == temp.JiShu20)
-                                xiangtongindex++;
-                            if (item.JiShu21 != null && item.JiShu21 == temp.JiShu21)
-                                xiangtongindex++;
-                            if (item.JiShu22 != null && item.JiShu22 == temp.JiShu22)
-                                xiangtongindex++;
-                            if (item.JiShu23 != null && item.JiShu23 == temp.JiShu23)
-                                xiangtongindex++;
-                            if (item.JiShu24 != null && item.JiShu24 == temp.JiShu24)
-                                xiangtongindex++;
-                            if (item.JiShu25 != null && item.JiShu25 == temp.JiShu25)
-                                xiangtongindex++;
-                            if (item.JiShu26 != null && item.JiShu26 == temp.JiShu26)
-                                xiangtongindex++;
-                            if (item.JiShu27 != null && item.JiShu27 == temp.JiShu27)
-                                xiangtongindex++;
-                            if (item.JiShu28 != null && item.JiShu28 == temp.JiShu28)
-                                xiangtongindex++;
-                            if (item.JiShu29 != null && item.JiShu29 == temp.JiShu29)
-                                xiangtongindex++;
-                            if (item.JiShu30 != null && item.JiShu30 == temp.JiShu30)
+                            {
+                                same_list.Add("JiShu1");
                                 xiangtongindex++;
 
+                            }
+                            if (item.JiShu2 != null && item.JiShu2 == temp.JiShu2)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu2");
+                            }
+                            if (item.JiShu3 != null && item.JiShu3 == temp.JiShu3)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu3");
+                            }
+                            if (item.JiShu4 != null && item.JiShu4 == temp.JiShu4)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu4");
+
+                            }
+                            if (item.JiShu5 != null && item.JiShu5 == temp.JiShu5)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu5");
+                            }
+                            if (item.JiShu6 != null && item.JiShu6 == temp.JiShu6)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu6");
+                            }
+                            if (item.JiShu7 != null && item.JiShu7 == temp.JiShu7)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu7");
+                            }
+                            if (item.JiShu8 != null && item.JiShu8 == temp.JiShu8)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu8");
+                            }
+                            if (item.JiShu9 != null && item.JiShu9 == temp.JiShu9)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu9");
+                            }
+                            //new
+                            if (item.JiShu10 != null && item.JiShu10 == temp.JiShu10)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu10");
+                            }
+                            if (item.JiShu11 != null && item.JiShu11 == temp.JiShu11)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu11");
+                            }
+                            if (item.JiShu12 != null && item.JiShu12 == temp.JiShu12)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu12");
+                            }
+                            if (item.JiShu13 != null && item.JiShu13 == temp.JiShu13)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu13");
+                            }
+                            if (item.JiShu14 != null && item.JiShu14 == temp.JiShu14)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu14");
+                            }
+                            if (item.JiShu15 != null && item.JiShu15 == temp.JiShu15)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu15");
+                            }
+                            //new 0621
+                            if (item.JiShu16 != null && item.JiShu16 == temp.JiShu16)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu16");
+                            }
+                            if (item.JiShu17 != null && item.JiShu17 == temp.JiShu17)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu17");
+                            }
+                            if (item.JiShu18 != null && item.JiShu18 == temp.JiShu18)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu18");
+                            }
+                            if (item.JiShu19 != null && item.JiShu19 == temp.JiShu19)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu19");
+                            }
+                            if (item.JiShu20 != null && item.JiShu20 == temp.JiShu20)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu20");
+
+                            }
+                            if (item.JiShu21 != null && item.JiShu21 == temp.JiShu21)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu21");
+                            }
+                            if (item.JiShu22 != null && item.JiShu22 == temp.JiShu22)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu22");
+                            }
+                            if (item.JiShu23 != null && item.JiShu23 == temp.JiShu23)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu23");
+                            }
+                            if (item.JiShu24 != null && item.JiShu24 == temp.JiShu24)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu24");
+
+                            }
+                            if (item.JiShu25 != null && item.JiShu25 == temp.JiShu25)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu25");
+                            }
+                            if (item.JiShu26 != null && item.JiShu26 == temp.JiShu26)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu26");
+
+                            }
+                            if (item.JiShu27 != null && item.JiShu27 == temp.JiShu27)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu27");
+                            }
+                            if (item.JiShu28 != null && item.JiShu28 == temp.JiShu28)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu28");
+                            }
+                            if (item.JiShu29 != null && item.JiShu29 == temp.JiShu29)
+                            {
+                                xiangtongindex++;
+                                same_list.Add("JiShu29");
+                            }
+                            if (item.JiShu30 != null && item.JiShu30 == temp.JiShu30)
+                            {
+                                same_list.Add("JiShu30");
+                                xiangtongindex++;
+                            }
                             #endregion
                             #region MyRegion
                             if (indexing == 1)
@@ -1173,6 +1304,8 @@ namespace MasterClassified
                             else if (indexing == 199) item.qian199 = xiangtongindex.ToString();
                             else if (indexing == 200) item.qian200 = xiangtongindex.ToString();
                             #endregion
+                            if (indexing < 4)
+                                same_qian3mark(indexing, item, xiangtongindex, same_list);
                         }
                     }
                 }
@@ -3233,77 +3366,177 @@ namespace MasterClassified
                                     indexing++;
                                     int xiangtongindex = 0;
 
+                                    //new 20191120  找出哪些 基数相等
+                                    List<string> same_list = new List<string>();
+
+
                                     #region 匹配相同次数
                                     for (int j = 0; j < UDF.Count; j++)
                                     {
+
                                         //f000
                                         if (item.JiShu1 != null && item.JiShu1 == temp.JiShu1 && UDF[j] == 1)
+                                        {
+                                            same_list.Add("JiShu1");
                                             xiangtongindex++;
+                                        }
                                         if (item.JiShu2 != null && item.JiShu2 == temp.JiShu2 && UDF[j] == 2)
+                                        {
+                                            same_list.Add("JiShu2");
                                             xiangtongindex++;
+                                        }
                                         if (item.JiShu3 != null && item.JiShu3 == temp.JiShu3 && UDF[j] == 3)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu3");
+                                        }
                                         if (item.JiShu4 != null && item.JiShu4 == temp.JiShu4 && UDF[j] == 4)
-                                            xiangtongindex++;
-                                        if (item.JiShu5 != null && item.JiShu5 == temp.JiShu5 && UDF[j] == 5)
-                                            xiangtongindex++;
-                                        if (item.JiShu6 != null && item.JiShu6 == temp.JiShu6 && UDF[j] == 6)
-                                            xiangtongindex++;
-                                        if (item.JiShu7 != null && item.JiShu7 == temp.JiShu7 && UDF[j] == 7)
-                                            xiangtongindex++;
-                                        if (item.JiShu8 != null && item.JiShu8 == temp.JiShu8 && UDF[j] == 8)
-                                            xiangtongindex++;
-                                        if (item.JiShu9 != null && item.JiShu9 == temp.JiShu9 && UDF[j] == 9)
+                                        {
                                             xiangtongindex++;
 
+                                            same_list.Add("JiShu4");
+                                        }
+                                        if (item.JiShu5 != null && item.JiShu5 == temp.JiShu5 && UDF[j] == 5)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu5");
+                                        }
+                                        if (item.JiShu6 != null && item.JiShu6 == temp.JiShu6 && UDF[j] == 6)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu6");
+                                        }
+                                        if (item.JiShu7 != null && item.JiShu7 == temp.JiShu7 && UDF[j] == 7)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu7");
+                                        }
+                                        if (item.JiShu8 != null && item.JiShu8 == temp.JiShu8 && UDF[j] == 8)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu8");
+                                        }
+                                        if (item.JiShu9 != null && item.JiShu9 == temp.JiShu9 && UDF[j] == 9)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu9");
+                                        }
+
                                         if (item.JiShu10 != null && item.JiShu10 == temp.JiShu10 && UDF[j] == 10)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu10");
+                                        }
                                         if (item.JiShu11 != null && item.JiShu11 == temp.JiShu11 && UDF[j] == 11)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu11");
+                                        }
                                         if (item.JiShu12 != null && item.JiShu12 == temp.JiShu12 && UDF[j] == 12)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu12");
+
+                                        }
                                         if (item.JiShu13 != null && item.JiShu13 == temp.JiShu13 && UDF[j] == 13)
+                                        {
                                             xiangtongindex++;
+
+                                            same_list.Add("JiShu13");
+                                        }
                                         if (item.JiShu14 != null && item.JiShu14 == temp.JiShu14 && UDF[j] == 14)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu14");
+                                        }
                                         if (item.JiShu15 != null && item.JiShu15 == temp.JiShu15 && UDF[j] == 15)
+                                        {
                                             xiangtongindex++;
+
+                                            same_list.Add("JiShu15");
+                                        }
 
                                         //new 0621
                                         if (item.JiShu16 != null && item.JiShu16 == temp.JiShu16 && UDF[j] == 16)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu16");
+                                        }
                                         if (item.JiShu17 != null && item.JiShu17 == temp.JiShu17 && UDF[j] == 17)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu17");
+                                        }
                                         if (item.JiShu18 != null && item.JiShu18 == temp.JiShu18 && UDF[j] == 18)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu18");
+                                        }
                                         if (item.JiShu19 != null && item.JiShu19 == temp.JiShu19 && UDF[j] == 19)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu19");
+                                        }
                                         if (item.JiShu20 != null && item.JiShu20 == temp.JiShu20 && UDF[j] == 20)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu20");
+                                        }
                                         if (item.JiShu21 != null && item.JiShu21 == temp.JiShu21 && UDF[j] == 21)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu21");
+                                        }
                                         if (item.JiShu22 != null && item.JiShu22 == temp.JiShu22 && UDF[j] == 22)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu22");
+                                        }
                                         if (item.JiShu23 != null && item.JiShu23 == temp.JiShu23 && UDF[j] == 23)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu23");
+                                        }
                                         if (item.JiShu24 != null && item.JiShu24 == temp.JiShu24 && UDF[j] == 24)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu24");
+                                        }
                                         if (item.JiShu25 != null && item.JiShu25 == temp.JiShu25 && UDF[j] == 25)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu25");
+                                        }
                                         if (item.JiShu26 != null && item.JiShu26 == temp.JiShu26 && UDF[j] == 26)
+                                        {
                                             xiangtongindex++;
+                                            same_list.Add("JiShu26");
+                                        }
                                         if (item.JiShu27 != null && item.JiShu27 == temp.JiShu27 && UDF[j] == 27)
-                                            xiangtongindex++;
-                                        if (item.JiShu28 != null && item.JiShu28 == temp.JiShu28 && UDF[j] == 28)
-                                            xiangtongindex++;
-                                        if (item.JiShu29 != null && item.JiShu29 == temp.JiShu29 && UDF[j] == 29)
-                                            xiangtongindex++;
-                                        if (item.JiShu30 != null && item.JiShu30 == temp.JiShu30 && UDF[j] == 30)
+                                        {
                                             xiangtongindex++;
 
+                                            same_list.Add("JiShu27");
+                                        }
+                                        if (item.JiShu28 != null && item.JiShu28 == temp.JiShu28 && UDF[j] == 28)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu28");
+                                        }
+                                        if (item.JiShu29 != null && item.JiShu29 == temp.JiShu29 && UDF[j] == 29)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu29");
+                                        }
+                                        if (item.JiShu30 != null && item.JiShu30 == temp.JiShu30 && UDF[j] == 30)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu30");
+                                        }
 
                                     }
                                     #endregion
+
 
                                     #region MyRegion
                                     if (indexing == 1)
@@ -3511,6 +3744,8 @@ namespace MasterClassified
                                     else if (indexing == 200) item.qian200 = xiangtongindex.ToString();
                                     #endregion
 
+                                    // 20191121 判断基数 有3个以内的做 前期分析用
+                                    same_qian3mark(indexing, item, xiangtongindex, same_list);
                                 }
                             }
                         }
@@ -3524,6 +3759,230 @@ namespace MasterClassified
             else
                 MessageBox.Show("请选择要分析的条目，否则请点击取消关闭窗口", "Waring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+        }
+
+        private void same_qian3mark(int indexing, inputCaipiaoDATA item, int xiangtongindex, List<string> same_list)
+        {
+            #region 20191121 判断基数 有3个以内的做 前期分析用
+
+            if (UDF.Count < 4)
+            {
+                string xiangtogn = "";
+
+                for (int yx = 0; yx < same_list.Count; yx++)
+                {
+                    xiangtogn += same_list[yx].Replace("JiShu", "基");
+
+                }
+                if (indexing == 1)
+                    item.qian1 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 2) item.qian2 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 3) item.qian3 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 4) item.qian4 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 5) item.qian5 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 6) item.qian6 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 7) item.qian7 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 8) item.qian8 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 9) item.qian9 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 10) item.qian10 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 11) item.qian11 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 12) item.qian12 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 13) item.qian13 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 14) item.qian14 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 15) item.qian15 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 16) item.qian16 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 17) item.qian17 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 18) item.qian18 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 19) item.qian19 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 20) item.qian20 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 21) item.qian21 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 22) item.qian22 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 23) item.qian23 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 24) item.qian24 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 25) item.qian25 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 26) item.qian26 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 27) item.qian27 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 28) item.qian28 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 29) item.qian29 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 30) item.qian30 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 31) item.qian31 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 32) item.qian32 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 33) item.qian33 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 34) item.qian34 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 35) item.qian35 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 36) item.qian36 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 37) item.qian37 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 38) item.qian38 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 39) item.qian39 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 40) item.qian40 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 41) item.qian41 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 42) item.qian42 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 43) item.qian43 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 44) item.qian44 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 45) item.qian45 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 46) item.qian46 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 47) item.qian47 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 48) item.qian48 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 49) item.qian49 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 50) item.qian50 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 51) item.qian51 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 52) item.qian52 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 53) item.qian53 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 54) item.qian54 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 55) item.qian55 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 56) item.qian56 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 57) item.qian57 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 58) item.qian58 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 59) item.qian59 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 60) item.qian60 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 61) item.qian61 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 62) item.qian62 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 63) item.qian63 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 64) item.qian64 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 65) item.qian65 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 66) item.qian66 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 67) item.qian67 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 68) item.qian68 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 69) item.qian69 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 70) item.qian70 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 71) item.qian71 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 72) item.qian72 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 73) item.qian73 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 74) item.qian74 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 75) item.qian75 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 76) item.qian76 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 77) item.qian77 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 78) item.qian78 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 79) item.qian79 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 80) item.qian80 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 81) item.qian81 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 82) item.qian82 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 83) item.qian83 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 84) item.qian84 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 85) item.qian85 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 86) item.qian86 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 87) item.qian87 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 88) item.qian88 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 89) item.qian89 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 90) item.qian90 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 91) item.qian91 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 92) item.qian92 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 93) item.qian93 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 94) item.qian94 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 95) item.qian95 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 96) item.qian96 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 97) item.qian97 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 98) item.qian98 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 99) item.qian99 = xiangtongindex.ToString() + "-" + xiangtogn;
+                //20180630
+                else if (indexing == 100) item.qian100 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 101) item.qian101 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 102) item.qian102 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 103) item.qian103 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 104) item.qian104 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 105) item.qian105 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 106) item.qian106 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 107) item.qian107 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 108) item.qian108 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 109) item.qian109 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 110) item.qian110 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 111) item.qian111 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 112) item.qian112 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 113) item.qian113 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 114) item.qian114 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 115) item.qian115 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 116) item.qian116 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 117) item.qian117 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 118) item.qian118 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 119) item.qian119 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 120) item.qian120 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 121) item.qian121 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 122) item.qian122 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 123) item.qian123 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 124) item.qian124 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 125) item.qian125 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 126) item.qian126 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 127) item.qian127 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 128) item.qian128 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 129) item.qian129 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 130) item.qian130 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 131) item.qian131 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 132) item.qian132 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 133) item.qian133 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 134) item.qian134 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 135) item.qian135 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 136) item.qian136 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 137) item.qian137 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 138) item.qian138 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 139) item.qian139 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 140) item.qian140 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 141) item.qian141 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 142) item.qian142 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 143) item.qian143 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 144) item.qian144 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 145) item.qian145 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 146) item.qian146 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 147) item.qian147 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 148) item.qian148 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 149) item.qian149 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 150) item.qian150 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 151) item.qian151 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 152) item.qian152 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 153) item.qian153 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 154) item.qian154 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 155) item.qian155 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 156) item.qian156 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 157) item.qian157 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 158) item.qian158 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 159) item.qian159 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 160) item.qian160 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 161) item.qian161 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 162) item.qian162 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 163) item.qian163 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 164) item.qian164 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 165) item.qian165 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 166) item.qian166 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 167) item.qian167 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 168) item.qian168 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 169) item.qian169 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 170) item.qian170 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 171) item.qian171 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 172) item.qian172 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 173) item.qian173 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 174) item.qian174 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 175) item.qian175 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 176) item.qian176 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 177) item.qian177 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 178) item.qian178 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 179) item.qian179 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 180) item.qian180 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 181) item.qian181 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 182) item.qian182 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 183) item.qian183 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 184) item.qian184 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 185) item.qian185 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 186) item.qian186 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 187) item.qian187 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 188) item.qian188 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 189) item.qian189 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 190) item.qian190 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 191) item.qian191 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 192) item.qian192 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 193) item.qian193 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 194) item.qian194 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 195) item.qian195 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 196) item.qian196 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 197) item.qian197 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 198) item.qian198 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 199) item.qian199 = xiangtongindex.ToString() + "-" + xiangtogn;
+                else if (indexing == 200) item.qian200 = xiangtongindex.ToString() + "-" + xiangtogn;
+
+
+
+            }
+
+
+            #endregion
         }
 
 
@@ -3671,6 +4130,7 @@ namespace MasterClassified
                 Suiji_NewMethodNEW();
             }
         }
+
         private void Suiji_NewMethod1()
         {
             try
@@ -3804,6 +4264,7 @@ namespace MasterClassified
                 throw;
             }
         }
+
         private void Suiji_NewMethodNEW()
         {
             try
@@ -4194,6 +4655,7 @@ namespace MasterClassified
                 throw;
             }
         }
+
         private List<int> ZidingyiMeiDuanGeshu(string NAME)
         {
             List<int> EverDuanList = new List<int>();
@@ -4938,6 +5400,7 @@ namespace MasterClassified
 
 
         }
+
         public int GetRowIndexAt(int mouseLocation_Y)
         {
             if (dataGridView1.FirstDisplayedScrollingRowIndex < 0)
@@ -5100,6 +5563,7 @@ namespace MasterClassified
             qianqiqishu = Convert.ToInt32(toolStripComboBox4.Text);
             chufafenxijishu_ZidingYi_tab3();
         }
+
         private void chufafenxijishu_ZidingYi_tab3()
         {
             {
@@ -5315,6 +5779,7 @@ namespace MasterClassified
                 toolStripLabel8.Text = "结束";
             }
         }
+
         private void tab3()
         {
             try
@@ -6432,6 +6897,7 @@ namespace MasterClassified
                             else if (indexing == 199) item.qian199 = xiangtongindex.ToString();
                             else if (indexing == 200) item.qian200 = xiangtongindex.ToString();
                             #endregion
+
                         }
                     }
                 }

@@ -21,6 +21,9 @@ namespace MC.Buiness
         //230.55
         public log4net.ILog ProcessLogger { get; set; }
         public log4net.ILog ExceptionLogger { get; set; }
+        string connectionString = "mongodb://yhocn.cn";
+        //string connectionString = "mongodb://127.0.0.1";
+
         #region 导入数据
         public clsAllnew()
         {
@@ -184,7 +187,7 @@ namespace MC.Buiness
 
         public void SPInputclaimreport_Server(List<inputCaipiaoDATA> AddMAPResult)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
@@ -221,7 +224,7 @@ namespace MC.Buiness
 
         public void SPInputclaimreport_Server1(List<inputCaipiaoDATA> AddMAPResult, string zhiqianqianqi)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
@@ -298,7 +301,7 @@ namespace MC.Buiness
             {
                 List<inputCaipiaoDATA> ClaimReport_Server = new List<inputCaipiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db = server.GetDatabase("MasterClassified");
                 MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
@@ -353,7 +356,7 @@ namespace MC.Buiness
             {
                 List<inputCaipiaoDATA> ClaimReport_Server = new List<inputCaipiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db = server.GetDatabase("MasterClassified");
                 MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
@@ -414,7 +417,7 @@ namespace MC.Buiness
             {
                 List<inputCaipiaoDATA> ClaimReport_Server = new List<inputCaipiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db = server.GetDatabase("MasterClassified");
                 MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
@@ -479,7 +482,7 @@ namespace MC.Buiness
             {
                 List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterFangAn");
@@ -568,7 +571,7 @@ namespace MC.Buiness
             {
                 List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
@@ -657,7 +660,7 @@ namespace MC.Buiness
             {
                 List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterFangAn");
@@ -742,7 +745,7 @@ namespace MC.Buiness
             {
                 List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
@@ -828,7 +831,7 @@ namespace MC.Buiness
             {
                 List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterFangAn");
@@ -864,7 +867,7 @@ namespace MC.Buiness
             {
                 List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
@@ -900,7 +903,7 @@ namespace MC.Buiness
             {
                 List<CaipiaoZhongLeiDATA> Result = new List<CaipiaoZhongLeiDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("CaiPiaoZhongLei");
@@ -938,7 +941,7 @@ namespace MC.Buiness
             {
                 List<CaipiaoZhongLeiDATA> Result = new List<CaipiaoZhongLeiDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("CaiPiaoZhongLei");
@@ -1004,7 +1007,7 @@ namespace MC.Buiness
             {
                 List<CaipiaoZhongLeiDATA> Result = new List<CaipiaoZhongLeiDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("CaiPiaoZhongLei");
@@ -1071,7 +1074,7 @@ namespace MC.Buiness
             try
             {
                 List<inputCaipiaoDATA> ClaimReport_Server = new List<inputCaipiaoDATA>();
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db = server.GetDatabase("MasterClassified");
                 MongoCollection collection = db.GetCollection("MasterClassified_CaiPiaoData");
@@ -1176,7 +1179,7 @@ namespace MC.Buiness
 
         public void Save_FangAn(List<FangAnLieBiaoDATA> NEWResult)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterFangAn");
@@ -1239,7 +1242,7 @@ namespace MC.Buiness
         }
         public void Save_Piliang_FangAn(List<FangAnLieBiaoDATA> NEWResult)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
@@ -1307,7 +1310,7 @@ namespace MC.Buiness
             {
                 List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterFangAn");
@@ -1339,7 +1342,7 @@ namespace MC.Buiness
             {
                 List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
@@ -1367,7 +1370,7 @@ namespace MC.Buiness
 
         public void Save_CaiPiaoZhongLei(List<CaipiaoZhongLeiDATA> NEWResult)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("CaiPiaoZhongLei");
@@ -1422,7 +1425,7 @@ namespace MC.Buiness
             {
                 List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
 
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("CaiPiaoZhongLei");
@@ -1464,7 +1467,7 @@ namespace MC.Buiness
             #region Read  database info server
             try
             {
-                string connectionString = "mongodb://127.0.0.1";
+                //string connectionString = "mongodb://127.0.0.1";
                 MongoServer server = MongoServer.Create(connectionString);
                 MongoDatabase db1 = server.GetDatabase("MasterClassified");
                 MongoCollection collection1 = db1.GetCollection("CaiPiaoZhongLei");
@@ -1500,7 +1503,7 @@ namespace MC.Buiness
         #region 删除数据
         public void delete_FangAn(string name)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterFangAn");
@@ -1516,7 +1519,7 @@ namespace MC.Buiness
         }
         public void delete_PiLiang_FangAn(string name)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterPiLiangFangAn");
@@ -1532,7 +1535,7 @@ namespace MC.Buiness
         }
         public void deleteID_FangAn(string name)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterFangAn");
@@ -1553,7 +1556,7 @@ namespace MC.Buiness
 
         public void delete_CaiPiaoZhongLei(string name)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("CaiPiaoZhongLei");
@@ -1573,7 +1576,7 @@ namespace MC.Buiness
         }
         public void delete_CaiPiaoData(string name, string Caipiaomingcheng)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
@@ -1591,7 +1594,7 @@ namespace MC.Buiness
         }
         public void delete_CaiPiaoData_Caipiaomingcheng(string Caipiaomingcheng)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
@@ -1608,7 +1611,7 @@ namespace MC.Buiness
         }
         public void deleteID_CaiPiaoData(string name)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");
@@ -1626,7 +1629,7 @@ namespace MC.Buiness
         }
         public void Clear_CaiPiaoData(string name)
         {
-            string connectionString = "mongodb://127.0.0.1";
+            //string connectionString = "mongodb://127.0.0.1";
             MongoServer server = MongoServer.Create(connectionString);
             MongoDatabase db1 = server.GetDatabase("MasterClassified");
             MongoCollection collection1 = db1.GetCollection("MasterClassified_CaiPiaoData");

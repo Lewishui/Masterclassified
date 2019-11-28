@@ -65,6 +65,7 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.listBox3 = new System.Windows.Forms.ListBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -92,7 +93,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(716, 553);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(716, 510);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tabControl1
@@ -102,7 +103,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(234, 547);
+            this.tabControl1.Size = new System.Drawing.Size(234, 504);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -111,7 +112,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(226, 521);
+            this.tabPage1.Size = new System.Drawing.Size(226, 478);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "方案";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -128,7 +129,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.84289F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.157113F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(220, 515);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(220, 472);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // listBox1
@@ -142,7 +143,7 @@
             "默认方案"});
             this.listBox1.Location = new System.Drawing.Point(3, 3);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(214, 477);
+            this.listBox1.Size = new System.Drawing.Size(214, 436);
             this.listBox1.TabIndex = 0;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
@@ -151,7 +152,7 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 490);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 447);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(220, 25);
             this.toolStrip1.TabIndex = 1;
@@ -168,34 +169,34 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(44, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(45, 22);
             this.toolStripDropDownButton1.Text = "设置";
             // 
             // 清空ToolStripMenuItem
             // 
             this.清空ToolStripMenuItem.Name = "清空ToolStripMenuItem";
-            this.清空ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.清空ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.清空ToolStripMenuItem.Text = "清空";
             this.清空ToolStripMenuItem.Click += new System.EventHandler(this.清空ToolStripMenuItem_Click);
             // 
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
             // 改名ToolStripMenuItem
             // 
             this.改名ToolStripMenuItem.Name = "改名ToolStripMenuItem";
-            this.改名ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.改名ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.改名ToolStripMenuItem.Text = "改名";
             this.改名ToolStripMenuItem.Click += new System.EventHandler(this.改名ToolStripMenuItem_Click);
             // 
             // 增加ToolStripMenuItem
             // 
             this.增加ToolStripMenuItem.Name = "增加ToolStripMenuItem";
-            this.增加ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.增加ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.增加ToolStripMenuItem.Text = "增加";
             this.增加ToolStripMenuItem.Click += new System.EventHandler(this.增加ToolStripMenuItem_Click);
             // 
@@ -210,10 +211,10 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(243, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.13115F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.86885F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(470, 547);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.6269F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.3731F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(470, 504);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tabControl2
@@ -223,11 +224,12 @@
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(464, 230);
+            this.tabControl2.Size = new System.Drawing.Size(464, 232);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.checkBox3);
             this.tabPage3.Controls.Add(this.comboBox3);
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.checkBox2);
@@ -242,7 +244,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(456, 204);
+            this.tabPage3.Size = new System.Drawing.Size(456, 206);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "随机分段";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -253,16 +255,16 @@
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(71, 94);
+            this.comboBox3.Location = new System.Drawing.Point(71, 87);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(94, 21);
+            this.comboBox3.Size = new System.Drawing.Size(94, 20);
             this.comboBox3.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 96);
+            this.label4.Location = new System.Drawing.Point(7, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 16);
             this.label4.TabIndex = 10;
@@ -272,7 +274,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(10, 121);
+            this.checkBox2.Location = new System.Drawing.Point(10, 112);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(182, 17);
             this.checkBox2.TabIndex = 9;
@@ -285,7 +287,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(238, 179);
+            this.textBox1.Size = new System.Drawing.Size(238, 166);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "一段=\t\r\n二段=\r\n三段=\r\n";
             // 
@@ -293,7 +295,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(10, 170);
+            this.checkBox1.Location = new System.Drawing.Point(10, 180);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(117, 20);
             this.checkBox1.TabIndex = 7;
@@ -304,7 +306,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(171, 71);
+            this.label3.Location = new System.Drawing.Point(171, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 16);
             this.label3.TabIndex = 6;
@@ -319,16 +321,16 @@
             this.comboBox2.Items.AddRange(new object[] {
             "段数随机",
             "模板随机"});
-            this.comboBox2.Location = new System.Drawing.Point(71, 141);
+            this.comboBox2.Location = new System.Drawing.Point(71, 130);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(121, 20);
             this.comboBox2.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 145);
+            this.label2.Location = new System.Drawing.Point(7, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 4;
@@ -351,9 +353,9 @@
             "8",
             "9",
             "10"});
-            this.comboBox1.Location = new System.Drawing.Point(71, 68);
+            this.comboBox1.Location = new System.Drawing.Point(71, 63);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(94, 21);
+            this.comboBox1.Size = new System.Drawing.Size(94, 20);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -361,7 +363,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 72);
+            this.label1.Location = new System.Drawing.Point(7, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 1;
@@ -369,9 +371,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(6, 17);
+            this.button3.Location = new System.Drawing.Point(6, 16);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(186, 33);
+            this.button3.Size = new System.Drawing.Size(186, 30);
             this.button3.TabIndex = 0;
             this.button3.Text = "随机分析";
             this.button3.UseVisualStyleBackColor = true;
@@ -385,19 +387,19 @@
             this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 503);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 464);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(464, 41);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(464, 37);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(310, 4);
+            this.button2.Location = new System.Drawing.Point(310, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 32);
+            this.button2.Size = new System.Drawing.Size(75, 30);
             this.button2.TabIndex = 1;
             this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
@@ -406,9 +408,9 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(78, 4);
+            this.button1.Location = new System.Drawing.Point(78, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.Size = new System.Drawing.Size(75, 30);
             this.button1.TabIndex = 0;
             this.button1.Text = "确定";
             this.button1.UseVisualStyleBackColor = true;
@@ -421,12 +423,12 @@
             this.tableLayoutPanel5.Controls.Add(this.toolStrip2, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.tabControl3, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 239);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 241);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.04673F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.95327F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(464, 258);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(464, 217);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // toolStrip2
@@ -436,7 +438,7 @@
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripButton3});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 233);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 192);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(464, 25);
             this.toolStrip2.TabIndex = 4;
@@ -447,7 +449,7 @@
             this.toolStripButton1.Image = global::MasterClassified.Properties.Resources.createNewBackup;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(99, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(100, 22);
             this.toolStripButton1.Text = "保存新的方案";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -456,7 +458,7 @@
             this.toolStripButton2.Image = global::MasterClassified.Properties.Resources.save;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(51, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(52, 22);
             this.toolStripButton2.Text = "保存";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -465,7 +467,7 @@
             this.toolStripButton3.Image = global::MasterClassified.Properties.Resources.clear_co;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(99, 22);
+            this.toolStripButton3.Size = new System.Drawing.Size(100, 22);
             this.toolStripButton3.Text = "清空当前分段";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -476,7 +478,7 @@
             this.tabControl3.Location = new System.Drawing.Point(3, 3);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(458, 213);
+            this.tabControl3.Size = new System.Drawing.Size(458, 178);
             this.tabControl3.TabIndex = 3;
             // 
             // tabPage4
@@ -485,7 +487,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(450, 187);
+            this.tabPage4.Size = new System.Drawing.Size(450, 152);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "分段内容";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -497,6 +499,7 @@
             this.listBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox3.FormattingEnabled = true;
             this.listBox3.HorizontalScrollbar = true;
+            this.listBox3.ItemHeight = 12;
             this.listBox3.Items.AddRange(new object[] {
             "一段=",
             "二段=",
@@ -505,14 +508,25 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.ScrollAlwaysVisible = true;
             this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox3.Size = new System.Drawing.Size(444, 181);
+            this.listBox3.Size = new System.Drawing.Size(444, 146);
             this.listBox3.TabIndex = 4;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(10, 157);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(86, 17);
+            this.checkBox3.TabIndex = 12;
+            this.checkBox3.Text = "相同性分析";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // frmSetConfig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 553);
+            this.ClientSize = new System.Drawing.Size(716, 510);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmSetConfig";
@@ -578,5 +592,6 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

@@ -56,6 +56,7 @@ namespace MasterClassified
 
         List<FangAnLieBiaoDATA> piliangfangan_Result;
         List<inputCaipiaoDATA> ClaimReport_Server_Initial;
+        string xiangtongxingfenxi = "";
         public frmTracing_Analysis()
         {
             InitializeComponent();
@@ -419,10 +420,11 @@ namespace MasterClassified
                         //item.qianAll = item.qianAll + "\r\n前" + indexing + " " + xiangtongindex.ToString();
 
                         // 20191121 判断基数 有3个以内的做 前期分析用
-                        //same_qianqi_tab2mark(item, same_list, xiangtongindex);
+                        if (xiangtongxingfenxi != null && xiangtongxingfenxi == "YES")
+                            same_qianqi_tab2mark(item, same_list, xiangtongindex);
 
                         text = text + " " + xiangtongindex.ToString();
-                         item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
+                        //item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
                         item.qianMingcheng = item.qianMingcheng + "\r\n前" + indexing;
                         //  qianmingcheng = item.qianMingcheng + "\r\n前" + indexing; ;
                         int isrun = 0;
@@ -633,7 +635,8 @@ namespace MasterClassified
 
                             #endregion
                             // 20191121 判断基数 有3个以内的做 前期分析用
-                            same_qianqi_tab2mark(item, same_list, xiangtongindex);
+                            if (xiangtongxingfenxi != null && xiangtongxingfenxi == "YES")
+                                same_qianqi_tab2mark(item, same_list, xiangtongindex);
 
                             text = text + " " + xiangtongindex.ToString();
                             item.qianMingcheng = item.qianMingcheng + "\r\n前" + indexing;
@@ -781,6 +784,9 @@ namespace MasterClassified
         {
             try
             {
+
+
+
                 //ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
                 clsAllnew BusinessHelp = new clsAllnew();
 
@@ -811,6 +817,9 @@ namespace MasterClassified
 
                     foreach (FangAnLieBiaoDATA temp in Result)
                     {
+                        if (temp.xiangtongxingfenxi != null && temp.xiangtongxingfenxi == "YES")
+                            xiangtongxingfenxi = "YES";
+
                         if (temp.Data == null)
                             continue;
 
@@ -1304,7 +1313,7 @@ namespace MasterClassified
                             else if (indexing == 199) item.qian199 = xiangtongindex.ToString();
                             else if (indexing == 200) item.qian200 = xiangtongindex.ToString();
                             #endregion
-                            if (indexing < 4)
+                            if (indexing < 4 && xiangtongxingfenxi == "YES")
                                 same_qian3mark(indexing, item, xiangtongindex, same_list);
                         }
                     }
@@ -3223,12 +3232,17 @@ namespace MasterClassified
                         //   List<inputCaipiaoDATA> ClaimReport_Server = BusinessHelp.ReadclaimreportfromServer();
                         #region 添加 基数 和前几期对比
 
+
+
                         List<FangAnLieBiaoDATA> Result = BusinessHelp.Read_FangAn("YES");
                         ClaimReport_Server.Sort(new CompsSmall());
                         foreach (inputCaipiaoDATA item in ClaimReport_Server)
                         {
                             foreach (FangAnLieBiaoDATA temp in Result)
                             {
+                                if (temp.xiangtongxingfenxi != null && temp.xiangtongxingfenxi == "YES")
+                                    xiangtongxingfenxi = "YES";
+
                                 string[] temp1 = System.Text.RegularExpressions.Regex.Split(temp.Data, "\r\n");
 
                                 string[] temp2 = System.Text.RegularExpressions.Regex.Split(item.KaiJianHaoMa, " ");
@@ -3745,7 +3759,8 @@ namespace MasterClassified
                                     #endregion
 
                                     // 20191121 判断基数 有3个以内的做 前期分析用
-                                    same_qian3mark(indexing, item, xiangtongindex, same_list);
+                                    if (xiangtongxingfenxi == "YES")
+                                        same_qian3mark(indexing, item, xiangtongindex, same_list);
                                 }
                             }
                         }
@@ -6951,6 +6966,42 @@ namespace MasterClassified
                     dataGridView1.Rows[ii].Selected = true;   //光标显示至i行 
                 }
 
+            }
+        }
+
+        private void 相同性分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (相同性分析ToolStripMenuItem.Text.Contains("取消"))
+            {
+
+                相同性分析ToolStripMenuItem.Text = "相同性分析";
+                xiangtongxingfenxi = "";
+
+            }
+
+            else
+            {
+
+                相同性分析ToolStripMenuItem.Text = "取消相同性分析";
+                xiangtongxingfenxi = "YES";
+            }
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (toolStripMenuItem2.Text.Contains("取消"))
+            {
+
+                toolStripMenuItem2.Text = "相同性分析";
+                xiangtongxingfenxi = "";
+
+            }
+
+            else
+            {
+
+                toolStripMenuItem2.Text = "取消相同性分析";
+                xiangtongxingfenxi = "YES";
             }
         }
 

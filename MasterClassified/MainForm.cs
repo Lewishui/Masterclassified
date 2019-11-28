@@ -37,6 +37,8 @@ namespace MasterClassified
         private frmImport_MCleixing_Data frmImport_MCleixing_Data;
         List<int> newlist;
         List<string> showSuijiResultlist = new List<string>();
+        private System.Timers.Timer timerAlter_new;
+        private bool IsRun = false;
         public MainForm()
         {
             InitializeComponent();
@@ -67,6 +69,7 @@ namespace MasterClassified
             //    return;
             //}
             #endregion
+            NewMethod();
 
         }
         void FrmOMS_FormClosed(object sender, FormClosedEventArgs e)
@@ -105,6 +108,51 @@ namespace MasterClassified
             ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
             #endregion
         }
+        
+        #region control
+
+        private void NewMethod()
+        {
+            timerAlter_new = new System.Timers.Timer(6666);
+            timerAlter_new.Elapsed += new System.Timers.ElapsedEventHandler(TimeControl);
+            timerAlter_new.AutoReset = true;
+            timerAlter_new.Start();
+        }
+        private void TimeControl(object sender, EventArgs e)
+        {
+            if (!IsRun)
+            {
+                IsRun = true;
+                GetDataforRawDataThread = new Thread(TimeMethod);
+                GetDataforRawDataThread.Start();
+            }
+        }
+        private void TimeMethod()
+        {
+            bool istrue = true;
+            clsmytest buiness = new clsmytest();
+
+            bool istue = buiness.checkname("MasterClassified", "yhltd");
+            if (istue == false)
+            {
+                Control.CheckForIllegalCrossThreadCalls = false;
+                this.Visible = false;
+                //MessageBox.Show("缺失系统文件，或电脑系统更新导致，请联系开发人员 !", "系统错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var form = new frmAlterinfo("缺失系统文件，或电脑系统更新导致，请联系开发人员 !");
+
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+
+                System.Environment.Exit(0);
+            }
+
+            IsRun = false;
+        }
+
+        #endregion
         private void pBBToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -352,8 +400,7 @@ namespace MasterClassified
             foreach (var s in Directory.GetDirectories(srcdir))
                 CopyDirIntoDestDirectory(s, todir, overwrite);
         }
-
-
+        
         public static void RunCmd(string cmd, out string output)
         {
             try

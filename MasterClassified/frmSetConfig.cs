@@ -723,7 +723,7 @@ namespace MasterClassified
                     }
 
                 }
-                  //new 0621
+                //new 0621
                 else if (this.comboBox1.Text == "7")
                 {
                     if (this.comboBox3.Text == "4111111 模板")
@@ -735,12 +735,12 @@ namespace MasterClassified
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
-                    }              
-                
+                    }
+
                 }
                 //new 0621
                 else if (this.comboBox1.Text == "8")
-                { 
+                {
                     //new 0621
                     if (this.comboBox3.Text == "31111111 模板")
                     {
@@ -914,6 +914,11 @@ namespace MasterClassified
 
             item.Name = this.listBox1.Text.ToString();//保存名称
             item.DuanShu = showSuijiResultlist.Count.ToString();
+
+            if (this.checkBox3.Checked == true)
+                item.xiangtongxingfenxi = "YES";
+
+
             Result.Add(item);
             clsAllnew BusinessHelp = new clsAllnew();
             BusinessHelp.Save_FangAn(Result);
@@ -957,12 +962,12 @@ namespace MasterClassified
 
             if (frmAddFanAnName == null)
             {
-                frmAddFanAnName = new frmAddFanAnName("",0);
+                frmAddFanAnName = new frmAddFanAnName("", 0);
                 frmAddFanAnName.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
             }
             if (frmAddFanAnName == null)
             {
-                frmAddFanAnName = new frmAddFanAnName("",0);
+                frmAddFanAnName = new frmAddFanAnName("", 0);
             }
             frmAddFanAnName.Show();
 
@@ -1116,12 +1121,12 @@ namespace MasterClassified
         {
             if (frmAddFanAnName == null)
             {
-                frmAddFanAnName = new frmAddFanAnName(this.listBox1.Text,0);
+                frmAddFanAnName = new frmAddFanAnName(this.listBox1.Text, 0);
                 frmAddFanAnName.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
             }
             if (frmAddFanAnName == null)
             {
-                frmAddFanAnName = new frmAddFanAnName(this.listBox1.Text,0);
+                frmAddFanAnName = new frmAddFanAnName(this.listBox1.Text, 0);
             }
             frmAddFanAnName.Show();
 

@@ -258,3 +258,5 @@ C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MasterClassified
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MasterClassified\obj\Debug\MasterClassified.Properties.Resources.resources
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmImport_MCleixing_Data.resources
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MasterClassified\obj\Debug\MasterClassified.csproj.GenerateResource.Cache
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MasterClassified\bin\Debug\MySql.Data.dll
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MasterClassified\obj\Debug\MasterClassified.frmAlterinfo.resources

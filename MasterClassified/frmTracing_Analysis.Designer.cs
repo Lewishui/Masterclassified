@@ -121,6 +121,9 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.相同性分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -157,6 +160,7 @@
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            this.contextMenuStrip4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -211,21 +215,21 @@
             // 设置ToolStripMenuItem
             // 
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.设置ToolStripMenuItem.Text = "设置";
             this.设置ToolStripMenuItem.Click += new System.EventHandler(this.设置ToolStripMenuItem_Click);
             // 
             // 自定义分析ToolStripMenuItem
             // 
             this.自定义分析ToolStripMenuItem.Name = "自定义分析ToolStripMenuItem";
-            this.自定义分析ToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.自定义分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.自定义分析ToolStripMenuItem.Text = "自定义分析";
             this.自定义分析ToolStripMenuItem.Click += new System.EventHandler(this.自定义分析ToolStripMenuItem_Click);
             // 
             // 批量设置ToolStripMenuItem
             // 
             this.批量设置ToolStripMenuItem.Name = "批量设置ToolStripMenuItem";
-            this.批量设置ToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.批量设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.批量设置ToolStripMenuItem.Text = "批量设置";
             this.批量设置ToolStripMenuItem.Click += new System.EventHandler(this.批量设置ToolStripMenuItem_Click);
             // 
@@ -769,16 +773,17 @@
             this.contextMenuStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.contextMenuStrip2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.自选方案ToolStripMenuItem1});
+            this.自选方案ToolStripMenuItem1,
+            this.相同性分析ToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip1";
             this.contextMenuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.contextMenuStrip2.ShowImageMargin = false;
-            this.contextMenuStrip2.Size = new System.Drawing.Size(100, 26);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(112, 48);
             // 
             // 自选方案ToolStripMenuItem1
             // 
             this.自选方案ToolStripMenuItem1.Name = "自选方案ToolStripMenuItem1";
-            this.自选方案ToolStripMenuItem1.Size = new System.Drawing.Size(99, 22);
+            this.自选方案ToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
             this.自选方案ToolStripMenuItem1.Text = "自选方案";
             this.自选方案ToolStripMenuItem1.Click += new System.EventHandler(this.自选方案ToolStripMenuItem1_Click);
             // 
@@ -1368,6 +1373,31 @@
             this.comboBox5.TabIndex = 20;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
+            // 相同性分析ToolStripMenuItem
+            // 
+            this.相同性分析ToolStripMenuItem.Name = "相同性分析ToolStripMenuItem";
+            this.相同性分析ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.相同性分析ToolStripMenuItem.Text = "相同性分析";
+            this.相同性分析ToolStripMenuItem.Click += new System.EventHandler(this.相同性分析ToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip4
+            // 
+            this.contextMenuStrip4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.contextMenuStrip4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.contextMenuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
+            this.contextMenuStrip4.Name = "contextMenuStrip1";
+            this.contextMenuStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.contextMenuStrip4.ShowImageMargin = false;
+            this.contextMenuStrip4.Size = new System.Drawing.Size(128, 48);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(127, 22);
+            this.toolStripMenuItem2.Text = "相同性分析";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // frmTracing_Analysis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1422,6 +1452,7 @@
             this.tabPage8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            this.contextMenuStrip4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1515,5 +1546,8 @@
         private System.Windows.Forms.ToolStripMenuItem 自选方案ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 自选方案ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripMenuItem 相同性分析ToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

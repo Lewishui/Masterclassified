@@ -96,3 +96,4 @@ C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\D
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csproj.ResolveComReference.cache
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb
+C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\MySql.Data.dll

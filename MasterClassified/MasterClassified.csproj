@@ -104,6 +104,12 @@
     <Compile Include="backupfrom2.Designer.cs">
       <DependentUpon>backupfrom2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAlterinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlterinfo.Designer.cs">
+      <DependentUpon>frmAlterinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSelfPiLiangFangAN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="backupfrom2.resx">
       <DependentUpon>backupfrom2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlterinfo.resx">
+      <DependentUpon>frmAlterinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelfPiLiangFangAN.resx">
       <DependentUpon>frmSelfPiLiangFangAN.cs</DependentUpon>

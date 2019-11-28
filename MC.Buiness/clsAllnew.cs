@@ -1229,10 +1229,10 @@ namespace MC.Buiness
                 { "DuanWei10", item.DuanWei10 },
                  { "ZhuJian", item.ZhuJian },  
                 { "MorenDuanShu", item.MorenDuanShu },  
-                   { "Mobanleibie", item.Mobanleibie },  
+                   { "Mobanleibie", item.Mobanleibie },                 
+                { "Input_Date", DateTime.Now.ToString("MM/dd/yyyy/HHss")},  
                 
-                { "Input_Date", DateTime.Now.ToString("MM/dd/yyyy/HHss")}  
-                 };
+                  { "xiangtongxingfenxi", item.xiangtongxingfenxi } };
                 collection.Insert(fruit_1);
             }
 

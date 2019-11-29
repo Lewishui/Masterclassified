@@ -422,7 +422,8 @@ namespace MasterClassified
                         // 20191121 判断基数 有3个以内的做 前期分析用
                         if (xiangtongxingfenxi != null && xiangtongxingfenxi == "YES")
                             same_qianqi_tab2mark(item, same_list, xiangtongindex);
-
+                        else
+                            item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
                         text = text + " " + xiangtongindex.ToString();
                         //item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
                         item.qianMingcheng = item.qianMingcheng + "\r\n前" + indexing;
@@ -534,7 +535,7 @@ namespace MasterClassified
             for (int j = 2; j < dataGridView2.ColumnCount; j++)
             {
 
-                dataGridView2.Columns[j].Width = 30;
+                dataGridView2.Columns[j].Width = 40;
             }
             if (dataGridView2.Rows.Count != 0)
             {
@@ -637,6 +638,8 @@ namespace MasterClassified
                             // 20191121 判断基数 有3个以内的做 前期分析用
                             if (xiangtongxingfenxi != null && xiangtongxingfenxi == "YES")
                                 same_qianqi_tab2mark(item, same_list, xiangtongindex);
+                            else
+                                item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
 
                             text = text + " " + xiangtongindex.ToString();
                             item.qianMingcheng = item.qianMingcheng + "\r\n前" + indexing;
@@ -751,7 +754,7 @@ namespace MasterClassified
                 for (int j = 2; j < dataGridView2.ColumnCount; j++)
                 {
 
-                    dataGridView2.Columns[j].Width = 30;
+                    dataGridView2.Columns[j].Width = 40;
                 }
                 if (dataGridView2.Rows.Count != 0)
                 {
@@ -763,16 +766,43 @@ namespace MasterClassified
             }
         }
 
-        private static void same_qianqi_tab2mark(inputCaipiaoDATA item, List<string> same_list, int xiangtongindex)
+        private void same_qianqi_tab2mark(inputCaipiaoDATA item, List<string> same_list, int xiangtongindex)
         {
             // same_qian3mark(indexing, item, xiangtongindex, same_list);
             //列出相同内容
             string xiangtogn = "";
-            for (int yx = 0; yx < same_list.Count; yx++)
+            //for (int yx = 0; yx < same_list.Count; yx++)
+            //{
+            //    xiangtogn += same_list[yx].Replace("JiShu", "第");
+            //}
+            ////item.qianAll = item.qianAll + "\r\n前" + indexing + " " + xiangtongindex.ToString();
+
+            if (newi.Count < 4)
             {
-                xiangtogn += same_list[yx].Replace("JiShu", "第");
+                xiangtogn = "";
+                for (int j = 0; j < newi.Count; j++)
+                {
+                    bool isrun = false;
+                    for (int yx = 0; yx < same_list.Count; yx++)
+                    {
+                        //if (JIDTA.Count > 0)
+                        {
+                            if (("基" + newi[j].ToString()) == same_list[yx].Replace("JiShu", "基"))
+                                isrun = true;
+
+
+                            if (isrun == true)
+                                break;
+
+                        }
+                    }
+                    if (isrun == true)
+                        xiangtogn += "" + 1;
+                    else
+                        xiangtogn += "" + 0;
+                }
             }
-            //item.qianAll = item.qianAll + "\r\n前" + indexing + " " + xiangtongindex.ToString();
+
 
             if (same_list != null && same_list.Count > 0)
                 item.qianAll = item.qianAll + " " + xiangtongindex.ToString() + ":" + xiangtogn;
@@ -3783,11 +3813,31 @@ namespace MasterClassified
             if (UDF.Count < 4)
             {
                 string xiangtogn = "";
-
-                for (int yx = 0; yx < same_list.Count; yx++)
+                for (int j = 0; j < UDF.Count; j++)
                 {
-                    xiangtogn += same_list[yx].Replace("JiShu", "基");
+                    bool isrun = false;
+                    for (int yx = 0; yx < same_list.Count; yx++)
+                    {
 
+
+                        //if (JIDTA.Count > 0)
+                        {
+
+
+
+                            if (("基" + UDF[j].ToString()) == same_list[yx].Replace("JiShu", "基"))
+                                isrun = true;
+
+
+                            if (isrun == true)
+                                break;
+
+                        }
+                    }
+                    if (isrun == true)
+                        xiangtogn += "" + 1;
+                    else
+                        xiangtogn += "" + 0;
                 }
                 if (indexing == 1)
                     item.qian1 = xiangtongindex.ToString() + "-" + xiangtogn;

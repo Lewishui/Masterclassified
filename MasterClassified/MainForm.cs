@@ -69,7 +69,7 @@ namespace MasterClassified
             //    return;
             //}
             #endregion
-            NewMethod();
+            //NewMethod();
 
         }
         void FrmOMS_FormClosed(object sender, FormClosedEventArgs e)

@@ -48,3 +48,12 @@ C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Common\bin\De
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Common\bin\Debug\MySql.Data.Entity.dll
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Common\bin\Debug\MC.DB.pdb
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Common\obj\Debug\MC.Common.pdb
+F:\git_version\Masterclassified\MC.Common\bin\Debug\MC.Common.dll
+F:\git_version\Masterclassified\MC.Common\bin\Debug\MC.Common.pdb
+F:\git_version\Masterclassified\MC.Common\bin\Debug\MC.DB.dll
+F:\git_version\Masterclassified\MC.Common\bin\Debug\MySql.Data.dll
+F:\git_version\Masterclassified\MC.Common\bin\Debug\MySql.Data.Entity.dll
+F:\git_version\Masterclassified\MC.Common\bin\Debug\MC.DB.pdb
+F:\git_version\Masterclassified\MC.Common\obj\Debug\MC.Common.csprojResolveAssemblyReference.cache
+F:\git_version\Masterclassified\MC.Common\obj\Debug\MC.Common.dll
+F:\git_version\Masterclassified\MC.Common\obj\Debug\MC.Common.pdb

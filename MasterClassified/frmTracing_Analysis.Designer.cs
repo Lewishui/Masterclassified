@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTracing_Analysis));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -93,6 +93,7 @@
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -180,7 +181,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.32653F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.67347F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1228, 595);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1228, 713);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // toolStrip1
@@ -208,28 +209,28 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(81, 28);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(85, 28);
             this.toolStripDropDownButton1.Text = "高级编辑";
             this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // 设置ToolStripMenuItem
             // 
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.设置ToolStripMenuItem.Text = "设置";
             this.设置ToolStripMenuItem.Click += new System.EventHandler(this.设置ToolStripMenuItem_Click);
             // 
             // 自定义分析ToolStripMenuItem
             // 
             this.自定义分析ToolStripMenuItem.Name = "自定义分析ToolStripMenuItem";
-            this.自定义分析ToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.自定义分析ToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.自定义分析ToolStripMenuItem.Text = "自定义分析";
             this.自定义分析ToolStripMenuItem.Click += new System.EventHandler(this.自定义分析ToolStripMenuItem_Click);
             // 
             // 批量设置ToolStripMenuItem
             // 
             this.批量设置ToolStripMenuItem.Name = "批量设置ToolStripMenuItem";
-            this.批量设置ToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.批量设置ToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.批量设置ToolStripMenuItem.Text = "批量设置";
             this.批量设置ToolStripMenuItem.Click += new System.EventHandler(this.批量设置ToolStripMenuItem_Click);
             // 
@@ -242,20 +243,20 @@
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(55, 28);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(57, 28);
             this.toolStripDropDownButton2.Text = "系统";
             // 
             // 下载当前界面数据ToolStripMenuItem
             // 
             this.下载当前界面数据ToolStripMenuItem.Name = "下载当前界面数据ToolStripMenuItem";
-            this.下载当前界面数据ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.下载当前界面数据ToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.下载当前界面数据ToolStripMenuItem.Text = "下载数据";
             this.下载当前界面数据ToolStripMenuItem.Click += new System.EventHandler(this.下载当前界面数据ToolStripMenuItem_Click);
             // 
             // 自选方案ToolStripMenuItem
             // 
             this.自选方案ToolStripMenuItem.Name = "自选方案ToolStripMenuItem";
-            this.自选方案ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.自选方案ToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.自选方案ToolStripMenuItem.Text = "自选方案";
             this.自选方案ToolStripMenuItem.Click += new System.EventHandler(this.自选方案ToolStripMenuItem_Click);
             // 
@@ -266,7 +267,7 @@
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(118, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(123, 28);
             this.toolStripButton1.Text = "同步数据库";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -275,7 +276,7 @@
             this.toolStripButton8.Image = global::MasterClassified.Properties.Resources.taglib1;
             this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(78, 28);
+            this.toolStripButton8.Size = new System.Drawing.Size(81, 28);
             this.toolStripButton8.Text = "最后行";
             this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
@@ -294,7 +295,7 @@
             this.toolStripComboBox4,
             this.toolStripLabel7,
             this.toolStripLabel8});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 565);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 683);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip2.Size = new System.Drawing.Size(1228, 25);
@@ -687,11 +688,11 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.8219178F));
             this.tableLayoutPanel4.Controls.Add(this.tabControl1, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 79);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 86);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1222, 483);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1222, 594);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // tabControl1
@@ -703,7 +704,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1205, 477);
+            this.tabControl1.Size = new System.Drawing.Size(1205, 588);
             this.tabControl1.TabIndex = 2;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
             // 
@@ -714,7 +715,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1197, 451);
+            this.tabPage1.Size = new System.Drawing.Size(1197, 562);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "除法分析";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -732,34 +733,34 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1191, 445);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1191, 556);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip2;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1018, 439);
+            this.dataGridView1.Size = new System.Drawing.Size(1018, 550);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
@@ -771,7 +772,7 @@
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.contextMenuStrip2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.contextMenuStrip2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.自选方案ToolStripMenuItem1,
             this.相同性分析ToolStripMenuItem});
@@ -813,13 +814,13 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.36364F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.36364F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(161, 439);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(161, 550);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(25, 397);
+            this.button4.Location = new System.Drawing.Point(25, 502);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 30);
             this.button4.TabIndex = 13;
@@ -830,7 +831,7 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(25, 347);
+            this.button3.Location = new System.Drawing.Point(25, 439);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 29);
             this.button3.TabIndex = 12;
@@ -841,7 +842,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(25, 297);
+            this.button2.Location = new System.Drawing.Point(25, 377);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 30);
             this.button2.TabIndex = 11;
@@ -856,7 +857,7 @@
             this.tabControl4.Location = new System.Drawing.Point(3, 3);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(155, 243);
+            this.tabControl4.Size = new System.Drawing.Size(155, 306);
             this.tabControl4.TabIndex = 14;
             // 
             // tabPage2
@@ -865,7 +866,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(147, 214);
+            this.tabPage2.Size = new System.Drawing.Size(147, 277);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "基数";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -883,12 +884,12 @@
             this.checkedListBox2.Location = new System.Drawing.Point(3, 3);
             this.checkedListBox2.MultiColumn = true;
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(141, 208);
+            this.checkedListBox2.Size = new System.Drawing.Size(141, 271);
             this.checkedListBox2.TabIndex = 17;
             // 
             // contextMenuStrip3
             // 
-            this.contextMenuStrip3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.contextMenuStrip3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox5});
             this.contextMenuStrip3.Name = "contextMenuStrip1";
@@ -905,7 +906,7 @@
             this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(20, 258);
+            this.comboBox3.Location = new System.Drawing.Point(20, 326);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 15;
@@ -917,7 +918,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1197, 451);
+            this.tabPage3.Size = new System.Drawing.Size(1197, 562);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "前期分析";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -935,7 +936,7 @@
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1191, 445);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1191, 556);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // dataGridView2
@@ -943,18 +944,18 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.ContextMenuStrip = this.contextMenuStrip4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1047, 439);
+            this.dataGridView2.Size = new System.Drawing.Size(1047, 550);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellMouseEnter);
             this.dataGridView2.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellMouseLeave);
@@ -963,7 +964,7 @@
             // contextMenuStrip4
             // 
             this.contextMenuStrip4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.contextMenuStrip4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.contextMenuStrip4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.contextMenuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2});
             this.contextMenuStrip4.Name = "contextMenuStrip1";
@@ -999,14 +1000,14 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(132, 439);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(132, 550);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 322);
+            this.comboBox2.Location = new System.Drawing.Point(3, 406);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(115, 21);
             this.comboBox2.TabIndex = 21;
@@ -1020,10 +1021,11 @@
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton3,
             this.toolStripButton4,
+            this.toolStripButton10,
             this.toolStripButton5});
-            this.toolStrip3.Location = new System.Drawing.Point(0, 339);
+            this.toolStrip3.Location = new System.Drawing.Point(0, 423);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(111, 100);
+            this.toolStrip3.Size = new System.Drawing.Size(111, 127);
             this.toolStrip3.TabIndex = 17;
             this.toolStrip3.Text = "toolStrip3";
             // 
@@ -1045,13 +1047,22 @@
             this.toolStripButton4.Text = "清空";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.Image = global::MasterClassified.Properties.Resources.save1;
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(109, 21);
+            this.toolStripButton10.Text = "全选";
+            this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
+            // 
             // toolStripButton5
             // 
-            this.toolStripButton5.Image = global::MasterClassified.Properties.Resources.save1;
+            this.toolStripButton5.Image = global::MasterClassified.Properties.Resources.plugin_16;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(109, 21);
-            this.toolStripButton5.Text = "全选";
+            this.toolStripButton5.Text = "随机";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // label3
@@ -1061,7 +1072,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 32);
+            this.label3.Size = new System.Drawing.Size(126, 42);
             this.label3.TabIndex = 16;
             this.label3.Text = "请选择将分析的段位：";
             // 
@@ -1069,10 +1080,10 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 191);
+            this.tabControl2.Location = new System.Drawing.Point(3, 238);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(126, 125);
+            this.tabControl2.Size = new System.Drawing.Size(126, 162);
             this.tabControl2.TabIndex = 18;
             // 
             // tabPage4
@@ -1081,7 +1092,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(118, 99);
+            this.tabPage4.Size = new System.Drawing.Size(118, 136);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "前期";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1099,13 +1110,13 @@
             this.checkedListBox1.Location = new System.Drawing.Point(3, 3);
             this.checkedListBox1.MultiColumn = true;
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(112, 93);
+            this.checkedListBox1.Size = new System.Drawing.Size(112, 130);
             this.checkedListBox1.TabIndex = 17;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.contextMenuStrip1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox6});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -1123,10 +1134,10 @@
             // 
             this.tabControl3.Controls.Add(this.tabPage5);
             this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl3.Location = new System.Drawing.Point(3, 35);
+            this.tabControl3.Location = new System.Drawing.Point(3, 45);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(126, 125);
+            this.tabControl3.Size = new System.Drawing.Size(126, 162);
             this.tabControl3.TabIndex = 19;
             // 
             // tabPage5
@@ -1135,7 +1146,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(118, 99);
+            this.tabPage5.Size = new System.Drawing.Size(118, 136);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "当前期";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1153,14 +1164,14 @@
             this.clbStatus.Location = new System.Drawing.Point(3, 3);
             this.clbStatus.MultiColumn = true;
             this.clbStatus.Name = "clbStatus";
-            this.clbStatus.Size = new System.Drawing.Size(112, 93);
+            this.clbStatus.Size = new System.Drawing.Size(112, 130);
             this.clbStatus.TabIndex = 16;
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 166);
+            this.comboBox1.Location = new System.Drawing.Point(3, 213);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(115, 21);
             this.comboBox1.TabIndex = 20;
@@ -1172,7 +1183,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1197, 451);
+            this.tabPage6.Size = new System.Drawing.Size(1197, 562);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "除法分析-基数分析";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1190,25 +1201,25 @@
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1191, 445);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1191, 556);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // dataGridView3
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(1047, 439);
+            this.dataGridView3.Size = new System.Drawing.Size(1047, 550);
             this.dataGridView3.TabIndex = 1;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             this.dataGridView3.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellMouseEnter);
@@ -1238,13 +1249,13 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(132, 439);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(132, 550);
             this.tableLayoutPanel10.TabIndex = 2;
             // 
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Location = new System.Drawing.Point(11, 405);
+            this.button5.Location = new System.Drawing.Point(11, 516);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 30);
             this.button5.TabIndex = 22;
@@ -1256,7 +1267,7 @@
             // 
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(3, 295);
+            this.comboBox4.Location = new System.Drawing.Point(3, 379);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(115, 21);
             this.comboBox4.TabIndex = 21;
@@ -1270,9 +1281,9 @@
             this.toolStripButton2,
             this.toolStripButton6,
             this.toolStripButton7});
-            this.toolStrip4.Location = new System.Drawing.Point(0, 312);
+            this.toolStrip4.Location = new System.Drawing.Point(0, 396);
             this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.Size = new System.Drawing.Size(132, 89);
+            this.toolStrip4.Size = new System.Drawing.Size(132, 117);
             this.toolStrip4.TabIndex = 17;
             this.toolStrip4.Text = "toolStrip4";
             // 
@@ -1281,7 +1292,7 @@
             this.toolStripButton2.Image = global::MasterClassified.Properties.Resources.sucaiwcom54660jvp;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(52, 86);
+            this.toolStripButton2.Size = new System.Drawing.Size(52, 114);
             this.toolStripButton2.Text = "确认";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
             // 
@@ -1311,7 +1322,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 29);
+            this.label5.Size = new System.Drawing.Size(126, 39);
             this.label5.TabIndex = 16;
             this.label5.Text = "请选择将分析的基数段位：";
             // 
@@ -1319,10 +1330,10 @@
             // 
             this.tabControl5.Controls.Add(this.tabPage7);
             this.tabControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl5.Location = new System.Drawing.Point(3, 176);
+            this.tabControl5.Location = new System.Drawing.Point(3, 223);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(126, 113);
+            this.tabControl5.Size = new System.Drawing.Size(126, 150);
             this.tabControl5.TabIndex = 18;
             // 
             // tabPage7
@@ -1331,7 +1342,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(118, 87);
+            this.tabPage7.Size = new System.Drawing.Size(118, 124);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "前期";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1349,17 +1360,17 @@
             this.checkedListBox3.Location = new System.Drawing.Point(3, 3);
             this.checkedListBox3.MultiColumn = true;
             this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(112, 81);
+            this.checkedListBox3.Size = new System.Drawing.Size(112, 118);
             this.checkedListBox3.TabIndex = 17;
             // 
             // tabControl6
             // 
             this.tabControl6.Controls.Add(this.tabPage8);
             this.tabControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl6.Location = new System.Drawing.Point(3, 32);
+            this.tabControl6.Location = new System.Drawing.Point(3, 42);
             this.tabControl6.Name = "tabControl6";
             this.tabControl6.SelectedIndex = 0;
-            this.tabControl6.Size = new System.Drawing.Size(126, 113);
+            this.tabControl6.Size = new System.Drawing.Size(126, 150);
             this.tabControl6.TabIndex = 19;
             // 
             // tabPage8
@@ -1368,7 +1379,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(118, 87);
+            this.tabPage8.Size = new System.Drawing.Size(118, 124);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "当前期";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1386,14 +1397,14 @@
             this.checkedListBox4.Location = new System.Drawing.Point(3, 3);
             this.checkedListBox4.MultiColumn = true;
             this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(112, 81);
+            this.checkedListBox4.Size = new System.Drawing.Size(112, 118);
             this.checkedListBox4.TabIndex = 16;
             // 
             // comboBox5
             // 
             this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(3, 151);
+            this.comboBox5.Location = new System.Drawing.Point(3, 198);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(115, 21);
             this.comboBox5.TabIndex = 20;
@@ -1403,7 +1414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 595);
+            this.ClientSize = new System.Drawing.Size(1228, 713);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "frmTracing_Analysis";
@@ -1550,5 +1561,6 @@
         private System.Windows.Forms.ToolStripMenuItem 相同性分析ToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripButton toolStripButton10;
     }
 }

@@ -388,6 +388,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="7 %282%29.ico" />
+    <None Include="Resources\plugin_16.png" />
     <None Include="Resources\taglib.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -97,3 +97,17 @@ C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\D
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.Buiness\bin\Debug\MySql.Data.dll
+F:\git_version\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.dll
+F:\git_version\Masterclassified\MC.Buiness\bin\Debug\MC.Buiness.pdb
+F:\git_version\Masterclassified\MC.Buiness\bin\Debug\MC.Common.dll
+F:\git_version\Masterclassified\MC.Buiness\bin\Debug\MC.DB.dll
+F:\git_version\Masterclassified\MC.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
+F:\git_version\Masterclassified\MC.Buiness\bin\Debug\MySql.Data.dll
+F:\git_version\Masterclassified\MC.Buiness\bin\Debug\MC.Common.pdb
+F:\git_version\Masterclassified\MC.Buiness\bin\Debug\MC.DB.pdb
+F:\git_version\Masterclassified\MC.Buiness\bin\Debug\Interop.Office.dll
+F:\git_version\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csprojResolveAssemblyReference.cache
+F:\git_version\Masterclassified\MC.Buiness\obj\Debug\Interop.Office.dll
+F:\git_version\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.csproj.ResolveComReference.cache
+F:\git_version\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.dll
+F:\git_version\Masterclassified\MC.Buiness\obj\Debug\MC.Buiness.pdb

@@ -32,3 +32,8 @@ C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.DB\bin\Debug\
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.DB\obj\Debug\MC.DB.csprojResolveAssemblyReference.cache
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.DB\obj\Debug\MC.DB.dll
 C:\bake40mypc\Devlop\Masterclassified_20191120\Masterclassified\MC.DB\obj\Debug\MC.DB.pdb
+F:\git_version\Masterclassified\MC.DB\bin\Debug\MC.DB.dll
+F:\git_version\Masterclassified\MC.DB\bin\Debug\MC.DB.pdb
+F:\git_version\Masterclassified\MC.DB\obj\Debug\MC.DB.csprojResolveAssemblyReference.cache
+F:\git_version\Masterclassified\MC.DB\obj\Debug\MC.DB.dll
+F:\git_version\Masterclassified\MC.DB\obj\Debug\MC.DB.pdb

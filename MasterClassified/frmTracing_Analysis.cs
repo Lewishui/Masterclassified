@@ -777,7 +777,7 @@ namespace MasterClassified
             //}
             ////item.qianAll = item.qianAll + "\r\n前" + indexing + " " + xiangtongindex.ToString();
 
-            if (newi.Count < 4)
+            if (newi.Count < 5)
             {
                 xiangtogn = "";
                 for (int j = 0; j < newi.Count; j++)
@@ -805,7 +805,7 @@ namespace MasterClassified
 
 
             if (same_list != null && same_list.Count > 0)
-                item.qianAll = item.qianAll + " " + xiangtongindex.ToString() + ":" + xiangtogn;
+                item.qianAll = item.qianAll + " " + xiangtongindex.ToString() + "-" + xiangtogn;
             else
                 item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
         }
@@ -3810,7 +3810,7 @@ namespace MasterClassified
         {
             #region 20191121 判断基数 有3个以内的做 前期分析用
 
-            if (UDF.Count < 4)
+            if (UDF.Count < 5)
             {
                 string xiangtogn = "";
                 for (int j = 0; j < UDF.Count; j++)
@@ -4093,12 +4093,11 @@ namespace MasterClassified
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < clbStatus.Items.Count; i++)
-            {
-                clbStatus.SetItemChecked(i, true);
-                this.checkedListBox1.SetItemChecked(i, true);
 
-            }
+            //20230427 添加随机
+
+            comboBox2_SelectedIndexChanged(this, EventArgs.Empty);
+            toolStripButton3_Click(this, EventArgs.Empty);
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
@@ -4801,6 +4800,16 @@ namespace MasterClassified
                 EverDuanList.Add(2);
                 EverDuanList.Add(1);
             }
+            //20230427
+            if (NAME == "5221 模板")
+            {
+                EverDuanList.Add(5);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(1);
+            }
+
+
             if (NAME == "5311 模板")
             {
                 EverDuanList.Add(5);
@@ -7052,6 +7061,16 @@ namespace MasterClassified
 
                 toolStripMenuItem2.Text = "取消相同性分析";
                 xiangtongxingfenxi = "YES";
+            }
+        }
+
+        private void toolStripButton10_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < clbStatus.Items.Count; i++)
+            {
+                clbStatus.SetItemChecked(i, true);
+                this.checkedListBox1.SetItemChecked(i, true);
+
             }
         }
 

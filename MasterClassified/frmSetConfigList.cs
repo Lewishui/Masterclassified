@@ -627,6 +627,17 @@ namespace MasterClassified
                         EverDuanList.Add(2);
                         EverDuanList.Add(1);
                     }
+                    //20230427
+
+                    if (this.comboBox3.Text == "5221 模板")
+                    {
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(1);
+                    }
+
+
                     if (this.comboBox3.Text == "5311 模板")
                     {
                         EverDuanList.Add(5);
@@ -1240,6 +1251,8 @@ namespace MasterClassified
                 comboBox3.Items.Add("4411 模板");
                 comboBox3.Items.Add("3331 模板");
                 comboBox3.Items.Add("4321 模板");
+                //new 20230427
+                comboBox3.Items.Add("5221 模板");
                 comboBox3.Items.Add("5311 模板");
                 //new 0619
                 comboBox3.Items.Add("6211 模板");

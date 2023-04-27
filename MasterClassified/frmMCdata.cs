@@ -126,7 +126,8 @@ namespace MasterClassified
 
                 int l = 0;
                 qtyTable.Columns.Add("期号", System.Type.GetType("System.Int32"));
-                qtyTable.Columns.Add("开奖日期", System.Type.GetType("System.String"));
+              //  qtyTable.Columns.Add("开奖日期", System.Type.GetType("System.String"));
+                qtyTable.Columns.Add("日期", System.Type.GetType("System.String"));//20230427 变更删除开奖
 
                 int jiindex = 0;
 

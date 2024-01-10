@@ -754,7 +754,7 @@ namespace MasterClassified
                 for (int j = 2; j < dataGridView2.ColumnCount; j++)
                 {
 
-                    dataGridView2.Columns[j].Width = 40;
+                    dataGridView2.Columns[j].Width = 50;
                 }
                 if (dataGridView2.Rows.Count != 0)
                 {
@@ -807,7 +807,9 @@ namespace MasterClassified
             if (same_list != null && same_list.Count > 0)
                 item.qianAll = item.qianAll + " " + xiangtongindex.ToString() + "-" + xiangtogn;
             else
-                item.qianAll = item.qianAll + " " + xiangtongindex.ToString();
+                item.qianAll = item.qianAll + " " + xiangtongindex.ToString() + "-" + xiangtogn; ;
+               // item.qianAll = item.qianAll + "-" + xiangtongindex.ToString();//20230516变更
+
         }
 
         private void NewMethodtab1()

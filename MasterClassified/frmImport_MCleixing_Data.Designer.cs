@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 50);
+            this.label1.Location = new System.Drawing.Point(30, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 16);
             this.label1.TabIndex = 0;
@@ -48,17 +48,17 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 44);
+            this.textBox1.Location = new System.Drawing.Point(149, 41);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 29);
+            this.textBox1.Size = new System.Drawing.Size(251, 27);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(406, 47);
+            this.button1.Location = new System.Drawing.Point(406, 43);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 23);
+            this.button1.Size = new System.Drawing.Size(50, 21);
             this.button1.TabIndex = 2;
             this.button1.Text = "....";
             this.button1.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(77, 255);
+            this.button2.Location = new System.Drawing.Point(77, 235);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 36);
+            this.button2.Size = new System.Drawing.Size(99, 33);
             this.button2.TabIndex = 3;
             this.button2.Text = "确认";
             this.button2.UseVisualStyleBackColor = true;
@@ -76,9 +76,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(281, 255);
+            this.button3.Location = new System.Drawing.Point(281, 235);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 36);
+            this.button3.Size = new System.Drawing.Size(99, 33);
             this.button3.TabIndex = 4;
             this.button3.Text = "取消";
             this.button3.UseVisualStyleBackColor = true;
@@ -88,26 +88,26 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(146, 85);
+            this.label2.Location = new System.Drawing.Point(146, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 13);
+            this.label2.Size = new System.Drawing.Size(197, 12);
             this.label2.TabIndex = 5;
             this.label2.Text = "*导入数据格式可以是 Txt 文本文件";
             // 
-            // frmImport_Data
+            // frmImport_MCleixing_Data
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 315);
+            this.ClientSize = new System.Drawing.Size(498, 291);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "frmImport_Data";
+            this.Name = "frmImport_MCleixing_Data";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "导入彩票类型数据";
+            this.Text = "导入数据类型数据";
             this.ResumeLayout(false);
             this.PerformLayout();
 

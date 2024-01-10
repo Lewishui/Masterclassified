@@ -85,13 +85,16 @@ namespace MasterClassified
             //    }
             //}
             fanganindex = checkinfo + fanganindex;
-            var item = oncheckinfo.Find((x) => { return x.Contains(checkinfo); });
-            if (item == null)
-                oncheckinfo.Add(fanganindex);
-            else
+            if (checkinfo != null)
             {
-                oncheckinfo.Remove(item);
-                oncheckinfo.Add(fanganindex);
+                var item = oncheckinfo.Find((x) => { return x.Contains(checkinfo); });
+                if (item == null)
+                    oncheckinfo.Add(fanganindex);
+                else
+                {
+                    oncheckinfo.Remove(item);
+                    oncheckinfo.Add(fanganindex);
+                }
             }
             //   this.Close();
             List<string> alist = new List<string>();
@@ -100,7 +103,8 @@ namespace MasterClassified
                 foreach (string status in this.checkedListBox1.CheckedItems)
                 {
                     var item1 = oncheckinfo.Find((x) => { return x.Contains(status); });
-                    alist.Add(status + "-" + item1.Replace(status, ""));
+                    if (item1 != null)
+                        alist.Add(status + "-" + item1.Replace(status, ""));
 
                 }
             }

@@ -103,7 +103,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "彩票类型：";
+            this.label1.Text = "数据类型：";
             // 
             // comboBox1
             // 
@@ -201,7 +201,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 48);
             this.button2.TabIndex = 1;
-            this.button2.Text = "增加彩票";
+            this.button2.Text = "增加数据";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -234,7 +234,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmNavigate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "彩票选择";
+            this.Text = "数据选择";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);

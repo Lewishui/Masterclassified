@@ -181,6 +181,8 @@ namespace MasterClassified
                     RowRemark = ii;
                     toolStripLabel1.Text ="共计"+ dataGridView1.Rows.Count.ToString();
 
+                    dataGridView1.CurrentCell = dataGridView1[0, 0]; // 强制将光标指向i行
+                    dataGridView1.Rows[0].Selected = true; 
                 }
                 #endregion
 

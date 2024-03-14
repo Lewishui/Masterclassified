@@ -276,6 +276,14 @@ namespace MC.DB
         public string DuanWei8 { get; set; }
         public string DuanWei9 { get; set; }
         public string DuanWei10 { get; set; }
+        public string DuanWei11 { get; set; }
+        public string DuanWei12 { get; set; }
+        public string DuanWei13{ get; set; }
+        public string DuanWei14 { get; set; }
+        public string DuanWei15 { get; set; }
+        public string DuanWei16 { get; set; }
+        public string DuanWei17 { get; set; }
+
         public string ZhuJian { get; set; }
         public string MorenDuanShu { get; set; }
         public string Mobanleibie { get; set; }

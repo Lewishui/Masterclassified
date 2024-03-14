@@ -525,6 +525,7 @@ namespace MasterClassified
                 newlist.Add(7);
                 newlist.Add(8);
                 newlist.Add(9);
+                //newlist.Add(10);
                 newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
 
                 int duan = 3;
@@ -594,6 +595,23 @@ namespace MasterClassified
                         item.DuanWei9 = temp1[1].Trim();
                     else if (i == 9)
                         item.DuanWei10 = temp1[1].Trim();
+
+                        //20240311
+                    else if (i == 10)
+                        item.DuanWei11 = temp1[1].Trim();
+                    else if (i == 11)
+                        item.DuanWei12 = temp1[1].Trim();
+                    else if (i == 12)
+                        item.DuanWei13 = temp1[1].Trim();
+                    else if (i == 13)
+                        item.DuanWei14 = temp1[1].Trim();
+                    else if (i == 14)
+                        item.DuanWei15 = temp1[1].Trim();
+                    else if (i == 15)
+                        item.DuanWei16 = temp1[1].Trim();
+                    else if (i == 16)
+                        item.DuanWei17 = temp1[1].Trim();
+
 
                     item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
                 }

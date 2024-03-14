@@ -1,0 +1,72 @@
+2024-03-11 17:08:33,363 [8] FATAL SystemExceptionLogger [(null)] - System Error 值不能为空。
+参数名: input, Exception Detail Info :   在 System.Text.RegularExpressions.Regex.Split(String input)
+   在 System.Text.RegularExpressions.Regex.Split(String input, String pattern)
+   在 MasterClassified.frmTracing_Analysis.button2_Click(Object sender, EventArgs e) 位置 f:\git_version\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 3281
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.PerformClick()
+   在 MasterClassified.frmTracing_Analysis.button4_Click(Object sender, EventArgs e) 位置 f:\git_version\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 4194
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time2024/3/11 17:08:33
+2024-03-11 17:44:47,959 [9] FATAL SystemExceptionLogger [(null)] - System Error 值不能为空。
+参数名: input, Exception Detail Info :   在 System.Text.RegularExpressions.Regex.Split(String input)
+   在 System.Text.RegularExpressions.Regex.Split(String input, String pattern)
+   在 MasterClassified.frmTracing_Analysis.button2_Click(Object sender, EventArgs e) 位置 f:\git_version\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 3281
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.PerformClick()
+   在 MasterClassified.frmTracing_Analysis.button4_Click(Object sender, EventArgs e) 位置 f:\git_version\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 4194
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time2024/3/11 17:44:47
+2024-03-11 17:47:54,784 [9] FATAL SystemExceptionLogger [(null)] - System Error 值不能为空。
+参数名: input, Exception Detail Info :   在 System.Text.RegularExpressions.Regex.Split(String input)
+   在 System.Text.RegularExpressions.Regex.Split(String input, String pattern)
+   在 MasterClassified.frmTracing_Analysis.button2_Click(Object sender, EventArgs e) 位置 f:\git_version\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 3281
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.PerformClick()
+   在 MasterClassified.frmTracing_Analysis.button4_Click(Object sender, EventArgs e) 位置 f:\git_version\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 4194
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time2024/3/11 17:47:54
+2024-03-11 18:21:27,756 [9] FATAL SystemExceptionLogger [(null)] - System Error 值不能为空。
+参数名: input, Exception Detail Info :   在 System.Text.RegularExpressions.Regex.Split(String input)
+   在 System.Text.RegularExpressions.Regex.Split(String input, String pattern)
+   在 MasterClassified.frmTracing_Analysis.button2_Click(Object sender, EventArgs e)
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.PerformClick()
+   在 MasterClassified.frmTracing_Analysis.button4_Click(Object sender, EventArgs e)
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)Time2024/3/11 18:21:27

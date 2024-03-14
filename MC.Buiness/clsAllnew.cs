@@ -21,8 +21,8 @@ namespace MC.Buiness
         //230.55
         public log4net.ILog ProcessLogger { get; set; }
         public log4net.ILog ExceptionLogger { get; set; }
-       string connectionString = "mongodb://yhocn.cn";
-        // string connectionString = "mongodb://127.0.0.1";
+      //string connectionString = "mongodb://yhocn.cn";
+       string connectionString = "mongodb://127.0.0.1";
 
         #region 导入数据
         public clsAllnew()
@@ -545,6 +545,28 @@ namespace MC.Buiness
                     if (emp.Contains("DuanWei10"))
                         item.DuanWei10 = (emp["DuanWei10"].AsString);
 
+                    if (emp.Contains("DuanWei11"))
+                        item.DuanWei11 = (emp["DuanWei11"].AsString);
+
+                    if (emp.Contains("DuanWei12"))
+                        item.DuanWei12 = (emp["DuanWei12"].AsString);
+
+                    if (emp.Contains("DuanWei13"))
+                        item.DuanWei13 = (emp["DuanWei13"].AsString);
+
+                    if (emp.Contains("DuanWei14"))
+                        item.DuanWei14 = (emp["DuanWei14"].AsString);
+
+                    if (emp.Contains("DuanWei15"))
+                        item.DuanWei15 = (emp["DuanWei15"].AsString);
+
+                    if (emp.Contains("DuanWei16"))
+                        item.DuanWei16 = (emp["DuanWei16"].AsString);
+
+                    if (emp.Contains("DuanWei17"))
+                        item.DuanWei17 = (emp["DuanWei17"].AsString);
+
+      
                     if (emp.Contains("ZhuJian"))
                         item.ZhuJian = (emp["ZhuJian"].AsString);
                     if (emp.Contains("MorenDuanShu"))
@@ -634,6 +656,27 @@ namespace MC.Buiness
                     if (emp.Contains("DuanWei10"))
                         item.DuanWei10 = (emp["DuanWei10"].AsString);
 
+                    if (emp.Contains("DuanWei11"))
+                        item.DuanWei11 = (emp["DuanWei11"].AsString);
+
+                    if (emp.Contains("DuanWei12"))
+                        item.DuanWei12 = (emp["DuanWei12"].AsString);
+
+                    if (emp.Contains("DuanWei13"))
+                        item.DuanWei13 = (emp["DuanWei13"].AsString);
+
+                    if (emp.Contains("DuanWei14"))
+                        item.DuanWei14 = (emp["DuanWei14"].AsString);
+
+                    if (emp.Contains("DuanWei15"))
+                        item.DuanWei15 = (emp["DuanWei15"].AsString);
+
+                    if (emp.Contains("DuanWei16"))
+                        item.DuanWei16 = (emp["DuanWei16"].AsString);
+
+                    if (emp.Contains("DuanWei17"))
+                        item.DuanWei17 = (emp["DuanWei17"].AsString);
+
                     if (emp.Contains("ZhuJian"))
                         item.ZhuJian = (emp["ZhuJian"].AsString);
                     if (emp.Contains("MorenDuanShu"))
@@ -719,6 +762,28 @@ namespace MC.Buiness
                     if (emp.Contains("DuanWei10"))
                         item.DuanWei10 = (emp["DuanWei10"].AsString);
 
+
+                    if (emp.Contains("DuanWei11"))
+                        item.DuanWei11 = (emp["DuanWei11"].AsString);
+
+                    if (emp.Contains("DuanWei12"))
+                        item.DuanWei12 = (emp["DuanWei12"].AsString);
+
+                    if (emp.Contains("DuanWei13"))
+                        item.DuanWei13 = (emp["DuanWei13"].AsString);
+
+                    if (emp.Contains("DuanWei14"))
+                        item.DuanWei14 = (emp["DuanWei14"].AsString);
+
+                    if (emp.Contains("DuanWei15"))
+                        item.DuanWei15 = (emp["DuanWei15"].AsString);
+
+                    if (emp.Contains("DuanWei16"))
+                        item.DuanWei16 = (emp["DuanWei16"].AsString);
+
+                    if (emp.Contains("DuanWei17"))
+                        item.DuanWei17 = (emp["DuanWei17"].AsString);
+
                     if (emp.Contains("ZhuJian"))
                         item.ZhuJian = (emp["ZhuJian"].AsString);
                     if (emp.Contains("MorenDuanShu"))
@@ -803,6 +868,28 @@ namespace MC.Buiness
 
                     if (emp.Contains("DuanWei10"))
                         item.DuanWei10 = (emp["DuanWei10"].AsString);
+
+
+                    if (emp.Contains("DuanWei11"))
+                        item.DuanWei11 = (emp["DuanWei11"].AsString);
+
+                    if (emp.Contains("DuanWei12"))
+                        item.DuanWei12 = (emp["DuanWei12"].AsString);
+
+                    if (emp.Contains("DuanWei13"))
+                        item.DuanWei13 = (emp["DuanWei13"].AsString);
+
+                    if (emp.Contains("DuanWei14"))
+                        item.DuanWei14 = (emp["DuanWei14"].AsString);
+
+                    if (emp.Contains("DuanWei15"))
+                        item.DuanWei15 = (emp["DuanWei15"].AsString);
+
+                    if (emp.Contains("DuanWei16"))
+                        item.DuanWei16 = (emp["DuanWei16"].AsString);
+
+                    if (emp.Contains("DuanWei17"))
+                        item.DuanWei17 = (emp["DuanWei17"].AsString);
 
                     if (emp.Contains("ZhuJian"))
                         item.ZhuJian = (emp["ZhuJian"].AsString);
@@ -1227,6 +1314,13 @@ namespace MC.Buiness
                 { "DuanWei8", item.DuanWei8 },
                 { "DuanWei9", item.DuanWei9 },
                 { "DuanWei10", item.DuanWei10 },
+                { "DuanWei11", item.DuanWei11 },
+                { "DuanWei12", item.DuanWei12 },
+                { "DuanWei13", item.DuanWei13 },
+                { "DuanWei14", item.DuanWei14 },
+                { "DuanWei15", item.DuanWei15 },
+                { "DuanWei16", item.DuanWei16 },
+                { "DuanWei17", item.DuanWei17 },                                          
                  { "ZhuJian", item.ZhuJian },  
                 { "MorenDuanShu", item.MorenDuanShu },  
                    { "Mobanleibie", item.Mobanleibie },                 
@@ -1290,6 +1384,13 @@ namespace MC.Buiness
                 { "DuanWei8", item.DuanWei8 },
                 { "DuanWei9", item.DuanWei9 },
                 { "DuanWei10", item.DuanWei10 },
+                { "DuanWei11", item.DuanWei11 },
+                { "DuanWei12", item.DuanWei12 },
+                { "DuanWei13", item.DuanWei13 },
+                { "DuanWei14", item.DuanWei14 },
+                { "DuanWei15", item.DuanWei15 },
+                { "DuanWei16", item.DuanWei16 },
+                { "DuanWei17", item.DuanWei17 }, 
                  { "ZhuJian", item.ZhuJian },  
                 { "MorenDuanShu", item.MorenDuanShu },  
                    { "Mobanleibie", item.Mobanleibie },                  

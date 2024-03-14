@@ -137,7 +137,46 @@ namespace MasterClassified
                 newlist.Add(8);
                 newlist.Add(9);
                 //
+                 //newlist.Add(10);
+                if (this.comboBox3.Text != "" && this.comboBox3.Text.Contains("_"))
+                {
+                    //要i求1-33  不含0 
+                    newlist = new List<int>();
+                    newlist.Add(1);
+                    newlist.Add(2);
+                    newlist.Add(3);
+                    newlist.Add(4);
+                    newlist.Add(5);
+                    newlist.Add(6);
+                    newlist.Add(7);
+                    newlist.Add(8);
+                    newlist.Add(9);
 
+                     newlist.Add(10);
+                    newlist.Add(11);
+                    newlist.Add(12);
+                    newlist.Add(13);
+                    newlist.Add(14);
+                    newlist.Add(15);
+                    newlist.Add(16);
+                    newlist.Add(17);
+                    newlist.Add(18);
+                    newlist.Add(19);
+                    newlist.Add(20);
+                    newlist.Add(21);
+                    newlist.Add(22);
+                    newlist.Add(23);
+                    newlist.Add(24);
+                    newlist.Add(25);
+                    newlist.Add(26);
+                    newlist.Add(27);
+                    newlist.Add(28);
+                    newlist.Add(29);                
+                    newlist.Add(30);
+                    newlist.Add(31);
+                    newlist.Add(32);
+                    newlist.Add(33);
+                }
                 newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
 
                 for (int i = 0; i < newlist.Count; i++)
@@ -162,7 +201,7 @@ namespace MasterClassified
                 string[] temp1 = System.Text.RegularExpressions.Regex.Split(this.textBox1.Text, "\r\n");
                 for (int iq = 0; iq < temp1.Length; iq++)
                 {
-                    if (temp1[iq].Length > 4)
+                    if (temp1[iq].Length > 4 && temp1[iq] != "十一段=\t" && temp1[iq] != "十二段=\t" && temp1[iq] != "十三段=\t" && temp1[iq] != "十四段=\t" && temp1[iq] != "十五段=\t" && temp1[iq] != "十六段=\t" && temp1[iq] != "十七段=\t")
                     {
                         SelfNo.Add(temp1[iq]);
                         //差分自定义的数字
@@ -567,7 +606,12 @@ namespace MasterClassified
                    
                     }
 
+                    else if (this.comboBox3.Text == "17_16 模板")
+                    {
+                        EverDuanList.Add(17);
+                        EverDuanList.Add(16);
 
+                    }
                 }
                 else if (this.comboBox1.Text == "3")
                 {
@@ -610,6 +654,13 @@ namespace MasterClassified
                         EverDuanList.Add(2);
                         EverDuanList.Add(1);
                     }
+                    else if (this.comboBox3.Text == "11_11_11 模板")
+                    {
+                        EverDuanList.Add(11);
+                        EverDuanList.Add(11);
+                        EverDuanList.Add(11);
+                    }
+
                 }
                 else if (this.comboBox1.Text == "4")
                 {
@@ -674,6 +725,13 @@ namespace MasterClassified
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
                     }
+                    if (this.comboBox3.Text == "9_8_8_8 模板")
+                    {
+                        EverDuanList.Add(9);
+                        EverDuanList.Add(8);
+                        EverDuanList.Add(8);
+                        EverDuanList.Add(8);
+                    }
                 }
                 //new 0621
                 else if (this.comboBox1.Text == "5")
@@ -720,7 +778,14 @@ namespace MasterClassified
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
                     }
-
+                    if (this.comboBox3.Text == "7_7_7_6_6 模板")
+                    {
+                        EverDuanList.Add(7);
+                        EverDuanList.Add(7);
+                        EverDuanList.Add(7);
+                        EverDuanList.Add(6);
+                        EverDuanList.Add(6);
+                    }
                 }
                 //new 0621
                 else if (this.comboBox1.Text == "6")
@@ -753,7 +818,15 @@ namespace MasterClassified
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
                     }
-
+                    if (this.comboBox3.Text == "666_555 模板")
+                    {
+                        EverDuanList.Add(6);
+                        EverDuanList.Add(6);
+                        EverDuanList.Add(6);
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(5);
+                    }
                 }
                 //new 0621
                 else if (this.comboBox1.Text == "7")
@@ -767,6 +840,16 @@ namespace MasterClassified
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
+                    }
+                    if (this.comboBox3.Text == "55555_44 模板")
+                    {
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
                     }
 
                 }
@@ -783,6 +866,214 @@ namespace MasterClassified
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
                         EverDuanList.Add(1);
+                        EverDuanList.Add(1);
+                    }
+                    if (this.comboBox3.Text == "5_4444444 模板")
+                    {
+                        EverDuanList.Add(5);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                    }
+                }
+                //new 20240311
+                else if (this.comboBox1.Text == "9")
+                {
+                    //new 0621
+                    if (this.comboBox3.Text == "444444_333 模板")
+                    {
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                    }
+                  
+                }
+                //new 20240311
+                else if (this.comboBox1.Text == "10")
+                {
+                    //new 0621
+                    if (this.comboBox3.Text == "444_3333333 模板")
+                    {
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(4);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                    }
+
+                }
+                //new 20240311
+                else if (this.comboBox1.Text == "11")
+                {
+                    //new 0621
+                    if (this.comboBox3.Text == "33333333333_ 模板")
+                    {
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                    }
+
+                }
+                //new 20240311
+                else if (this.comboBox1.Text == "12")
+                {
+                    //new 0621
+                    if (this.comboBox3.Text == "333333333_222 模板")
+                    {
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                    }
+
+                }
+                //new 20240311
+                else if (this.comboBox1.Text == "13")
+                {
+                    //new 0621
+                    if (this.comboBox3.Text == "3333333_222222 模板")
+                    {
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                    }
+
+                }
+                //new 20240311
+                else if (this.comboBox1.Text == "14")
+                {
+                    //new 0621
+                    if (this.comboBox3.Text == "33333_222222222 模板")
+                    {
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                    }
+
+                }
+                //new 20240311
+                else if (this.comboBox1.Text == "15")
+                {
+                    //new 0621
+                    if (this.comboBox3.Text == "333_222222222222 模板")
+                    {
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                    }
+
+                }
+                //new 20240311
+                else if (this.comboBox1.Text == "16")
+                {
+                    //new 0621
+                    if (this.comboBox3.Text == "3_222222222222222 模板")
+                    {
+                        EverDuanList.Add(3);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                    }
+
+                }
+                //new 20240311
+                else if (this.comboBox1.Text == "17")
+                {
+                    //new 0621
+                    if (this.comboBox3.Text == "2222222222222222_1 模板")
+                    {
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
+                        EverDuanList.Add(2);
                         EverDuanList.Add(1);
                     }
 
@@ -933,6 +1224,24 @@ namespace MasterClassified
                 else if (i == 9)
                     item.DuanWei10 = temp1[1].Trim();
 
+
+                 //20240311
+                else if (i == 10)
+                    item.DuanWei11 = temp1[1].Trim();
+                else if (i == 11)
+                    item.DuanWei12 = temp1[1].Trim();
+                else if (i == 12)
+                    item.DuanWei13 = temp1[1].Trim();
+                else if (i == 13)
+                    item.DuanWei14 = temp1[1].Trim();
+                else if (i == 14)
+                    item.DuanWei15 = temp1[1].Trim();
+                else if (i == 15)
+                    item.DuanWei16 = temp1[1].Trim();
+                else if (i == 16)
+                    item.DuanWei17 = temp1[1].Trim();
+
+
                 item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
             }
             if (this.checkBox1.Checked == true)
@@ -1056,6 +1365,24 @@ namespace MasterClassified
                     else if (i == 9)
                         item.DuanWei10 = temp1[1].Trim();
 
+                     //20240311
+                    else if (i == 10)
+                        item.DuanWei11 = temp1[1].Trim();
+                    else if (i == 11)
+                        item.DuanWei12 = temp1[1].Trim();
+                    else if (i == 12)
+                        item.DuanWei13 = temp1[1].Trim();
+                    else if (i == 13)
+                        item.DuanWei14 = temp1[1].Trim();
+                    else if (i == 14)
+                        item.DuanWei15 = temp1[1].Trim();
+                    else if (i == 15)
+                        item.DuanWei16 = temp1[1].Trim();
+                    else if (i == 16)
+                        item.DuanWei17 = temp1[1].Trim();
+
+
+
                     item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
                 }
                 if (this.checkBox1.Checked == true)
@@ -1127,6 +1454,22 @@ namespace MasterClassified
                         item.DuanWei9 = "";
                     else if (i == 9)
                         item.DuanWei10 = "";
+
+                     //20240311
+                    else if (i == 10)
+                        item.DuanWei11 = "";
+                    else if (i == 11)
+                        item.DuanWei12 = "";
+                    else if (i == 12)
+                        item.DuanWei13 = "";
+                    else if (i == 13)
+                        item.DuanWei14 = "";
+                    else if (i == 14)
+                        item.DuanWei15 = "";
+                    else if (i == 15)
+                        item.DuanWei16 = "";
+                    else if (i == 16)
+                        item.DuanWei17 = "";
 
                     item.Data = "";
                 }
@@ -1204,6 +1547,21 @@ namespace MasterClassified
                     else if (i == 9)
                         item.DuanWei10 = "";
 
+                   //20240311
+                    else if (i == 10)
+                        item.DuanWei11 = "";
+                    else if (i == 11)
+                        item.DuanWei12 = "";
+                    else if (i == 12)
+                        item.DuanWei13 = "";
+                    else if (i == 13)
+                        item.DuanWei14 = "";
+                    else if (i == 14)
+                        item.DuanWei15 = "";
+                    else if (i == 15)
+                        item.DuanWei16 = "";
+                    else if (i == 16)
+                        item.DuanWei17 = "";
                     item.Data = "";
                 }
                 if (this.checkBox1.Checked == true)
@@ -1230,8 +1588,6 @@ namespace MasterClassified
             comboBox3.Items.Add("默认");
             if (this.comboBox1.Text == "2")
             {
-         
-
                // comboBox3.Items.Add("46 模板");
                // comboBox3.Items.Add("28 模板");
                // comboBox3.Items.Add("37 模板");
@@ -1239,6 +1595,9 @@ namespace MasterClassified
                 comboBox3.Items.Add("64 模板");
                 comboBox3.Items.Add("82 模板");
                 comboBox3.Items.Add("73 模板");
+               //20240311
+                comboBox3.Items.Add("17_16 模板");
+
             }
             else if (this.comboBox1.Text == "3")
             {
@@ -1251,6 +1610,8 @@ namespace MasterClassified
                 comboBox3.Items.Add("631 模板");
                 //new 0619
                 comboBox3.Items.Add("721 模板");
+                //20240311
+                comboBox3.Items.Add("11_11_11 模板");
 
             }
             else if (this.comboBox1.Text == "4")
@@ -1268,6 +1629,9 @@ namespace MasterClassified
                 //new 0619
                 comboBox3.Items.Add("6211 模板");
                 comboBox3.Items.Add("7111 模板");
+                //20240311
+                comboBox3.Items.Add("9_8_8_8 模板");
+
             }
             //new 0619
             else if (this.comboBox1.Text == "5")
@@ -1279,6 +1643,9 @@ namespace MasterClassified
                 comboBox3.Items.Add("42211 模板");
                 comboBox3.Items.Add("32221 模板");
                 comboBox3.Items.Add("43111 模板");
+                //20240311
+                comboBox3.Items.Add("7_7_7_6_6 模板");
+
 
             }
             //new 0619
@@ -1289,7 +1656,8 @@ namespace MasterClassified
 
                 comboBox3.Items.Add("421111 模板");
                 comboBox3.Items.Add("331111 模板");
-
+                //20240311
+                comboBox3.Items.Add("666_555 模板");
             }
             //new 0619
             else if (this.comboBox1.Text == "7")
@@ -1297,14 +1665,86 @@ namespace MasterClassified
                 //new 0619
                 comboBox3.Items.Add("4111111 模板");
 
+                //20240311
+                comboBox3.Items.Add("55555_44 模板");
+
+
+
             }
             //new 0619
             else if (this.comboBox1.Text == "8")
             {
                 //new 0619
                 comboBox3.Items.Add("31111111 模板");
+                //20240311
+                comboBox3.Items.Add("5_4444444 模板");
+
 
             }
+            //20240311
+            else if (this.comboBox1.Text == "9")
+            {
+                //20240311
+                comboBox3.Items.Add("444444_333 模板");
+                
+            }
+            //20240311
+            else if (this.comboBox1.Text == "10")
+            {
+                //20240311
+                comboBox3.Items.Add("444_3333333 模板");
+
+            }
+            //20240311
+            else if (this.comboBox1.Text == "11")
+            {
+                //20240311
+                comboBox3.Items.Add("33333333333_ 模板");
+              
+            }
+            //20240311
+            else if (this.comboBox1.Text == "12")
+            {
+                //20240311
+                comboBox3.Items.Add("333333333_222 模板");
+
+            }
+            //20240311
+            else if (this.comboBox1.Text == "13")
+            {
+                //20240311
+                comboBox3.Items.Add("3333333_222222 模板");
+
+            }
+            //20240311
+            else if (this.comboBox1.Text == "14")
+            {
+                //20240311
+                comboBox3.Items.Add("33333_222222222 模板");
+
+            }
+            //20240311
+            else if (this.comboBox1.Text == "15")
+            {
+                //20240311
+                comboBox3.Items.Add("333_222222222222 模板");
+
+            }
+            //20240311
+            else if (this.comboBox1.Text == "16")
+            {
+                //20240311
+                comboBox3.Items.Add("3_222222222222222 模板");
+
+            }
+            //20240311
+            else if (this.comboBox1.Text == "17")
+            {
+                //20240311
+                comboBox3.Items.Add("2222222222222222_1 模板");
+
+            }
+
 
             this.comboBox3.SelectedIndex = 0;
             string amewi = this.textBox1.Text;//\t\r\n
@@ -1332,9 +1772,101 @@ namespace MasterClassified
                     this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "九段=";
                 if (i == 10)
                     this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十段=";
+                if (i == 11)
+                    this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十一段=";
+                if (i == 12)
+                    this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十二段=";
+                if (i == 13)
+                    this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十三段=";
+                if (i == 14)
+                    this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十四段=";
+                if (i == 15)
+                    this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十五段=";
+                if (i == 16)
+                    this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十六段=";
+                if (i == 17)
+                    this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十七段=";
+            
 
             }
             this.textBox1.Text = this.textBox1.Text + "\t\r\n";
+
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            if (this.listBox1.Text == null)
+            {
+                MessageBox.Show("请选择方案名称，在保存在其名下！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            List<FangAnLieBiaoDATA> Result = new List<FangAnLieBiaoDATA>();
+            FangAnLieBiaoDATA item = new FangAnLieBiaoDATA();
+
+
+            for (int i = 0; i < showSuijiResultlist.Count; i++)
+            {
+                string[] temp1 = System.Text.RegularExpressions.Regex.Split(showSuijiResultlist[i], "=");
+                if (i == 0)
+                    item.DuanWei1 = temp1[1].Trim();
+                else if (i == 1)
+                    item.DuanWei2 = temp1[1].Trim();
+                else if (i == 2)
+                    item.DuanWei3 = temp1[1].Trim();
+                else if (i == 3)
+                    item.DuanWei4 = temp1[1].Trim();
+                else if (i == 4)
+                    item.DuanWei5 = temp1[1].Trim();
+                else if (i == 5)
+                    item.DuanWei6 = temp1[1].Trim();
+                else if (i == 6)
+                    item.DuanWei7 = temp1[1].Trim();
+                else if (i == 7)
+                    item.DuanWei8 = temp1[1].Trim();
+                else if (i == 8)
+                    item.DuanWei9 = temp1[1].Trim();
+                else if (i == 9)
+                    item.DuanWei10 = temp1[1].Trim();
+
+                //20240311
+                else if (i == 10)
+                    item.DuanWei11 = temp1[1].Trim();
+                else if (i == 11)
+                    item.DuanWei12 = temp1[1].Trim();
+                else if (i == 12)
+                    item.DuanWei13 = temp1[1].Trim();
+                else if (i == 13)
+                    item.DuanWei14 = temp1[1].Trim();
+                else if (i == 14)
+                    item.DuanWei15 = temp1[1].Trim();
+                else if (i == 15)
+                    item.DuanWei16 = temp1[1].Trim();
+                else if (i == 16)
+                    item.DuanWei17 = temp1[1].Trim();
+ 
+                item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
+            }
+           // if (this.checkBox1.Checked == true)
+                item.ZhuJian = "YES";
+
+           // if (this.checkBox2.Checked == true)
+                item.MorenDuanShu = comboBox1.Text;
+
+            if (this.comboBox3.Text != "")
+                item.Mobanleibie = comboBox3.Text;
+
+            item.Name = this.listBox1.Text.ToString();//保存名称
+            item.DuanShu = showSuijiResultlist.Count.ToString();
+
+             if (this.checkBox3.Checked == true)
+                item.xiangtongxingfenxi = "YES";
+
+
+            Result.Add(item);
+            clsAllnew BusinessHelp = new clsAllnew();
+            BusinessHelp.Save_FangAn(Result);
+
+            MessageBox.Show("保存成功！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

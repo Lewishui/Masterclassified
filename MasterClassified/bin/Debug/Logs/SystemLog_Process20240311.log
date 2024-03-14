@@ -1,0 +1,578 @@
+2024-03-11 08:26:00,234 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:26:00
+2024-03-11 08:26:00,362 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 8:26:00
+2024-03-11 08:26:22,282 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:26:22
+2024-03-11 08:26:22,283 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:26:22
+2024-03-11 08:26:24,930 [9] FATAL ProcessLogger [(null)] - System Error 60239 MongoDB.Driver.MongoConnectionException: Unable to connect to server yhocn.cn:27017: 未将对象引用设置到对象的实例。. ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 MongoDB.Driver.MongoServerInstance.RefreshStateAsSoonAsPossible()
+   在 MongoDB.Driver.Internal.MongoConnection.HandleException(Exception ex)
+   在 MongoDB.Driver.Internal.MongoConnection.SendMessage(BsonBuffer buffer, Int32 requestId)
+   在 MongoDB.Driver.Internal.MongoConnection.SendMessage(MongoRequestMessage message)
+   在 MongoDB.Driver.Operations.CommandOperation`1.Execute(MongoConnection connection)
+   在 MongoDB.Driver.MongoServerInstance.RunCommandAs[TCommandResult](MongoConnection connection, String databaseName, IMongoCommand command)
+   在 MongoDB.Driver.MongoServerInstance.Ping(MongoConnection connection)
+   在 MongoDB.Driver.MongoServerInstance.Connect()
+   在 MongoDB.Driver.Internal.DirectMongoServerProxy.Connect(TimeSpan timeout, ReadPreference readPreference)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MC.Buiness.clsAllnew.Read_CaiPiaoZhongLei_Moren(String findtext) 位置 f:\git_version\Masterclassified\MC.Buiness\clsAllnew.cs:行号 998
+   在 MasterClassified.frmTracing_Analysis.InitialSystemInfo() 位置 f:\git_version\Masterclassified\MasterClassified\frmTracing_Analysis.cs:行号 992024/3/11 8:26:24
+2024-03-11 08:29:46,435 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:29:46
+2024-03-11 08:29:46,514 [10] FATAL ProcessLogger [(null)] - initialize2024/3/11 8:29:46
+2024-03-11 08:29:50,471 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:29:50
+2024-03-11 08:29:50,472 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:29:50
+2024-03-11 08:29:53,407 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:29:53
+2024-03-11 08:30:07,647 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:30:07
+2024-03-11 08:30:08,555 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:30:08
+2024-03-11 08:30:09,277 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:30:09
+2024-03-11 08:30:10,029 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:30:10
+2024-03-11 08:30:10,876 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:30:10
+2024-03-11 08:30:34,741 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:30:34
+2024-03-11 08:32:10,797 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:32:10
+2024-03-11 08:32:11,931 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:32:11
+2024-03-11 08:32:21,427 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:32:21
+2024-03-11 08:32:23,976 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:32:23
+2024-03-11 08:37:27,954 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:37:27
+2024-03-11 08:37:27,963 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:37:27
+2024-03-11 08:37:35,606 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:37:35
+2024-03-11 08:37:38,964 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:37:38
+2024-03-11 08:37:38,964 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:37:38
+2024-03-11 08:37:45,912 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:37:45
+2024-03-11 08:38:03,200 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:03
+2024-03-11 08:38:04,636 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:04
+2024-03-11 08:38:05,837 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:05
+2024-03-11 08:38:08,093 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:08
+2024-03-11 08:38:11,946 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:11
+2024-03-11 08:38:16,833 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:16
+2024-03-11 08:38:26,973 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:26
+2024-03-11 08:38:30,726 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:30
+2024-03-11 08:38:32,449 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:32
+2024-03-11 08:38:34,181 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 8:38:34
+2024-03-11 09:04:08,690 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:08
+2024-03-11 09:04:08,795 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 9:04:08
+2024-03-11 09:04:12,618 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:12
+2024-03-11 09:04:12,619 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:12
+2024-03-11 09:04:15,331 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:15
+2024-03-11 09:04:23,620 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:23
+2024-03-11 09:04:24,665 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:24
+2024-03-11 09:04:25,013 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:25
+2024-03-11 09:04:25,656 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:25
+2024-03-11 09:04:26,178 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:26
+2024-03-11 09:04:28,811 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:28
+2024-03-11 09:04:31,542 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:31
+2024-03-11 09:04:31,914 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:31
+2024-03-11 09:04:32,344 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:32
+2024-03-11 09:04:32,736 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:04:32
+2024-03-11 09:25:54,234 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:25:54
+2024-03-11 09:25:54,234 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:25:54
+2024-03-11 09:25:58,914 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:25:58
+2024-03-11 09:26:02,856 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:26:02
+2024-03-11 09:26:02,876 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:26:02
+2024-03-11 09:26:12,663 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:26:12
+2024-03-11 09:26:16,951 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:26:16
+2024-03-11 09:26:16,951 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:26:16
+2024-03-11 09:26:34,851 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:26:34
+2024-03-11 09:27:06,989 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:27:06
+2024-03-11 09:27:09,356 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:27:09
+2024-03-11 09:27:11,212 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:27:11
+2024-03-11 09:27:14,000 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:27:14
+2024-03-11 09:27:15,726 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:27:15
+2024-03-11 09:28:58,607 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:28:58
+2024-03-11 09:29:00,992 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:29:00
+2024-03-11 09:29:01,478 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:29:01
+2024-03-11 09:29:02,219 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:29:02
+2024-03-11 09:29:02,736 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:29:02
+2024-03-11 09:34:03,790 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:34:03
+2024-03-11 09:40:51,958 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:40:51
+2024-03-11 09:40:52,088 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 9:40:52
+2024-03-11 09:41:01,667 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:41:01
+2024-03-11 09:41:01,668 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:41:01
+2024-03-11 09:41:03,927 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:41:03
+2024-03-11 09:41:13,964 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:41:13
+2024-03-11 09:41:14,860 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:41:14
+2024-03-11 09:41:15,331 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:41:15
+2024-03-11 09:41:16,165 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:41:16
+2024-03-11 09:41:16,786 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:41:16
+2024-03-11 09:56:01,871 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:56:01
+2024-03-11 09:56:01,988 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 9:56:01
+2024-03-11 09:56:05,710 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:56:05
+2024-03-11 09:56:05,711 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:56:05
+2024-03-11 09:56:08,335 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:56:08
+2024-03-11 09:56:20,369 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:56:20
+2024-03-11 09:56:21,256 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:56:21
+2024-03-11 09:56:21,721 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:56:21
+2024-03-11 09:56:22,464 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:56:22
+2024-03-11 09:56:23,001 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 9:56:23
+2024-03-11 10:02:24,809 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:02:24
+2024-03-11 10:02:24,916 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 10:02:24
+2024-03-11 10:02:34,305 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:02:34
+2024-03-11 10:02:34,307 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:02:34
+2024-03-11 10:02:36,525 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:02:36
+2024-03-11 10:02:55,773 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:02:55
+2024-03-11 10:02:57,113 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:02:57
+2024-03-11 10:02:57,659 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:02:57
+2024-03-11 10:02:58,825 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:02:58
+2024-03-11 10:02:59,598 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:02:59
+2024-03-11 10:07:36,411 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:07:36
+2024-03-11 10:07:36,563 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 10:07:36
+2024-03-11 10:07:44,360 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:07:44
+2024-03-11 10:07:44,365 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:07:44
+2024-03-11 10:07:47,207 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:07:47
+2024-03-11 10:08:09,772 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:08:09
+2024-03-11 10:08:11,469 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:08:11
+2024-03-11 10:08:12,126 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:08:12
+2024-03-11 10:08:13,394 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:08:13
+2024-03-11 10:08:14,365 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:08:14
+2024-03-11 10:11:09,085 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:11:09
+2024-03-11 10:13:00,401 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:13:00
+2024-03-11 10:13:51,688 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:13:51
+2024-03-11 10:15:09,455 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:15:09
+2024-03-11 10:15:18,644 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:15:18
+2024-03-11 10:32:54,838 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:32:54
+2024-03-11 10:32:54,954 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 10:32:54
+2024-03-11 10:33:32,597 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:33:32
+2024-03-11 10:33:32,620 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:33:32
+2024-03-11 10:33:41,150 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:33:41
+2024-03-11 10:34:14,916 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:34:14
+2024-03-11 10:34:14,917 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:34:14
+2024-03-11 10:34:18,589 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:34:18
+2024-03-11 10:34:20,604 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:34:20
+2024-03-11 10:34:23,005 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:34:23
+2024-03-11 10:34:23,007 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:34:23
+2024-03-11 10:34:43,098 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:34:43
+2024-03-11 10:35:40,596 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:35:40
+2024-03-11 10:35:41,847 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:35:41
+2024-03-11 10:35:42,446 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:35:42
+2024-03-11 10:35:43,523 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:35:43
+2024-03-11 10:35:44,406 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:35:44
+2024-03-11 10:37:50,598 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:37:50
+2024-03-11 10:37:50,602 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:37:50
+2024-03-11 10:37:55,154 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:37:55
+2024-03-11 10:37:55,645 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:37:55
+2024-03-11 10:37:55,645 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:37:55
+2024-03-11 10:37:58,260 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:37:58
+2024-03-11 10:38:24,567 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:38:24
+2024-03-11 10:38:25,046 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:38:25
+2024-03-11 10:38:25,046 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:38:25
+2024-03-11 10:38:27,814 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:38:27
+2024-03-11 10:40:24,847 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:24
+2024-03-11 10:40:24,885 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:24
+2024-03-11 10:40:24,978 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:24
+2024-03-11 10:40:27,221 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:27
+2024-03-11 10:40:29,434 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:29
+2024-03-11 10:40:29,434 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:29
+2024-03-11 10:40:35,498 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:35
+2024-03-11 10:40:35,935 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:35
+2024-03-11 10:40:37,453 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:37
+2024-03-11 10:40:39,194 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:39
+2024-03-11 10:40:39,293 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:39
+2024-03-11 10:40:41,179 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:41
+2024-03-11 10:40:41,360 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:40:41
+2024-03-11 10:42:07,168 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:07
+2024-03-11 10:42:12,368 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:12
+2024-03-11 10:42:13,738 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:13
+2024-03-11 10:42:15,809 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:15
+2024-03-11 10:42:17,221 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:17
+2024-03-11 10:42:25,501 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:25
+2024-03-11 10:42:25,509 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:25
+2024-03-11 10:42:25,827 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:25
+2024-03-11 10:42:30,438 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:30
+2024-03-11 10:42:36,691 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:36
+2024-03-11 10:42:36,691 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:36
+2024-03-11 10:42:38,250 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:38
+2024-03-11 10:42:38,607 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:38
+2024-03-11 10:42:39,996 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:39
+2024-03-11 10:42:41,462 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:41
+2024-03-11 10:42:41,566 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:41
+2024-03-11 10:42:42,659 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:42
+2024-03-11 10:42:42,838 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:42
+2024-03-11 10:42:57,611 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:42:57
+2024-03-11 10:43:01,988 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:43:01
+2024-03-11 10:43:05,211 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:43:05
+2024-03-11 10:43:08,403 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:43:08
+2024-03-11 10:43:10,921 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:43:10
+2024-03-11 10:43:13,174 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:43:13
+2024-03-11 10:43:16,073 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:43:16
+2024-03-11 10:43:16,702 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:43:16
+2024-03-11 10:43:19,122 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:43:19
+2024-03-11 10:43:34,420 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:43:34
+2024-03-11 10:44:10,992 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:44:10
+2024-03-11 10:44:11,002 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:44:11
+2024-03-11 10:44:17,265 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:44:17
+2024-03-11 10:44:18,032 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:44:18
+2024-03-11 10:44:18,032 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:44:18
+2024-03-11 10:44:21,145 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:44:21
+2024-03-11 10:44:37,380 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:44:37
+2024-03-11 10:44:37,381 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:44:37
+2024-03-11 10:46:04,043 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:46:04
+2024-03-11 10:49:22,317 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:49:22
+2024-03-11 10:49:22,317 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:49:22
+2024-03-11 10:49:22,345 [9] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2024/3/11 10:49:22
+2024-03-11 10:49:22,348 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052024/3/11 10:49:22
+2024-03-11 10:49:22,959 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062024/3/11 10:49:22
+2024-03-11 10:49:22,966 [9] FATAL ProcessLogger [(null)] - System  701072024/3/11 10:49:22
+2024-03-11 10:49:32,633 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:49:32
+2024-03-11 10:49:32,633 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:49:32
+2024-03-11 10:49:38,965 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:49:38
+2024-03-11 10:49:38,965 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:49:38
+2024-03-11 10:49:47,771 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:49:47
+2024-03-11 10:49:47,771 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:49:47
+2024-03-11 10:54:49,104 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:54:49
+2024-03-11 10:54:58,297 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:54:58
+2024-03-11 10:54:58,297 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:54:58
+2024-03-11 10:55:03,401 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 10:55:03
+2024-03-11 11:06:41,168 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:06:41
+2024-03-11 11:06:46,086 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:06:46
+2024-03-11 11:07:06,214 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:07:06
+2024-03-11 11:07:07,968 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:07:07
+2024-03-11 11:13:37,658 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:13:37
+2024-03-11 11:14:25,608 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:14:25
+2024-03-11 11:15:14,687 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:15:14
+2024-03-11 11:21:00,458 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:21:00
+2024-03-11 11:21:11,939 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:21:11
+2024-03-11 11:21:11,939 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:21:11
+2024-03-11 11:21:12,001 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 11:21:12
+2024-03-11 11:21:12,001 [9] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 11:21:12
+2024-03-11 11:21:12,029 [9] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 11:21:12
+2024-03-11 11:21:12,030 [9] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 11:21:12
+2024-03-11 11:25:51,220 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:25:51
+2024-03-11 11:25:53,884 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:25:53
+2024-03-11 11:25:57,466 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:25:57
+2024-03-11 11:26:01,890 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:26:01
+2024-03-11 11:26:01,890 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:26:01
+2024-03-11 11:26:05,012 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:26:05
+2024-03-11 11:26:55,632 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:26:55
+2024-03-11 11:27:16,893 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:27:16
+2024-03-11 11:27:36,331 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:27:36
+2024-03-11 11:27:46,866 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:27:46
+2024-03-11 11:27:58,324 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:27:58
+2024-03-11 11:31:33,861 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:31:33
+2024-03-11 11:35:16,410 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:35:16
+2024-03-11 11:35:16,411 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:35:16
+2024-03-11 11:35:16,467 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 11:35:16
+2024-03-11 11:35:51,881 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:35:51
+2024-03-11 11:36:09,358 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:36:09
+2024-03-11 11:36:27,052 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:36:27
+2024-03-11 11:36:35,767 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:36:35
+2024-03-11 11:36:35,768 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:36:35
+2024-03-11 11:36:35,824 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 11:36:35
+2024-03-11 11:36:52,170 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:36:52
+2024-03-11 11:37:09,515 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:37:09
+2024-03-11 11:37:12,498 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:37:12
+2024-03-11 11:37:21,251 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:37:21
+2024-03-11 11:37:25,221 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:37:25
+2024-03-11 11:37:25,221 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:37:25
+2024-03-11 11:37:28,613 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:37:28
+2024-03-11 11:47:55,097 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:47:55
+2024-03-11 11:48:28,962 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:48:28
+2024-03-11 11:48:28,962 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:48:28
+2024-03-11 11:48:29,033 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 11:48:29
+2024-03-11 11:48:29,033 [9] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 11:48:29
+2024-03-11 11:48:29,069 [9] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 11:48:29
+2024-03-11 11:48:29,069 [9] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 11:48:29
+2024-03-11 11:48:42,241 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:48:42
+2024-03-11 11:48:44,462 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:48:44
+2024-03-11 11:48:45,202 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:48:45
+2024-03-11 11:49:06,018 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:49:06
+2024-03-11 11:49:11,676 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:49:11
+2024-03-11 11:49:16,360 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 11:49:16
+2024-03-11 12:02:43,814 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 12:02:43
+2024-03-11 12:03:21,594 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 12:03:21
+2024-03-11 12:03:30,195 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 12:03:30
+2024-03-11 14:37:14,791 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:37:14
+2024-03-11 14:37:14,995 [8] FATAL ProcessLogger [(null)] - initialize2024/3/11 14:37:14
+2024-03-11 14:37:27,254 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:37:27
+2024-03-11 14:37:27,256 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:37:27
+2024-03-11 14:37:29,374 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:37:29
+2024-03-11 14:39:11,659 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:39:11
+2024-03-11 14:39:14,170 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:39:14
+2024-03-11 14:39:15,261 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:39:15
+2024-03-11 14:39:17,629 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:39:17
+2024-03-11 14:39:20,254 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:39:20
+2024-03-11 14:57:43,778 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:57:43
+2024-03-11 14:57:43,962 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 14:57:43
+2024-03-11 14:59:34,646 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:59:34
+2024-03-11 14:59:34,649 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:59:34
+2024-03-11 14:59:37,821 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 14:59:37
+2024-03-11 16:57:53,821 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 16:57:53
+2024-03-11 16:57:53,942 [8] FATAL ProcessLogger [(null)] - initialize2024/3/11 16:57:53
+2024-03-11 17:05:07,709 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:05:07
+2024-03-11 17:05:07,710 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:05:07
+2024-03-11 17:05:09,460 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:05:09
+2024-03-11 17:05:31,621 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:05:31
+2024-03-11 17:05:31,621 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:05:31
+2024-03-11 17:05:36,115 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:05:36
+2024-03-11 17:05:37,914 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:05:37
+2024-03-11 17:05:37,914 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:05:37
+2024-03-11 17:05:37,979 [8] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 17:05:37
+2024-03-11 17:05:37,979 [8] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 17:05:37
+2024-03-11 17:05:38,009 [8] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 17:05:38
+2024-03-11 17:05:38,010 [8] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 17:05:38
+2024-03-11 17:06:06,776 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:06:06
+2024-03-11 17:06:11,257 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:06:11
+2024-03-11 17:06:34,085 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:06:34
+2024-03-11 17:07:12,533 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:07:12
+2024-03-11 17:07:26,268 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:07:26
+2024-03-11 17:08:37,942 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:08:37
+2024-03-11 17:33:21,881 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:33:21
+2024-03-11 17:33:43,733 [8] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:33:43
+2024-03-11 17:43:16,435 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:43:16
+2024-03-11 17:43:16,558 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 17:43:16
+2024-03-11 17:43:20,677 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:43:20
+2024-03-11 17:43:20,678 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:43:20
+2024-03-11 17:43:32,287 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:43:32
+2024-03-11 17:44:18,086 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:44:18
+2024-03-11 17:44:38,933 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:44:38
+2024-03-11 17:44:54,305 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:44:54
+2024-03-11 17:44:54,305 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:44:54
+2024-03-11 17:44:54,364 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 17:44:54
+2024-03-11 17:44:54,364 [9] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 17:44:54
+2024-03-11 17:44:54,392 [9] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 17:44:54
+2024-03-11 17:44:54,392 [9] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 17:44:54
+2024-03-11 17:45:01,829 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:01
+2024-03-11 17:45:05,215 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:05
+2024-03-11 17:45:05,215 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:05
+2024-03-11 17:45:09,803 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:09
+2024-03-11 17:45:18,966 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:18
+2024-03-11 17:45:18,966 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:18
+2024-03-11 17:45:19,024 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 17:45:19
+2024-03-11 17:45:19,024 [9] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 17:45:19
+2024-03-11 17:45:19,052 [9] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 17:45:19
+2024-03-11 17:45:19,052 [9] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 17:45:19
+2024-03-11 17:45:30,614 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:30
+2024-03-11 17:45:34,153 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:34
+2024-03-11 17:45:35,483 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:35
+2024-03-11 17:45:36,458 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:36
+2024-03-11 17:45:54,316 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:54
+2024-03-11 17:45:58,365 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:45:58
+2024-03-11 17:46:02,696 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:46:02
+2024-03-11 17:46:08,429 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:46:08
+2024-03-11 17:46:10,493 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:46:10
+2024-03-11 17:48:01,869 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:48:01
+2024-03-11 17:48:01,870 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:48:01
+2024-03-11 17:48:01,927 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 17:48:01
+2024-03-11 17:48:01,927 [9] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 17:48:01
+2024-03-11 17:48:01,955 [9] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 17:48:01
+2024-03-11 17:48:01,955 [9] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 17:48:01
+2024-03-11 17:48:06,631 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:48:06
+2024-03-11 17:48:08,432 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:48:08
+2024-03-11 17:48:10,144 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:48:10
+2024-03-11 17:48:10,821 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:48:10
+2024-03-11 17:48:11,597 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:48:11
+2024-03-11 17:49:52,642 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:49:52
+2024-03-11 17:51:40,618 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:51:40
+2024-03-11 17:52:30,855 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 17:52:30
+2024-03-11 18:01:11,809 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:01:11
+2024-03-11 18:01:48,400 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:01:48
+2024-03-11 18:20:47,963 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:20:47
+2024-03-11 18:21:21,751 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:21:21
+2024-03-11 18:21:33,428 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:21:33
+2024-03-11 18:21:33,429 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:21:33
+2024-03-11 18:21:33,481 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 18:21:33
+2024-03-11 18:21:33,481 [9] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 18:21:33
+2024-03-11 18:21:33,507 [9] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 18:21:33
+2024-03-11 18:21:33,507 [9] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 18:21:33
+2024-03-11 18:21:37,947 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:21:37
+2024-03-11 18:21:54,484 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:21:54
+2024-03-11 18:22:05,074 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:22:05
+2024-03-11 18:22:18,544 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:22:18
+2024-03-11 18:22:47,054 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:22:47
+2024-03-11 18:22:58,847 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:22:58
+2024-03-11 18:25:09,217 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:25:09
+2024-03-11 18:25:09,217 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:25:09
+2024-03-11 18:25:20,238 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:25:20
+2024-03-11 18:25:29,859 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:25:29
+2024-03-11 18:26:11,049 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:26:11
+2024-03-11 18:26:11,049 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:26:11
+2024-03-11 18:26:26,870 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:26:26
+2024-03-11 18:26:54,073 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:26:54
+2024-03-11 18:26:54,073 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:26:54
+2024-03-11 18:26:54,101 [9] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2024/3/11 18:26:54
+2024-03-11 18:26:54,104 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052024/3/11 18:26:54
+2024-03-11 18:26:54,927 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062024/3/11 18:26:54
+2024-03-11 18:26:54,936 [9] FATAL ProcessLogger [(null)] - System  701072024/3/11 18:26:54
+2024-03-11 18:28:51,479 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:28:51
+2024-03-11 18:28:51,494 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:28:51
+2024-03-11 18:28:51,494 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:28:51
+2024-03-11 18:28:51,565 [9] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2024/3/11 18:28:51
+2024-03-11 18:28:51,566 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052024/3/11 18:28:51
+2024-03-11 18:28:53,233 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062024/3/11 18:28:53
+2024-03-11 18:28:53,241 [9] FATAL ProcessLogger [(null)] - System  701072024/3/11 18:28:53
+2024-03-11 18:29:23,114 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:29:23
+2024-03-11 18:29:23,115 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:29:23
+2024-03-11 18:29:23,115 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:29:23
+2024-03-11 18:29:23,172 [9] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2024/3/11 18:29:23
+2024-03-11 18:29:23,172 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052024/3/11 18:29:23
+2024-03-11 18:29:23,724 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062024/3/11 18:29:23
+2024-03-11 18:29:23,730 [9] FATAL ProcessLogger [(null)] - System  701072024/3/11 18:29:23
+2024-03-11 18:29:59,986 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:29:59
+2024-03-11 18:29:59,988 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:29:59
+2024-03-11 18:29:59,988 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:29:59
+2024-03-11 18:30:00,027 [9] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2024/3/11 18:30:00
+2024-03-11 18:30:00,029 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052024/3/11 18:30:00
+2024-03-11 18:30:07,251 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062024/3/11 18:30:07
+2024-03-11 18:30:07,269 [9] FATAL ProcessLogger [(null)] - System  701072024/3/11 18:30:07
+2024-03-11 18:30:46,673 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:30:46
+2024-03-11 18:30:46,674 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:30:46
+2024-03-11 18:30:46,674 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:30:46
+2024-03-11 18:30:46,714 [9] FATAL ProcessLogger [(null)] - System Read_CaiPiaoZhongLei_Moren 70104 2024/3/11 18:30:46
+2024-03-11 18:30:46,715 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701052024/3/11 18:30:46
+2024-03-11 18:30:48,253 [9] FATAL ProcessLogger [(null)] - System ReadclaimreportfromServerBy_Xuan 701062024/3/11 18:30:48
+2024-03-11 18:30:48,266 [9] FATAL ProcessLogger [(null)] - System  701072024/3/11 18:30:48
+2024-03-11 18:32:26,477 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:32:26
+2024-03-11 18:32:26,477 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:32:26
+2024-03-11 18:33:18,291 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:33:18
+2024-03-11 18:33:18,291 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 18:33:18
+2024-03-11 19:19:34,818 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:19:34
+2024-03-11 19:19:35,072 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 19:19:35
+2024-03-11 19:20:00,754 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:20:00
+2024-03-11 19:20:00,756 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:20:00
+2024-03-11 19:20:10,204 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:20:10
+2024-03-11 19:22:11,599 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:22:11
+2024-03-11 19:22:11,599 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:22:11
+2024-03-11 19:22:21,165 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:22:21
+2024-03-11 19:22:21,166 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:22:21
+2024-03-11 19:22:21,229 [9] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 19:22:21
+2024-03-11 19:22:21,230 [9] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 19:22:21
+2024-03-11 19:22:21,256 [9] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 19:22:21
+2024-03-11 19:22:21,257 [9] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 19:22:21
+2024-03-11 19:56:03,820 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:56:03
+2024-03-11 19:56:04,089 [10] FATAL ProcessLogger [(null)] - initialize2024/3/11 19:56:04
+2024-03-11 19:56:10,253 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:56:10
+2024-03-11 19:56:10,255 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:56:10
+2024-03-11 19:56:11,679 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:56:11
+2024-03-11 19:56:53,454 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:56:53
+2024-03-11 19:56:53,454 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 19:56:53
+2024-03-11 19:56:53,519 [10] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 19:56:53
+2024-03-11 19:56:53,520 [10] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 19:56:53
+2024-03-11 19:56:53,543 [10] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 19:56:53
+2024-03-11 19:56:53,543 [10] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 19:56:53
+2024-03-11 20:12:27,097 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:12:27
+2024-03-11 20:12:27,252 [10] FATAL ProcessLogger [(null)] - initialize2024/3/11 20:12:27
+2024-03-11 20:12:38,017 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:12:38
+2024-03-11 20:12:38,019 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:12:38
+2024-03-11 20:12:39,018 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:12:39
+2024-03-11 20:14:59,510 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:14:59
+2024-03-11 20:14:59,510 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:14:59
+2024-03-11 20:14:59,566 [10] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 20:14:59
+2024-03-11 20:14:59,566 [10] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 20:14:59
+2024-03-11 20:14:59,589 [10] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 20:14:59
+2024-03-11 20:14:59,590 [10] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 20:14:59
+2024-03-11 20:15:52,209 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:15:52
+2024-03-11 20:15:52,330 [10] FATAL ProcessLogger [(null)] - initialize2024/3/11 20:15:52
+2024-03-11 20:15:56,523 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:15:56
+2024-03-11 20:15:56,524 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:15:56
+2024-03-11 20:15:57,491 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:15:57
+2024-03-11 20:16:09,422 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:09
+2024-03-11 20:16:09,422 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:09
+2024-03-11 20:16:09,483 [10] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 20:16:09
+2024-03-11 20:16:09,483 [10] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 20:16:09
+2024-03-11 20:16:09,523 [10] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 20:16:09
+2024-03-11 20:16:09,523 [10] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 20:16:09
+2024-03-11 20:16:28,172 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:28
+2024-03-11 20:16:33,113 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:33
+2024-03-11 20:16:34,135 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:34
+2024-03-11 20:16:35,493 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:35
+2024-03-11 20:16:36,405 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:36
+2024-03-11 20:16:37,025 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:37
+2024-03-11 20:16:37,657 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:37
+2024-03-11 20:16:40,461 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:40
+2024-03-11 20:16:41,375 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:41
+2024-03-11 20:16:42,155 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:16:42
+2024-03-11 20:18:00,862 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:18:00
+2024-03-11 20:18:18,655 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:18:18
+2024-03-11 20:20:08,164 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:20:08
+2024-03-11 20:20:10,926 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:20:10
+2024-03-11 20:21:16,049 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:21:16
+2024-03-11 20:21:48,880 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:21:48
+2024-03-11 20:22:18,264 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:22:18
+2024-03-11 20:22:18,264 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:22:18
+2024-03-11 20:22:18,322 [10] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 20:22:18
+2024-03-11 20:22:18,322 [10] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 20:22:18
+2024-03-11 20:22:18,349 [10] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 20:22:18
+2024-03-11 20:22:18,350 [10] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 20:22:18
+2024-03-11 20:22:27,920 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:22:27
+2024-03-11 20:22:30,068 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:22:30
+2024-03-11 20:22:35,854 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:22:35
+2024-03-11 20:32:31,795 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:32:31
+2024-03-11 20:32:44,271 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:32:44
+2024-03-11 20:32:44,272 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:32:44
+2024-03-11 20:32:44,326 [10] FATAL ProcessLogger [(null)] - 68013 Read FangAN 2024/3/11 20:32:44
+2024-03-11 20:32:44,326 [10] FATAL ProcessLogger [(null)] - 68014 Read FangAN 2024/3/11 20:32:44
+2024-03-11 20:32:44,354 [10] FATAL ProcessLogger [(null)] - 68015 Read FangAN 2024/3/11 20:32:44
+2024-03-11 20:32:44,354 [10] FATAL ProcessLogger [(null)] - 68016 Read FangAN 2024/3/11 20:32:44
+2024-03-11 20:32:55,565 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:32:55
+2024-03-11 20:32:58,122 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:32:58
+2024-03-11 20:33:04,116 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:33:04
+2024-03-11 20:34:09,347 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:34:09
+2024-03-11 20:38:10,764 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:38:10
+2024-03-11 20:38:51,421 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:38:51
+2024-03-11 20:39:06,894 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:39:06
+2024-03-11 20:40:25,605 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:40:25
+2024-03-11 20:50:01,647 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:01
+2024-03-11 20:50:05,037 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:05
+2024-03-11 20:50:06,427 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:06
+2024-03-11 20:50:07,931 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:07
+2024-03-11 20:50:08,540 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:08
+2024-03-11 20:50:11,602 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:11
+2024-03-11 20:50:13,704 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:13
+2024-03-11 20:50:14,227 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:14
+2024-03-11 20:50:15,138 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:15
+2024-03-11 20:50:15,646 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:15
+2024-03-11 20:50:52,353 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:50:52
+2024-03-11 20:51:26,605 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:51:26
+2024-03-11 20:53:36,874 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:53:36
+2024-03-11 20:53:36,874 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:53:36
+2024-03-11 20:53:43,782 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:53:43
+2024-03-11 20:53:51,939 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:53:51
+2024-03-11 20:53:51,939 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:53:51
+2024-03-11 20:53:59,244 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:53:59
+2024-03-11 20:54:35,196 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:54:35
+2024-03-11 20:54:35,211 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:54:35
+2024-03-11 20:54:49,221 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:54:49
+2024-03-11 20:54:52,907 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:54:52
+2024-03-11 20:54:56,672 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:54:56
+2024-03-11 20:55:06,546 [10] FATAL ProcessLogger [(null)] - System Start 2024/3/11 20:55:06
+2024-03-11 21:11:01,709 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:11:01
+2024-03-11 21:11:01,888 [11] FATAL ProcessLogger [(null)] - initialize2024/3/11 21:11:01
+2024-03-11 21:11:11,753 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:11:11
+2024-03-11 21:11:11,754 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:11:11
+2024-03-11 21:11:29,223 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:11:29
+2024-03-11 21:12:21,209 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:12:21
+2024-03-11 21:12:26,487 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:12:26
+2024-03-11 21:12:29,585 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:12:29
+2024-03-11 21:12:32,707 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:12:32
+2024-03-11 21:12:34,714 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:12:34
+2024-03-11 21:16:33,090 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:16:33
+2024-03-11 21:16:33,720 [11] FATAL ProcessLogger [(null)] - initialize2024/3/11 21:16:33
+2024-03-11 21:17:39,331 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:17:39
+2024-03-11 21:17:39,336 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:17:39
+2024-03-11 21:17:47,958 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:17:47
+2024-03-11 21:20:34,449 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:20:34
+2024-03-11 21:20:42,784 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:20:42
+2024-03-11 21:20:45,033 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:20:45
+2024-03-11 21:20:49,416 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:20:49
+2024-03-11 21:20:58,425 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:20:58
+2024-03-11 21:24:06,402 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:24:06
+2024-03-11 21:24:22,345 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:24:22
+2024-03-11 21:24:29,238 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:24:29
+2024-03-11 21:24:31,732 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:24:31
+2024-03-11 21:24:34,525 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:24:34
+2024-03-11 21:24:50,050 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:24:50
+2024-03-11 21:24:53,673 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:24:53
+2024-03-11 21:24:55,357 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:24:55
+2024-03-11 21:24:58,209 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:24:58
+2024-03-11 21:25:00,277 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:25:00
+2024-03-11 21:27:49,837 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:27:49
+2024-03-11 21:27:53,873 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:27:53
+2024-03-11 21:27:54,478 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:27:54
+2024-03-11 21:27:56,048 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:27:56
+2024-03-11 21:27:56,680 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:27:56
+2024-03-11 21:29:33,356 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:29:33
+2024-03-11 21:30:51,053 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:30:51
+2024-03-11 21:30:51,063 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:30:51
+2024-03-11 21:33:32,690 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:33:32
+2024-03-11 21:33:34,774 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:33:34
+2024-03-11 21:33:41,534 [11] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:33:41
+2024-03-11 21:37:45,149 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:37:45
+2024-03-11 21:37:45,244 [9] FATAL ProcessLogger [(null)] - initialize2024/3/11 21:37:45
+2024-03-11 21:37:50,182 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:37:50
+2024-03-11 21:37:50,183 [9] FATAL ProcessLogger [(null)] - System Start 2024/3/11 21:37:50

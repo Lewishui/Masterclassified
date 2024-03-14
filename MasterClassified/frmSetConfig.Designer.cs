@@ -43,6 +43,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -65,7 +66,7 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -93,7 +94,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(716, 510);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(804, 510);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tabControl1
@@ -103,7 +104,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(234, 504);
+            this.tabControl1.Size = new System.Drawing.Size(263, 504);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -112,7 +113,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(226, 478);
+            this.tabPage1.Size = new System.Drawing.Size(255, 478);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "方案";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -129,7 +130,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.84289F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.157113F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(220, 472);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(249, 472);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // listBox1
@@ -143,7 +144,7 @@
             "默认方案"});
             this.listBox1.Location = new System.Drawing.Point(3, 3);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(214, 436);
+            this.listBox1.Size = new System.Drawing.Size(243, 436);
             this.listBox1.TabIndex = 0;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
@@ -154,7 +155,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 447);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(220, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(249, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -208,13 +209,13 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(243, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(272, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.6269F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.3731F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(470, 504);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(529, 504);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tabControl2
@@ -224,7 +225,7 @@
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(464, 232);
+            this.tabControl2.Size = new System.Drawing.Size(523, 232);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage3
@@ -244,10 +245,21 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(456, 206);
+            this.tabPage3.Size = new System.Drawing.Size(515, 206);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "随机分段";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(10, 157);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(86, 17);
+            this.checkBox3.TabIndex = 12;
+            this.checkBox3.Text = "相同性分析";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // comboBox3
             // 
@@ -257,7 +269,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(71, 87);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(94, 20);
+            this.comboBox3.Size = new System.Drawing.Size(194, 20);
             this.comboBox3.TabIndex = 11;
             // 
             // label4
@@ -283,7 +295,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(214, 6);
+            this.textBox1.Location = new System.Drawing.Point(271, 6);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -352,7 +364,14 @@
             "7",
             "8",
             "9",
-            "10"});
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17"});
             this.comboBox1.Location = new System.Drawing.Point(71, 63);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(94, 20);
@@ -391,13 +410,13 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(464, 37);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(523, 37);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(310, 3);
+            this.button2.Location = new System.Drawing.Point(354, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 30);
             this.button2.TabIndex = 1;
@@ -408,7 +427,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(78, 3);
+            this.button1.Location = new System.Drawing.Point(93, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 30);
             this.button1.TabIndex = 0;
@@ -428,7 +447,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.04673F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.95327F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(464, 217);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(523, 217);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // toolStrip2
@@ -437,10 +456,11 @@
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripButton3});
+            this.toolStripButton3,
+            this.toolStripButton4});
             this.toolStrip2.Location = new System.Drawing.Point(0, 192);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(464, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(523, 25);
             this.toolStrip2.TabIndex = 4;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -478,7 +498,7 @@
             this.tabControl3.Location = new System.Drawing.Point(3, 3);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(458, 178);
+            this.tabControl3.Size = new System.Drawing.Size(517, 178);
             this.tabControl3.TabIndex = 3;
             // 
             // tabPage4
@@ -487,7 +507,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(450, 152);
+            this.tabPage4.Size = new System.Drawing.Size(509, 152);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "分段内容";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -508,25 +528,23 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.ScrollAlwaysVisible = true;
             this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox3.Size = new System.Drawing.Size(444, 146);
+            this.listBox3.Size = new System.Drawing.Size(503, 146);
             this.listBox3.TabIndex = 4;
             // 
-            // checkBox3
+            // toolStripButton4
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(10, 157);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(86, 17);
-            this.checkBox3.TabIndex = 12;
-            this.checkBox3.Text = "相同性分析";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.toolStripButton4.Image = global::MasterClassified.Properties.Resources.save;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(76, 22);
+            this.toolStripButton4.Text = "一键保存";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // frmSetConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 510);
+            this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmSetConfig";
@@ -593,5 +611,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
     }
 }

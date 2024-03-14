@@ -388,6 +388,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="7 %282%29.ico" />
+    <None Include="Resources\more.png" />
+    <None Include="Resources\random.png" />
     <None Include="Resources\plugin_16.png" />
     <None Include="Resources\taglib.gif" />
   </ItemGroup>

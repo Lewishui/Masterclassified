@@ -57,6 +57,9 @@ namespace MasterClassified
         List<FangAnLieBiaoDATA> piliangfangan_Result;
         List<inputCaipiaoDATA> ClaimReport_Server_Initial;
         string xiangtongxingfenxi = "";
+
+        int suiji20_30 = 0;
+
         public frmTracing_Analysis()
         {
             InitializeComponent();
@@ -165,7 +168,7 @@ namespace MasterClassified
             {
                 ProcessLogger.Fatal("System Error 60239 " + ex + DateTime.Now.ToString());
 
-                MessageBox.Show("系统初始化失败,请关闭当前界面并重新尝试!", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("系统初始化失败或找不到服务器,请关闭当前界面并重新尝试!", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 throw;
             }
@@ -245,6 +248,11 @@ namespace MasterClassified
         {
             try
             {
+                toolStripLabel9.Text = "";
+
+
+
+
                 clsAllnew BusinessHelp = new clsAllnew();
                 //ClaimReport_Server = new List<inputCaipiaoDATA>();
 
@@ -808,7 +816,7 @@ namespace MasterClassified
                 item.qianAll = item.qianAll + " " + xiangtongindex.ToString() + "-" + xiangtogn;
             else
                 item.qianAll = item.qianAll + " " + xiangtongindex.ToString() + "-" + xiangtogn; ;
-               // item.qianAll = item.qianAll + "-" + xiangtongindex.ToString();//20230516变更
+            // item.qianAll = item.qianAll + "-" + xiangtongindex.ToString();//20230516变更
 
         }
 
@@ -829,7 +837,11 @@ namespace MasterClassified
                 {
                     this.label4.Text = "当前方案名称：　" + Result[0].Name;
                     if (Result[0].Data != null)
-                        toolStripLabel7.Text = Result[0].Data.Replace("\r\n", "* ");
+                    {
+                        toolStripLabel7.Text = Result[0].Data.Replace("\r\n", "* ").Replace("=   ", "=");
+                        //toolStripLabel9.Text = Result[0].Data.Replace("\r\n", "* ").Replace("=   ", "=");
+
+                    }
                 }
                 //showSuijiResultlist = new List<string>();
 
@@ -870,6 +882,18 @@ namespace MasterClassified
                                 //if (temp1[i].Contains(temp2[ii]))
                                 if (temp3[1].Contains(temp2[ii]))
                                 {
+                                    //例如 27 包含7  所以容易出错再次切分判断一次  20240314
+                                    string[] temp3_1 = System.Text.RegularExpressions.Regex.Split(temp3[1], " ");
+                                    int ishanv = 0;
+                                    for (int ip = 0; ip < temp3_1.Length; ip++)
+                                    {
+                                        if (temp3_1[ip] == temp2[ii])
+                                            ishanv++;
+
+                                    }
+                                    if (ishanv == 0)
+                                        continue;
+
                                     item.JiShu = item.JiShu + "基" + ss.ToString() + " " + temp3[0];
                                     if (ss == 1)
                                         item.JiShu1 = temp3[0];
@@ -3298,6 +3322,19 @@ namespace MasterClassified
                                         //if (temp1[i].Contains(temp2[ii]))
                                         if (temp3[1].Contains(temp2[ii]))
                                         {
+                                            //例如 27 包含7  所以容易出错再次切分判断一次  20240314
+                                            string[] temp3_1 = System.Text.RegularExpressions.Regex.Split(temp3[1], " ");
+                                            int ishanv = 0;
+                                            for (int ip = 0; ip < temp3_1.Length; ip++)
+                                            {
+                                                if (temp3_1[ip] == temp2[ii])
+                                                    ishanv++;
+
+                                            }
+                                            if (ishanv == 0)
+                                                continue;
+
+
                                             item.JiShu = item.JiShu + "基" + ss.ToString() + " " + temp3[0];
                                             if (ss == 1)
                                                 item.JiShu1 = temp3[0];
@@ -4095,7 +4132,7 @@ namespace MasterClassified
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-
+            suiji20_30 = 0;
             //20230427 添加随机
 
             comboBox2_SelectedIndexChanged(this, EventArgs.Empty);
@@ -4214,7 +4251,7 @@ namespace MasterClassified
                 newlist.Add(7);
                 newlist.Add(8);
                 newlist.Add(9);
-
+              //  newlist.Add(10);
 
                 newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
 
@@ -4308,6 +4345,22 @@ namespace MasterClassified
                     else if (i == 9)
                         item.DuanWei10 = temp1[1].Trim();
 
+                        //20240311
+                    else if (i == 10)
+                        item.DuanWei11 = temp1[1].Trim();
+                    else if (i == 11)
+                        item.DuanWei12 = temp1[1].Trim();
+                    else if (i == 12)
+                        item.DuanWei13 = temp1[1].Trim();
+                    else if (i == 13)
+                        item.DuanWei14 = temp1[1].Trim();
+                    else if (i == 14)
+                        item.DuanWei15 = temp1[1].Trim();
+                    else if (i == 15)
+                        item.DuanWei16 = temp1[1].Trim();
+                    else if (i == 16)
+                        item.DuanWei17 = temp1[1].Trim();
+
                     item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
                 }
                 item.ZhuJian = "YES";
@@ -4321,6 +4374,8 @@ namespace MasterClassified
                 NewMethodtab1();
 
                 toolStripLabel7.Text = item.Data.Replace("\r\n", "*");
+                //toolStripLabel9.Text = item.Data.Replace("\r\n", "* ").Replace("=   ", "=");
+
             }
             catch (Exception ex)
             {
@@ -4349,7 +4404,48 @@ namespace MasterClassified
                 newlist.Add(7);
                 newlist.Add(8);
                 newlist.Add(9);
+               // newlist.Add(10);
+                clsAllnew BusinessHelp1 = new clsAllnew();
+                List<FangAnLieBiaoDATA> Result121 = BusinessHelp1.Read_FangAn("YES");
+                if (Result121[0].Mobanleibie != null && Result121[0].Mobanleibie.Contains("_"))
+                {
+                    //要求 1-33 不含0 
+                    newlist = new List<int>();
+                    newlist.Add(1);
+                    newlist.Add(2);
+                    newlist.Add(3);
+                    newlist.Add(4);
+                    newlist.Add(5);
+                    newlist.Add(6);
+                    newlist.Add(7);
+                    newlist.Add(8);
+                    newlist.Add(9);
 
+                    newlist.Add(10);
+                    newlist.Add(11);
+                    newlist.Add(12);
+                    newlist.Add(13);
+                    newlist.Add(14);
+                    newlist.Add(15);
+                    newlist.Add(16);
+                    newlist.Add(17);
+                    newlist.Add(18);
+                    newlist.Add(19);
+                    newlist.Add(20);
+                    newlist.Add(21);
+                    newlist.Add(22);
+                    newlist.Add(23);
+                    newlist.Add(24);
+                    newlist.Add(25);
+                    newlist.Add(26);
+                    newlist.Add(27);
+                    newlist.Add(28);
+                    newlist.Add(29);
+                    newlist.Add(30);
+                    newlist.Add(31);
+                    newlist.Add(32);
+                    newlist.Add(33);
+                }
                 newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
                 for (int i = 0; i < newlist.Count; i++)
                 {
@@ -4357,8 +4453,15 @@ namespace MasterClassified
                 }
                 clsAllnew BusinessHelp = new clsAllnew();
                 List<FangAnLieBiaoDATA> Result12 = BusinessHelp.Read_FangAn("YES");
-                if (Result12[0].MorenDuanShu != null && Result12[0].MorenDuanShu != "")
+                if (Result12.Count > 0 && Result12[0].MorenDuanShu != null && Result12[0].MorenDuanShu != "")
                 {
+                    if (Result12[0].Data == null)
+                    {
+
+                        MessageBox.Show("方案数据填写缺失 ，请检查操作步骤是否保存上数据", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+
+                    }
                 }
                 else
                 {
@@ -4694,6 +4797,23 @@ namespace MasterClassified
                     else if (i == 9)
                         item.DuanWei10 = temp1[1].Trim();
 
+                             //20240311
+                    else if (i == 10)
+                        item.DuanWei11 = temp1[1].Trim();
+                    else if (i == 11)
+                        item.DuanWei12 = temp1[1].Trim();
+                    else if (i == 12)
+                        item.DuanWei13 = temp1[1].Trim();
+                    else if (i == 13)
+                        item.DuanWei14 = temp1[1].Trim();
+                    else if (i == 14)
+                        item.DuanWei15 = temp1[1].Trim();
+                    else if (i == 15)
+                        item.DuanWei16 = temp1[1].Trim();
+                    else if (i == 16)
+                        item.DuanWei17 = temp1[1].Trim();
+
+
                     item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
                 }
                 item.ZhuJian = "YES";
@@ -4708,8 +4828,16 @@ namespace MasterClassified
 
                 BusinessHelp.Save_FangAn(Result);
                 NewMethodtab1();
+                if (item.Data != null)
+                {
+                    toolStripLabel7.Text = item.Data.Replace("\r\n", "*");
+                    //toolStripLabel9.Text = item.Data.Replace("\r\n", "* ").Replace("=   ", "=");
 
-                toolStripLabel7.Text = item.Data.Replace("\r\n", "*");
+                }
+
+
+                else
+                    toolStripLabel7.Text = "检查方案数据是否准确";
 
 
             }
@@ -4740,6 +4868,21 @@ namespace MasterClassified
             {
                 EverDuanList.Add(3);
                 EverDuanList.Add(7);
+            }
+            else if (NAME == "64 模板")
+            {
+                EverDuanList.Add(6);
+                EverDuanList.Add(4);
+            }
+            else if (NAME == "82 模板")
+            {
+                EverDuanList.Add(8);
+                EverDuanList.Add(2);
+            }
+            else if (NAME == "73 模板")
+            {
+                EverDuanList.Add(7);
+                EverDuanList.Add(3);
             }
             else if (NAME == "532 模板")
             {
@@ -4933,6 +5076,215 @@ namespace MasterClassified
                 EverDuanList.Add(1);
                 EverDuanList.Add(1);
             }
+            //20240311
+
+            if (NAME == "17_16 模板")
+            {
+                EverDuanList.Add(17);
+                EverDuanList.Add(16);
+            }
+            if (NAME == "11_11_11 模板")
+            {
+                EverDuanList.Add(11);
+                EverDuanList.Add(11);
+                EverDuanList.Add(11);
+            }
+
+            if (NAME == "9_8_8_8 模板")
+            {
+                EverDuanList.Add(9);
+                EverDuanList.Add(8);
+                EverDuanList.Add(8);
+                EverDuanList.Add(8);
+            }
+
+            if (NAME == "7_7_7_6_6 模板")
+            {
+                EverDuanList.Add(7);
+                EverDuanList.Add(7);
+                EverDuanList.Add(7);
+                EverDuanList.Add(6);
+                EverDuanList.Add(6);
+            }
+
+            if (NAME == "666_555 模板")
+            {
+                EverDuanList.Add(6);
+                EverDuanList.Add(6);
+                EverDuanList.Add(6);
+                EverDuanList.Add(5);
+                EverDuanList.Add(5);
+                EverDuanList.Add(5);
+            }
+            if (NAME == "55555_44 模板")
+            {
+                EverDuanList.Add(5);
+                EverDuanList.Add(5);
+                EverDuanList.Add(5);
+                EverDuanList.Add(5);
+                EverDuanList.Add(5);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+            }
+
+            if (NAME == "5_4444444 模板")
+            {
+                EverDuanList.Add(5);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+            }
+            if (NAME == "444444_333 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+            }
+            if (NAME == "444_3333333 模板")
+            {
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(4);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+            }
+            if (NAME == "33333333333_ 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+            }
+
+            if (NAME == "333333333_222 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+            }
+            if (NAME == "3333333_222222 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+            }
+            if (NAME == "33333_222222222 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+            }
+            if (NAME == "333_222222222222 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(3);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+            }
+            if (NAME == "3_222222222222222 模板")
+            {
+                EverDuanList.Add(3);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+            }
+            if (NAME == "2222222222222222_1 模板")
+            {
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(2);
+                EverDuanList.Add(1);
+            }
+
+
             return EverDuanList;
 
         }
@@ -5054,12 +5406,41 @@ namespace MasterClassified
             if (sq == 1)
             {
                 List<int> newlist = new List<int>();
-
-                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                //在1-20选项区间随机选择几位   20240314
+                if (suiji20_30 == 2)
                 {
-                    checkedListBox1.SetItemChecked(i, false);
-                    newlist.Add(i);
+                    for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                    {
+                        checkedListBox1.SetItemChecked(i, false);
+                        if (i > 0 && i <= 20)
+                        {
 
+                            newlist.Add(i);
+                        }
+                    }
+                }
+                //在21-30选项区间随机选择几位   20240311
+                else if (suiji20_30 == 1)
+                {
+                    for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                    {
+                        checkedListBox1.SetItemChecked(i, false);
+                        if (i > 20 && i <= 30)
+                        {
+
+                            newlist.Add(i);
+                        }
+                    }
+
+                }
+                else if (suiji20_30 == 0)
+                {
+                    for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                    {
+                        checkedListBox1.SetItemChecked(i, false);
+                        newlist.Add(i);
+
+                    }
                 }
                 newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
                 string[] temp3 = System.Text.RegularExpressions.Regex.Split(comboBox2.Text, " ");
@@ -5070,6 +5451,7 @@ namespace MasterClassified
                     checkedListBox1.SetItemChecked(newlist[i], true);
                 }
             }
+            // suiji20_30 = 0;
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -5556,8 +5938,15 @@ namespace MasterClassified
                         for (int i = 0; i < JIDTA1.Count; i++)
                         {
                             if (JIDTA1[i] - 1 < temp3.Length)
-                                showmessage = showmessage + temp3[JIDTA1[i] - 1];
-
+                            {
+                              //  新需求 点击鼠标显示双位数 没有用零补 方便查看 后期有作废
+                                if (temp3[JIDTA1[i] - 1].Length < 2)
+                                {
+                                    showmessage = showmessage + " 0" + temp3[JIDTA1[i] - 1];
+                                }
+                                else
+                                showmessage = showmessage + " " + temp3[JIDTA1[i] - 1];
+                            }
                         }
                         toolStripLabel8.Text = showmessage;
 
@@ -6540,7 +6929,12 @@ namespace MasterClassified
                 {
                     this.label4.Text = "当前方案名称：　" + Result[0].Name;
                     if (Result[0].Data != null)
+                    {
                         toolStripLabel7.Text = Result[0].Data.Replace("\r\n", "* ");
+                        //toolStripLabel9.Text = Result[0].Data.Replace("\r\n", "* ");
+
+
+                    }
                 }
 
                 ClaimReport_Server.Sort(new CompsSmall());
@@ -7074,6 +7468,79 @@ namespace MasterClassified
                 this.checkedListBox1.SetItemChecked(i, true);
 
             }
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            suiji20_30 = 1;
+
+            //20230427 添加随机
+
+            comboBox2_SelectedIndexChanged(this, EventArgs.Empty);
+            toolStripButton3_Click(this, EventArgs.Empty);
+
+
+
+
+
+
+
+        }
+
+        private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+
+
+            bool istrue = true;
+            //clsmytest buiness = new clsmytest();
+
+            //bool istue = buiness.checkname("MasterClassified", "yhltd");
+            //if (istue == false)
+            {
+                //Control.CheckForIllegalCrossThreadCalls = false;
+                //this.Visible = false;
+                MessageBox.Show(toolStripLabel7.Text, "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //var form = new frmAlterinfo(toolStripLabel7.Text);
+
+                //if (form.ShowDialog() == DialogResult.OK)
+                //{
+
+                //}
+
+
+                //System.Environment.Exit(0);
+            }
+
+            //IsRun = false;
+        }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+            suiji20_30 = 2;
+
+            //20230427 添加随机
+
+            comboBox2_SelectedIndexChanged(this, EventArgs.Empty);
+            toolStripButton3_Click(this, EventArgs.Empty);
+
+
+
+        }
+
+        private void checkedListBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolStripLabel8.Text = "   ";
+            //  qianqi_newi = new List<int>();
+            if (this.checkedListBox1.CheckedItems.Count > 0)
+            {
+                foreach (string status in this.checkedListBox1.CheckedItems)
+                {
+                  //  qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+                    toolStripLabel8.Text = toolStripLabel8.Text + status;
+                }
+            }
+
+            
         }
 
     }

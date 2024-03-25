@@ -19,7 +19,7 @@ namespace MasterClassified
         List<string> showSuijiResultlist = new List<string>();
         public log4net.ILog ProcessLogger;
         public log4net.ILog ExceptionLogger;
-
+        public int listbox3indexnum = 0;
 
         private frmAddFanAnName frmAddFanAnName;
 
@@ -137,7 +137,7 @@ namespace MasterClassified
                 newlist.Add(8);
                 newlist.Add(9);
                 //
-                 //newlist.Add(10);
+                //newlist.Add(10);
                 if (this.comboBox3.Text != "" && this.comboBox3.Text.Contains("_"))
                 {
                     //要i求1-33  不含0 
@@ -152,7 +152,7 @@ namespace MasterClassified
                     newlist.Add(8);
                     newlist.Add(9);
 
-                     newlist.Add(10);
+                    newlist.Add(10);
                     newlist.Add(11);
                     newlist.Add(12);
                     newlist.Add(13);
@@ -171,7 +171,7 @@ namespace MasterClassified
                     newlist.Add(26);
                     newlist.Add(27);
                     newlist.Add(28);
-                    newlist.Add(29);                
+                    newlist.Add(29);
                     newlist.Add(30);
                     newlist.Add(31);
                     newlist.Add(32);
@@ -591,19 +591,19 @@ namespace MasterClassified
                     {
                         EverDuanList.Add(6);
                         EverDuanList.Add(4);
-                      
+
                     }
                     else if (this.comboBox3.Text == "82 模板")
                     {
                         EverDuanList.Add(8);
                         EverDuanList.Add(2);
-                     
+
                     }
                     else if (this.comboBox3.Text == "73 模板")
                     {
                         EverDuanList.Add(7);
                         EverDuanList.Add(3);
-                   
+
                     }
 
                     else if (this.comboBox3.Text == "17_16 模板")
@@ -896,7 +896,7 @@ namespace MasterClassified
                         EverDuanList.Add(3);
                         EverDuanList.Add(3);
                     }
-                  
+
                 }
                 //new 20240311
                 else if (this.comboBox1.Text == "10")
@@ -1588,14 +1588,14 @@ namespace MasterClassified
             comboBox3.Items.Add("默认");
             if (this.comboBox1.Text == "2")
             {
-               // comboBox3.Items.Add("46 模板");
-               // comboBox3.Items.Add("28 模板");
-               // comboBox3.Items.Add("37 模板");
+                // comboBox3.Items.Add("46 模板");
+                // comboBox3.Items.Add("28 模板");
+                // comboBox3.Items.Add("37 模板");
                 //20230427变更
                 comboBox3.Items.Add("64 模板");
                 comboBox3.Items.Add("82 模板");
                 comboBox3.Items.Add("73 模板");
-               //20240311
+                //20240311
                 comboBox3.Items.Add("17_16 模板");
 
             }
@@ -1686,7 +1686,7 @@ namespace MasterClassified
             {
                 //20240311
                 comboBox3.Items.Add("444444_333 模板");
-                
+
             }
             //20240311
             else if (this.comboBox1.Text == "10")
@@ -1700,7 +1700,7 @@ namespace MasterClassified
             {
                 //20240311
                 comboBox3.Items.Add("33333333333_ 模板");
-              
+
             }
             //20240311
             else if (this.comboBox1.Text == "12")
@@ -1786,7 +1786,7 @@ namespace MasterClassified
                     this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十六段=";
                 if (i == 17)
                     this.textBox1.Text = this.textBox1.Text + "\t\r\n" + "十七段=";
-            
+
 
             }
             this.textBox1.Text = this.textBox1.Text + "\t\r\n";
@@ -1843,14 +1843,14 @@ namespace MasterClassified
                     item.DuanWei16 = temp1[1].Trim();
                 else if (i == 16)
                     item.DuanWei17 = temp1[1].Trim();
- 
+
                 item.Data = item.Data + "\r\n" + showSuijiResultlist[i];
             }
-           // if (this.checkBox1.Checked == true)
-                item.ZhuJian = "YES";
+            // if (this.checkBox1.Checked == true)
+            item.ZhuJian = "YES";
 
-           // if (this.checkBox2.Checked == true)
-                item.MorenDuanShu = comboBox1.Text;
+            // if (this.checkBox2.Checked == true)
+            item.MorenDuanShu = comboBox1.Text;
 
             if (this.comboBox3.Text != "")
                 item.Mobanleibie = comboBox3.Text;
@@ -1858,7 +1858,7 @@ namespace MasterClassified
             item.Name = this.listBox1.Text.ToString();//保存名称
             item.DuanShu = showSuijiResultlist.Count.ToString();
 
-             if (this.checkBox3.Checked == true)
+            if (this.checkBox3.Checked == true)
                 item.xiangtongxingfenxi = "YES";
 
 
@@ -1868,6 +1868,36 @@ namespace MasterClassified
 
             MessageBox.Show("保存成功！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void 自选方案ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            //   this.listBox3.DataSource = showSuijiResultlist;
+          //  string nem = listBox3.SelectedItems.ToString();
+            string nem = this.listBox3.Text.ToString();
+         //   nem = nem.Replace("", "");
+            //string list1Remove =  listBox3.SelectedItem.ToString();
+            Clipboard.SetText(nem);
+        }
+        public static void CopyToClipboard(string text)
+        {
+            Clipboard.SetText(text);
+        }
+
+        private void listBox3_Click(object sender, EventArgs e)
+        {
+            listbox3indexnum = listBox3.SelectedIndex;       
+        }
+
+        private void 相同性分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string nem = ""; 
+            for (int i = 0; i < listBox3.Items.Count; i++)
+            {
+                nem = nem + listBox3.Items[i].ToString();                            
+            }
+            Clipboard.SetText(nem);
         }
     }
 }

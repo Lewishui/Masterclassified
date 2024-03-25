@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSetConfig));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -63,10 +64,13 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.自选方案ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.相同性分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -80,6 +84,7 @@
             this.toolStrip2.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -491,6 +496,15 @@
             this.toolStripButton3.Text = "清空当前分段";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = global::MasterClassified.Properties.Resources.save;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(76, 22);
+            this.toolStripButton4.Text = "一键保存";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
             // tabControl3
             // 
             this.tabControl3.Controls.Add(this.tabPage4);
@@ -516,6 +530,7 @@
             // 
             this.listBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox3.ContextMenuStrip = this.contextMenuStrip2;
             this.listBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox3.FormattingEnabled = true;
             this.listBox3.HorizontalScrollbar = true;
@@ -527,18 +542,35 @@
             this.listBox3.Location = new System.Drawing.Point(3, 3);
             this.listBox3.Name = "listBox3";
             this.listBox3.ScrollAlwaysVisible = true;
-            this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox3.Size = new System.Drawing.Size(503, 146);
             this.listBox3.TabIndex = 4;
+            this.listBox3.Click += new System.EventHandler(this.listBox3_Click);
             // 
-            // toolStripButton4
+            // contextMenuStrip2
             // 
-            this.toolStripButton4.Image = global::MasterClassified.Properties.Resources.save;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(76, 22);
-            this.toolStripButton4.Text = "一键保存";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.contextMenuStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.contextMenuStrip2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.自选方案ToolStripMenuItem1,
+            this.相同性分析ToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip1";
+            this.contextMenuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.contextMenuStrip2.ShowImageMargin = false;
+            this.contextMenuStrip2.Size = new System.Drawing.Size(128, 70);
+            // 
+            // 自选方案ToolStripMenuItem1
+            // 
+            this.自选方案ToolStripMenuItem1.Name = "自选方案ToolStripMenuItem1";
+            this.自选方案ToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
+            this.自选方案ToolStripMenuItem1.Text = "复制";
+            this.自选方案ToolStripMenuItem1.Click += new System.EventHandler(this.自选方案ToolStripMenuItem1_Click);
+            // 
+            // 相同性分析ToolStripMenuItem
+            // 
+            this.相同性分析ToolStripMenuItem.Name = "相同性分析ToolStripMenuItem";
+            this.相同性分析ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.相同性分析ToolStripMenuItem.Text = "复制所有";
+            this.相同性分析ToolStripMenuItem.Click += new System.EventHandler(this.相同性分析ToolStripMenuItem_Click);
             // 
             // frmSetConfig
             // 
@@ -568,6 +600,7 @@
             this.toolStrip2.PerformLayout();
             this.tabControl3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -612,5 +645,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem 自选方案ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 相同性分析ToolStripMenuItem;
     }
 }

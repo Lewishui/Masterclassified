@@ -7543,5 +7543,14 @@ namespace MasterClassified
             
         }
 
+        private void 复制选中信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string nem = toolStripLabel8.Text.ToString();
+            nem = nem.Replace("选中信息：", "");
+
+            //string list1Remove =  listBox3.SelectedItem.ToString();
+            Clipboard.SetText(nem);
+        }
+
     }
 }

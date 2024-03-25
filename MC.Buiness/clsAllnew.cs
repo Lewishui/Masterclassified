@@ -21,8 +21,8 @@ namespace MC.Buiness
         //230.55
         public log4net.ILog ProcessLogger { get; set; }
         public log4net.ILog ExceptionLogger { get; set; }
-      //string connectionString = "mongodb://yhocn.cn";
-       string connectionString = "mongodb://127.0.0.1";
+      // string connectionString = "mongodb://yhocn.cn";
+        string connectionString = "mongodb://127.0.0.1";
 
         #region 导入数据
         public clsAllnew()

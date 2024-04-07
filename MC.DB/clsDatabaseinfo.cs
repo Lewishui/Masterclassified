@@ -45,6 +45,28 @@ namespace MC.DB
         public string JiShu28 { get; set; }
         public string JiShu29 { get; set; }
         public string JiShu30 { get; set; }
+        //new 20240328
+        public string JiShu31 { get; set; }
+        public string JiShu32 { get; set; }
+        public string JiShu33 { get; set; }
+        public string JiShu34 { get; set; }
+        public string JiShu35 { get; set; }
+        public string JiShu36 { get; set; }
+        public string JiShu37 { get; set; }
+        public string JiShu38 { get; set; }
+        public string JiShu39 { get; set; }
+        public string JiShu40 { get; set; }
+        public string JiShu41 { get; set; }
+        public string JiShu42 { get; set; }
+        public string JiShu43 { get; set; }
+        public string JiShu44 { get; set; }
+        public string JiShu45 { get; set; }
+        public string JiShu46 { get; set; }
+        public string JiShu47 { get; set; }
+        public string JiShu48 { get; set; }
+        public string JiShu49 { get; set; }
+        public string JiShu50 { get; set; }
+    
 
 
 

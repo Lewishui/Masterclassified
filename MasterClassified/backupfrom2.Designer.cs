@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -89,7 +89,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(805, 494);
+            this.tabControl1.Size = new System.Drawing.Size(805, 456);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -99,7 +99,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(797, 468);
+            this.tabPage1.Size = new System.Drawing.Size(797, 430);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "除法分析";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -117,25 +117,25 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(791, 462);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(791, 424);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(646, 456);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 418);
             this.dataGridView1.TabIndex = 2;
             // 
             // tableLayoutPanel6
@@ -159,36 +159,36 @@
             this.tableLayoutPanel6.Location = new System.Drawing.Point(655, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 13;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(133, 456);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 7F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(133, 418);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(3, 328);
+            this.button4.Location = new System.Drawing.Point(3, 302);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 30);
+            this.button4.Size = new System.Drawing.Size(62, 28);
             this.button4.TabIndex = 13;
             this.button4.Text = "随机";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(3, 291);
+            this.button3.Location = new System.Drawing.Point(3, 268);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(62, 29);
+            this.button3.Size = new System.Drawing.Size(62, 27);
             this.button3.TabIndex = 12;
             this.button3.Text = "取消";
             this.button3.UseVisualStyleBackColor = true;
@@ -198,7 +198,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(3, 3);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(49, 20);
+            this.checkBox1.Size = new System.Drawing.Size(49, 18);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "基1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -206,9 +206,9 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(3, 29);
+            this.checkBox3.Location = new System.Drawing.Point(3, 27);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(49, 18);
+            this.checkBox3.Size = new System.Drawing.Size(49, 16);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "基2";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -216,9 +216,9 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(3, 53);
+            this.checkBox2.Location = new System.Drawing.Point(3, 49);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(49, 18);
+            this.checkBox2.Size = new System.Drawing.Size(49, 16);
             this.checkBox2.TabIndex = 3;
             this.checkBox2.Text = "基3";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -226,9 +226,9 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(3, 77);
+            this.checkBox4.Location = new System.Drawing.Point(3, 71);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(49, 19);
+            this.checkBox4.Size = new System.Drawing.Size(49, 17);
             this.checkBox4.TabIndex = 4;
             this.checkBox4.Text = "基4";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -236,9 +236,9 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(3, 102);
+            this.checkBox5.Location = new System.Drawing.Point(3, 94);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(49, 17);
+            this.checkBox5.Size = new System.Drawing.Size(49, 15);
             this.checkBox5.TabIndex = 5;
             this.checkBox5.Text = "基5";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -246,9 +246,9 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(3, 125);
+            this.checkBox6.Location = new System.Drawing.Point(3, 115);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(49, 20);
+            this.checkBox6.Size = new System.Drawing.Size(49, 18);
             this.checkBox6.TabIndex = 6;
             this.checkBox6.Text = "基6";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -256,9 +256,9 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(3, 151);
+            this.checkBox7.Location = new System.Drawing.Point(3, 139);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(49, 18);
+            this.checkBox7.Size = new System.Drawing.Size(49, 16);
             this.checkBox7.TabIndex = 7;
             this.checkBox7.Text = "基7";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -266,9 +266,9 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(3, 175);
+            this.checkBox8.Location = new System.Drawing.Point(3, 161);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(49, 19);
+            this.checkBox8.Size = new System.Drawing.Size(49, 17);
             this.checkBox8.TabIndex = 8;
             this.checkBox8.Text = "基8";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -276,7 +276,7 @@
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(3, 200);
+            this.checkBox9.Location = new System.Drawing.Point(3, 184);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(49, 20);
             this.checkBox9.TabIndex = 9;
@@ -287,7 +287,7 @@
             // 
             this.checkBox10.AutoSize = true;
             this.checkBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox10.Location = new System.Drawing.Point(3, 229);
+            this.checkBox10.Location = new System.Drawing.Point(3, 211);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(62, 17);
             this.checkBox10.TabIndex = 10;
@@ -296,9 +296,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 255);
+            this.button2.Location = new System.Drawing.Point(3, 235);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 30);
+            this.button2.Size = new System.Drawing.Size(62, 27);
             this.button2.TabIndex = 11;
             this.button2.Text = "确认";
             this.button2.UseVisualStyleBackColor = true;
@@ -309,7 +309,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1197, 451);
+            this.tabPage3.Size = new System.Drawing.Size(797, 430);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "前期分析";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -327,25 +327,25 @@
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1191, 445);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(791, 424);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1047, 439);
+            this.dataGridView2.Size = new System.Drawing.Size(693, 418);
             this.dataGridView2.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -360,25 +360,25 @@
             this.tableLayoutPanel8.Controls.Add(this.tabControl3, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.comboBox1, 0, 2);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(1056, 3);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(702, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 6;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333334F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(132, 439);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(86, 418);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 322);
+            this.comboBox2.Location = new System.Drawing.Point(3, 307);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(115, 21);
+            this.comboBox2.Size = new System.Drawing.Size(80, 20);
             this.comboBox2.TabIndex = 21;
             // 
             // toolStrip3
@@ -390,9 +390,9 @@
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripButton5});
-            this.toolStrip3.Location = new System.Drawing.Point(0, 339);
+            this.toolStrip3.Location = new System.Drawing.Point(0, 322);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(111, 100);
+            this.toolStrip3.Size = new System.Drawing.Size(86, 96);
             this.toolStrip3.TabIndex = 17;
             this.toolStrip3.Text = "toolStrip3";
             // 
@@ -401,7 +401,7 @@
             this.toolStripButton3.Image = global::MasterClassified.Properties.Resources.sucaiwcom54660jvp;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(109, 20);
+            this.toolStripButton3.Size = new System.Drawing.Size(84, 21);
             this.toolStripButton3.Text = "确认";
             // 
             // toolStripButton4
@@ -409,7 +409,7 @@
             this.toolStripButton4.Image = global::MasterClassified.Properties.Resources.clear_co1;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(109, 20);
+            this.toolStripButton4.Size = new System.Drawing.Size(84, 21);
             this.toolStripButton4.Text = "清空";
             // 
             // toolStripButton5
@@ -417,7 +417,7 @@
             this.toolStripButton5.Image = global::MasterClassified.Properties.Resources.save1;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(109, 20);
+            this.toolStripButton5.Size = new System.Drawing.Size(84, 21);
             this.toolStripButton5.Text = "全选";
             // 
             // label3
@@ -427,7 +427,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 32);
+            this.label3.Size = new System.Drawing.Size(80, 31);
             this.label3.TabIndex = 16;
             this.label3.Text = "请选择将分析的段位：";
             // 
@@ -435,10 +435,10 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 191);
+            this.tabControl2.Location = new System.Drawing.Point(3, 182);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(126, 125);
+            this.tabControl2.Size = new System.Drawing.Size(80, 119);
             this.tabControl2.TabIndex = 18;
             // 
             // tabPage4
@@ -447,7 +447,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(118, 99);
+            this.tabPage4.Size = new System.Drawing.Size(72, 93);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "前期";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -464,17 +464,17 @@
             this.checkedListBox1.Location = new System.Drawing.Point(3, 3);
             this.checkedListBox1.MultiColumn = true;
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(112, 93);
+            this.checkedListBox1.Size = new System.Drawing.Size(66, 87);
             this.checkedListBox1.TabIndex = 17;
             // 
             // tabControl3
             // 
             this.tabControl3.Controls.Add(this.tabPage5);
             this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl3.Location = new System.Drawing.Point(3, 35);
+            this.tabControl3.Location = new System.Drawing.Point(3, 34);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(126, 125);
+            this.tabControl3.Size = new System.Drawing.Size(80, 119);
             this.tabControl3.TabIndex = 19;
             // 
             // tabPage5
@@ -483,7 +483,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(118, 99);
+            this.tabPage5.Size = new System.Drawing.Size(72, 93);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "当前期";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -500,23 +500,23 @@
             this.clbStatus.Location = new System.Drawing.Point(3, 3);
             this.clbStatus.MultiColumn = true;
             this.clbStatus.Name = "clbStatus";
-            this.clbStatus.Size = new System.Drawing.Size(112, 93);
+            this.clbStatus.Size = new System.Drawing.Size(66, 87);
             this.clbStatus.TabIndex = 16;
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 166);
+            this.comboBox1.Location = new System.Drawing.Point(3, 159);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
+            this.comboBox1.Size = new System.Drawing.Size(80, 20);
             this.comboBox1.TabIndex = 20;
             // 
             // backupfrom2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 494);
+            this.ClientSize = new System.Drawing.Size(805, 456);
             this.Controls.Add(this.tabControl1);
             this.Name = "backupfrom2";
             this.Text = "backupfrom2";

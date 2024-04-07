@@ -453,7 +453,9 @@ namespace MasterClassified
                 }
                 string[] temptong = System.Text.RegularExpressions.Regex.Split(text, " ");
 
-                for (int j = 0; j < 30; j++)
+                //     for (int j = 0; j < 30; j++)
+                //20240328
+                for (int j = 0; j < 50; j++)
                 {
                     int xiangtongindex = 0;
 
@@ -672,7 +674,9 @@ namespace MasterClassified
                     }
                     string[] temptong = System.Text.RegularExpressions.Regex.Split(text, " ");
 
-                    for (int j = 0; j < 30; j++)
+                    //for (int j = 0; j < 30; j++)
+                    //     //20240328
+                    for (int j = 0; j < 50; j++)
                     {
                         int xiangtongindex = 0;
 
@@ -980,6 +984,66 @@ namespace MasterClassified
                                     else if (ss == 30)
                                         item.JiShu30 = temp3[0];
 
+                                    else if (ss == 31)
+                                        item.JiShu31 = temp3[0];
+
+                                    else if (ss == 32)
+                                        item.JiShu32 = temp3[0];
+
+                                    else if (ss == 33)
+                                        item.JiShu33 = temp3[0];
+
+                                    else if (ss == 34)
+                                        item.JiShu34 = temp3[0];
+
+                                    else if (ss == 35)
+                                        item.JiShu35 = temp3[0];
+
+                                    else if (ss == 36)
+                                        item.JiShu36 = temp3[0];
+
+                                    else if (ss == 37)
+                                        item.JiShu37 = temp3[0];
+
+                                    else if (ss == 38)
+                                        item.JiShu38 = temp3[0];
+
+                                    else if (ss == 39)
+                                        item.JiShu39 = temp3[0];
+
+                                    else if (ss == 40)
+                                        item.JiShu40 = temp3[0];
+
+                                    else if (ss == 41)
+                                        item.JiShu41 = temp3[0];
+
+                                    else if (ss == 42)
+                                        item.JiShu42 = temp3[0];
+
+                                    else if (ss == 43)
+                                        item.JiShu43 = temp3[0];
+
+                                    else if (ss == 44)
+                                        item.JiShu44 = temp3[0];
+
+                                    else if (ss == 45)
+                                        item.JiShu45 = temp3[0];
+
+                                    else if (ss == 46)
+                                        item.JiShu46 = temp3[0];
+
+                                    else if (ss == 47)
+                                        item.JiShu47 = temp3[0];
+
+                                    else if (ss == 48)
+                                        item.JiShu48 = temp3[0];
+
+                                    else if (ss == 49)
+                                        item.JiShu49 = temp3[0];
+
+                                    else if (ss == 50)
+                                        item.JiShu50 = temp3[0];
+
                                     break;
 
                                 }
@@ -1164,6 +1228,107 @@ namespace MasterClassified
                                 same_list.Add("JiShu30");
                                 xiangtongindex++;
                             }
+                            if (item.JiShu31 != null && item.JiShu31 == temp.JiShu31)
+                            {
+                                same_list.Add("JiShu31");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu32 != null && item.JiShu32 == temp.JiShu32)
+                            {
+                                same_list.Add("JiShu32");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu33 != null && item.JiShu33 == temp.JiShu33)
+                            {
+                                same_list.Add("JiShu33");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu34 != null && item.JiShu34 == temp.JiShu34)
+                            {
+                                same_list.Add("JiShu34");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu35 != null && item.JiShu35 == temp.JiShu35)
+                            {
+                                same_list.Add("JiShu35");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu36 != null && item.JiShu36 == temp.JiShu36)
+                            {
+                                same_list.Add("JiShu36");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu37 != null && item.JiShu37 == temp.JiShu37)
+                            {
+                                same_list.Add("JiShu37");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu38 != null && item.JiShu38 == temp.JiShu38)
+                            {
+                                same_list.Add("JiShu38");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu39 != null && item.JiShu39 == temp.JiShu39)
+                            {
+                                same_list.Add("JiShu39");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu40 != null && item.JiShu40 == temp.JiShu40)
+                            {
+                                same_list.Add("JiShu40");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu41 != null && item.JiShu41 == temp.JiShu41)
+                            {
+                                same_list.Add("JiShu41");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu42 != null && item.JiShu42 == temp.JiShu42)
+                            {
+                                same_list.Add("JiShu42");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu43 != null && item.JiShu43 == temp.JiShu43)
+                            {
+                                same_list.Add("JiShu43");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu44 != null && item.JiShu44 == temp.JiShu44)
+                            {
+                                same_list.Add("JiShu44");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu45 != null && item.JiShu45 == temp.JiShu45)
+                            {
+                                same_list.Add("JiShu45");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu46 != null && item.JiShu46 == temp.JiShu46)
+                            {
+                                same_list.Add("JiShu46");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu47 != null && item.JiShu47 == temp.JiShu47)
+                            {
+                                same_list.Add("JiShu47");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu48 != null && item.JiShu48 == temp.JiShu48)
+                            {
+                                same_list.Add("JiShu48");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu49 != null && item.JiShu49 == temp.JiShu49)
+                            {
+                                same_list.Add("JiShu49");
+                                xiangtongindex++;
+                            }
+                            if (item.JiShu50 != null && item.JiShu50 == temp.JiShu50)
+                            {
+                                same_list.Add("JiShu50");
+                                xiangtongindex++;
+                            }
+
                             #endregion
                             #region MyRegion
                             if (indexing == 1)
@@ -2493,6 +2658,47 @@ namespace MasterClassified
                                 if (UDF[m] == 30)
                                     qtyTable.Rows[jk][31] = item.JiShu30;
 
+                                if (UDF[m] == 31)
+                                    qtyTable.Rows[jk][32] = item.JiShu31;
+                                if (UDF[m] == 32)
+                                    qtyTable.Rows[jk][33] = item.JiShu32;
+                                if (UDF[m] == 33)
+                                    qtyTable.Rows[jk][34] = item.JiShu33;
+                                if (UDF[m] == 34)
+                                    qtyTable.Rows[jk][35] = item.JiShu34;
+                                if (UDF[m] == 35)
+                                    qtyTable.Rows[jk][36] = item.JiShu35;
+                                if (UDF[m] == 36)
+                                    qtyTable.Rows[jk][37] = item.JiShu36;
+                                if (UDF[m] == 37)
+                                    qtyTable.Rows[jk][38] = item.JiShu37;
+                                if (UDF[m] == 38)
+                                    qtyTable.Rows[jk][39] = item.JiShu38;
+                                if (UDF[m] == 39)
+                                    qtyTable.Rows[jk][40] = item.JiShu39;
+                                if (UDF[m] == 40)
+                                    qtyTable.Rows[jk][41] = item.JiShu40;
+                                if (UDF[m] == 41)
+                                    qtyTable.Rows[jk][42] = item.JiShu41;
+                                if (UDF[m] == 42)
+                                    qtyTable.Rows[jk][43] = item.JiShu42;
+                                if (UDF[m] == 43)
+                                    qtyTable.Rows[jk][44] = item.JiShu43;
+                                if (UDF[m] == 44)
+                                    qtyTable.Rows[jk][45] = item.JiShu44;
+                                if (UDF[m] == 45)
+                                    qtyTable.Rows[jk][46] = item.JiShu45;
+                                if (UDF[m] == 46)
+                                    qtyTable.Rows[jk][47] = item.JiShu46;
+                                if (UDF[m] == 47)
+                                    qtyTable.Rows[jk][48] = item.JiShu47;
+                                if (UDF[m] == 48)
+                                    qtyTable.Rows[jk][49] = item.JiShu48;
+                                if (UDF[m] == 49)
+                                    qtyTable.Rows[jk][50] = item.JiShu49;
+                                if (UDF[m] == 50)
+                                    qtyTable.Rows[jk][51] = item.JiShu50;
+
 
                             }
                         }
@@ -2567,6 +2773,68 @@ namespace MasterClassified
                                 qtyTable.Rows[jk][30] = item.JiShu29;
                             if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 29)
                                 qtyTable.Rows[jk][31] = item.JiShu30;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 30)
+                                qtyTable.Rows[jk][32] = item.JiShu31;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 31)
+                                qtyTable.Rows[jk][33] = item.JiShu32;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 32)
+                                qtyTable.Rows[jk][34] = item.JiShu33;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 33)
+                                qtyTable.Rows[jk][35] = item.JiShu34;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 34)
+                                qtyTable.Rows[jk][36] = item.JiShu35;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 35)
+                                qtyTable.Rows[jk][37] = item.JiShu36;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 36)
+                                qtyTable.Rows[jk][38] = item.JiShu37;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 37)
+                                qtyTable.Rows[jk][39] = item.JiShu38;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 38)
+                                qtyTable.Rows[jk][40] = item.JiShu39;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 39)
+                                qtyTable.Rows[jk][41] = item.JiShu40;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 40)
+                                qtyTable.Rows[jk][42] = item.JiShu41;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 41)
+                                qtyTable.Rows[jk][43] = item.JiShu42;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 42)
+                                qtyTable.Rows[jk][44] = item.JiShu43;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 43)
+                                qtyTable.Rows[jk][45] = item.JiShu44;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 44)
+                                qtyTable.Rows[jk][46] = item.JiShu45;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 45)
+                                qtyTable.Rows[jk][47] = item.JiShu46;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 46)
+                                qtyTable.Rows[jk][48] = item.JiShu47;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 47)
+                                qtyTable.Rows[jk][49] = item.JiShu48;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 48)
+                                qtyTable.Rows[jk][50] = item.JiShu49;
+
+                            if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 49)
+                                qtyTable.Rows[jk][51] = item.JiShu50;
+
+
 
 
 
@@ -3422,6 +3690,67 @@ namespace MasterClassified
                                             else if (ss == 30)
                                                 item.JiShu30 = temp3[0];
 
+                                            else if (ss == 31)
+                                                item.JiShu31 = temp3[0];
+
+                                            else if (ss == 32)
+                                                item.JiShu32 = temp3[0];
+
+                                            else if (ss == 33)
+                                                item.JiShu33 = temp3[0];
+
+                                            else if (ss == 34)
+                                                item.JiShu34 = temp3[0];
+
+                                            else if (ss == 35)
+                                                item.JiShu35 = temp3[0];
+
+                                            else if (ss == 36)
+                                                item.JiShu36 = temp3[0];
+
+                                            else if (ss == 37)
+                                                item.JiShu37 = temp3[0];
+
+                                            else if (ss == 38)
+                                                item.JiShu38 = temp3[0];
+
+                                            else if (ss == 39)
+                                                item.JiShu39 = temp3[0];
+
+                                            else if (ss == 40)
+                                                item.JiShu40 = temp3[0];
+
+                                            else if (ss == 41)
+                                                item.JiShu41 = temp3[0];
+
+                                            else if (ss == 42)
+                                                item.JiShu42 = temp3[0];
+
+                                            else if (ss == 43)
+                                                item.JiShu43 = temp3[0];
+
+                                            else if (ss == 44)
+                                                item.JiShu44 = temp3[0];
+
+                                            else if (ss == 45)
+                                                item.JiShu45 = temp3[0];
+
+                                            else if (ss == 46)
+                                                item.JiShu46 = temp3[0];
+
+                                            else if (ss == 47)
+                                                item.JiShu47 = temp3[0];
+
+                                            else if (ss == 48)
+                                                item.JiShu48 = temp3[0];
+
+                                            else if (ss == 49)
+                                                item.JiShu49 = temp3[0];
+
+                                            else if (ss == 50)
+                                                item.JiShu50 = temp3[0];
+
+
 
 
                                             break;
@@ -3616,6 +3945,107 @@ namespace MasterClassified
                                             xiangtongindex++;
                                             same_list.Add("JiShu30");
                                         }
+                                        if (item.JiShu31 != null && item.JiShu31 == temp.JiShu31 && UDF[j] == 31)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu31");
+                                        }
+                                        if (item.JiShu32 != null && item.JiShu32 == temp.JiShu32 && UDF[j] == 32)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu32");
+                                        }
+                                        if (item.JiShu33 != null && item.JiShu33 == temp.JiShu33 && UDF[j] == 33)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu33");
+                                        }
+                                        if (item.JiShu34 != null && item.JiShu34 == temp.JiShu34 && UDF[j] == 34)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu34");
+                                        }
+                                        if (item.JiShu35 != null && item.JiShu35 == temp.JiShu35 && UDF[j] == 35)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu35");
+                                        }
+                                        if (item.JiShu36 != null && item.JiShu36 == temp.JiShu36 && UDF[j] == 36)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu36");
+                                        }
+                                        if (item.JiShu37 != null && item.JiShu37 == temp.JiShu37 && UDF[j] == 37)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu37");
+                                        }
+                                        if (item.JiShu38 != null && item.JiShu38 == temp.JiShu38 && UDF[j] == 38)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu38");
+                                        }
+                                        if (item.JiShu39 != null && item.JiShu39 == temp.JiShu39 && UDF[j] == 39)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu39");
+                                        }
+                                        if (item.JiShu40 != null && item.JiShu40 == temp.JiShu40 && UDF[j] == 40)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu40");
+                                        }
+                                        if (item.JiShu41 != null && item.JiShu41 == temp.JiShu41 && UDF[j] == 41)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu41");
+                                        }
+                                        if (item.JiShu42 != null && item.JiShu42 == temp.JiShu42 && UDF[j] == 42)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu42");
+                                        }
+                                        if (item.JiShu43 != null && item.JiShu43 == temp.JiShu43 && UDF[j] == 43)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu43");
+                                        }
+                                        if (item.JiShu44 != null && item.JiShu44 == temp.JiShu44 && UDF[j] == 44)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu44");
+                                        }
+                                        if (item.JiShu45 != null && item.JiShu45 == temp.JiShu45 && UDF[j] == 45)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu45");
+                                        }
+                                        if (item.JiShu46 != null && item.JiShu46 == temp.JiShu46 && UDF[j] == 46)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu46");
+                                        }
+                                        if (item.JiShu47 != null && item.JiShu47 == temp.JiShu47 && UDF[j] == 47)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu47");
+                                        }
+                                        if (item.JiShu48 != null && item.JiShu48 == temp.JiShu48 && UDF[j] == 48)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu48");
+                                        }
+                                        if (item.JiShu49 != null && item.JiShu49 == temp.JiShu49 && UDF[j] == 49)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu49");
+                                        }
+                                        if (item.JiShu50 != null && item.JiShu50 == temp.JiShu50 && UDF[j] == 50)
+                                        {
+                                            xiangtongindex++;
+                                            same_list.Add("JiShu50");
+                                        }
+
 
                                     }
                                     #endregion
@@ -4251,7 +4681,7 @@ namespace MasterClassified
                 newlist.Add(7);
                 newlist.Add(8);
                 newlist.Add(9);
-              //  newlist.Add(10);
+                //  newlist.Add(10);
 
                 newlist = newlist.Select(a => new { a, newID = Guid.NewGuid() }).OrderBy(b => b.newID).Select(c => c.a).ToList();
 
@@ -4404,7 +4834,7 @@ namespace MasterClassified
                 newlist.Add(7);
                 newlist.Add(8);
                 newlist.Add(9);
-               // newlist.Add(10);
+                // newlist.Add(10);
                 clsAllnew BusinessHelp1 = new clsAllnew();
                 List<FangAnLieBiaoDATA> Result121 = BusinessHelp1.Read_FangAn("YES");
                 if (Result121[0].Mobanleibie != null && Result121[0].Mobanleibie.Contains("_"))
@@ -5412,7 +5842,7 @@ namespace MasterClassified
                     for (int i = 0; i < checkedListBox1.Items.Count; i++)
                     {
                         checkedListBox1.SetItemChecked(i, false);
-                        if (i > 0 && i <= 20)
+                        if (i >= 0 && i <  20)
                         {
 
                             newlist.Add(i);
@@ -5422,10 +5852,10 @@ namespace MasterClassified
                 //在21-30选项区间随机选择几位   20240311
                 else if (suiji20_30 == 1)
                 {
-                    for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                    for (int i = 0; i <  checkedListBox1.Items.Count; i++)
                     {
                         checkedListBox1.SetItemChecked(i, false);
-                        if (i > 20 && i <= 30)
+                        if (i > 19 && i <= 30)
                         {
 
                             newlist.Add(i);
@@ -5939,13 +6369,13 @@ namespace MasterClassified
                         {
                             if (JIDTA1[i] - 1 < temp3.Length)
                             {
-                              //  新需求 点击鼠标显示双位数 没有用零补 方便查看 后期有作废
+                                //  新需求 点击鼠标显示双位数 没有用零补 方便查看 后期有作废
                                 if (temp3[JIDTA1[i] - 1].Length < 2)
                                 {
                                     showmessage = showmessage + " 0" + temp3[JIDTA1[i] - 1];
                                 }
                                 else
-                                showmessage = showmessage + " " + temp3[JIDTA1[i] - 1];
+                                    showmessage = showmessage + " " + temp3[JIDTA1[i] - 1];
                             }
                         }
                         toolStripLabel8.Text = showmessage;
@@ -6143,6 +6573,8 @@ namespace MasterClassified
                     }
                     string[] temptong = System.Text.RegularExpressions.Regex.Split(text, " ");
 
+                    //for (int j = 0; j < 30; j++)
+                    //20240328
                     for (int j = 0; j < 30; j++)
                     {
                         int xiangtongindex = 0;
@@ -6338,6 +6770,8 @@ namespace MasterClassified
                     }
                     string[] temptong = System.Text.RegularExpressions.Regex.Split(text, " ");
 
+                    //   for (int j = 0; j < 30; j++)
+                    //20240328
                     for (int j = 0; j < 30; j++)
                     {
                         int xiangtongindex = 0;
@@ -6527,6 +6961,65 @@ namespace MasterClassified
                     if (UDF[m] == 30)
                         jishutotal += item.JiShu30;
 
+                    if (UDF[m] == 31)
+                        jishutotal += item.JiShu31;
+
+                    if (UDF[m] == 32)
+                        jishutotal += item.JiShu32;
+
+                    if (UDF[m] == 33)
+                        jishutotal += item.JiShu33;
+
+                    if (UDF[m] == 4)
+                        jishutotal += item.JiShu34;
+
+                    if (UDF[m] == 35)
+                        jishutotal += item.JiShu35;
+
+                    if (UDF[m] == 36)
+                        jishutotal += item.JiShu36;
+
+                    if (UDF[m] == 37)
+                        jishutotal += item.JiShu37;
+
+                    if (UDF[m] == 38)
+                        jishutotal += item.JiShu38;
+
+                    if (UDF[m] == 39)
+                        jishutotal += item.JiShu39;
+
+                    if (UDF[m] == 40)
+                        jishutotal += item.JiShu40;
+
+                    if (UDF[m] == 41)
+                        jishutotal += item.JiShu41;
+
+                    if (UDF[m] == 42)
+                        jishutotal += item.JiShu42;
+
+                    if (UDF[m] == 43)
+                        jishutotal += item.JiShu43;
+
+                    if (UDF[m] == 44)
+                        jishutotal += item.JiShu44;
+
+                    if (UDF[m] == 45)
+                        jishutotal += item.JiShu45;
+
+                    if (UDF[m] == 46)
+                        jishutotal += item.JiShu46;
+
+                    if (UDF[m] == 47)
+                        jishutotal += item.JiShu47;
+
+                    if (UDF[m] == 48)
+                        jishutotal += item.JiShu48;
+
+                    if (UDF[m] == 49)
+                        jishutotal += item.JiShu49;
+
+                    if (UDF[m] == 50)
+                        jishutotal += item.JiShu50;
 
                 }
             }
@@ -6603,6 +7096,46 @@ namespace MasterClassified
                         jishutotal += item.JiShu29;
                     if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 29)
                         jishutotal += item.JiShu30;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 30)
+                        jishutotal += item.JiShu31;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 31)
+                        jishutotal += item.JiShu32;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 32)
+                        jishutotal += item.JiShu33;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 33)
+                        jishutotal += item.JiShu34;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 34)
+                        jishutotal += item.JiShu35;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 35)
+                        jishutotal += item.JiShu36;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 36)
+                        jishutotal += item.JiShu37;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 37)
+                        jishutotal += item.JiShu38;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 38)
+                        jishutotal += item.JiShu39;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 39)
+                        jishutotal += item.JiShu40;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 40)
+                        jishutotal += item.JiShu41;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 41)
+                        jishutotal += item.JiShu42;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 42)
+                        jishutotal += item.JiShu43;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 43)
+                        jishutotal += item.JiShu44;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 44)
+                        jishutotal += item.JiShu45;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 45)
+                        jishutotal += item.JiShu46;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 46)
+                        jishutotal += item.JiShu47;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 47)
+                        jishutotal += item.JiShu48;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 48)
+                        jishutotal += item.JiShu49;
+                    if (Convert.ToInt32(InitialUDF[InitialUDF.Count - 1]) > 49)
+                        jishutotal += item.JiShu50;
 
                 }
 
@@ -6806,7 +7339,6 @@ namespace MasterClassified
             {
                 toolStripButton2_Click_1(this, EventArgs.Empty);
             }
-
 
         }
 
@@ -7067,6 +7599,67 @@ namespace MasterClassified
                                     else if (ss == 30)
                                         item.JiShu30 = temp3[0];
 
+
+                                    else if (ss == 31)
+                                        item.JiShu31 = temp3[0];
+
+                                    else if (ss == 32)
+                                        item.JiShu32 = temp3[0];
+
+                                    else if (ss == 33)
+                                        item.JiShu33 = temp3[0];
+
+                                    else if (ss == 34)
+                                        item.JiShu34 = temp3[0];
+
+                                    else if (ss == 35)
+                                        item.JiShu35 = temp3[0];
+
+                                    else if (ss == 36)
+                                        item.JiShu36 = temp3[0];
+
+                                    else if (ss == 37)
+                                        item.JiShu37 = temp3[0];
+
+                                    else if (ss == 38)
+                                        item.JiShu38 = temp3[0];
+
+                                    else if (ss == 39)
+                                        item.JiShu39 = temp3[0];
+
+                                    else if (ss == 40)
+                                        item.JiShu40 = temp3[0];
+
+                                    else if (ss == 41)
+                                        item.JiShu41 = temp3[0];
+
+                                    else if (ss == 42)
+                                        item.JiShu42 = temp3[0];
+
+                                    else if (ss == 43)
+                                        item.JiShu43 = temp3[0];
+
+                                    else if (ss == 44)
+                                        item.JiShu44 = temp3[0];
+
+                                    else if (ss == 45)
+                                        item.JiShu45 = temp3[0];
+
+                                    else if (ss == 46)
+                                        item.JiShu46 = temp3[0];
+
+                                    else if (ss == 47)
+                                        item.JiShu47 = temp3[0];
+
+                                    else if (ss == 48)
+                                        item.JiShu48 = temp3[0];
+
+                                    else if (ss == 49)
+                                        item.JiShu49 = temp3[0];
+
+                                    else if (ss == 50)
+                                        item.JiShu50 = temp3[0];
+
                                     break;
 
                                 }
@@ -7159,6 +7752,68 @@ namespace MasterClassified
                                     xiangtongindex++;
                                 if (item.JiShu30 != null && item.JiShu30 == temp.JiShu30)
                                     xiangtongindex++;
+
+                                if (item.JiShu32 != null && item.JiShu32 == temp.JiShu32)
+                                    xiangtongindex++;
+
+                                if (item.JiShu33 != null && item.JiShu33 == temp.JiShu33)
+                                    xiangtongindex++;
+
+                                if (item.JiShu34 != null && item.JiShu34 == temp.JiShu34)
+                                    xiangtongindex++;
+
+                                if (item.JiShu35 != null && item.JiShu35 == temp.JiShu35)
+                                    xiangtongindex++;
+
+                                if (item.JiShu36 != null && item.JiShu36 == temp.JiShu36)
+                                    xiangtongindex++;
+
+                                if (item.JiShu37 != null && item.JiShu37 == temp.JiShu37)
+                                    xiangtongindex++;
+
+                                if (item.JiShu38 != null && item.JiShu38 == temp.JiShu38)
+                                    xiangtongindex++;
+
+                                if (item.JiShu39 != null && item.JiShu39 == temp.JiShu39)
+                                    xiangtongindex++;
+
+                                if (item.JiShu40 != null && item.JiShu40 == temp.JiShu40)
+                                    xiangtongindex++;
+
+                                if (item.JiShu41 != null && item.JiShu41 == temp.JiShu41)
+                                    xiangtongindex++;
+
+                                if (item.JiShu42 != null && item.JiShu42 == temp.JiShu42)
+                                    xiangtongindex++;
+
+                                if (item.JiShu43 != null && item.JiShu43 == temp.JiShu43)
+                                    xiangtongindex++;
+
+                                if (item.JiShu44 != null && item.JiShu44 == temp.JiShu44)
+                                    xiangtongindex++;
+
+                                if (item.JiShu45 != null && item.JiShu45 == temp.JiShu45)
+                                    xiangtongindex++;
+
+                                if (item.JiShu46 != null && item.JiShu46 == temp.JiShu46)
+                                    xiangtongindex++;
+
+                                if (item.JiShu47 != null && item.JiShu47 == temp.JiShu47)
+                                    xiangtongindex++;
+
+                                if (item.JiShu48 != null && item.JiShu48 == temp.JiShu48)
+                                    xiangtongindex++;
+
+                                if (item.JiShu49 != null && item.JiShu49 == temp.JiShu49)
+                                    xiangtongindex++;
+
+                                if (item.JiShu50 != null && item.JiShu50 == temp.JiShu50)
+                                    xiangtongindex++;
+
+
+
+
+
                             }
                             #endregion
                             #region MyRegion
@@ -7535,12 +8190,12 @@ namespace MasterClassified
             {
                 foreach (string status in this.checkedListBox1.CheckedItems)
                 {
-                  //  qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
+                    //  qianqi_newi.Add(Convert.ToInt32(status.Replace("第 ", "").Replace(" 位", "")));
                     toolStripLabel8.Text = toolStripLabel8.Text + status;
                 }
             }
 
-            
+
         }
 
         private void 复制选中信息ToolStripMenuItem_Click(object sender, EventArgs e)

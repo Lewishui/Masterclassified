@@ -90,6 +90,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.复制选中信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
@@ -129,7 +130,6 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.复制选中信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -996,14 +996,21 @@
             this.contextMenuStrip4.Name = "contextMenuStrip1";
             this.contextMenuStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.contextMenuStrip4.ShowImageMargin = false;
-            this.contextMenuStrip4.Size = new System.Drawing.Size(128, 70);
+            this.contextMenuStrip4.Size = new System.Drawing.Size(124, 48);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(127, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(123, 22);
             this.toolStripMenuItem2.Text = "相同性分析";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // 复制选中信息ToolStripMenuItem
+            // 
+            this.复制选中信息ToolStripMenuItem.Name = "复制选中信息ToolStripMenuItem";
+            this.复制选中信息ToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.复制选中信息ToolStripMenuItem.Text = "复制选中信息";
+            this.复制选中信息ToolStripMenuItem.Click += new System.EventHandler(this.复制选中信息ToolStripMenuItem_Click);
             // 
             // tableLayoutPanel8
             // 
@@ -1456,13 +1463,6 @@
             this.comboBox5.Size = new System.Drawing.Size(115, 21);
             this.comboBox5.TabIndex = 20;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // 复制选中信息ToolStripMenuItem
-            // 
-            this.复制选中信息ToolStripMenuItem.Name = "复制选中信息ToolStripMenuItem";
-            this.复制选中信息ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.复制选中信息ToolStripMenuItem.Text = "复制选中信息";
-            this.复制选中信息ToolStripMenuItem.Click += new System.EventHandler(this.复制选中信息ToolStripMenuItem_Click);
             // 
             // frmTracing_Analysis
             // 

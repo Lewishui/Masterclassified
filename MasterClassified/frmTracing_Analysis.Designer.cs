@@ -931,7 +931,7 @@
             this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(20, 357);
+            this.comboBox3.Location = new System.Drawing.Point(20, 355);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 15;
@@ -1040,7 +1040,7 @@
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 381);
+            this.comboBox2.Location = new System.Drawing.Point(3, 382);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(115, 21);
             this.comboBox2.TabIndex = 21;
@@ -1136,7 +1136,7 @@
             this.tabControl2.Location = new System.Drawing.Point(3, 212);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(123, 163);
+            this.tabControl2.Size = new System.Drawing.Size(123, 164);
             this.tabControl2.TabIndex = 18;
             // 
             // tabPage4
@@ -1145,7 +1145,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(115, 137);
+            this.tabPage4.Size = new System.Drawing.Size(115, 138);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "前期";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1163,7 +1163,7 @@
             this.checkedListBox1.Location = new System.Drawing.Point(3, 3);
             this.checkedListBox1.MultiColumn = true;
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(109, 131);
+            this.checkedListBox1.Size = new System.Drawing.Size(109, 132);
             this.checkedListBox1.TabIndex = 17;
             this.checkedListBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.checkedListBox1_MouseMove);
             // 
@@ -1191,7 +1191,7 @@
             this.tabControl3.Location = new System.Drawing.Point(3, 19);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(123, 160);
+            this.tabControl3.Size = new System.Drawing.Size(123, 161);
             this.tabControl3.TabIndex = 19;
             // 
             // tabPage5
@@ -1200,7 +1200,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(115, 134);
+            this.tabPage5.Size = new System.Drawing.Size(115, 135);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "当前期";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1218,14 +1218,14 @@
             this.clbStatus.Location = new System.Drawing.Point(3, 3);
             this.clbStatus.MultiColumn = true;
             this.clbStatus.Name = "clbStatus";
-            this.clbStatus.Size = new System.Drawing.Size(109, 128);
+            this.clbStatus.Size = new System.Drawing.Size(109, 129);
             this.clbStatus.TabIndex = 16;
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 185);
+            this.comboBox1.Location = new System.Drawing.Point(3, 186);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(115, 21);
             this.comboBox1.TabIndex = 20;

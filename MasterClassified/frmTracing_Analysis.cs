@@ -5855,7 +5855,7 @@ namespace MasterClassified
                     for (int i = 0; i <  checkedListBox1.Items.Count; i++)
                     {
                         checkedListBox1.SetItemChecked(i, false);
-                        if (i > 19 && i <= 30)
+                        if (i > 19 && i <  30)
                         {
 
                             newlist.Add(i);
